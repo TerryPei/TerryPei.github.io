@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Terry Pei 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
+Hi! I am Xiaohuan Pei 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
 <!-- **Skills Mastery**: Python, SQL, Git, Latex, Markdown, Google Cloud Platform, Jupyter, Pytorch, Numpy, Matplotlib, C/C++, Scrapy, Flask. -->
 
