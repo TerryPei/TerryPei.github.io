@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Terry Pei 😊, a PhD student at the University of Sydney. I major in deep learning at the school of computer science.
+Hi! I am Terry Pei 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
 <!-- **Skills Mastery**: Python, SQL, Git, Latex, Markdown, Google Cloud Platform, Jupyter, Pytorch, Numpy, Matplotlib, C/C++, Scrapy, Flask. -->
 
-**Specialized Field**: Data-centric LLMs with downstream applications. I also have rich experience on  NLP and CV during the industry internship.
+**Specialized Field**: LLMs with downstream applications. I also have rich experience on  NLP and CV during the industry internship.
 
-**Recent Work**: Update the AI search engine.
+**Recent Work**: EfficientMamba
 
 ## Projects
 
@@ -96,10 +96,12 @@ Hi! I am Terry Pei 😊, a PhD student at the University of Sydney. I major in d
 ## News
 
 <!-- * GPT is a good Annotator. -->
-* <sub>**[Nov 2022]** Win the "Best Student Paper" awarded by ICDM as the first author. [[Award News]](https://twitter.com/icdm2022/status/1595243601545826304) </sub>
+* <sub>**[Jan 2024]** Our work has been accepted by ICLR 2024. [[Accepted News]](https://openreview.net/group?id=ICLR.cc/2024) </sub>
+
+<!-- * <sub>**[Nov 2022]** Win the "Best Student Paper" awarded by ICDM as the first author. [[Award News]](https://twitter.com/icdm2022/status/1595243601545826304) </sub>
 
 
-* <sub>**[Nov 2022]** Our work has been accepted by ICDM. ([Core Rank A*](http://portal.core.edu.au/conf-ranks/?search=mining&by=all&source=all&sort=arank&page=1)). [[Accepted News]](https://www.cse.fau.edu/~xqzhu/icdm2022/ICDM2022Program.pdf) </sub>
+* <sub>**[Nov 2022]** Our work has been accepted by ICDM. ([Core Rank A*](http://portal.core.edu.au/conf-ranks/?search=mining&by=all&source=all&sort=arank&page=1)). [[Accepted News]](https://www.cse.fau.edu/~xqzhu/icdm2022/ICDM2022Program.pdf) </sub> -->
 
 ## Honors and Awards
 
@@ -117,5 +119,5 @@ Hi! I am Terry Pei 😊, a PhD student at the University of Sydney. I major in d
 * <sub> Python, Pytorch, Git, Linux, Latex, C++, Swift, SQL, Google Cloud Platform, BPMN </sub>
 
 ## Academic Services
-* <sub> Program chair of NeurIPS. </sub>
+<!-- * <sub> Program chair of NeurIPS. </sub> -->
  * <sub> Reviewer of ICML, NeurIPS, ICDM, AAAI. </sub>
