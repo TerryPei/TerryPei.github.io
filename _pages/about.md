@@ -66,7 +66,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/scan.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba](https://openreview.net/pdf?id=PpBs2iL0jv) 
+[EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba](https://arxiv.org/pdf/2403.09977) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -84,7 +84,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024</div><img src='images/NNretrieval.gif' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Neural Architecture Retrieval](https://openreview.net/forum?id=1JtTPYBKqt&noteId=1Wl2fYCAjz) 
+[Neural Architecture Retrieval](https://openreview.net/pdf?id=1JtTPYBKqt) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -93,7 +93,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 *The International Conference on Learning Representations (ICLR), 2024*
 
-[[Paper]](https://openreview.net/forum?id=1JtTPYBKqt&noteId=1Wl2fYCAjz) [[Code]](https://github.com/TerryPei/NNRetrieval) 
+[[Paper]](https://openreview.net/pdf?id=1JtTPYBKqt) [[Code]](https://github.com/TerryPei/NNRetrieval) 
 
 </div>
 </div>
