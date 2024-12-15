@@ -19,9 +19,9 @@ redirect_from:
 
 Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
-**Specialized Field**: Efficiency AI, Decoding LLM.
+**Specialized Field**: Efficiency AI, VLM Inference.
 
-**Recent Work**: EfficientVMamba
+**Recent Work**: CSP, EfficientVMamba
 
 
 <!-- I obtained a PhD degree from Peking University supervised by A/Prof [Tingting Jiang](http://www.vie.group/ttj) and Prof [Yizhou Wang](https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm), and a Bachelor of Engineering from Tongji University. 
@@ -50,6 +50,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <span class='anchor' id='news'></span>
 
 # 🔥 News
+- *2024.01*: Release a VLM inference project: CSP.
+- *2024.12*: One paper accepted to AAAI 2025.
 - *2024.01*: One paper accepted to ICLR 2024.
 <!-- *2024.02*: Two papers accepted to CVPR 2024. 
 *2024.02*: I will serve as an Area Chair for MICCAI 2024.  -->
@@ -62,8 +64,23 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 # 📝  Artificial Intelligence Projects
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/csp.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/scan.png' alt="sym" width="100%"></div></div>
+[Cross-Self KV Cache Pruning for Efficient Vision-Language Inference](https://arxiv.org/abs/2412.04652) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Tao Huang, Chang Xu
+
+<!-- *International Conference on Machine Learning (ICML), 2024* -->
+
+[[Paper]](https://arxiv.org/pdf/2412.04652) [[Code]](https://github.com/TerryPei/CSP) 
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025</div><img src='images/scan.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba](https://arxiv.org/pdf/2403.09977) 
