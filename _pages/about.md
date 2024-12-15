@@ -89,7 +89,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 **Xiaohuan Pei**, Tao Huang, Chang Xu
 
-<!-- *International Conference on Machine Learning (ICML), 2024* -->
+*Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2025*
 
 [[Paper]](https://arxiv.org/pdf/2403.09977.pdf) [[Code]](https://github.com/TerryPei/EfficientVMamba) 
 
