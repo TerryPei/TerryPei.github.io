@@ -144,6 +144,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 **Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu
 
+*International Conference on Data Mining (ICDM), 2022*
+
 [[Paper]](https://ieeexplore.ieee.org/abstract/document/10027715) 
 [[Code]](https://github.com/TerryPei/C3P) 
 
@@ -162,6 +164,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
  -->
 
 **Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu
+
+*International Conference on Data Mining (ICDM), 2022*
 
 [[Paper]](https://ieeexplore.ieee.org/abstract/document/10027634) 
 [[Code]](https://github.com/TerryPei/AGCDM) 
