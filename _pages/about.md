@@ -180,6 +180,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 
 # 📖 Teaching
+- *2024*, Guest Lecture, Artifical Intelligence, The University of Sydney
+
 - *2023*, Tutor for COMP5329 Deep Learning, The University of Sydney
 
 <span class='anchor' id='awards'></span>
