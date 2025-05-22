@@ -19,9 +19,9 @@ redirect_from:
 
 Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
-**Specialized Field**: Efficiency AI, VLM Inference.
+**Specialized Field**: Efficiency AI, Visoin-Language Models.
 
-**Recent Work**: CSP, EfficientVMamba
+**Recent Work**: Future-aware Attention,  EfficientVMamba, Cross-Self Pruning.
 
 
 <!-- I obtained a PhD degree from Peking University supervised by A/Prof [Tingting Jiang](http://www.vie.group/ttj) and Prof [Yizhou Wang](https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm), and a Bachelor of Engineering from Tongji University. 
@@ -50,7 +50,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <span class='anchor' id='news'></span>
 
 # 🔥 News
-- *2024.01*: Release a VLM inference project: CSP.
+- *2024.05*: Future-aware Attention. 
+- *2024.12*: Release a VLM inference project: CSP.
 - *2024.12*: One paper accepted to AAAI 2025.
 - *2024.01*: One paper accepted to ICLR 2024.
 <!-- *2024.02*: Two papers accepted to CVPR 2024. 
@@ -63,6 +64,20 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <br>
 
 # 📝  Artificial Intelligence Projects
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Future-aware Attention](-) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu
+
+[[Paper]](-) [[Code]](-) 
+
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/csp.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -177,18 +192,16 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 
 
-
-
 # 📖 Teaching
 - *2024*, Guest Lecture, Artifical Intelligence, The University of Sydney
 
-- *2023*, Tutor for COMP5329 Deep Learning, The University of Sydney
+- *2023, 2025*, Tutor for COMP5329 Deep Learning, The University of Sydney
 
 <span class='anchor' id='awards'></span>
 
 # 🎖 Awards
 - ICDM Best Student Paper Award
-- Two Full Scholarship Awards from UoW
+- Two Full Scholarship Awards
 - Outstanding Graduate
 - National Second Prize in Mathematics Competition
 - Provincial Prize in C++ Programming Competition
@@ -201,7 +214,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 <span class='anchor' id='services'></span>
 
-# ♥️ Services
+# Services
 - Reviewer of ICML, NeurIPS, ICLR, CVPR.
 
 
