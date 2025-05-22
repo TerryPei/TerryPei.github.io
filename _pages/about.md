@@ -50,7 +50,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <span class='anchor' id='news'></span>
 
 # 🔥 News
-- *2024.05*: Future-aware Attention. 
+- *2024.05*: Light Future-aware Attention. 
 - *2024.12*: Release a VLM inference project: CSP.
 - *2024.12*: One paper accepted to AAAI 2025.
 - *2024.01*: One paper accepted to ICLR 2024.
@@ -68,7 +68,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Future-aware Attention](-) 
+[Light Future-aware Attention](-) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -77,7 +77,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 [[Paper]](-) [[Code]](-) 
 
 </div>
-
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/csp.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
