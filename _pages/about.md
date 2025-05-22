@@ -49,8 +49,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 <span class='anchor' id='news'></span>
 
-# 🔥 News
-- *2024.05*: Light Future-aware Attention. 
+# 🔥 Updates
+- *2024.05*: Release Light Future-aware Attention. 
 - *2024.12*: Release a VLM inference project: CSP.
 - *2024.12*: One paper accepted to AAAI 2025.
 - *2024.01*: One paper accepted to ICLR 2024.
