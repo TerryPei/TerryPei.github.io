@@ -19,7 +19,7 @@ redirect_from:
 
 Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
-**Specialized Field**: Efficiency AI, Visoin-Language Models.
+**Specialized Field**: Efficiency AI, Vision-Language Models.
 
 **Recent Work**: Future-aware Attention,  EfficientVMamba, Cross-Self Pruning.
 
