@@ -203,8 +203,8 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 - ICDM Best Student Paper Award
 - Two Full Scholarship Awards
 - Outstanding Graduate
-- National Second Prize in Mathematics Competition
-- Provincial Prize in C++ Programming Competition
+- National Second Prize in Mathematics Competition in China
+- Provincial Prize in C++ Programming Competition in China
 
 
 
