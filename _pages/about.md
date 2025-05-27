@@ -74,7 +74,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu
 
-[[Paper]](-) [[Code]](-) 
+[[Paper]](https://arxiv.org/pdf/2505.18605) [[Code]](-) 
 
 </div>
 </div>
