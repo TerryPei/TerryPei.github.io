@@ -19,7 +19,7 @@ redirect_from:
 
 Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
-**Specialized Field**: Efficiency AI, Vision-Language Models.
+**Specialized Field**: Vision Language Models, Vision Language Actions.
 
 **Recent Work**: Future-aware Attention,  EfficientVMamba, Cross-Self Pruning.
 
@@ -63,18 +63,18 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 <br>
 
-# 📝  Artificial Intelligence Projects
+# 📝  Research Projects 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Light Future-aware Attention](-) 
+[Future-aware Attention for Vision-Language Inference](-) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
 **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu
 
-[[Paper]](https://arxiv.org/pdf/2505.18605) [[-]](-) 
+[[Paper]](https://arxiv.org/pdf/2505.18605) [[UnderReview]](-) 
 
 </div>
 </div>
@@ -112,6 +112,22 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 </div>
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV W 2024</div><img src='images/local.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[LocalMamba: Visual State Space Model with Windowed Selective Scan](https://dl.acm.org/doi/abs/10.1007/978-3-031-91979-4_2) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+Tao Huang, **Xiaohuan Pei**, Chang Xu
+
+*The European Conference on Computer Vision (ECCV), Workshop, 2024*
+
+[[Paper]](https://dl.acm.org/doi/abs/10.1007/978-3-031-91979-4_2) [[Code]](https://github.com/hunto/LocalMamba) 
+
+</div>
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024</div><img src='images/NNretrieval.gif' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -134,14 +150,14 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/Annotator.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[GPT Self-Supervision for a Better Data Annotator](https://arxiv.org/pdf/2306.04349.pdf) 
+[GPT Self-Supervision for an Efficient Data Annotator](https://arxiv.org/pdf/2306.04349.pdf) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
 **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
 
 [[Paper]](https://arxiv.org/pdf/2306.04349.pdf) 
-<!-- [[Code]](https://github.com/TerryPei/NNRetrieval)  -->
+[[Code]](https://github.com/TerryPei/Annotator) 
 
 </div>
 </div>
@@ -174,7 +190,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/AGCDM.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Self-Attention Gated Model for Cognitive Diagnosis](https://ieeexplore.ieee.org/abstract/document/10027634) 
+[Self-Attention Gated Model for Faster Cognitive Diagnosis](https://ieeexplore.ieee.org/abstract/document/10027634) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -215,8 +231,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <span class='anchor' id='services'></span>
 
 # Services
-- Reviewer of ICML, NeurIPS, ICLR, CVPR.
-
+- Reviewer of TPAMI, ICML, NeurIPS, ICLR, CVPR, ICCV, KDD, ICDM.
 
 
 **Contact:** xiaohuan.pei at sydney.edu.au, terrypei123 at gmail.com
