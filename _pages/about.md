@@ -20,9 +20,9 @@ redirect_from:
 Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
 **Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
-<a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
+<!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
   <img alt="Google Scholar" src="https://img.shields.io/badge/450-Citations-4A90E2?logo=google-scholar&logoColor=white">
-</a>
+</a> -->
 
 
 **Recent Work**: Future-aware Attention, EfficientVMamba, Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
