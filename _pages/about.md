@@ -19,9 +19,14 @@ redirect_from:
 
 Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
-**Specialized Field**: Vision Language Models, Vision Language Actions.
+**Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
+<a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
+  <img alt="Google Scholar" src="https://img.shields.io/badge/450-Citations-4A90E2?logo=google-scholar&logoColor=white">
+</a>
 
-**Recent Work**: Future-aware Attention,  EfficientVMamba, Cross-Self Pruning.
+
+**Recent Work**: Future-aware Attention, EfficientVMamba, Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
+
 
 
 <!-- I obtained a PhD degree from Peking University supervised by A/Prof [Tingting Jiang](http://www.vie.group/ttj) and Prof [Yizhou Wang](https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm), and a Bachelor of Engineering from Tongji University. 
@@ -49,9 +54,9 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 <span class='anchor' id='news'></span>
 
-# 🔥 Updates
-- *2025.05*: Release Light Future-aware Attention. 
-- *2024.12*: Release a VLM inference project: CSP.
+# 🎉 Updates
+- *2025.05*: Light Future-aware Attention. 
+- *2024.12*: VLM inference with KV cache.
 - *2024.12*: One paper accepted to AAAI 2025.
 - *2024.01*: One paper accepted to ICLR 2024.
 <!-- *2024.02*: Two papers accepted to CVPR 2024. 
@@ -86,11 +91,13 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
-**Xiaohuan Pei**, Tao Huang, Chang Xu
+**Xiaohuan Pei**, Tao Huang, Chang Xu 
 
 <!-- *International Conference on Machine Learning (ICML), 2024* -->
 
-[[Paper]](https://arxiv.org/pdf/2412.04652) [[Code]](https://github.com/TerryPei/CSP) 
+[[Paper]](https://arxiv.org/pdf/2412.04652) [[Code]](https://github.com/TerryPei/CSP) <a href="https://github.com/TerryPei/CSP" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/CSP?style=social">
+</a>
 
 </div>
 </div>
@@ -107,6 +114,9 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2025*
 
 [[Paper]](https://arxiv.org/pdf/2403.09977.pdf) [[Code]](https://github.com/TerryPei/EfficientVMamba) 
+<a href="https://github.com/TerryPei/EfficientVMamba" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
+</a>
 
 </div>
 </div>
@@ -124,6 +134,9 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 *The European Conference on Computer Vision (ECCV), Workshop, 2024*
 
 [[Paper]](https://dl.acm.org/doi/abs/10.1007/978-3-031-91979-4_2) [[Code]](https://github.com/hunto/LocalMamba) 
+<a href="https://github.com/hunto/LocalMamba" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/hunto/LocalMamba?style=social">
+</a>
 
 </div>
 </div>
@@ -158,6 +171,8 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 [[Paper]](https://arxiv.org/pdf/2306.04349.pdf) 
 [[Code]](https://github.com/TerryPei/Annotator) 
+[[机器之心]](https://mp.weixin.qq.com/s/8661PcsHCprNdRKhucstIw) 
+
 
 </div>
 </div>
