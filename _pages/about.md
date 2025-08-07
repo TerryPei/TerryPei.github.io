@@ -25,7 +25,9 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 </a> -->
 
 
-**Recent Work**: Future-aware Attention, EfficientVMamba, Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
+**Recent Work**: 
+Future-aware Vision Language Attention, 
+Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS (by OpenAI) sink implementation from an inference perspective).
 
 
 
@@ -113,7 +115,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2025*
 
-[[Paper]](https://arxiv.org/pdf/2403.09977.pdf) [[Code]](https://github.com/TerryPei/EfficientVMamba) 
+[[Paper]](https://arxiv.org/pdf/2403.09977.pdf) [[Code]](https://github.com/TerryPei/EfficientVMamba) [[Tutorial]](https://mp.weixin.qq.com/s/zCwQRcOiNOx06Hnkr3EYvw)
 <a href="https://github.com/TerryPei/EfficientVMamba" target="_blank">
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
 </a>
