@@ -31,10 +31,6 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS (by OpenAI) sink imp
 
 
 
-<!-- I obtained a PhD degree from Peking University supervised by A/Prof [Tingting Jiang](http://www.vie.group/ttj) and Prof [Yizhou Wang](https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm), and a Bachelor of Engineering from Tongji University. 
- -->
-
-
 <!-- My research interests lie in intelligent surgical skill assessment using computer vision and generative artificial intelligence.
  -->
 
@@ -54,17 +50,13 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS (by OpenAI) sink imp
 <!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
  -->
 
-<span class='anchor' id='news'></span>
-
+<!-- <span class='anchor' id='news'></span>
 # 🎉 Updates
 - *2025.05*: Light Future-aware Attention. 
 - *2024.12*: VLM inference with KV cache.
 - *2024.12*: One paper accepted to AAAI 2025.
 - *2024.01*: One paper accepted to ICLR 2024.
-<!-- *2024.02*: Two papers accepted to CVPR 2024. 
-*2024.02*: I will serve as an Area Chair for MICCAI 2024.  -->
-
-<span class='anchor' id='publications'></span>
+<span class='anchor' id='publications'></span> -->
 
 
 
@@ -236,8 +228,8 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 - ICDM Best Student Paper Award
 - Two Full Scholarship Awards
 - Outstanding Graduate
-- National Second Prize in Mathematics Competition in China
-- Provincial Prize in C++ Programming Competition in China
+- National Second Prize in Mathematics Competition
+- Provincial Prize in C++ Programming Competition
 
 
 
