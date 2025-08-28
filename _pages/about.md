@@ -17,17 +17,19 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
+Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, honorably supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
 **Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
 <!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
-  <img alt="Google Scholar" src="https://img.shields.io/badge/450-Citations-4A90E2?logo=google-scholar&logoColor=white">
+  <img alt="Google Scholar" src="https://img.shields.io/badge/455-Citations-4A90E2?logo=google-scholar&logoColor=white">
 </a> -->
 
 
 **Recent Work**: 
+
 Future-aware Vision Language Attention, 
-Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS (by OpenAI) sink implementation from an inference perspective).
+
+Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
 
 
 
@@ -62,7 +64,7 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS (by OpenAI) sink imp
 
 <br>
 
-# 📝  Research Projects 
+# 📝  Recent Projects
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -144,6 +146,9 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
  -->
 
 **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
+<a href="https://github.com/TerryPei/NNRetreival" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
+</a>
 
 
 *The International Conference on Learning Representations (ICLR), 2024*
@@ -165,7 +170,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 [[Paper]](https://arxiv.org/pdf/2306.04349.pdf) 
 [[Code]](https://github.com/TerryPei/Annotator) 
-[[机器之心]](https://mp.weixin.qq.com/s/8661PcsHCprNdRKhucstIw) 
+[[News]](https://mp.weixin.qq.com/s/8661PcsHCprNdRKhucstIw) 
 
 
 </div>
