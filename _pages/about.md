@@ -29,7 +29,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 Future-aware Vision Language Attention, 
 
-Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
+Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation).
 
 
 
