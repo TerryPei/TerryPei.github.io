@@ -29,7 +29,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 Future-aware Vision Language Attention, 
 
-Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation).
+Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
 
 
 
@@ -177,70 +177,89 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 </div>
 
 
+<details>
+  <summary><span style="font-size: 1.8em; font-weight: bold;">📝 Old Projects</span></summary>
 
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">ICDM 2022</div>
+      <img src='images/C3P.png' alt="sym" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
 
+  [Contrastive Code-Comment Pre-training](https://ieeexplore.ieee.org/abstract/document/10027715) 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/C3P.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+  **Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu  
 
-[Contrastive Code-Comment Pre-training](https://ieeexplore.ieee.org/abstract/document/10027715) 
-<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
- -->
+  *International Conference on Data Mining (ICDM), 2022*  
 
-**Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu
+  [[Paper]](https://ieeexplore.ieee.org/abstract/document/10027715) 
+  [[Code]](https://github.com/TerryPei/C3P) 
 
-*International Conference on Data Mining (ICDM), 2022*
-
-[[Paper]](https://ieeexplore.ieee.org/abstract/document/10027715) 
-[[Code]](https://github.com/TerryPei/C3P) 
-
-</div>
-</div>
-
-
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/AGCDM.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Self-Attention Gated Model for Faster Cognitive Diagnosis](https://ieeexplore.ieee.org/abstract/document/10027634) 
-<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
- -->
-
-**Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu
-
-*International Conference on Data Mining (ICDM), 2022*
-
-[[Paper]](https://ieeexplore.ieee.org/abstract/document/10027634) 
-[[Code]](https://github.com/TerryPei/AGCDM) 
-
-</div>
+  </div>
 </div>
 
 
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">ICDM 2022</div>
+      <img src='images/AGCDM.png' alt="sym" width="100%">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+  [Self-Attention Gated Model for Faster Cognitive Diagnosis](https://ieeexplore.ieee.org/abstract/document/10027634)  
+
+  **Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu  
+
+  *International Conference on Data Mining (ICDM), 2022*  
+
+  [[Paper]](https://ieeexplore.ieee.org/abstract/document/10027634) 
+  [[Code]](https://github.com/TerryPei/AGCDM) 
+
+  </div>
+</div>
+
+</details>
 
 
 
-# 📖 Teaching
+
+<details>
+  <summary><span style="font-size: 1.8em; font-weight: bold;">📖 Teaching Experience</span></summary>
+
+<!-- # 📖 Teaching -->
 - *2024*, Guest Lecture, Artifical Intelligence, The University of Sydney
 
 - *2023, 2025*, Tutor for COMP5329 Deep Learning, The University of Sydney
 
+</details>
+
 <span class='anchor' id='awards'></span>
 
-# 🎖 Awards
+<details>
+  <summary><span style="font-size: 1.8em; font-weight: bold;">🎖 Awards</span></summary>
+
+<!-- # 🎖 Awards -->
 - ICDM Best Student Paper Award
 - Two Full Scholarship Awards
 - Outstanding Graduate
 - National Second Prize in Mathematics Competition
 - Provincial Prize in C++ Programming Competition
 
+</details>
 
 
-# 🌟 Grants
+
+<details>
+  <summary><span style="font-size: 1.8em; font-weight: bold;">🌟 Grants</span></summary>
 
 - The National Computational Infrastructure (NCI) Adapter Scheme, Australia
+
+</details>
 
 <span class='anchor' id='services'></span>
 
@@ -248,4 +267,4 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 - Reviewer of TPAMI, ICML, NeurIPS, ICLR, CVPR, ICCV, KDD, ICDM.
 
 
-**Contact:** xiaohuan.pei at sydney.edu.au, terrypei123 at gmail.com
+**Contact:** xiaohuan.pei at sydney.edu.au
