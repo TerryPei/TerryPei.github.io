@@ -91,7 +91,7 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 
 <!-- *International Conference on Machine Learning (ICML), 2024* -->
 
-[[Paper]](https://arxiv.org/pdf/2412.04652) [[Code]](https://github.com/TerryPei/CSP) <a href="https://github.com/TerryPei/CSP" target="_blank">
+[[Paper]](https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/CSP.pdf) [[Code]](https://github.com/TerryPei/CSP) <a href="https://github.com/TerryPei/CSP" target="_blank">
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/CSP?style=social">
 </a>
 
@@ -162,7 +162,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/Annotator.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[GPT Self-Supervision for an Efficient Data Annotator](https://arxiv.org/pdf/2306.04349.pdf) 
+[GPT Self-Supervision for an Efficient Data Annotator](https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/Annotator.pdf) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
