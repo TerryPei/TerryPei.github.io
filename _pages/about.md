@@ -83,7 +83,7 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/csp.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Cross-Self KV Cache Pruning for Efficient Vision-Language Inference](https://arxiv.org/abs/2412.04652) 
+[Cross-Self KV Cache Pruning for Efficient Vision-Language Inference](https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/CSP.pdf) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -168,7 +168,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
 
-[[Paper]](https://arxiv.org/pdf/2306.04349.pdf) 
+[[Paper]](https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/Annotator.pdf) 
 [[Code]](https://github.com/TerryPei/Annotator) 
 [[News]](https://mp.weixin.qq.com/s/8661PcsHCprNdRKhucstIw) 
 
