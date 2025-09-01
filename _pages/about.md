@@ -146,9 +146,9 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
  -->
 
 **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
-<a href="https://github.com/TerryPei/NNRetreival" target="_blank">
+<!-- <a href="https://github.com/TerryPei/NNRetreival" target="_blank">
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
-</a>
+</a> -->
 
 
 *The International Conference on Learning Representations (ICLR), 2024*

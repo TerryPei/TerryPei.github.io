@@ -16,31 +16,3 @@
     padding : 5px;
 }
 
-summary {
-    list-style: none; /* 移除默认的三角箭头 */
-    display: flex; /* 让内容在 Flexbox 布局中 */
-    align-items: center; /* 垂直居中 */
-    cursor: pointer; /* 显示手型光标表示可点击 */
-  }
-  
-  summary::-webkit-details-marker {
-    display: none; /* 针对 Webkit 浏览器隐藏默认箭头 */
-  }
-  
-  summary::before {
-    content: '▶'; /* 使用自定义的三角箭头 */
-    margin-right: 10px; /* 箭头和文字之间的距离 */
-    transition: transform 0.2s; /* 添加展开/收起时的动画效果 */
-  }
-  
-  details[open] summary::before {
-    transform: rotate(90deg); /* 展开时旋转箭头 */
-  }
-  
-  .old-projects-heading {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 0.5em; /* 这个根据你的整体布局可能需要调整 */
-    /* 如果你希望标题更紧凑，可以考虑移除或减小 margin-bottom */
-    line-height: 1.2; /* 调整行高，让标题更紧凑 */
-  }
