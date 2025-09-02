@@ -27,7 +27,7 @@ Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, 
 
 **Recent Work**: 
 
-Future-aware Vision Language Attention, 
+Future-aware Masking for Vision Language Inference, 
 
 Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation from an inference perspective).
 
@@ -64,12 +64,12 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 
 <br>
 
-# 📝  Recent Projects
+# 📝  Recent Work
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Future-aware Attention for Vision-Language Inference](-) 
+[Light Future-aware Masking for Vision-Language Inference](-) 
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -138,7 +138,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024</div><img src='images/NNretrieval.gif' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024</div><img src='images/NAR.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Neural Architecture Retrieval](https://openreview.net/pdf?id=1JtTPYBKqt) 
