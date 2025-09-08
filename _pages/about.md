@@ -163,7 +163,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 *Rethinking Causal Mask Attention for Vision-Language Inference.*
 **Xiaohuan Pei**, Tao Huang, Chang Xu.
-arXiv preprint [arXiv:2412.04652](https://arxiv.org/pdf/2505.18605) (2024).
+arXiv preprint [arXiv:2412.04652](https://arxiv.org/pdf/2505.18605) (2025).
 
 <!-- *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
 Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.  
