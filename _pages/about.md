@@ -158,59 +158,57 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 </div>
 </div>
 
+
 # 🧑🏻‍💻 Preprints
 
-**Xiaohuan Pei**, Tao Huang, Chang Xu.  
-   *Rethinking Causal Mask Attention for Vision-Language Inference.*  
-   Under review (2025).
+*Rethinking Causal Mask Attention for Vision-Language Inference.*
+**Xiaohuan Pei**, Tao Huang, Chang Xu.
+arXiv preprint [arXiv:2412.04652](https://arxiv.org/pdf/2505.18605) (2024).
 
+<!-- *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
 Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.  
-   *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
-   Under review (2025).
+Under review (2025). -->
 
-**Xiaohuan Pei**, Tao Huang, Chang Xu.  
-   *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*  
-   arXiv preprint [arXiv:2412.04652](https://arxiv.org/abs/2412.04652) (2024).  
+*Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*
+**Xiaohuan Pei**, Tao Huang, Chang Xu.
+arXiv preprint [arXiv:2412.04652](https://arxiv.org/abs/2412.04652) (2024).
 
-**Xiaohuan Pei**, Yanxi Li, Chang Xu.  
-   *GPT self-supervision for a better data annotator.*  
-   arXiv preprint [arXiv:2306.04349](https://arxiv.org/abs/2306.04349) (2023).
+*GPT self-supervision for a better data annotator.*
+**Xiaohuan Pei**, Yanxi Li, Chang Xu.
+arXiv preprint [arXiv:2306.04349](https://arxiv.org/abs/2306.04349) (2023).
 
- Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
-   *Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*  
-   Under review (2025).
+<!-- *Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*  
+Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
+Under review (2025). -->
 
- **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.  
-   *Text-driven Neural Architecture Embeddings and Retrieval.*  
-   Under review (2024).
+*Text-driven Neural Architecture Embeddings and Retrieval.*
+**Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.
 
+# 🧑🏻‍💻 Academic Publications
 
+*Efficientvmamba: Atrous selective scan for light weight visual mamba.*
+**Xiaohuan Pei**, Tao Huang, Chang Xu.
+Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2024). *(Core Rank A\*)*
 
-# 🧑🏻‍💻 Aademic Publications
+*Localmamba: Visual state space model with windowed selective scan.*
+Tao Huang, **Xiaohuan Pei**, Chang Xu.
+European Conference on Computer Vision (ECCV 2024), Workshop. *(Core Rank A\*)*
 
-   **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
-   *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
-   Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2024). *(Core Rank A\*)*
+*Neural Architecture Retrieval.*
+**Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.
+The Twelfth International Conference on Learning Representations (ICLR 2024). *(Core Rank A\*)*
 
-   Tao Huang, **Xiaohuan Pei**, Chang Xu.  
-   *Localmamba: Visual state space model with windowed selective scan.*  
-   European Conference on Computer Vision (ECCV 2024), Workshop. *(Core Rank A\*)*
+*Contrastive code-comment pre-training.*
+**Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu.
+IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
-  **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.  
-   *Neural Architecture Retrieval.*  
-   The Twelfth International Conference on Learning Representations (ICLR 2024). *(Core Rank A\*)*
+*Self-attention gated cognitive diagnosis for faster adaptive educational assessments.*
+**Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu.
+IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
-  **Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu.  
-   *Contrastive code-comment pre-training.*  
-   IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
-
-  **Xiaohuan Pei**, Shuo Yang, Jiajun Huang.  
-   *Self-attention gated cognitive diagnosis for faster adaptive educational assessments.*  
-   IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
-
-  Hongyan Xu*, **Xiaohuan Pei***, Xiu Su, You Shan, Chang Xu.  
-   *TCNAS: Transformer Architecture Evolving in Clone Detection.*  
-   IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
+*TCNAS: Transformer Architecture Evolving in Clone Detection.*
+Hongyan Xu\*, **Xiaohuan Pei**\*, et al.
+IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
 
 
 # 📖 Teaching
