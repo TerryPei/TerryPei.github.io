@@ -207,7 +207,7 @@ IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
 *TCNAS: Transformer Architecture Evolving in Clone Detection.*
-Hongyan Xu\*, **Xiaohuan Pei**\*, et al.
+Hongyan Xu\*, **Xiaohuan Pei**\*, Xiu Su, Shan You, Chang Xu.
 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
 
 
