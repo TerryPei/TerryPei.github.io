@@ -207,8 +207,6 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
 
 # 🧑🏻‍💻 Aademic Publications
 
-## Academic Publications
-
    **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
    *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
    Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2024). *(Core Rank A\*)*
@@ -225,7 +223,7 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
    *Contrastive code-comment pre-training.*  
    IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
-  **Xiaohuan Pei**, et al.  
+  **Xiaohuan Pei**, Shuo Yang, Jiajun Huang.  
    *Self-attention gated cognitive diagnosis for faster adaptive educational assessments.*  
    IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
@@ -233,46 +231,6 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
    *TCNAS: Transformer Architecture Evolving in Clone Detection.*  
    IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
 
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/C3P.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Contrastive Code-Comment Pre-training](https://ieeexplore.ieee.org/abstract/document/10027715) 
-<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
- -->
-
-**Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu
-
-*International Conference on Data Mining (ICDM), 2022*
-
-[[Paper]](https://ieeexplore.ieee.org/abstract/document/10027715) 
-[[Code]](https://github.com/TerryPei/C3P) 
-
-</div>
-</div>
-
-
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/AGCDM.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Self-Attention Gated Model for Faster Cognitive Diagnosis](https://ieeexplore.ieee.org/abstract/document/10027634) 
-<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
- -->
-
-**Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu
-
-*International Conference on Data Mining (ICDM), 2022*
-
-[[Paper]](https://ieeexplore.ieee.org/abstract/document/10027634) 
-[[Code]](https://github.com/TerryPei/AGCDM) 
-
-</div>
-</div>
 
 
 
