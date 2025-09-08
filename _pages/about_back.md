@@ -75,8 +75,7 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 
 **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu
 
-[[Paper]](https://arxiv.org/pdf/2505.18605) 
-<!-- [[UnderReview]](-)  -->
+[[Paper]](https://arxiv.org/pdf/2505.18605) [[UnderReview]](-) 
 
 </div>
 </div>
@@ -182,11 +181,11 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 **Xiaohuan Pei**, Tao Huang, Chang Xu.  
    *Rethinking Causal Mask Attention for Vision-Language Inference.*  
-   arXiv preprint [arXiv:2412.04652](https://arxiv.org/pdf/2505.18605) (2024).
+   Under review (2025).
 
-<!-- Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.  
+Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.  
    *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
-   Under review (2025). -->
+   Under review (2025).
 
 **Xiaohuan Pei**, Tao Huang, Chang Xu.  
    *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*  
@@ -196,16 +195,19 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
    *GPT self-supervision for a better data annotator.*  
    arXiv preprint [arXiv:2306.04349](https://arxiv.org/abs/2306.04349) (2023).
 
- <!-- Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
+ Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
    *Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*  
-   Under review (2025). -->
+   Under review (2025).
 
  **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.  
    *Text-driven Neural Architecture Embeddings and Retrieval.*  
+   Under review (2024).
 
 
 
 # 🧑🏻‍💻 Aademic Publications
+
+## Academic Publications
 
    **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
    *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
@@ -223,13 +225,54 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
    *Contrastive code-comment pre-training.*  
    IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
-  **Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu.  
+  **Xiaohuan Pei**, et al.  
    *Self-attention gated cognitive diagnosis for faster adaptive educational assessments.*  
    IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
   Hongyan Xu*, **Xiaohuan Pei***, et al.  
    *TCNAS: Transformer Architecture Evolving in Clone Detection.*  
    IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
+
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/C3P.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Contrastive Code-Comment Pre-training](https://ieeexplore.ieee.org/abstract/document/10027715) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Daochang Liu, Qian Luo, Chang Xu
+
+*International Conference on Data Mining (ICDM), 2022*
+
+[[Paper]](https://ieeexplore.ieee.org/abstract/document/10027715) 
+[[Code]](https://github.com/TerryPei/C3P) 
+
+</div>
+</div>
+
+
+
+<!-- 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/AGCDM.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Self-Attention Gated Model for Faster Cognitive Diagnosis](https://ieeexplore.ieee.org/abstract/document/10027634) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Shuo Yang, Jiajun Huang, Chang Xu
+
+*International Conference on Data Mining (ICDM), 2022*
+
+[[Paper]](https://ieeexplore.ieee.org/abstract/document/10027634) 
+[[Code]](https://github.com/TerryPei/AGCDM) 
+
+</div>
+</div> -->
 
 
 
