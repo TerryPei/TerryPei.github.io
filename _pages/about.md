@@ -158,7 +158,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 </div>
 </div>
 
-# Preprints
+# 🧑🏻‍💻 Preprints
 
 **Xiaohuan Pei**, Tao Huang, Chang Xu.  
    *Rethinking Causal Mask Attention for Vision-Language Inference.*  
@@ -186,7 +186,7 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
 
 
 
-# Aademic Publications
+# 🧑🏻‍💻 Aademic Publications
 
    **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
    *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
