@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! I am  Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, honorably supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
+Hi! I am Xiaohuan Pei (Terry), a second year PhD student at the University of Sydney, honorably supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
 
 **Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
 <!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
