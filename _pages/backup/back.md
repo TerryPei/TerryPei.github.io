@@ -229,7 +229,7 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
    *Self-attention gated cognitive diagnosis for faster adaptive educational assessments.*  
    IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
-  Hongyan Xu*, **Xiaohuan Pei***, et al.  
+  Hongyan Xu*, **Xiaohuan Pei***, Xiu Su, You Shan, Chang Xu.  
    *TCNAS: Transformer Architecture Evolving in Clone Detection.*  
    IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
 
@@ -255,7 +255,7 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
 
 
 
-<!-- 
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDM 2022</div><img src='images/AGCDM.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -272,7 +272,7 @@ Yuxing Chen*, **Xiaohuan Pei***, Minjing Dong, Chang Xu.
 [[Code]](https://github.com/TerryPei/AGCDM) 
 
 </div>
-</div> -->
+</div>
 
 
 
