@@ -33,25 +33,6 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 
 
 
-<!-- My research interests lie in intelligent surgical skill assessment using computer vision and generative artificial intelligence.
- -->
-
-<!-- My research seeks to answer two principal questions, i.e., “what” is performed and “how well” it is performed, by observing human activities from visual or multi-modal data and using generative learning frameworks. This is pivotal to human-centric machine intelligence to comprehend, collaborate with, and amplify human capabilities in daily and professional lives.  -->
-
-<!-- This stems from the notion that human behavior is inherently a generative act, conditioned on driving goals, environmental contexts, and prior experiences. Such an “understanding-by-generating" paradigm enables unsupervised learning of human activities. I also feel excited about delving into human skill assessment by viewing skills as emergent attributes generated from repeated action operations. My goal is to understand skill acquisition through generative learning, by connecting the generative process of actions and the learning curve of skills from novice to expert.  -->
-
-<!-- My research about generative surgical AI lies in intelligent analysis of surgeries to enhance patient care and surgical education. The short-term goal is to demystify the intricacies of surgical procedures, e.g., tool usage and event patterns, using videos from minimally invasive or robotic surgeries, and establish links with surgical skills and clinical outcomes. My previous works have shown promising results; AI-based skill assessment on in-vivo clinical gastrectomy surgeries demonstrated remarkable correlations with the expert consensus. The long-term vision is to bring intelligence into the multimodal data of surgeries in an enriched context beyond videos, including perioperative imaging, robotic kinematics, textual records, and environmental and physiological metrics, to offer holistic insights into surgical procedures. By utilizing specialized models, foundational models, and specialized-foundational models of machine learning, my research aims to advance surgical data science from concept to translation in the next generation of surgery.
- -->
-<!-- My research is rooted in understanding human action and skills with computer vision and generative artificial intelligence, which also involves fundamental problems in generative diffusion models and applications in automatic surgical skill assessment.
- -->
-<!-- My research interests lie in computer vision, artificial intelligence, and related topics in the medical domain, specifically including:
-- Generative AI, Diffusion Models
-- Surgical AI, Surgical Skill Assessment
-- Video Understanding and Action Analysis -->
-
-<!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
- -->
-
 <!-- <span class='anchor' id='news'></span>
 # 🎉 Updates
 - *2025.05*: Light Future-aware Attention. 
