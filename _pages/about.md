@@ -189,7 +189,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
    *Text-driven Neural Architecture Embeddings and Retrieval.*  
 
-    **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.  
+   **Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu.  
 
 
 
