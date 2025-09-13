@@ -168,10 +168,9 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 <!-- Yuxing Chen*, **Xiaohuan Pei***, Siyu Xu, Yunke Wang, Chang Xu.  
    *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
    Under review (2025). -->
- 
-   *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.* 
-   **Xiaohuan Pei**, Tao Huang, Chang Xu.  
-   arXiv preprint [arXiv:2412.04652] (2024).  
+  *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*  
+   **Xiaohuan Pei**, Tao Huang, Chang Xu. 
+   arXiv preprint [arXiv:2412.04652] (2024).
 
 
    *GPT self-supervision for a better data annotator.*  
