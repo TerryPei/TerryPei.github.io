@@ -202,7 +202,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 *Action-aware Dynamic Pruning for Efficient Vision-Language-Action
 Manipulation.*  
-**Xiaohuan Pei***, Yuxing Chen*, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
+**Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
 arXiv preprint [arXiv:2505.18605] (2025).
 
 
