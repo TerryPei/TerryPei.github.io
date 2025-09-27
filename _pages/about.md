@@ -202,7 +202,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 *Action-aware Dynamic Pruning for Efficient Vision-Language-Action
 Manipulation.*  
-**Xiaohuan Pei***, Yuxing Chen*, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
+**Xiaohuan Pei***, Yuxing Chen*, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
 arXiv preprint [arXiv:2505.18605] (2025).
 
 
@@ -263,7 +263,7 @@ IEEE International Conference on Data Mining (ICDM 2022). *(Core Rank A\*)*
 
 
 *TCNAS: Transformer Architecture Evolving in Clone Detection.*  
-Hongyan Xu*, **Xiaohuan Pei***, Shan You, Chang Xu.  
+Hongyan Xu<sup>*</sup>, **Xiaohuan Pei**<sup>*</sup>, Shan You, Chang Xu.  
 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024).
 
 
