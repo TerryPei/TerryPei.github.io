@@ -41,16 +41,56 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 - *2024.01*: One paper accepted to ICLR 2024.
 <span class='anchor' id='publications'></span> -->
 
-
+<!-- Self-Distilled RoI Predictors for Fine-Grained MLLM Perception -->
 
 <br>
 
 # 📝  Recent Work
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/adp.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Action-aware Dynamic Pruning for Efficient Vision-Language-Action
+Manipulation](-) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei***, Yuxing Chen*, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
+
+[[Paper]](https://github.com/chen7086/VLA-ADP)
+[[Code]](https://github.com/chen7086/VLA-ADP)
+
+
+</div>
+</div>
+
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/SD-RPN.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Self-Distilled RoI Predictors for Fine-Grained MLLM Perception](https://arxiv.org/pdf/2509.16944) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu
+
+[[Paper]](https://arxiv.org/pdf/2509.16944)
+[[Code]](https://github.com/YuHengsss/SD-RPN)
+<!-- [[UnderReview]](-)  -->
+
+</div>
+</div>
+
+
+
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Light Future-aware Masking for Vision-Language Inference](-) 
+[Light Future-aware Masking for Vision-Language Inference](https://arxiv.org/pdf/2505.18605)
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
@@ -160,25 +200,33 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 # 🧑🏻‍💻 Preprints
 
+*Action-aware Dynamic Pruning for Efficient Vision-Language-Action
+Manipulation.*  
+**Xiaohuan Pei***, Yuxing Chen*, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
+arXiv preprint [arXiv:2505.18605] (2025).
+
+
+
  
    *Rethinking Causal Mask Attention for Vision-Language Inference.*  
-   **Xiaohuan Pei**, Tao Huang, Chang Xu. 
-   arXiv preprint [arXiv:2412.04652] (2024).
+   **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu.  
+   arXiv preprint [arXiv:2505.18605] (2025).
 
 <!-- Yuxing Chen*, **Xiaohuan Pei***, Siyu Xu, Yunke Wang, Chang Xu.  
    *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
    Under review (2025). -->
   *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*  
-   **Xiaohuan Pei**, Tao Huang, Chang Xu. 
-   arXiv preprint [arXiv:2412.04652] (2024).
+  **Xiaohuan Pei**, Tao Huang, Chang Xu.   
+  arXiv preprint [arXiv:2412.04652] (2024).
 
 
    *GPT self-supervision for a better data annotator.*  
-   **Xiaohuan Pei**, Yanxi Li, Chang Xu.  
+   **Xiaohuan Pei**, Yanxi Li, Chang Xu.   
    arXiv preprint [arXiv:2306.04349]  (2023).
 
   
    *Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*  
+   arXiv preprint [arXiv:2509.16944]  (2025).   
    Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
    
 
