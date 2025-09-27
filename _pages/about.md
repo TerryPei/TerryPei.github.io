@@ -47,7 +47,7 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 
 # 📝  Recent Work
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/adp.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/ADP2.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Action-aware Dynamic Pruning for Efficient Vision-Language-Action
@@ -55,7 +55,7 @@ Manipulation](-)
 <!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
  -->
 
-**Xiaohuan Pei***, Yuxing Chen*, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
+**Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
 
 [[Paper]](https://github.com/chen7086/VLA-ADP)
 [[Code]](https://github.com/chen7086/VLA-ADP)
