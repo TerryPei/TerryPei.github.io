@@ -15,6 +15,17 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+<style>
+/* Lightweight preview: 不改 main.scss，只新增 .proj 系列 */
+.proj{position:relative;display:block;overflow:hidden;}
+.proj-still{display:block;width:100%;height:auto;transition:opacity 120ms ease;}
+.proj-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;transition:opacity 180ms ease;}
+.proj.is-playing .proj-video,.proj:hover .proj-video{opacity:1;}
+.proj.is-playing .proj-still,.proj:hover .proj-still{opacity:0;}
+@media (prefers-reduced-motion: reduce){.proj-still,.proj-video{transition:none !important;}}
+</style>
+
+
 <span class='anchor' id='about-me'></span>
 
 Hi! I am Xiaohuan Pei (Terry) 😊, a second year PhD student at the University of Sydney, honorably supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
@@ -45,24 +56,34 @@ Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation 
 
 <br>
 
+
+
+
+
 # 📝  Recent Work
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/ADP2.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class='paper-box-image'>
+  <div><div class="badge"></div>
+    <div class="proj" data-preview-delay="5000" data-preview-duration="3500">
+      <img class="proj-still" src="images/adp.gif" alt="sym" width="100%"
+           data-gif="images/ADP2.gif">
+      <video class="proj-video" preload="none" muted playsinline loop poster="images/ADP2.png">
+        <source src="videos/ADP2.mp4" type="video/mp4">
+      </video>
+    </div>
 
 [Action-aware Dynamic Pruning for Efficient Vision-Language-Action
-Manipulation](-) 
-<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
- -->
+Manipulation](-)   
 
 **Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
 
 [[Paper]](https://github.com/chen7086/VLA-ADP)
 [[Code]](https://github.com/chen7086/VLA-ADP)
+  </div>
+</div>
 
 
-</div>
-</div>
+
 
 
 
