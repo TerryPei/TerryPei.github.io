@@ -27,7 +27,7 @@ author:
   location         : "Sydney, Australia"
   employer         : 
   pubmed           : 
-  googlescholar    : # "https://scholar.google.com/citations?user=gD6bKHEAAAAJ&hl=en"
+  googlescholar    :  "https://scholar.google.com/citations?user=gD6bKHEAAAAJ&hl=en"
   email            : "xiaohuan.pei@sydney.edu.au"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -43,7 +43,7 @@ author:
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : # "https://www.linkedin.com/in/terry-p-812013113/"
+  linkedin         :  "https://www.linkedin.com/in/terry-p-812013113/"
   dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
   orcid            : # e.g., "https://orcid.org/xxxx"
   pinterest        :
