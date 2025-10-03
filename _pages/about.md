@@ -50,7 +50,7 @@ supervised by [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/).
 
 Future-aware Masking for Vision Language Inference, 
 
-Cross-Self Pruning with \$n-Softmax\$ (equivalent to GPT-OSS sink implementation released one year earlier).
+Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation released one year earlier).
 
 
 
