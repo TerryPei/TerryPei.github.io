@@ -28,7 +28,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! I am Xiaohuan Pei (Terry) 😊, a second year PhD student at the University of Sydney, honorably supervised by Professor Chang Xu. I major in deep learning at the school of computer science.
+
+ <!-- **Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney, supervised by [Prof. Chang Xu](http://changxu.xyz/). His research focuses on the efficiency of vision–language models and foundation models for robot manipulations. He previously received an MPhil from USYD and a BSc from CCNU
+supervised by [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/).
+ -->
+
+ Hi! I am Xiaohuan Pei (Terry) 😊, a second-year PhD student at the University of Sydney, honorably supervised by [Prof. Chang Xu](http://changxu.xyz/). I also received my MPhil degree at the University of Sydney. Before that, I obtained a BSc degree from CCNU, supervised by [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/). 
+ I major in deep learning at the School of Computer Science, with a research focus on the efficiency of vision–language models and foundation models.  
+
+
+
+
 
 **Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
 <!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
@@ -40,7 +50,7 @@ Hi! I am Xiaohuan Pei (Terry) 😊, a second year PhD student at the University 
 
 Future-aware Masking for Vision Language Inference, 
 
-Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation released one year earlier).
+Cross-Self Pruning with \$n-Softmax\$ (equivalent to GPT-OSS sink implementation released one year earlier).
 
 
 
