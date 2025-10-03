@@ -33,7 +33,7 @@ redirect_from:
 supervised by [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/).
  -->
 
- Hi! I am Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, honorably supervised by [Prof. Chang Xu](http://changxu.xyz/). I also received my MPhil degree at the USYD. Before that, I obtained a BSc degree from CCNU, supervised by [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/). 
+ Hi! I am Xiaohuan Pei (Terry) 😊, a PhD student at the University of Sydney, honorably supervised by Prof. [Chang Xu](http://changxu.xyz/). I also received my MPhil degree at the USYD. Before that, I obtained a BSc degree from CCNU, supervised by Prof. [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/). 
  I major in deep learning at the School of Computer Science, with a research focus on the efficiency of vision–language models and foundation models.  
 
 
