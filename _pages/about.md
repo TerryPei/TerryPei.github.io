@@ -266,7 +266,7 @@ arXiv preprint [arXiv:2505.18605] (2025).
 # 🧑🏻‍💻 Academic Publications
 
 *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
-**Xiaohuan Pei**<sup>*</sup>, Tao Huang<sup>*</sup>, and Chang Xu.  
+**Xiaohuan Pei**, Tao Huang, and Chang Xu.  
 Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2024). *(Core Rank A\*)*  
 
 
