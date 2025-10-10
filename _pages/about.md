@@ -49,7 +49,7 @@ Future-aware Masking for Vision Language Inference,
 
 Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation released one year earlier).
 
-<span style="color:red">💻 I am openning for research collabration on efficiency for LLM/VLM/VLA.</span>
+<span style="color:red">💻 Openning for research collabration on efficiency for LLM/VLM/VLA.</span>
 
 
 
