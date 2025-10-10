@@ -36,13 +36,12 @@ redirect_from:
  I major in deep learning at the School of Computer Science, with a research focus on the efficiency of vision–language models and foundation models.   -->
 
 
-
-
-
 **Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
 <!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
   <img alt="Google Scholar" src="https://img.shields.io/badge/455-Citations-4A90E2?logo=google-scholar&logoColor=white">
 </a> -->
+<span style="color:red">💻 I am openning for research collabration on efficiency for LLM/VLM/VLA.</span>
+
 
 
 <!-- **Recent Projects**: 
@@ -266,7 +265,7 @@ arXiv preprint [arXiv:2505.18605] (2025).
 # 🧑🏻‍💻 Academic Publications
 
 *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
-**Xiaohuan Pei**, Tao Huang, and Chang Xu.  
+**Xiaohuan Pei**<sup>*</sup>, Tao Huang<sup>*</sup>, and Chang Xu.  
 Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2024). *(Core Rank A\*)*  
 
 
