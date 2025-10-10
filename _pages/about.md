@@ -40,6 +40,7 @@ redirect_from:
 <!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
   <img alt="Google Scholar" src="https://img.shields.io/badge/455-Citations-4A90E2?logo=google-scholar&logoColor=white">
 </a> -->
+
 <span style="color:red">💻 I am openning for research collabration on efficiency for LLM/VLM/VLA.</span>
 
 
