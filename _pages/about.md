@@ -41,15 +41,19 @@ redirect_from:
   <img alt="Google Scholar" src="https://img.shields.io/badge/455-Citations-4A90E2?logo=google-scholar&logoColor=white">
 </a> -->
 
+**Recent Highlights**: 
+
+Action-aware Dynamic Pruning for Efficient Vision-Language-Action
+
+Future-aware Masking for Vision Language Inference, 
+
+Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation released one year earlier).
+
 <span style="color:red">💻 I am openning for research collabration on efficiency for LLM/VLM/VLA.</span>
 
 
 
-<!-- **Recent Projects**: 
 
-Future-aware Masking for Vision Language Inference, 
-
-Cross-Self Pruning with \$nSoftmax\$ (equivalent to GPT-OSS sink implementation released one year earlier). -->
 
 
 
