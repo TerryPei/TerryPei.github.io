@@ -43,7 +43,7 @@ redirect_from:
 
 **Recent Highlights**: 
 
-Action-aware Dynamic Pruning for Efficient Vision-Language-Action
+Action-aware Dynamic Pruning for Efficient Vision-Language-Action,
 
 Future-aware Masking for Vision Language Inference, 
 
