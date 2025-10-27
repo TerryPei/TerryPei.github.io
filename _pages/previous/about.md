@@ -129,7 +129,7 @@ Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu
 **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu
 
 [[Paper]](https://arxiv.org/pdf/2505.18605) 
-[[Code]](-) 
+<!-- [[UnderReview]](-)  -->
 
 </div>
 </div>
@@ -192,6 +192,44 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 </div>
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024</div><img src='images/NAR.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Neural Architecture Retrieval](https://openreview.net/pdf?id=1JtTPYBKqt) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
+<!-- <a href="https://github.com/TerryPei/NNRetreival" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
+</a> -->
+
+
+*The International Conference on Learning Representations (ICLR), 2024*
+
+[[Paper]](https://openreview.net/pdf?id=1JtTPYBKqt) [[Code]](https://github.com/TerryPei/NNRetrieval) 
+
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/Annotator.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+
+[GPT Self-Supervision for an Efficient Data Annotator](https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/Annotator.pdf) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
+
+[[Paper]](https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/Annotator.pdf) 
+[[Code]](https://github.com/TerryPei/Annotator) 
+[[News]](https://mp.weixin.qq.com/s/8661PcsHCprNdRKhucstIw) 
+
+
+</div>
+</div>
 
 # 🧑🏻‍💻 Preprints
 
