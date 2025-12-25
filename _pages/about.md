@@ -29,28 +29,31 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 
- **Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/). He is also collaborate closely with [Tao Huang](https://taohuang.info/) at SJTU, [Yanxi Li](https://liyxi.github.io/) at NTU, [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. <!-- He will join the University of California, Los Angeles (UCLA) hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/) as a visiting PhD researcher. -->His research focuses on the efficiency of vision–language models and foundation models for robot manipulations and autonomous driving. 
-<!-- He will join the University of California, Los Angeles (UCLA) as a visiting PhD hosted by Prof. Cho-Jui Hsieh. -->
+ **Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/). 
+ He currently collaborate closely with [Tao Huang](https://taohuang.info/) at SJTU and [Pichao Wang](https://wangpichao.github.io/) at NVIDIA US. 
+ His research focuses on the efficiency of vision–language models and foundation multimodal models for robot manipulations and autonomous driving. 
+
+  <!-- He will join the University of California, Los Angeles (UCLA) hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/) as a visiting PhD researcher.  -->
 
 
  <!-- Hi! I am Xiaohuan Pei (Terry)😊 , a PhD student at the University of Sydney, honorably supervised by Prof. [Chang Xu](http://changxu.xyz/). I also received my MPhil degree at the USYD. Before that, I obtained a BSc degree from CCNU, supervised by Prof. [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/). 
  I major in deep learning at the School of Computer Science, with a research focus on the efficiency of vision–language models and foundation models.   -->
 
 
-**Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions.
+<!-- **Specialized Field**: Efficiency, Vision Language Models, Vision Language Actions. -->
+
 <!-- <a href="https://scholar.google.com/citations?user=ElujT6oAAAAJ" target="_blank" style="margin-left: 10px;">
   <img alt="Google Scholar" src="https://img.shields.io/badge/455-Citations-4A90E2?logo=google-scholar&logoColor=white">
 </a> -->
 
 **Recent Highlights**: 
+<!-- Action-aware Dynamic Pruning for Efficient Vision-Language-Action, -->
 
-Action-aware Dynamic Pruning for Efficient Vision-Language-Action,
+Future-aware Masking for Vision Language Model, 
 
-Future-aware Masking for Vision Language Inference, 
+Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year earlier than OpenAI).
 
-Cross-Self Pruning with \$nSoftmax\$ (GPT-OSS sink implementation released one year earlier).
-
-<span style="color:red">💻 Openning for research collabration on efficiency for LLM/VLM/VLA.</span>
+<span style="color:red"> Openning for research collabration on efficiency for LLM/VLM/VLA.</span>
 
 
 
@@ -74,7 +77,7 @@ Cross-Self Pruning with \$nSoftmax\$ (GPT-OSS sink implementation released one y
 
 
 
-# 📝  Selected Work
+# 📝  Selected Work 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/ADP2.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
