@@ -31,7 +31,8 @@ redirect_from:
 
  **Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/). 
  He currently collaborate with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU and research PI [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
- His research focuses on the efficiency of vision–language models and foundation multimodal models for robot manipulations and autonomous driving. 
+   He will visit the University of California, Los Angeles (UCLA) as a graduate researcher, hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/). 
+ His research focuses on the vision–language models and foundation multimodal models for robot manipulations and autonomous driving. 
 
   <!-- He will join the University of California, Los Angeles (UCLA) hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/) as a visiting PhD researcher.  -->
 
