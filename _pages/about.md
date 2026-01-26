@@ -32,7 +32,7 @@ redirect_from:
 **Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  He collaborate with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU, RA/Prof. [Yanxi Li](https://liyxi.github.io/) at NTU, A/Prof. [Minjing Dong](https://www.cs.cityu.edu.hk/~minjdong/) at CityU, [Yuheng Shi]() at USYD and researcher [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
 He is a visiting graduate researcher at the University of California, Los Angeles (UCLA), hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/).
 
-Currently, he is working on vision-language models pretraining from scratch at the billion-parameter scale, with a primary focus on kinds of receipts of **Stage-1 (Alignment)**, **Stage-2 (SFT)** and their own designed **Stage-3**. In parallel, He is also exploring foundation models for autonomous driving, with an emphasis on scalable pretraining and efficient inference.
+Currently, he is working on fundation models pretraining from scratch at the billion-parameter scale, with a primary focus on kinds of receipts of **Stage-1 (Alignment)**, **Stage-2 (SFT)** and their own designed **Stage-3**. In parallel, He is also exploring foundation models for autonomous driving, with an emphasis on scalable pretraining and efficient inference.
 
   <!-- He will join the University of California, Los Angeles (UCLA) hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/) as a visiting PhD researcher.  -->
 
