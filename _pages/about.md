@@ -28,11 +28,12 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+**Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  
+<!-- His research focuses on the vision–language models and foundation multimodal models for robot manipulations and autonomous driving.  -->
+He collaborate with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU, RA/Prof. [Yanxi Li](https://liyxi.github.io/) at NTU, A/Prof. [Minjing Dong](https://www.cs.cityu.edu.hk/~minjdong/) at CityU, [Yuheng Shi]() at USYD and researcher [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
+He is a visiting graduate researcher at the University of California, Los Angeles (UCLA), hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/).
 
- **Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  His research focuses on the vision–language models and foundation multimodal models for robot manipulations and autonomous driving. 
- <!-- He collaborate as a research intern with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU and research PI [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
-   He is a visiting graduate researcher at the University of California, Los Angeles (UCLA), hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/).  -->
- <!-- His research focuses on the vision–language models and foundation multimodal models for robot manipulations and autonomous driving.  -->
+Currently, he is working on large-scale pretraining from scratch at the billion-parameter scale, with a primary focus on kinds of receipts of **Stage-1 (Alignment)**, **Stage-2 (SFT)** and their own designed **Stage-3**. In parallel, He is also exploring foundation models for autonomous driving, with an emphasis on scalable pretraining and Efficient inference.
 
   <!-- He will join the University of California, Los Angeles (UCLA) hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/) as a visiting PhD researcher.  -->
 
@@ -54,7 +55,7 @@ redirect_from:
 
 Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year earlier than OpenAI). -->
 
-<span style="color:red"> Openning for research collabration on efficiency for LLM/VLM/VLA.</span>
+<span style="color:red"> Currently openning one position for research collabration on efficiency for World Model.</span>
 
 
 
@@ -80,7 +81,7 @@ Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year 
 
 # 📝  Selected Work 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/ADP2.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/ADP2.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Action-aware Dynamic Pruning for Efficient Vision-Language-Action
@@ -104,7 +105,7 @@ Manipulation](https://arxiv.org/pdf/2509.22093)
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/SD-RPN.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/SD-RPN.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Self-Distilled RoI Predictors for Fine-Grained MLLM Perception](https://arxiv.org/pdf/2509.16944) 
@@ -124,7 +125,7 @@ Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/future.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/future.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Light Future-aware Masking for Vision-Language Inference](https://arxiv.org/pdf/2505.18605)
@@ -201,34 +202,17 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 # 🧑🏻‍💻 Preprints
 
-*Action-aware Dynamic Pruning for Efficient Vision-Language-Action
-Manipulation.*  
-**Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
-arXiv preprint [arXiv:2505.18605] (2025).
-
-
-
- 
-   *Rethinking Causal Mask Attention for Vision-Language Inference.*  
-   **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu.  
-   arXiv preprint [arXiv:2505.18605] (2025).
-
 <!-- Yuxing Chen*, **Xiaohuan Pei***, Siyu Xu, Yunke Wang, Chang Xu.  
    *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
    Under review (2025). -->
   *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*  
   **Xiaohuan Pei**, Tao Huang, Chang Xu.   
-  arXiv preprint [arXiv:2412.04652] (2024).
+  arXiv preprint [arXiv:2412.04652].
 
 
    *GPT self-supervision for a better data annotator.*  
    **Xiaohuan Pei**, Yanxi Li, Chang Xu.   
    arXiv preprint [arXiv:2306.04349]  (2023).
-
-  
-   *Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*  
-   arXiv preprint [arXiv:2509.16944]  (2025).   
-   Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
    
 
    *Text-driven Neural Architecture Embeddings and Retrieval.*  
@@ -237,6 +221,19 @@ arXiv preprint [arXiv:2505.18605] (2025).
 
 
 # 🧑🏻‍💻 Academic Publications
+
+*Action-aware Dynamic Pruning for Efficient Vision-Language-Action
+Manipulation.*  
+**Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
+The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
+
+*Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*    
+Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.  
+The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
+
+*Rethinking Causal Mask Attention for Vision-Language Inference.*  
+**Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu. 
+The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
 
 *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
 **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
