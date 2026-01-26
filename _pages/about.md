@@ -201,9 +201,6 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 # 🧑🏻‍💻 Preprints
 
-<!-- Yuxing Chen*, **Xiaohuan Pei***, Siyu Xu, Yunke Wang, Chang Xu.  
-   *Dynamic Anticipatory Pruning for Efficient Vision-Language-Actions Manipulations.*  
-   Under review (2025). -->
   *Cross-Self KV Cache Pruning for Efficient Vision-Language Inference.*  
   **Xiaohuan Pei**, Tao Huang, Chang Xu.   
   arXiv preprint [arXiv:2412.04652].
@@ -231,7 +228,7 @@ Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu.
 The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
 
 *Rethinking Causal Mask Attention for Vision-Language Inference.*  
-**Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu. 
+**Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu.    
 The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
 
 *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
