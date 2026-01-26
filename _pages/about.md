@@ -220,7 +220,7 @@ Tao Huang, **Xiaohuan Pei**, Chang Xu
 
 *Action-aware Dynamic Pruning for Efficient Vision-Language-Action
 Manipulation.*  
-**Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
+**Xiaohuan Pei**, Yuxing Chen, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu   
 The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
 
 *Catching the details: self-distilled ROI predictors for fine-grained Vision-Language-Model perception.*    
