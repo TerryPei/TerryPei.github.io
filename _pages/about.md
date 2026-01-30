@@ -233,7 +233,7 @@ The Fourteenth International Conference on Learning Representations (ICLR 2026).
 
 *Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
 **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
-Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2024). *(Core Rank A\*)*  
+Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2025). *(Core Rank A\*)*  
 
 
 *Localmamba: Visual state space model with windowed selective scan.*  
