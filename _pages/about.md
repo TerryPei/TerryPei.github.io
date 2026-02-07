@@ -176,6 +176,25 @@ Yuheng Shi, **Xiaohuan Pei**, Minjing Dong, Chang Xu
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024</div><img src='images/NAR.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Neural Architecture Retrieval](https://openreview.net/pdf?id=1JtTPYBKqt) 
+<!-- <strong><span class='show_paper_citations' data='ElujT6oAAAAJ:_kc_bZDykSQC'></span></strong>
+ -->
+
+**Xiaohuan Pei**, Yanxi Li, Minjing Dong, Chang Xu
+<!-- <a href="https://github.com/TerryPei/NNRetreival" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
+</a> -->
+
+
+*The International Conference on Learning Representations (ICLR), 2024*
+
+[[Paper]](https://openreview.net/pdf?id=1JtTPYBKqt) [[Code]](https://github.com/TerryPei/NNRetrieval) 
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV W 2024</div><img src='images/local.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
