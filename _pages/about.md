@@ -29,8 +29,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-**Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  He collaborate with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU, <!-- RA/Prof. [Yanxi Li](https://liyxi.github.io/) at NTU, A/Prof. [Minjing Dong](https://www.cs.cityu.edu.hk/~minjdong/) at CityU,  -->
-[Yuheng Shi]() at USYD and researcher [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
+**Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  He collaborate with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU, RA/Prof. [Yanxi Li](https://liyxi.github.io/) at NTU, A/Prof. [Minjing Dong](https://www.cs.cityu.edu.hk/~minjdong/) at CityU, [Yuheng Shi]() at USYD and researcher [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
 He is a visiting graduate researcher at the University of California, Los Angeles (UCLA), hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/).
 
 Recently, his research centers on large-scale pretraining of foundation models from scratch at the billion-parameter level, with a particular focus on principled training recipes spanning **Stage-1 (Alignment)**, **Stage-2 (SFT)**, and a newly designed **Stage-3** paradigm. In parallel, he investigates foundation models for autonomous driving, emphasizing scalable pretraining pipelines and efficiency-oriented inference to support real-world deployment. 
