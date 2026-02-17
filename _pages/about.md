@@ -34,7 +34,7 @@ He is a visiting graduate researcher at the University of California, Los Angele
 
 Recently, he is working on large-scale pretraining of foundation models from scratch at the billion-parameter level, with a particular focus on principled training recipes spanning **Stage-1 (Alignment)**, **Stage-2 (SFT)**, and a newly designed **Stage-3** paradigm. In parallel, he investigates foundation models for autonomous driving, emphasizing scalable pretraining pipelines and efficiency-oriented inference to support real-world deployment. 
 
-He is also a nationally certified table tennis 🏓 athlete and registered professional coach.
+He is also a nationally certified table tennis athlete and registered professional coach.
 
 
 
