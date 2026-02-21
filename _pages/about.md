@@ -100,6 +100,7 @@ Manipulation](https://arxiv.org/pdf/2509.22093)
 
 [[Paper]](https://arxiv.org/pdf/2509.22093)
 [[Code]](https://github.com/TerryPei/VLA-ADP)
+[[Web]](https://www.terrypei.com/VLA-ADP/)
 
 
 </div>
