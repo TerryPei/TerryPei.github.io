@@ -99,8 +99,8 @@ Manipulation](https://arxiv.org/pdf/2509.22093)
 **Xiaohuan Pei**<sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
 
 [[Paper]](https://arxiv.org/pdf/2509.22093)
-[[Code]](https://github.com/TerryPei/VLA-ADP)
-[[Web]](https://www.terrypei.com/VLA-ADP/)
+[[Code]](https://chen7086.github.io/VLA-ADP/)
+[[Web]](https://chen7086.github.io/VLA-ADP/)
 
 
 </div>
