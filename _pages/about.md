@@ -62,7 +62,7 @@ He is also a nationally certified table tennis athlete and registered profession
 
 Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year earlier than OpenAI). -->
 
-<span style="color:red"> Openning to one research intern position working on efficiency for VLM/VLA.</span>
+<span style="color:red"> Openning to one research intern position working on scalable training/inference for large multi-modality models.</span>
 
 
 
