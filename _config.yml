@@ -22,7 +22,6 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Xiaohuan Pei"
-  # avatar           : "images/photo_large.jpg"
   avatar           : "images/xiaohuan.jpg"
   # avatar           : "images/photo.jpg"
   location         : "Sydney/LA"
