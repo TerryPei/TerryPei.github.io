@@ -82,10 +82,10 @@ Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year 
 
 <br>
 
-# 📝  Recent Industry Work 
+<!-- # 📝  Recent Industry Work  -->
 
-- All-in-One    (coming soon)
-- S-E  (coming soon)
+<!-- - All-in-One    (coming soon) -->
+<!-- - S-E  (coming soon) -->
 
 
 # 📝  Previous Academic Work 
