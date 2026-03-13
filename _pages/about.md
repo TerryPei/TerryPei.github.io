@@ -88,7 +88,7 @@ Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year 
 <!-- - S-E  (coming soon) -->
 
 
-# 📝  Previous Academic Work 
+# 📝  Academic Work 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/ADP2.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
