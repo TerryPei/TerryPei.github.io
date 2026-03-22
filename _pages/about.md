@@ -29,7 +29,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-**Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  He work closely with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU, and collaborate with RA/Prof. [Yanxi Li](https://liyxi.github.io/) at NTU, A/Prof. [Minjing Dong](https://www.cs.cityu.edu.hk/~minjdong/) at CityU, [Yuheng Shi]() at USYD, Prof. [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/) at CCNU and researcher [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
+**Xiaohuan Pei (Terry)** is a PhD student in Computer Science at the University of Sydney (USYD), supervised by Prof. [Chang Xu](http://changxu.xyz/).  He works closely with A/Prof. [Tao Huang](https://taohuang.info/) at SJTU, and collaborates with RA/Prof. [Yanxi Li](https://liyxi.github.io/) at NTU, A/Prof. [Minjing Dong](https://www.cs.cityu.edu.hk/~minjdong/) at CityU, [Yuheng Shi]() at USYD, Prof. [Zhifeng Wang](https://www.cs.cmu.edu/~novawzf/) at CCNU and researcher [Pichao Wang](https://wangpichao.github.io/) at NVIDIA. 
 He is a visiting graduate researcher at the University of California, Los Angeles (UCLA), hosted by Prof. [Cho-Jui Hsieh](https://samueli.ucla.edu/people/cho-jui-hsieh/). 
 
 Recently, he is working on large-scale pretraining of foundation models from scratch at the billion-parameter level, with a particular focus on principled training recipes spanning **Stage-1 (Alignment)**, **Stage-2 (SFT)**, and a newly designed **[Stage-3 Paradigm](/stage3/)**. In parallel, he investigates foundation models for autonomous driving, emphasizing scalable pretraining pipelines and efficiency-oriented inference to support real-world deployment. 
@@ -62,7 +62,7 @@ He is also a nationally certified table tennis athlete and registered profession
 
 Cross-Self Pruning with \$nSoftmax\$ (OSS sink implementation released one year earlier than OpenAI). -->
 
-<span style="color:red"> Openning to one research intern position working on scalable training/inference for large multi-modality models.</span>
+<span style="color:red"> Opening to one research intern position working on scalable training/inference for large multi-modality models.</span>
 
 
 
@@ -261,12 +261,12 @@ The Fourteenth International Conference on Learning Representations (ICLR 2026).
 **Xiaohuan Pei**, Tao Huang, Yanxiang Ma, Chang Xu.    
 The Fourteenth International Conference on Learning Representations (ICLR 2026). *(Core Rank A\*)*
 
-*Efficientvmamba: Atrous selective scan for light weight visual mamba.*  
+*EfficientVMamba: Atrous selective scan for light weight visual mamba.*  
 **Xiaohuan Pei**, Tao Huang, and Chang Xu.  
 Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2025). *(Core Rank A\*)*  
 
 
-*Localmamba: Visual state space model with windowed selective scan.*  
+*LocalMamba: Visual state space model with windowed selective scan.*  
 Tao Huang, **Xiaohuan Pei**, Chang Xu.  
 European Conference on Computer Vision (ECCV 2024), Workshop. *(Core Rank A\*)*  
 
@@ -292,7 +292,7 @@ IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP
 
 
 # 📖 Teaching
-- *2024*, Guest Lecture, Artifical Intelligence, The University of Sydney
+- *2024*, Guest Lecture, Artificial Intelligence, The University of Sydney
 
 - *2023, 2025*, Tutor for COMP5329 Deep Learning, The University of Sydney
 
