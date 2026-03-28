@@ -9,7 +9,33 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<style>
+  .page__content .MathJax,
+  .page__content .MathJax_Display {
+    font-size: 1.08em !important;
+  }
+
+  .page__content .MathJax_Display {
+    max-width: 100%;
+  }
+</style>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: { autoNumber: "all" }
+    },
+    CommonHTML: {
+      linebreaks: { automatic: true, width: "container" }
+    },
+    "HTML-CSS": {
+      linebreaks: { automatic: true, width: "container" }
+    },
+    SVG: {
+      linebreaks: { automatic: true, width: "container" }
+    }
+  });
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
