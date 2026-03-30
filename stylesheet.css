@@ -276,3 +276,33 @@ details[open] summary::before {
 .community-ieee {
   color: #1A1A1A;
 }
+
+/* Mobile responsive */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  table {
+    width: 100% !important;
+  }
+  td {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+  }
+  td[style*="width:25%"],
+  td[style*="width:30%"] {
+    text-align: center;
+  }
+  td[style*="width:25%"] img,
+  td[style*="width:30%"] img {
+    max-width: 200px;
+  }
+  td[style*="padding-top:8%"] {
+    padding-top: 10px !important;
+  }
+}
