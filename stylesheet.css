@@ -298,9 +298,11 @@ details[open] summary::before {
   td[style*="width:30%"] {
     text-align: center;
   }
-  td[style*="width:25%"] img,
-  td[style*="width:30%"] img {
+  td[style*="width:25%"] img {
     max-width: 200px;
+  }
+  td[style*="width:30%"] img {
+    max-width: 120px;
   }
   td[style*="padding-top:8%"] {
     padding-top: 10px !important;
