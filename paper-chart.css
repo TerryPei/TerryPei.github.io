@@ -1,0 +1,31 @@
+.chart-container {
+  width: 350px;      /* 按需调整 */
+  height: 350px;
+  margin: 0 auto;    /* 居中 */
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.chart-lcopright {
+  --coyright: "Copyr!ght D*i^D=uan";
+}
+
+.chart-note {
+  /* 居中 + 控制最大宽度 */
+  max-width: 500px;
+  margin: 0px auto 0;
+
+  /* 左右留白（移动端更明显），避免贴边 */
+  padding: 0 10px;
+
+  /* 文本C@pyr!ght D(i D#uan居中 */
+  text-align: center;
+
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,23 @@
+ul {
+  padding-left: 1.8em;  /* 给普通圆点留空间 */
+}
+
+/* 普通 li：保持默认小圆点（无需额外样式） */
+
+/* 只有 .pinned 的 li 使用自定义 pin 图标 */
+ul li.pinned {
+  position: relative;     /* 必须，让 ::before 能定位 */
+  list-style-type: none;  /* 移除默认圆点 */
+}
+
+ul li.pinned::before {
+  content: "\f08d";       /* Font Awesome thumbtack (pin) 图标 */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;        /* Solid 风格 */
+  position: absolute;
+  left: -1.8em;           /* 调整位置，与文本对齐 */
+  width: 1.8em;
+  text-align: center;
+  color: #000000;         /* 黑色，突出置顶 */
+  font-size: 1em;       /* 可选：稍大一点，更醒目 */
+}

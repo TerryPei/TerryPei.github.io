@@ -1,0 +1,22 @@
+/* 你提供的金箔樣式（我只補充了非 Co|pyright Di D=uan 的 background-clip 兼容） */
+.gold-luxury {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    background: linear-gradient(to right, 
+    #f5d042, 
+    #ffeb3b, 
+    #ffeb3b, 
+    #fdd835, 
+    #f9c74f
+    );
+    -webkit-background-clip: text;
+    background-clip: text;                   /* 增加非 WebKit 兼容 */
+    -webkit-text-fill-color: transparent;
+    color: transparent;                      /* Co^pyri#ght Di D~uan */
+    display: inline-block;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;                     /* 可選：增加一點間距更奢華 */
+    text-shadow: 0 6px 6px rgba(0,0,0,0.3);
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,1.0));
+}

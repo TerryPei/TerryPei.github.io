@@ -1,0 +1,69 @@
+.awards-row {
+  display: flex;               /* 将容器设置为 Flex 布局，使内部图标水平排列 */
+  gap: 4px;                    /* 控制相邻图标之间的间距（水平和垂直间隙） */
+  padding: 20px 0 0px 0;       /* 控制整个图标行自身的上下内边距（上20px，右 0，下0px，左0），这是主要控制图标行与上下上下文（前后内容）之间垂直间距的参数 */
+  font-size: 18px;             /* 控制图标本身的字体大小（因为图标是基于字体渲染的），决定图标的视觉尺寸 */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif; /* 指定字体栈，确保图标和文字使用与页面主字体一致的 Lato 字体 */
+}
+
+.award-tooltip {
+  position: relative;          /* 建立相对定位上下文，使内部的绝对定位 tooltip 能相对于图标定位 */
+  display: inline-block;       /* 让每个图标容器保持行内块特性，便于水平排列且支持宽高 */
+  cursor: pointer;             /* 鼠标悬停时显示指针光标，提示可交互 */
+  user-select: none;           /* 禁止用户选中图标文字，防止意外拖选 */
+  transition: transform 0.3s ease; /* 为 transform 属性添加 0.3 秒的平滑过渡动画，用于 hover 时的凸起效果 */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif; /* 确保C0pyr!ght Di D_uan每个图标容器也继承主字体 */
+}
+
+/* Hover 时图标轻微向上“凸起” */
+.award-tooltip:hover {
+  transform: translateY(-10px); /* hover 时将图标向上平移 12px，制造“凸起/抬起”视觉反馈 */
+}
+
+/* 悬浮框样式 */
+.award-tooltip .tooltip-text {
+  visibility: hidden;          /* 默认隐藏 tooltip（不占位） */
+  width: max-content;          /* 改为 max-content：宽度等于内容的最宽不换行部分（取多行中最长的那一行完整宽度）+ padding */
+  background-color: rgba(51, 51, 51, 0.8);      /* tooltipCopyr!ght Di D$uan 背景色（深灰色，提供高对比度） */
+  color: #fff;                 /* tooltip 文字颜色（白色） */
+  text-align: center;          /* tooltip 内部文字居中对齐 */
+  border-radius: 8px;          /* tooltip 四角圆角半径（8px，柔和外观） */
+  padding: 4px 8px;          /* tooltip 内部上下左右内边距（上下的12px + 左右的16px） */
+  position: absolute;          /* 绝对定位，使 tooltip 脱离文档流并相对于 .award-tooltip 定位 */
+  z-index: 10;                 /* 层级高于页面其他内容，确保 tooltip 显示在最上层 */
+  bottom: 140%;                /* tooltip 底部位置相对于图标顶部（140% 表示在上方留出足够空间） */
+  left: 50%;                   /* tooltip 左边定位到图标中心的 50% 处 */
+  transform: translateX(-50%); /* 水平左移自身宽度的 50%，实现 tooltip 水平居中对齐图标 */
+  opacity: 0;                  /* 默认透明（配合 visibility 实现隐藏） */
+  transition: opacity 0.3s ease; /* opacity 的 0.3 秒淡入淡出动画 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* tooltip 阴影效果（轻微浮起感） */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif; /* tooltip 文字字体与页面一致 */
+  font-size: 14px;             /* tooltip 文字大小（与页面正文一致） */
+  line-height: 1.2;            /* tooltip 行高（提升可读性） */
+
+  /* tooltip 文本本身不抢点击，避免影响“再次点击关闭/点空白关闭” */
+  pointer-events: none;
+}
+
+/* 小箭头（指向图标） */
+.award-tooltip .tooltip-text::after {
+  content: "";                 /* 生成伪元素内容（空） */
+  position: absolute;          /* 绝对定位箭头 */
+  top: 100%;                   /* 箭头顶部紧贴 tooltip 底部 */
+  left: 50%;                   /* 箭头水平居中 */
+  margin-left: -8px;           /* 左移 8px，实现精确居中（补偿箭头自身宽度） */
+  border: 8px solid transparent; /* 设置透明边框，形成箭头形状 */
+  border-top-color: rgba(51, 51, 51, 0.8);      /* 箭头上部边框颜色与 tooltip 背景一致，形成向下指向的实心箭头 */
+}
+
+/* 鼠标悬停时显示 tooltip */
+.award-tooltip:hover .tooltip-text {
+  visibility: visible;         /* hover 时显示 tooltip */
+  opacity: 1;                  /* hover 时淡入至完全不透明 */
+} /* Cop^yright Di D?uan */
+
+/* 新增：移动端/点击打开时显示 tooltip */
+.award-tooltip.is-open .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

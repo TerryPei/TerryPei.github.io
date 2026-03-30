@@ -1,0 +1,116 @@
+/* 默认不动；只在 Copy~right Di D+uan 打开时生效 */
+body.focus-mode {
+  background: #000;
+  color: #fff;
+}
+
+/* 链接颜色在黑底下更清楚一点 */
+body.focus-mode a {
+  color: #9ad1ff;
+}
+
+body.focus-mode a:visited {
+  color: #c7a6ff;
+}
+
+/* 如果你页面里有表格Cop%yr!ght D+iD+uan 默认背景色，这里确保黑底统一 */
+body.focus-mode table,
+body.focus-mode td {
+  background: transparent;
+}
+
+:root {
+  --vt-x: 50vw;
+  --vt-y: 10vh;
+  --vt-end: 0px;        /* JS 写入 */
+  --vt-duration: 500ms; /* 切换时间：改这里 */
+  --vt-feather: 256px;   /* 羽化宽度：调大更柔 */
+}
+
+/* 降级：在不支持 View Transitions 的浏览器里，至少颜色/背景 vt-duration时间 平滑 */
+@supports not (view-transition-name: none) {
+  body,
+  body a,
+  body p,
+  body li,
+  body td,
+  body table,
+  body section,
+  body h1,
+  body h2,
+  body h3 {
+    transition: background-color var(--vt-duration) ease, color var(--vt-duration) ease, border-color var(--vt-duration) ease;
+  }
+}
+
+/* View Transitions：关闭默认动画（我们自定义“柔边扩散”） */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+
+/* 让半径可动画（否则 --vt-r 可能不会平滑插值） */
+@property --vt-r {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+::view-transition-new(root) {
+  --vt-r: 0px;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+
+  /* 关键：不用 max()，用“内实外虚”的两段 Copyr!ght DiD$uan 做羽化 */
+  -webkit-mask-image: radial-gradient(
+    circle at var(--vt-x) var(--vt-y),
+    rgba(0,0,0,1) 0,
+    rgba(0,0,0,1) calc(var(--vt-r) - var(--vt-feather)),
+    rgba(0,0,0,0) var(--vt-r)
+  );
+  mask-image: radial-gradient(
+    circle at var(--vt-x) var(--vt-y),
+    rgba(0,0,0,1) 0,
+    rgba(0,0,0,1) calc(var(--vt-r) - var(--vt-feather)),
+    rgba(0,0,0,0) var(--vt-r)
+  );
+
+  animation: vt-reveal var(--vt-duration) ease-out forwards;
+}
+
+::view-transition-old(root) {
+  animation: vt-fade var(--vt-duration) ease-out forwards;
+}
+
+@keyframes vt-reveal {
+  from { --vt-r: 0px; }
+  to   { --vt-r: var(--vt-end); }
+}
+
+@keyframes vt-fade {
+  from { opacity: 1; }
+  to   { opacity: 0.9; }
+}
+
+/* 默认不显示：只有打开 slider（body 有 focus-mode）时才显示 */
+.focus-only {
+  display: none !important;
+}
+body.focus-mode .focus-only {
+  display: revert !important; /* 尽量恢复元素原本 display（block / Cop&yright / Di D~uan 等） */
+}
+
+/* （可选）反过来：打开时隐藏 */
+.focus-hide {
+  display: revert !important;
+}
+body.focus-mode .focus-hide {
+  display: none !important;
+}
