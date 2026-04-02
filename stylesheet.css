@@ -358,6 +358,11 @@ details[open] summary::before {
   opacity: 0.9;
 }
 
+/* Mobile avatar (hidden on desktop) */
+.mobile-avatar {
+  display: none;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 600px) {
   body {
@@ -365,6 +370,8 @@ details[open] summary::before {
   }
   .name {
     font-size: 24px;
+    text-align: center;
+    margin-bottom: 8px;
   }
   .series-container {
     gap: 10px;
@@ -389,17 +396,22 @@ details[open] summary::before {
     max-width: 100% !important;
     padding: 10px !important;
   }
-  td[style*="width:25%"],
-  td[style*="width:30%"] {
-    text-align: center;
-  }
   td[style*="width:25%"] img {
     max-width: 200px;
   }
-  td[style*="width:30%"] img {
-    max-width: 120px;
+  /* Hide desktop avatar on mobile */
+  .desktop-avatar {
+    display: none !important;
   }
-  td[style*="padding-top:8%"] {
-    padding-top: 10px !important;
+  /* Show mobile avatar floating right */
+  .mobile-avatar {
+    display: block;
+    float: right;
+    width: 110px;
+    margin: 0 0 10px 15px;
+  }
+  .mobile-avatar img {
+    width: 100%;
+    border-radius: 50%;
   }
 }
