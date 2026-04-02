@@ -279,25 +279,25 @@ details[open] summary::before {
 
 /* Social icons */
 .social-icons {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
+  text-align: center;
+  font-size: 14px;
 }
 
 .social-icons a {
-  font-size: 22px;
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);
+  opacity: 0.7;
 }
 
-.social-icons a[title="Email"] { color: #D44638; }
-.social-icons a[title="Google Scholar"] { color: #4285F4; }
-.social-icons a[title="GitHub"] { color: #333; }
-.social-icons a[title="LinkedIn"] { color: #0A66C2; }
-.social-icons a[title="Instagram"] { color: #E1306C; }
+.social-icons img.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
 
 /* Series cards */
 .series-container {
