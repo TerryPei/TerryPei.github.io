@@ -277,6 +277,64 @@ details[open] summary::before {
   color: #1A1A1A;
 }
 
+/* Series cards */
+.series-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.series-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  min-height: 90px;
+}
+
+.series-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+.series-chi {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.series-psi {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.series-omega {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.series-greek {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-family: 'Times New Roman', serif;
+}
+
+.series-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 600px) {
   body {
@@ -284,6 +342,20 @@ details[open] summary::before {
   }
   .name {
     font-size: 24px;
+  }
+  .series-container {
+    gap: 10px;
+    padding: 15px 10px;
+  }
+  .series-card {
+    padding: 16px 10px;
+    min-height: 70px;
+  }
+  .series-greek {
+    font-size: 24px;
+  }
+  .series-name {
+    font-size: 11px;
   }
   table {
     width: 100% !important;
