@@ -282,6 +282,10 @@ details[open] summary::before {
 .social-icons {
   text-align: center;
   font-size: 14px;
+  padding-left: 2.5%;
+  padding-right: 28.5%;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
 }
 
 .social-icons a {
@@ -372,6 +376,10 @@ details[open] summary::before {
     font-size: 24px;
     text-align: center;
     margin-bottom: 8px;
+  }
+  .social-icons {
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .series-container {
     gap: 10px;
