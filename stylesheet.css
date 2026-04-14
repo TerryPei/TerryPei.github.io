@@ -103,10 +103,20 @@ h2 {
 }
 
 .name {
-  padding-top: 20px;
-  margin: 0;
+  padding-top: 32px;
+  margin: 0 0 12px 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.name-alt {
+  font-weight: 400;
+  color: #888;
+  font-size: 0.72em;
+  letter-spacing: 0.5px;
 }
 
 .one {
