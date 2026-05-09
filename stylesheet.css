@@ -164,10 +164,16 @@ summary {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  list-style: none;
+  list-style: none !important;
+  list-style-type: none !important;
 }
 
 summary::-webkit-details-marker {
+  display: none !important;
+}
+
+summary::marker {
+  content: '' !important;
   display: none;
 }
 
