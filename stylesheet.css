@@ -164,6 +164,11 @@ summary {
   border-radius: 5px;
   display: flex;
   align-items: center;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 summary:hover {
