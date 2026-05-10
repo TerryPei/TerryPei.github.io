@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title></title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; overflow:hidden; background:#F8F6F0; }
+  #scene { position:fixed; inset:0; }
+  canvas { display:block; }
+</style>
+</head>
+<body>
+  <div id="scene"></div>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+// ---------- view tuning (small wide card) ----------
+const FOV = 38, CAM_DIST = 5.8, WORLD_TILT = -0.16;
+
+// ---------- colour helpers ----------
+function hexToRgb(h){ return [((h>>16)&255)/255, ((h>>8)&255)/255, (h&255)/255]; }
+function rgb2hsv(r,g,b){
+  const mx=Math.max(r,g,b), mn=Math.min(r,g,b), d=mx-mn; let h=0;
+  if(d>1e-9){ if(mx===r)h=((g-b)/d)%6; else if(mx===g)h=(b-r)/d+2; else h=(r-g)/d+4; h/=6; if(h<0)h+=1; }
+  return [h, mx<=0?0:d/mx, mx];
+}
+function hsv2rgb(h,s,v,out){
+  h=((h%1)+1)%1; const i=Math.floor(h*6), f=h*6-i;
+  const p=v*(1-s), q=v*(1-f*s), t=v*(1-(1-f)*s);
+  switch(i%6){
+    case 0:out[0]=v;out[1]=t;out[2]=p;break; case 1:out[0]=q;out[1]=v;out[2]=p;break;
+    case 2:out[0]=p;out[1]=v;out[2]=t;break; case 3:out[0]=p;out[1]=q;out[2]=v;break;
+    case 4:out[0]=t;out[1]=p;out[2]=v;break; default:out[0]=v;out[1]=p;out[2]=q;
+  }
+}
+const lerp=(a,b,t)=>a+(b-a)*t;
+function hueArc(a,b,t){ let d=b-a; if(d>0.5)d-=1; else if(d<-0.5)d+=1; return a+d*t; }
+const norm1=x=>((x%1)+1)%1;
+
+// ---------- scene ----------
+const host=document.getElementById('scene');
+const scene=new THREE.Scene();
+const CREAM=0xF8F6F0;
+scene.background=new THREE.Color(CREAM);
+scene.fog=new THREE.Fog(CREAM, 6.5, 14.0);
+const camera=new THREE.PerspectiveCamera(FOV, innerWidth/innerHeight, 0.1, 100);
+camera.position.set(0,0,CAM_DIST);
+const renderer=new THREE.WebGLRenderer({ antialias:true });
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth,innerHeight);
+host.appendChild(renderer.domElement);
+const world=new THREE.Group(); scene.add(world);
+
+// ---------- four corner operators ----------
+const cornerColors=[0x2a6df4,0xff3b30,0x16c081,0xc24ff2];
+const cornerHSV=cornerColors.map(c=>rgb2hsv(...hexToRgb(c)));
+
+// ---------- 4D surface ----------
+const N=72, V=N+1, COUNT=V*V;
+const base4=new Float32Array(COUNT*4);
+const bh=new Float32Array(COUNT), bs=new Float32Array(COUNT), bv=new Float32Array(COUNT);
+for(let j=0;j<V;j++){ const ty=j/N;
+  for(let i=0;i<V;i++){ const sx=i/N, idx=j*V+i;
+    const hB=norm1(hueArc(cornerHSV[0][0],cornerHSV[1][0],sx));
+    const hT=norm1(hueArc(cornerHSV[3][0],cornerHSV[2][0],sx));
+    bh[idx]=norm1(hueArc(hB,hT,ty));
+    bs[idx]=lerp(lerp(cornerHSV[0][1],cornerHSV[1][1],sx),lerp(cornerHSV[3][1],cornerHSV[2][1],sx),ty);
+    bv[idx]=lerp(lerp(cornerHSV[0][2],cornerHSV[1][2],sx),lerp(cornerHSV[3][2],cornerHSV[2][2],sx),ty);
+  }
+}
+const P={gamma:0.62,tau:0.45,thr:0.50,rew:0.55,nrm:0.30};
+function surf4D(u,v,out,i){
+  const SCALE=2.45;
+  const fold=0.30+1.05*P.gamma, freq=1.4+3.8*P.tau, skew=(P.thr-0.5)*1.6, wAmp=0.45+1.05*P.rew, flat=1.0-0.78*P.nrm;
+  const x=u*SCALE+skew*v*0.30, y=v*SCALE+skew*u*0.18;
+  let z=0.46*Math.sin(freq*u+1.7*v)+0.30*Math.cos((freq*0.85)*(u*v)*2.0+skew)+0.17*Math.sin(freq*1.6*u)*Math.cos(freq*1.3*v)+0.09*Math.sin(freq*2.4*v);
+  z*=fold*flat;
+  let w=0.56*Math.cos(2.0*u-1.3*v+skew*0.6)+0.32*Math.sin(2.8*u*v)+0.20*Math.cos(4.5*v)+0.13*Math.sin(6.1*u*v)+0.08*Math.cos(8.0*u);
+  w*=wAmp;
+  out[i*4]=x; out[i*4+1]=y; out[i*4+2]=z; out[i*4+3]=w;
+}
+const PN=7, pathUV=[];
+for(let p=0;p<PN;p++){ const t=p/(PN-1); pathUV.push([-0.62+1.24*t+0.16*Math.sin(3*Math.PI*t), -0.78*Math.cos(2*Math.PI*t)*(0.55+0.25*t)+0.08]); }
+const pathBase4=new Float32Array(PN*4), pathScratch=new Float32Array(4);
+function rebuildBase(){
+  for(let j=0;j<V;j++)for(let i=0;i<V;i++) surf4D((i/N)*2-1,(j/N)*2-1,base4,j*V+i);
+  for(let p=0;p<PN;p++){ surf4D(pathUV[p][0],pathUV[p][1],pathScratch,0); pathBase4[p*4]=pathScratch[0];pathBase4[p*4+1]=pathScratch[1];pathBase4[p*4+2]=pathScratch[2];pathBase4[p*4+3]=pathScratch[3]; }
+}
+const indices=[];
+for(let j=0;j<N;j++)for(let i=0;i<N;i++){ const a=j*V+i,b=j*V+i+1,c=(j+1)*V+i,dd=(j+1)*V+i+1; indices.push(a,c,b,b,c,dd); }
+const geo=new THREE.BufferGeometry();
+const posArr=new Float32Array(COUNT*3), colArr=new Float32Array(COUNT*3);
+geo.setAttribute('position',new THREE.BufferAttribute(posArr,3));
+geo.setAttribute('color',new THREE.BufferAttribute(colArr,3));
+geo.setIndex(indices);
+const mesh=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({vertexColors:true,side:THREE.DoubleSide}));
+mesh.frustumCulled=false; world.add(mesh);
+const glowOverlay=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({vertexColors:true,transparent:true,opacity:0.18,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide}));
+glowOverlay.frustumCulled=false; world.add(glowOverlay);
+const wireMesh=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.05,blending:THREE.AdditiveBlending,depthWrite:false}));
+wireMesh.frustumCulled=false; world.add(wireMesh);
+
+// perimeter
+const borderIdx=[];
+for(let i=0;i<V-1;i++)borderIdx.push(i);
+for(let j=0;j<V-1;j++)borderIdx.push(j*V+(V-1));
+for(let i=V-1;i>0;i--)borderIdx.push((V-1)*V+i);
+for(let j=V-1;j>0;j--)borderIdx.push(j*V);
+borderIdx.push(0);
+const borderGeo=new THREE.BufferGeometry();
+const borderPos=new Float32Array(borderIdx.length*3);
+borderGeo.setAttribute('position',new THREE.BufferAttribute(borderPos,3));
+const borderLine=new THREE.Line(borderGeo,new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:0.5,blending:THREE.AdditiveBlending,depthWrite:false}));
+borderLine.frustumCulled=false; world.add(borderLine);
+
+// corner spheres
+const cornerGridIdx=[0,V-1,(V-1)*V+(V-1),(V-1)*V+0];
+const glowTex=(()=>{ const c=document.createElement('canvas');c.width=c.height=128;const g=c.getContext('2d');
+  const grd=g.createRadialGradient(64,64,0,64,64,64); grd.addColorStop(0,'rgba(255,255,255,0.95)');grd.addColorStop(0.22,'rgba(255,255,255,0.5)');grd.addColorStop(1,'rgba(255,255,255,0)');
+  g.fillStyle=grd;g.fillRect(0,0,128,128); return new THREE.CanvasTexture(c); })();
+const cornerSpheres=[],cornerGlows=[];
+for(let k=0;k<4;k++){
+  const s=new THREE.Mesh(new THREE.SphereGeometry(0.12,24,18),new THREE.MeshBasicMaterial({color:cornerColors[k]}));
+  s.frustumCulled=false; world.add(s); cornerSpheres.push(s);
+  const gl=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:cornerColors[k],transparent:true,opacity:0.75,depthWrite:false,blending:THREE.AdditiveBlending}));
+  gl.scale.set(0.95,0.95,1); world.add(gl); cornerGlows.push(gl);
+}
+
+// search path
+const pathSpheres=[],pathArrows=[];
+for(let p=0;p<PN;p++){
+  const s=new THREE.Mesh(new THREE.SphereGeometry(0.062,16,12),new THREE.MeshBasicMaterial({color:0xffffff}));
+  s.frustumCulled=false; world.add(s); pathSpheres.push(s);
+  const ar=new THREE.ArrowHelper(new THREE.Vector3(1,0,0),new THREE.Vector3(),0.4,0xfff0bc,0.14,0.085);
+  ar.line.material.transparent=true; ar.line.material.opacity=0.95; ar.cone.material.transparent=true; ar.cone.material.opacity=0.95;
+  ar.frustumCulled=false; world.add(ar); pathArrows.push(ar);
+}
+let tubeMesh=null;
+const tubeMat=new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:0.5,blending:THREE.AdditiveBlending,depthWrite:false});
+rebuildBase();
+
+// ---------- 4D rotation ----------
+const ang={xw:0.55,yw:-0.30,zw:0.42,xz:0.0,yz:-0.18};
+const RC=new Float32Array(5),RS=new Float32Array(5);
+function precomputeRot(){ const a=[ang.xw,ang.yw,ang.zw,ang.xz,ang.yz]; for(let k=0;k<5;k++){RC[k]=Math.cos(a[k]);RS[k]=Math.sin(a[k]);} }
+const _o=new Float32Array(4);
+function rotate4(x,y,z,w){
+  let a,b;
+  a=x;b=w;x=a*RC[0]-b*RS[0];w=a*RS[0]+b*RC[0];
+  a=y;b=w;y=a*RC[1]-b*RS[1];w=a*RS[1]+b*RC[1];
+  a=z;b=w;z=a*RC[2]-b*RS[2];w=a*RS[2]+b*RC[2];
+  a=x;b=z;x=a*RC[3]-b*RS[3];z=a*RS[3]+b*RC[3];
+  a=y;b=z;y=a*RC[4]-b*RS[4];z=a*RS[4]+b*RC[4];
+  _o[0]=x;_o[1]=y;_o[2]=z;_o[3]=w;
+}
+function projW(w){ return 1.62/(2.7-w); }
+const _c=new Float32Array(3);
+function updateGeometry(){
+  precomputeRot();
+  const satMul=0.86+0.20*P.rew;
+  for(let idx=0;idx<COUNT;idx++){
+    rotate4(base4[idx*4],base4[idx*4+1],base4[idx*4+2],base4[idx*4+3]);
+    const s=projW(_o[3]);
+    posArr[idx*3]=_o[0]*s; posArr[idx*3+1]=_o[1]*s; posArr[idx*3+2]=_o[2]*s;
+    const wn=Math.min(1,Math.max(0,(_o[3]+1.6)/3.2));
+    const vv=Math.min(1,bv[idx]*(0.80+0.26*wn)), ss=Math.min(1,bs[idx]*satMul);
+    hsv2rgb(bh[idx]+(wn-0.5)*0.05, ss, vv, _c);
+    colArr[idx*3]=_c[0]; colArr[idx*3+1]=_c[1]; colArr[idx*3+2]=_c[2];
+  }
+  geo.attributes.position.needsUpdate=true; geo.attributes.color.needsUpdate=true;
+  for(let i=0;i<borderIdx.length;i++){ const gi=borderIdx[i]; borderPos[i*3]=posArr[gi*3];borderPos[i*3+1]=posArr[gi*3+1];borderPos[i*3+2]=posArr[gi*3+2]; }
+  borderGeo.attributes.position.needsUpdate=true;
+  for(let k=0;k<4;k++){ const gi=cornerGridIdx[k]; cornerSpheres[k].position.set(posArr[gi*3],posArr[gi*3+1],posArr[gi*3+2]); cornerGlows[k].position.copy(cornerSpheres[k].position); }
+  const pts3=[];
+  for(let p=0;p<PN;p++){ rotate4(pathBase4[p*4],pathBase4[p*4+1],pathBase4[p*4+2],pathBase4[p*4+3]); const s=projW(_o[3]); const Pp=new THREE.Vector3(_o[0]*s,_o[1]*s,_o[2]*s); pts3.push(Pp); pathSpheres[p].position.copy(Pp); }
+  for(let p=0;p<PN;p++){ const a=pts3[Math.max(0,p-1)],b=pts3[Math.min(PN-1,p+1)]; const dir=new THREE.Vector3().subVectors(b,a); if(dir.lengthSq()<1e-9)dir.set(1,0,0); dir.normalize(); pathArrows[p].position.copy(pts3[p]); pathArrows[p].setDirection(dir); pathArrows[p].setLength(0.46,0.16,0.095); }
+  if(tubeMesh){ world.remove(tubeMesh); tubeMesh.geometry.dispose(); }
+  tubeMesh=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts3,false,'catmullrom',0.3),70,0.018,7,false),tubeMat);
+  tubeMesh.frustumCulled=false; world.add(tubeMesh);
+}
+
+addEventListener('resize',()=>{ camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth,innerHeight); });
+
+let t0=performance.now();
+function animate(){
+  requestAnimationFrame(animate);
+  const now=performance.now(); const dt=Math.min(0.05,(now-t0)/1000); t0=now;
+  ang.xw+=dt*0.16; ang.yz+=dt*0.07; ang.zw+=dt*0.04;
+  camera.lookAt(0,0,0);
+  world.rotation.x=WORLD_TILT;
+  world.rotation.y=0.12*Math.sin(now*0.00018);
+  updateGeometry();
+  renderer.render(scene,camera);
+}
+updateGeometry();
+animate();
+</script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>differentiable operator space</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root { --cream: #F8F6F0; --ink: #2f2d2a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: var(--cream); }
+  body { font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #scene { position: fixed; inset: 0; cursor: grab; touch-action: none; }
+  #scene.dragging { cursor: grabbing; }
+
+  h1 {
+    position: fixed; top: clamp(20px, 3.8vh, 36px); left: 50%; transform: translateX(-50%);
+    z-index: 10; font-weight: 300; color: var(--ink);
+    font-size: clamp(17px, 2.7vw, 31px); letter-spacing: 0.012em; line-height: 1.35;
+    text-align: center; white-space: nowrap; pointer-events: none;
+    text-shadow: 0 1px 18px rgba(248,246,240,0.92), 0 0 9px rgba(248,246,240,0.92);
+    opacity: 0; animation: fadeIn 1.1s cubic-bezier(.22,.61,.36,1) .15s forwards;
+  }
+  h1 em { font-style: italic; font-weight: 400; }
+  @media (max-width: 560px) { h1 { white-space: normal; max-width: 86vw; } }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  .home-back {
+    position: fixed; top: 20px; left: 22px; z-index: 10; font-size: 22px; line-height: 1;
+    color: var(--ink); text-decoration: none; opacity: 0.30; transition: opacity .2s; font-weight: 300;
+  }
+  .home-back:hover { opacity: 0.68; }
+
+  .op-label {
+    position: fixed; z-index: 9; transform: translate(-50%, -50%);
+    font-size: 11px; letter-spacing: 0.18em; font-weight: 400;
+    color: rgba(47,45,42,0.62); pointer-events: none; white-space: nowrap;
+    text-shadow: 0 0 10px rgba(248,246,240,0.95), 0 1px 6px rgba(248,246,240,0.95);
+  }
+
+  /* ---- search-space slider panel (silky, keynote-ish) ---- */
+  #panel {
+    position: fixed; left: 50%; bottom: clamp(14px, 2.6vh, 26px); transform: translateX(-50%);
+    z-index: 11; width: min(720px, 94vw);
+    display: flex; gap: clamp(10px, 2.2vw, 28px); justify-content: center; align-items: flex-end;
+    padding: 15px clamp(16px, 2.6vw, 28px) 14px;
+    background: rgba(255,255,255,0.40);
+    backdrop-filter: blur(18px) saturate(1.25); -webkit-backdrop-filter: blur(18px) saturate(1.25);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 18px;
+    box-shadow: 0 10px 36px rgba(60,55,45,0.12), inset 0 1px 0 rgba(255,255,255,0.65);
+    opacity: 0; animation: panelIn .85s cubic-bezier(.22,.61,.36,1) .35s forwards;
+  }
+  @keyframes panelIn { from { opacity: 0; transform: translateX(-50%) translateY(16px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+  .ctrl { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; min-width: 0; }
+  .ctrl .lab {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(47,45,42,0.50); white-space: nowrap; transition: color .25s;
+  }
+  .ctrl .lab b { font-weight: 400; color: rgba(47,45,42,0.74); font-style: normal; }
+  .ctrl:hover .lab { color: rgba(47,45,42,0.72); }
+
+  input[type=range] {
+    -webkit-appearance: none; appearance: none; width: 100%; height: 3px; border-radius: 3px;
+    background: rgba(47,45,42,0.13); outline: none; cursor: pointer;
+    transition: background .12s linear;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(40,35,25,0.28), 0 0 0 0.5px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.9);
+    transition: transform .26s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
+  }
+  input[type=range]:hover::-webkit-slider-thumb { transform: scale(1.14); }
+  input[type=range]:active::-webkit-slider-thumb { transform: scale(1.3); box-shadow: 0 3px 10px rgba(40,35,25,0.30), 0 0 0 0.5px rgba(0,0,0,0.05); }
+  input[type=range]::-moz-range-thumb {
+    width: 16px; height: 16px; border: none; border-radius: 50%; background: #fff;
+    box-shadow: 0 1px 4px rgba(40,35,25,0.28); transition: transform .26s cubic-bezier(.34,1.56,.64,1);
+  }
+  input[type=range]:active::-moz-range-thumb { transform: scale(1.3); }
+  input[type=range]::-moz-range-progress { height: 3px; border-radius: 3px; background: linear-gradient(90deg,#6fa0e6,#c98fd6); }
+  @media (max-width: 480px) {
+    #panel { gap: 8px; padding: 12px 12px; }
+    .ctrl .lab { font-size: 9px; letter-spacing: 0.10em; }
+  }
+
+  #hint {
+    position: fixed; bottom: calc(clamp(14px,2.6vh,26px) + 96px); left: 50%; transform: translateX(-50%);
+    z-index: 9; font-size: 10.5px; letter-spacing: 0.24em; color: rgba(47,45,42,0.30);
+    pointer-events: none; transition: opacity 1.2s ease; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <a class="home-back" href="https://www.terrypei.com" title="terrypei.com">&larr;</a>
+  <h1>help improve your method in <em>differentiable operator space</em></h1>
+  <div id="scene"></div>
+  <div id="hint">drag to explore</div>
+
+  <span class="op-label" id="lbl0">PRUNE</span>
+  <span class="op-label" id="lbl1">MERGE</span>
+  <span class="op-label" id="lbl2">POOL</span>
+  <span class="op-label" id="lbl3">REWEIGHT</span>
+
+  <div id="panel">
+    <div class="ctrl"><span class="lab"><b>γ</b> gamma</span><input type="range" id="s_gamma" min="0" max="1" step="0.001" value="0.62"></div>
+    <div class="ctrl"><span class="lab"><b>τ</b> tau</span><input type="range" id="s_tau" min="0" max="1" step="0.001" value="0.45"></div>
+    <div class="ctrl"><span class="lab"><b>θ</b> threshold</span><input type="range" id="s_thr" min="0" max="1" step="0.001" value="0.50"></div>
+    <div class="ctrl"><span class="lab"><b>ρ</b> reweight</span><input type="range" id="s_rew" min="0" max="1" step="0.001" value="0.55"></div>
+    <div class="ctrl"><span class="lab"><b>η</b> norm</span><input type="range" id="s_nrm" min="0" max="1" step="0.001" value="0.30"></div>
+  </div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+// ---------- color helpers ----------
+function hexToRgb(h){ return [((h>>16)&255)/255, ((h>>8)&255)/255, (h&255)/255]; }
+function rgb2hsv(r,g,b){
+  const mx=Math.max(r,g,b), mn=Math.min(r,g,b), d=mx-mn;
+  let h=0;
+  if(d>1e-9){
+    if(mx===r) h=((g-b)/d)%6;
+    else if(mx===g) h=(b-r)/d+2;
+    else h=(r-g)/d+4;
+    h/=6; if(h<0)h+=1;
+  }
+  return [h, mx<=0?0:d/mx, mx];
+}
+function hsv2rgb(h,s,v,out){
+  h=((h%1)+1)%1; const i=Math.floor(h*6), f=h*6-i;
+  const p=v*(1-s), q=v*(1-f*s), t=v*(1-(1-f)*s);
+  switch(i%6){
+    case 0: out[0]=v;out[1]=t;out[2]=p;break;
+    case 1: out[0]=q;out[1]=v;out[2]=p;break;
+    case 2: out[0]=p;out[1]=v;out[2]=t;break;
+    case 3: out[0]=p;out[1]=q;out[2]=v;break;
+    case 4: out[0]=t;out[1]=p;out[2]=v;break;
+    default: out[0]=v;out[1]=p;out[2]=q;
+  }
+}
+const lerp = (a,b,t)=>a+(b-a)*t;
+function hueArc(a,b,t){ let d=b-a; if(d>0.5)d-=1; else if(d<-0.5)d+=1; return a+d*t; }
+const norm1 = x => ((x%1)+1)%1;
+
+// ---------- renderer / scene ----------
+const host = document.getElementById('scene');
+const scene = new THREE.Scene();
+const CREAM = 0xF8F6F0;
+scene.background = new THREE.Color(CREAM);
+scene.fog = new THREE.Fog(CREAM, 8.0, 18.0);
+
+const camera = new THREE.PerspectiveCamera(46, innerWidth/innerHeight, 0.1, 100);
+let camDist = 7.2;
+camera.position.set(0, 0, camDist);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+host.appendChild(renderer.domElement);
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.84));
+const d1 = new THREE.DirectionalLight(0xffffff, 0.40); d1.position.set(3, 4, 5); scene.add(d1);
+const d2 = new THREE.DirectionalLight(0xfff1d8, 0.24); d2.position.set(-4, -2, 3); scene.add(d2);
+const d3 = new THREE.DirectionalLight(0xdfeaff, 0.20); d3.position.set(0, -5, -4); scene.add(d3);
+
+const world = new THREE.Group();
+scene.add(world);
+
+// ---------- four corner operators (colors anchor the whole gradient) ----------
+const cornerColors  = [ 0x2a6df4, 0xff3b30, 0x16c081, 0xc24ff2 ];   // PRUNE, MERGE, POOL, REWEIGHT
+const cornerHSV     = cornerColors.map(c => rgb2hsv(...hexToRgb(c)));
+// physical placement on the (u,v) quad:  PRUNE=(-1,-1)  MERGE=(1,-1)  POOL=(1,1)  REWEIGHT=(-1,1)
+
+// ---------- 4D base surface ----------
+const N = 96;
+const V = N + 1;
+const COUNT = V * V;
+const base4 = new Float32Array(COUNT * 4);
+// per-vertex base colour in HSV (depends only on (u,v) → precomputed once, anchored to the 4 corner colours)
+const bh = new Float32Array(COUNT), bs = new Float32Array(COUNT), bv = new Float32Array(COUNT);
+(function buildBaseColors(){
+  for (let j=0;j<V;j++){
+    const ty = j/N;
+    for (let i=0;i<V;i++){
+      const sx = i/N, idx = j*V+i;
+      // bottom edge: PRUNE(0)→MERGE(1) ; top edge: REWEIGHT(3)→POOL(2)
+      const hB = norm1(hueArc(cornerHSV[0][0], cornerHSV[1][0], sx));
+      const hT = norm1(hueArc(cornerHSV[3][0], cornerHSV[2][0], sx));
+      bh[idx] = norm1(hueArc(hB, hT, ty));
+      bs[idx] = lerp(lerp(cornerHSV[0][1],cornerHSV[1][1],sx), lerp(cornerHSV[3][1],cornerHSV[2][1],sx), ty);
+      bv[idx] = lerp(lerp(cornerHSV[0][2],cornerHSV[1][2],sx), lerp(cornerHSV[3][2],cornerHSV[2][2],sx), ty);
+    }
+  }
+})();
+
+// search-space params: target (sliders) + eased current (silky morph)
+const Pt = { gamma:0.62, tau:0.45, thr:0.50, rew:0.55, nrm:0.30 };
+const P  = { ...Pt };
+
+function surf4D(u, v, out, i){
+  const SCALE = 2.45;
+  const fold  = 0.30 + 1.05 * P.gamma;          // gamma → vertical fold strength
+  const freq  = 1.4  + 3.8  * P.tau;            // tau → ripple frequency
+  const skew  = (P.thr - 0.5) * 1.6;            // threshold → asymmetric shear
+  const wAmp  = 0.45 + 1.05 * P.rew;            // reweight → 4th-dim amplitude
+  const flat  = 1.0 - 0.78 * P.nrm;             // norm → flatten toward the plane
+  const x = u * SCALE + skew * v * 0.30;
+  const y = v * SCALE + skew * u * 0.18;
+  let z = 0.46*Math.sin(freq*1.0*u + 1.7*v)
+        + 0.30*Math.cos((freq*0.85)*(u*v)*2.0 + skew)
+        + 0.17*Math.sin(freq*1.6*u)*Math.cos(freq*1.3*v)
+        + 0.09*Math.sin(freq*2.4*v);
+  z *= fold * flat;
+  let w = 0.56*Math.cos(2.0*u - 1.3*v + skew*0.6)
+        + 0.32*Math.sin(2.8*u*v)
+        + 0.20*Math.cos(4.5*v)
+        + 0.13*Math.sin(6.1*u*v)
+        + 0.08*Math.cos(8.0*u);
+  w *= wAmp;
+  out[i*4+0]=x; out[i*4+1]=y; out[i*4+2]=z; out[i*4+3]=w;
+}
+function rebuildBase(){
+  for (let j=0;j<V;j++) for (let i=0;i<V;i++){
+    surf4D((i/N)*2-1, (j/N)*2-1, base4, j*V+i);
+  }
+  for (let p=0;p<PN;p++){
+    surf4D(pathUV[p][0], pathUV[p][1], pathScratch, 0);
+    pathBase4[p*4]=pathScratch[0]; pathBase4[p*4+1]=pathScratch[1];
+    pathBase4[p*4+2]=pathScratch[2]; pathBase4[p*4+3]=pathScratch[3];
+  }
+}
+
+// triangle indices
+const indices = [];
+for (let j=0;j<N;j++) for (let i=0;i<N;i++){
+  const a=j*V+i, b=j*V+i+1, c=(j+1)*V+i, dd=(j+1)*V+i+1;
+  indices.push(a,c,b, b,c,dd);
+}
+
+const geo = new THREE.BufferGeometry();
+const posArr = new Float32Array(COUNT*3);
+const colArr = new Float32Array(COUNT*3);
+geo.setAttribute('position', new THREE.BufferAttribute(posArr,3));
+geo.setAttribute('color', new THREE.BufferAttribute(colArr,3));
+geo.setIndex(indices);
+
+const mesh = new THREE.Mesh(geo, new THREE.MeshPhongMaterial({ vertexColors:true, shininess:28, specular:0x222222, side:THREE.DoubleSide }));
+mesh.frustumCulled = false; world.add(mesh);
+const glowOverlay = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ vertexColors:true, transparent:true, opacity:0.20, blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide }));
+glowOverlay.frustumCulled = false; world.add(glowOverlay);
+const wireMesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color:0xffffff, wireframe:true, transparent:true, opacity:0.055, blending:THREE.AdditiveBlending, depthWrite:false }));
+wireMesh.frustumCulled = false; world.add(wireMesh);
+
+// glowing perimeter (the four edges between the corner operators)
+const borderIdx = [];
+for (let i=0;i<V-1;i++) borderIdx.push(i);
+for (let j=0;j<V-1;j++) borderIdx.push(j*V+(V-1));
+for (let i=V-1;i>0;i--) borderIdx.push((V-1)*V+i);
+for (let j=V-1;j>0;j--) borderIdx.push(j*V);
+borderIdx.push(0);
+const borderGeo = new THREE.BufferGeometry();
+const borderPos = new Float32Array(borderIdx.length*3);
+borderGeo.setAttribute('position', new THREE.BufferAttribute(borderPos,3));
+const borderLine = new THREE.Line(borderGeo, new THREE.LineBasicMaterial({ color:0xffffff, transparent:true, opacity:0.55, blending:THREE.AdditiveBlending, depthWrite:false }));
+borderLine.frustumCulled = false; world.add(borderLine);
+
+// ---------- corner spheres ----------
+const cornerGridIdx = [ 0, V-1, (V-1)*V+(V-1), (V-1)*V+0 ];
+const cornerSpheres = [], cornerGlows = [];
+const glowTex = (()=>{
+  const c=document.createElement('canvas'); c.width=c.height=128; const g=c.getContext('2d');
+  const grd=g.createRadialGradient(64,64,0,64,64,64);
+  grd.addColorStop(0,'rgba(255,255,255,0.95)'); grd.addColorStop(0.22,'rgba(255,255,255,0.5)'); grd.addColorStop(1,'rgba(255,255,255,0)');
+  g.fillStyle=grd; g.fillRect(0,0,128,128); return new THREE.CanvasTexture(c);
+})();
+for (let k=0;k<4;k++){
+  const s=new THREE.Mesh(new THREE.SphereGeometry(0.105,32,24), new THREE.MeshPhongMaterial({ color:cornerColors[k], emissive:cornerColors[k], emissiveIntensity:0.5, shininess:90 }));
+  s.frustumCulled=false; world.add(s); cornerSpheres.push(s);
+  const gl=new THREE.Sprite(new THREE.SpriteMaterial({ map:glowTex, color:cornerColors[k], transparent:true, opacity:0.7, depthWrite:false, blending:THREE.AdditiveBlending }));
+  gl.scale.set(0.8,0.8,1); world.add(gl); cornerGlows.push(gl);
+}
+
+// ---------- differentiable-search path ----------
+const PN = 7;
+const pathUV = [];
+for (let p=0;p<PN;p++){
+  const t=p/(PN-1);
+  pathUV.push([ -0.62 + 1.24*t + 0.16*Math.sin(3.0*Math.PI*t), -0.78*Math.cos(2.0*Math.PI*t)*(0.55+0.25*t) + 0.08 ]);
+}
+const pathBase4 = new Float32Array(PN*4);
+const pathScratch = new Float32Array(4);
+const pathSpheres = [], pathArrows = [];
+for (let p=0;p<PN;p++){
+  const s=new THREE.Mesh(new THREE.SphereGeometry(0.055,20,16), new THREE.MeshPhongMaterial({ color:0xffffff, emissive:0xfff4d0, emissiveIntensity:0.6, shininess:90 }));
+  s.frustumCulled=false; world.add(s); pathSpheres.push(s);
+  const ar=new THREE.ArrowHelper(new THREE.Vector3(1,0,0), new THREE.Vector3(), 0.4, 0xfff0bc, 0.13, 0.075);
+  ar.line.material.transparent=true; ar.line.material.opacity=0.95; ar.cone.material.transparent=true; ar.cone.material.opacity=0.95;
+  ar.frustumCulled=false; world.add(ar); pathArrows.push(ar);
+}
+let tubeMesh=null;
+const tubeMat=new THREE.MeshBasicMaterial({ color:0xffffff, transparent:true, opacity:0.48, blending:THREE.AdditiveBlending, depthWrite:false });
+
+rebuildBase();
+
+// ---------- 4D rotation ----------
+const ang = { xw:0.52, yw:-0.28, zw:0.40, xz:0.0, yz:-0.16 };
+const RC=new Float32Array(5), RS=new Float32Array(5);
+function precomputeRot(){
+  const a=[ang.xw,ang.yw,ang.zw,ang.xz,ang.yz];
+  for(let k=0;k<5;k++){ RC[k]=Math.cos(a[k]); RS[k]=Math.sin(a[k]); }
+}
+const _o=new Float32Array(4);
+function rotate4(x,y,z,w){
+  let a,b;
+  a=x;b=w; x=a*RC[0]-b*RS[0]; w=a*RS[0]+b*RC[0];
+  a=y;b=w; y=a*RC[1]-b*RS[1]; w=a*RS[1]+b*RC[1];
+  a=z;b=w; z=a*RC[2]-b*RS[2]; w=a*RS[2]+b*RC[2];
+  a=x;b=z; x=a*RC[3]-b*RS[3]; z=a*RS[3]+b*RC[3];
+  a=y;b=z; y=a*RC[4]-b*RS[4]; z=a*RS[4]+b*RC[4];
+  _o[0]=x;_o[1]=y;_o[2]=z;_o[3]=w;
+}
+function projW(w){ return 1.62 / (2.7 - w); }
+
+// ---------- per-frame geometry + colour ----------
+const _c=new Float32Array(3);
+function updateGeometry(){
+  precomputeRot();
+  const satMul = 0.86 + 0.20*P.rew;
+  for (let idx=0; idx<COUNT; idx++){
+    rotate4(base4[idx*4],base4[idx*4+1],base4[idx*4+2],base4[idx*4+3]);
+    const s=projW(_o[3]);
+    posArr[idx*3]=_o[0]*s; posArr[idx*3+1]=_o[1]*s; posArr[idx*3+2]=_o[2]*s;
+    // colour: fixed corner-anchored hue/sat, gentle 4th-dim shimmer in value + tiny hue lean
+    const wn = Math.min(1, Math.max(0, (_o[3]+1.6)/3.2));
+    const vv = Math.min(1, bv[idx]*(0.80 + 0.26*wn));
+    const ss = Math.min(1, bs[idx]*satMul);
+    hsv2rgb(bh[idx] + (wn-0.5)*0.05, ss, vv, _c);
+    colArr[idx*3]=_c[0]; colArr[idx*3+1]=_c[1]; colArr[idx*3+2]=_c[2];
+  }
+  geo.attributes.position.needsUpdate=true;
+  geo.attributes.color.needsUpdate=true;
+  geo.computeVertexNormals();
+
+  for (let i=0;i<borderIdx.length;i++){
+    const gi=borderIdx[i];
+    borderPos[i*3]=posArr[gi*3]; borderPos[i*3+1]=posArr[gi*3+1]; borderPos[i*3+2]=posArr[gi*3+2];
+  }
+  borderGeo.attributes.position.needsUpdate=true;
+
+  for (let k=0;k<4;k++){
+    const gi=cornerGridIdx[k];
+    cornerSpheres[k].position.set(posArr[gi*3],posArr[gi*3+1],posArr[gi*3+2]);
+    cornerGlows[k].position.copy(cornerSpheres[k].position);
+  }
+
+  const pts3=[];
+  for (let p=0;p<PN;p++){
+    rotate4(pathBase4[p*4],pathBase4[p*4+1],pathBase4[p*4+2],pathBase4[p*4+3]);
+    const s=projW(_o[3]);
+    const Pp=new THREE.Vector3(_o[0]*s,_o[1]*s,_o[2]*s);
+    pts3.push(Pp); pathSpheres[p].position.copy(Pp);
+  }
+  for (let p=0;p<PN;p++){
+    const a=pts3[Math.max(0,p-1)], b=pts3[Math.min(PN-1,p+1)];
+    const dir=new THREE.Vector3().subVectors(b,a);
+    if(dir.lengthSq()<1e-9) dir.set(1,0,0);
+    dir.normalize();
+    pathArrows[p].position.copy(pts3[p]);
+    pathArrows[p].setDirection(dir);
+    pathArrows[p].setLength(0.42,0.14,0.085);
+  }
+  if(tubeMesh){ world.remove(tubeMesh); tubeMesh.geometry.dispose(); }
+  tubeMesh=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts3,false,'catmullrom',0.3), 90, 0.016, 8, false), tubeMat);
+  tubeMesh.frustumCulled=false; world.add(tubeMesh);
+}
+
+// ---------- projected corner labels ----------
+const lblEls=[document.getElementById('lbl0'),document.getElementById('lbl1'),document.getElementById('lbl2'),document.getElementById('lbl3')];
+const _v=new THREE.Vector3();
+function updateLabels(){
+  for(let k=0;k<4;k++){
+    _v.copy(cornerSpheres[k].position); world.localToWorld(_v); _v.project(camera);
+    const el=lblEls[k];
+    if(_v.z>1||_v.z<-1){ el.style.opacity=0; continue; }
+    el.style.left=((_v.x*0.5+0.5)*innerWidth)+'px';
+    el.style.top =((-_v.y*0.5+0.5)*innerHeight - 22)+'px';
+    el.style.opacity=0.92;
+  }
+}
+
+// ---------- sliders (set targets; surface eases) ----------
+const ACCENT='linear-gradient(90deg,#6fa0e6,#c98fd6)';
+function bindSlider(id,key){
+  const el=document.getElementById(id);
+  const paint=()=>{
+    const pct=(parseFloat(el.value)*100).toFixed(1);
+    el.style.background=`linear-gradient(90deg,#6fa0e6 0%,#c98fd6 ${pct}%,rgba(47,45,42,0.13) ${pct}%)`;
+  };
+  el.addEventListener('input',()=>{ Pt[key]=parseFloat(el.value); paint(); });
+  paint();
+}
+bindSlider('s_gamma','gamma'); bindSlider('s_tau','tau'); bindSlider('s_thr','thr'); bindSlider('s_rew','rew'); bindSlider('s_nrm','nrm');
+
+// ---------- interaction ----------
+let dragging=false,lastX=0,lastY=0,idleSpin=true;
+const hintEl=document.getElementById('hint');
+const hideHint=()=>hintEl.style.opacity=0;
+let hintTimer=setTimeout(hideHint,6500);
+function pDown(e){ dragging=true; idleSpin=false; host.classList.add('dragging'); const p=e.touches?e.touches[0]:e; lastX=p.clientX; lastY=p.clientY; hideHint(); if(hintTimer)clearTimeout(hintTimer); }
+function pMove(e){ if(!dragging)return; const p=e.touches?e.touches[0]:e; const dx=p.clientX-lastX,dy=p.clientY-lastY; lastX=p.clientX; lastY=p.clientY; ang.xw+=dx*0.0055; ang.zw+=dx*0.0022; ang.yz+=dy*0.0050; ang.yw+=dy*0.0018; if(e.cancelable)e.preventDefault(); }
+function pUp(){ dragging=false; host.classList.remove('dragging'); }
+host.addEventListener('mousedown',pDown); window.addEventListener('mousemove',pMove); window.addEventListener('mouseup',pUp);
+host.addEventListener('touchstart',pDown,{passive:false}); host.addEventListener('touchmove',pMove,{passive:false}); host.addEventListener('touchend',pUp);
+host.addEventListener('wheel',(e)=>{ camDist*=(1+Math.sign(e.deltaY)*0.08); camDist=Math.min(12.5,Math.max(4.0,camDist)); e.preventDefault(); },{passive:false});
+addEventListener('resize',()=>{ camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth,innerHeight); });
+
+// ---------- loop ----------
+let t0=performance.now();
+function animate(){
+  requestAnimationFrame(animate);
+  const now=performance.now();
+  const dt=Math.min(0.05,(now-t0)/1000); t0=now;
+
+  // silky ease of search params toward slider targets
+  const k=1-Math.exp(-dt*9);
+  let moved=false;
+  for(const key in P){ const d=Pt[key]-P[key]; if(Math.abs(d)>1e-4){ P[key]+=d*k; moved=true; } else P[key]=Pt[key]; }
+  if(moved) rebuildBase();
+
+  if(idleSpin){ ang.xw+=dt*0.11; ang.yz+=dt*0.045; ang.zw+=dt*0.028; }
+  camera.position.z+=(camDist-camera.position.z)*Math.min(1,dt*6);
+  camera.lookAt(0,0,0);
+  world.rotation.x=-0.15;
+  world.rotation.y=0.09*Math.sin(now*0.00012);
+
+  updateGeometry();
+  updateLabels();
+  renderer.render(scene,camera);
+}
+updateGeometry();
+animate();
+</script>
+</body>
+</html>
