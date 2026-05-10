@@ -372,12 +372,12 @@ details[open] summary::before {
 
 .series-psi {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .series-omega {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .series-greek {
