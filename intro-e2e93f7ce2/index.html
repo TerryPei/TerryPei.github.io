@@ -100,6 +100,13 @@ h2{ font-weight:600; font-size:var(--h2-size); line-height:1.1; letter-spacing:-
 .diagram{ display:flex; justify-content:center; align-items:center; margin-top:.6rem; width:100%; }
 .diagram svg{ width:min(92vw,940px); height:auto; max-height:min(56vh,470px); }
 
+/* ===== research vision — 6 cards ===== */
+.vgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.6rem,1.6vw,1.1rem); max-width:min(94vw,1020px); margin:.5rem auto 0; }
+.vcard{ background:var(--paper-2); border:1px solid var(--line); border-top:3px solid var(--crimson); border-radius:12px; padding:clamp(.8rem,2vw,1.25rem); text-align:left; }
+.vcard .vt{ font-weight:600; font-size:var(--body-size); color:var(--crimson-deep); }
+.vcard .vd{ font-size:var(--small-size); color:var(--ink); line-height:1.35; margin-top:.4em; }
+@media (max-width:760px){ .vgrid{ grid-template-columns:1fr 1fr; } }
+
 /* ===== VLA real-world videos ===== */
 .vids{ display:flex; justify-content:center; align-items:flex-end; gap:clamp(.5rem,1.4vw,1.1rem); flex-wrap:wrap; margin-top:.4rem; }
 .vids video{ height:min(56vh,520px); width:auto; border-radius:12px; border:1px solid var(--line);
@@ -322,7 +329,7 @@ body.locked .slide, body.locked .nav-dots, body.locked .keyboard-hint{ visibilit
         <span class="lbl"><span class="dot"></span>Ours · fast, closed-loop</span>
       </div>
     </div>
-    <a class="wmlink reveal" href="http://127.0.0.1:8787/cosmos-eval.html" target="_blank" rel="noopener">Interactive evaluation &amp; baselines — cosmos-eval</a>
+    <a class="wmlink reveal" href="https://www.terrypei.com/smoothworldmodel/" target="_blank" rel="noopener">Interactive evaluation &amp; baselines — Smooth World Model</a>
 </div>
 </section>
 
@@ -331,23 +338,14 @@ body.locked .slide, body.locked .nav-dots, body.locked .keyboard-hint{ visibilit
   <div class="topbar"><span class="mark">Research vision</span><span>08 / 09</span></div>
   <div class="slide-content">
     <div class="eyebrow reveal">Research vision</div>
-    <h2 class="reveal"><span class="accent">MLLM</span> &amp; <span class="accent">World Model</span></h2>
-    <div class="diagram reveal">
-      <svg viewBox="0 0 920 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-        <defs><filter id="sh" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#7E1322" flood-opacity="0.10"/></filter></defs>
-        <!-- MLLM pillar -->
-        <g filter="url(#sh)"><rect x="80" y="70" width="340" height="180" rx="20" fill="#fff" stroke="#E7DAD4"/><rect x="80" y="70" width="7" height="180" rx="3.5" fill="#A51C30"/></g>
-        <text x="250" y="150" text-anchor="middle" font-size="46" font-weight="700" fill="#1C1614">MLLM</text>
-        <text x="250" y="186" text-anchor="middle" font-size="16.5" fill="#7A6A64">efficient multimodal LLMs</text>
-        <text x="250" y="214" text-anchor="middle" font-size="13.5" fill="#A51C30" font-family="IBM Plex Mono, monospace">grounding · post-training · VLA</text>
-        <!-- World Model pillar -->
-        <g filter="url(#sh)"><rect x="500" y="70" width="340" height="180" rx="20" fill="#A51C30"/></g>
-        <text x="670" y="150" text-anchor="middle" font-size="44" font-weight="700" fill="#fff">World Model</text>
-        <text x="670" y="186" text-anchor="middle" font-size="16.5" fill="#F3D2D8">efficient, learned simulators</text>
-        <text x="670" y="214" text-anchor="middle" font-size="13.5" fill="#FBE3E7" font-family="IBM Plex Mono, monospace">fast · closed-loop · controllable</text>
-        <!-- unifying baseline -->
-        <text x="460" y="300" text-anchor="middle" font-size="15" fill="#7A6A64" font-family="IBM Plex Mono, monospace">one efficient foundation-model stack</text>
-      </svg>
+    <h2 class="reveal">Efficient foundation models, <span class="accent">end to end</span></h2>
+    <div class="vgrid reveal">
+      <div class="vcard"><div class="vt">Efficient MLLM</div><div class="vd">Multimodal foundation models, cheaper to train, adapt, and serve.</div></div>
+      <div class="vcard"><div class="vt">World models</div><div class="vd">Learned, efficient, closed-loop simulators.</div></div>
+      <div class="vcard"><div class="vt">Post-training</div><div class="vd">Hidden-state and RL adaptation of frozen models.</div></div>
+      <div class="vcard"><div class="vt">Efficient architectures</div><div class="vd">Operator search, efficient attention, and KV-cache.</div></div>
+      <div class="vcard"><div class="vt">Agentic &amp; VLA</div><div class="vd">Tool-use and embodied decision-making.</div></div>
+      <div class="vcard"><div class="vt">AI for science</div><div class="vd">Reliable generation for molecules, materials, and discovery.</div></div>
     </div>
   </div>
 </section>
