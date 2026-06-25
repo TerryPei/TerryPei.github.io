@@ -100,11 +100,11 @@ h2{ font-weight:600; font-size:var(--h2-size); line-height:1.1; letter-spacing:-
 .diagram{ display:flex; justify-content:center; align-items:center; margin-top:.6rem; width:100%; }
 .diagram svg{ width:min(92vw,940px); height:auto; max-height:min(56vh,470px); }
 
-/* ===== research vision — 6 cards ===== */
-.vgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.6rem,1.6vw,1.1rem); max-width:min(94vw,1020px); margin:.5rem auto 0; }
-.vcard{ background:var(--paper-2); border:1px solid var(--line); border-top:3px solid var(--crimson); border-radius:12px; padding:clamp(.8rem,2vw,1.25rem); text-align:left; }
-.vcard .vt{ font-weight:600; font-size:var(--body-size); color:var(--crimson-deep); }
-.vcard .vd{ font-size:var(--small-size); color:var(--ink); line-height:1.35; margin-top:.4em; }
+/* ===== research vision — 6 cards (bigger) ===== */
+.vgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.8rem,2vw,1.5rem); max-width:min(95vw,1140px); margin:.8rem auto 0; }
+.vcard{ background:var(--paper-2); border:1px solid var(--line); border-top:4px solid var(--crimson); border-radius:16px; padding:clamp(1.15rem,3vw,2.1rem) clamp(1rem,2.4vw,1.7rem); text-align:left; }
+.vcard .vt{ font-weight:600; font-size:clamp(1.05rem,2.2vw,1.55rem); color:var(--crimson-deep); }
+.vcard .vd{ font-size:clamp(.8rem,1.55vw,1.1rem); color:var(--ink); line-height:1.45; margin-top:.55em; }
 @media (max-width:760px){ .vgrid{ grid-template-columns:1fr 1fr; } }
 
 /* ===== VLA real-world videos ===== */
@@ -122,7 +122,8 @@ h2{ font-weight:600; font-size:var(--h2-size); line-height:1.1; letter-spacing:-
 .cmp.ours .lbl{ color:var(--crimson); font-weight:600; } .cmp.ours .lbl .dot{ background:var(--crimson); }
 .cmp.ours video{ border-color:var(--crimson); box-shadow:0 10px 30px rgba(165,28,48,.18); }
 .wmlink{ display:inline-flex; align-items:center; gap:.5em; margin-top:.55rem; font-family:var(--mono); font-size:var(--small-size);
-  color:var(--crimson-deep); text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:.42em .95em; background:#fff; }
+  color:var(--crimson-deep); text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:.42em .95em; background:#fff; animation:wmpulse 1.8s ease-in-out infinite; }
+@keyframes wmpulse{ 0%,100%{ transform:translateY(0); box-shadow:0 0 0 0 rgba(165,28,48,0);} 50%{ transform:translateY(-2px); box-shadow:0 5px 16px rgba(165,28,48,.20);} }
 .wmlink::before{ content:"\25B6"; color:var(--crimson); font-size:.8em; }
 .wmlink:hover{ border-color:var(--crimson); }
 
@@ -216,7 +217,7 @@ body.locked .slide, body.locked .nav-dots, body.locked .keyboard-hint{ visibilit
     <h1 class="reveal">Xiaohuan (Terry) Pei</h1>
     <div class="rule reveal" style="margin:0 auto"></div>
     <p class="role reveal">Efficient multimodal foundation models · world models · AI for science</p>
-    <div class="reveal"><span class="meeting">PhD Candidate, University of Sydney &nbsp;·&nbsp; Visiting Scholar, UCLA</span></div>
+    <div class="reveal"><span class="meeting">PhD Candidate, University of Sydney &nbsp;·&nbsp; Visiting Graduate Researcher, UCLA</span></div>
   </div>
 </section>
 
@@ -329,7 +330,7 @@ body.locked .slide, body.locked .nav-dots, body.locked .keyboard-hint{ visibilit
         <span class="lbl"><span class="dot"></span>Ours · fast, closed-loop</span>
       </div>
     </div>
-    <a class="wmlink reveal" href="https://www.terrypei.com/smoothworldmodel/" target="_blank" rel="noopener">Interactive evaluation &amp; baselines — Smooth World Model</a>
+    <a class="wmlink reveal" href="https://www.terrypei.com/smoothworldmodel/" target="_blank" rel="noopener">👉 Interactive evaluation &amp; baselines — Smooth World Model</a>
 </div>
 </section>
 
@@ -338,7 +339,6 @@ body.locked .slide, body.locked .nav-dots, body.locked .keyboard-hint{ visibilit
   <div class="topbar"><span class="mark">Research vision</span><span>08 / 09</span></div>
   <div class="slide-content">
     <div class="eyebrow reveal">Research vision</div>
-    <h2 class="reveal">Efficient foundation models, <span class="accent">end to end</span></h2>
     <div class="vgrid reveal">
       <div class="vcard"><div class="vt">Efficient MLLM</div><div class="vd">Multimodal foundation models, cheaper to train, adapt, and serve.</div></div>
       <div class="vcard"><div class="vt">World models</div><div class="vd">Learned, efficient, closed-loop simulators.</div></div>
