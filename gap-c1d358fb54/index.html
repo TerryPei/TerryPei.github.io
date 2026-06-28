@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>GaP — Graph-as-Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{ --crimson:#A51C30; --ink:#1C1614; --muted:#7A6A64; --paper:#FBF8F6; --line:#E7DAD4; }
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-snap-type:y mandatory; scroll-behavior:smooth; }
+html,body{ height:100%; }
+body{ background:var(--paper); font-family:"IBM Plex Sans", system-ui, sans-serif; overflow-x:hidden; }
+
+.deck{ }
+.vslide{ width:100vw; height:100vh; height:100dvh; scroll-snap-align:start; overflow:hidden; }
+.vslide iframe{ width:100%; height:100%; border:0; display:block; background:#FBF8F6; }
+
+.nav-dots{ position:fixed; right:clamp(.6rem,1.5vw,1.2rem); top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:.6rem; z-index:50; }
+.nav-dots button{ width:9px; height:9px; border-radius:50%; border:1.5px solid var(--crimson); background:transparent; cursor:pointer; padding:0; transition:all .25s; }
+.nav-dots button.active{ background:var(--crimson); transform:scale(1.35); }
+.hint{ position:fixed; bottom:clamp(.5rem,1.5vh,1.1rem); left:50%; transform:translateX(-50%); font-family:"IBM Plex Mono",monospace; font-size:.8rem; color:var(--muted); letter-spacing:.08em; z-index:50; opacity:.8; }
+
+/* ===== PRIVATE PASSWORD GATE ===== */
+body.locked{ overflow:hidden; }
+body.locked .deck, body.locked .nav-dots, body.locked .hint{ visibility:hidden; }
+#gate{ position:fixed; inset:0; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem;
+  background:radial-gradient(120% 80% at 88% -10%, rgba(165,28,48,.07), transparent 60%), #FBF8F6;
+  font-family:"IBM Plex Sans", system-ui, sans-serif; color:#1C1614; text-align:center; padding:1.5rem; }
+#gate .mk{ width:.9em; height:.9em; background:#A51C30; transform:rotate(45deg); border-radius:2px; }
+#gate h2{ font-weight:600; font-size:clamp(1.1rem,3vw,1.9rem); }
+#gate p{ color:#7A6A64; font-size:.9rem; max-width:36ch; }
+#gate .box{ display:flex; gap:.5rem; margin-top:.3rem; }
+#gate input{ padding:.7em 1em; border:1px solid #E7DAD4; border-radius:10px; font-size:1rem; font-family:inherit; outline:none; }
+#gate input:focus{ border-color:#A51C30; }
+#gate button{ padding:.7em 1.3em; border:none; border-radius:10px; background:#A51C30; color:#fff; font-weight:600; cursor:pointer; font-size:1rem; font-family:inherit; }
+#gate .err{ color:#A51C30; font-size:.85rem; min-height:1.2em; }
+</style>
+</head>
+<body class="locked">
+
+<div id="gate">
+  <div class="mk"></div>
+  <h2>GaP &mdash; Graph-as-Policy</h2>
+  <p>This page is private, prepared for Prof. Ken Goldberg. Please enter the password to view.<br><span style="opacity:.75">hint: your name</span></p>
+  <div class="box"><input id="pw" type="password" placeholder="Password" autocomplete="off"><button id="go">Enter</button></div>
+  <div class="err" id="err"></div>
+</div>
+
+<div class="deck" id="deck">
+  <section class="vslide"><iframe src="concept.html" title="GaP — concept"></iframe></section>
+  <section class="vslide"><iframe src="graph.html" title="GaP — full graph"></iframe></section>
+</div>
+
+<nav class="nav-dots" aria-label="Slide navigation"></nav>
+<div class="hint">↑ ↓ · scroll · 2 views</div>
+
+<script>
+(function(){
+  const HASH="d46c9ae8201a33b2420df89a3221cc631d1467912d1f702103633e9c9b609967";
+  async function sha(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+  function unlock(){document.body.classList.remove('locked');const g=document.getElementById('gate');if(g)g.remove();initNav();}
+  async function tryPw(){const raw=(document.getElementById('pw')||{}).value||'';const v=raw.toLowerCase().replace(/\s+/g,'');const h=await sha(v);if(h===HASH){try{sessionStorage.setItem('gap_ok','1')}catch(e){}unlock();}else{const e=document.getElementById('err');if(e)e.textContent='Incorrect password.';}}
+  function initNav(){
+    const slides=Array.from(document.querySelectorAll('.vslide'));
+    const dots=document.querySelector('.nav-dots'); if(!dots||dots.childElementCount) return;
+    slides.forEach((s,i)=>{const b=document.createElement('button');if(i===0)b.classList.add('active');b.addEventListener('click',()=>s.scrollIntoView({behavior:'smooth'}));dots.appendChild(b);});
+    const dl=Array.from(dots.children);
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=slides.indexOf(e.target);dl.forEach(d=>d.classList.remove('active'));if(dl[i])dl[i].classList.add('active');}}),{threshold:.55});
+    slides.forEach(s=>io.observe(s));
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    try{if(sessionStorage.getItem('gap_ok')==='1'){unlock();return;}}catch(e){}
+    const go=document.getElementById('go'),pw=document.getElementById('pw');
+    if(pw){pw.focus();pw.addEventListener('keydown',e=>{if(e.key==='Enter')tryPw();});}
+    if(go)go.addEventListener('click',tryPw);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>GaP — Graph-as-Policy (concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crimson:#A51C30; --crimson-deep:#7E1322; --ink:#1C1614; --muted:#7A6A64;
+  --paper:#FBF8F6; --paper-2:#F3ECE8; --line:#E7DAD4;
+  --g:#15A35B; --g-deep:#0C7A41; --amber:#E0A116; --red:#D23B3B; --gsoft:#E3F6EC;
+  --sans:"IBM Plex Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", monospace;
+  --small-size:clamp(.65rem,1vw,.875rem); --body-size:clamp(.8rem,1.5vw,1.05rem);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ min-height:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased;
+  min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; overflow-x:hidden;
+  background-image:radial-gradient(120% 75% at 86% -10%, rgba(165,28,48,.06), transparent 60%); }
+header{ text-align:center; padding:clamp(1rem,3.5vh,2.2rem) 1rem 0; }
+.eyebrow{ font-family:var(--mono); font-size:var(--small-size); letter-spacing:.16em; text-transform:uppercase; color:var(--crimson); font-weight:600; }
+h1{ font-weight:600; font-size:clamp(1.25rem,3.4vw,2.2rem); letter-spacing:-.015em; line-height:1.05; margin-top:.3rem; }
+h1 .accent{ color:var(--crimson); }
+main{ flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:clamp(1rem,3vh,2rem) clamp(.6rem,3vw,2.5rem); }
+footer{ padding:0 1rem clamp(1rem,3vh,2rem); display:flex; justify-content:center; }
+.legend{ display:flex; flex-wrap:wrap; gap:.4rem clamp(.7rem,1.8vw,1.2rem); justify-content:center; font-family:var(--mono); font-size:var(--small-size); color:var(--muted); }
+.legend span{ display:inline-flex; align-items:center; gap:.4em; } .legend i{ width:.62em; height:.62em; border-radius:50%; display:inline-block; }
+
+.gap-status{ min-height:2.3em; display:flex; align-items:center; justify-content:center; margin-top:.6rem; font-size:var(--body-size); font-weight:500; }
+.gap-status .chip{ display:inline-flex; align-items:center; gap:.5em; padding:.4em 1em; border-radius:999px; border:1px solid var(--line); background:#fff; color:var(--crimson-deep); transition:all .3s; max-width:94vw; }
+.gap-status .chip .ico{ font-weight:700; }
+.gap-status.fail .chip{ color:var(--red); border-color:#F1C9C9; background:#FDF2F2; }
+.gap-status.win .chip{ color:var(--g-deep); border-color:#BCE7CE; background:var(--gsoft); box-shadow:0 6px 20px rgba(21,163,91,.18); }
+.morsl-strip{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:.4rem .55rem; margin:.6rem auto 0; }
+.morsl-strip .ms-lbl{ font-family:var(--mono); font-size:var(--small-size); color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.ms-chip{ font-family:var(--mono); font-size:clamp(.58rem,.9vw,.74rem); color:var(--crimson-deep); background:#fff; border:1px solid var(--line); border-radius:999px; padding:.24em .8em; transition:all .3s; }
+.ms-chip.hot{ background:var(--crimson); color:#fff; border-color:var(--crimson); transform:translateY(-2px); box-shadow:0 4px 14px rgba(165,28,48,.2); }
+.gap-graph{ display:flex; align-items:stretch; justify-content:center; flex-wrap:wrap; gap:.2rem clamp(.12rem,.5vw,.4rem); max-width:min(97vw,1180px); margin:.7rem auto 0; }
+.gap-graph .node{ position:relative; width:clamp(100px,13vw,158px); max-width:220px; background:#fff; border:1.5px solid var(--line); border-radius:14px; padding:clamp(.5rem,1.2vw,.85rem) clamp(.35rem,.9vw,.6rem); display:flex; flex-direction:column; align-items:center; gap:.28rem; box-shadow:0 4px 14px rgba(126,19,34,.06); transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s,background .35s,max-width .5s ease,padding .5s ease,opacity .45s ease; }
+.gap-graph .node .ico{ font-size:clamp(1.2rem,2.6vw,1.85rem); line-height:1; filter:grayscale(.5) opacity(.7); transition:filter .35s; }
+.gap-graph .node .nm{ font-size:clamp(.64rem,1vw,.84rem); font-weight:600; text-align:center; line-height:1.1; }
+.gap-graph .node .ty{ font-family:var(--mono); font-size:clamp(.5rem,.74vw,.64rem); letter-spacing:.04em; text-transform:uppercase; color:var(--muted); background:var(--paper-2); border-radius:999px; padding:.16em .55em; }
+.gap-graph .node .light{ position:absolute; top:.45rem; right:.45rem; width:.74rem; height:.74rem; border-radius:50%; background:#D7CDC8; box-shadow:inset 0 0 0 2px #fff,0 0 0 1px var(--line); transition:all .35s; }
+.gap-graph .node.run{ border-color:var(--crimson); transform:translateY(-4px) scale(1.03); box-shadow:0 10px 24px rgba(165,28,48,.16); }
+.gap-graph .node.run .light{ background:var(--crimson); box-shadow:inset 0 0 0 2px #fff,0 0 0 6px rgba(165,28,48,.18); animation:gblink .7s ease-in-out infinite; }
+.gap-graph .node.run .ico{ filter:none; }
+.gap-graph .node.ok{ border-color:var(--g); background:linear-gradient(180deg,#fff,#F4FBF7); }
+.gap-graph .node.ok .ico{ filter:none; }
+.gap-graph .node.ok .light{ background:var(--g); box-shadow:inset 0 0 0 2px #fff; animation:gpop .55s cubic-bezier(.2,.9,.2,1); }
+.gap-graph .node.ok::after{ content:"\2713"; position:absolute; top:.38rem; right:.36rem; font-size:.58rem; font-weight:700; color:#fff; }
+.gap-graph .node.fail{ border-color:var(--red); background:linear-gradient(180deg,#fff,#FDF4F4); animation:gshake .5s; }
+.gap-graph .node.fail .light{ background:var(--red); box-shadow:inset 0 0 0 2px #fff,0 0 0 6px rgba(210,59,59,.16); }
+.gap-graph .node.fail::after{ content:"\2717"; position:absolute; top:.38rem; right:.4rem; font-size:.62rem; font-weight:700; color:#fff; }
+.gap-graph .node.ins{ max-width:0; opacity:0; padding-left:0; padding-right:0; border-width:0; overflow:hidden; pointer-events:none; }
+.gap-graph .node.justin{ box-shadow:0 0 0 3px rgba(21,163,91,.25), 0 8px 22px rgba(21,163,91,.18); }
+.gap-graph .edge{ align-self:center; width:clamp(12px,2.4vw,40px); height:5px; border-radius:3px; background:var(--line); position:relative; flex:0 0 auto; transition:width .5s ease,opacity .45s ease; }
+.gap-graph .edge .fill{ position:absolute; inset:0; width:0; background:linear-gradient(90deg,var(--crimson),var(--g)); border-radius:3px; transition:width .5s ease; }
+.gap-graph .edge.on .fill{ width:100%; }
+.gap-graph .edge::after{ content:""; position:absolute; right:-7px; top:50%; transform:translateY(-50%); border-left:8px solid var(--line); border-top:5px solid transparent; border-bottom:5px solid transparent; transition:border-left-color .5s; }
+.gap-graph .edge.on::after{ border-left-color:var(--g); }
+.gap-graph .edge.ins{ width:0; opacity:0; }
+.gap-score{ display:flex; flex-wrap:wrap; justify-content:center; gap:.45rem clamp(.55rem,1.4vw,1rem); margin-top:.9rem; }
+.gap-score .sc{ display:flex; align-items:center; gap:.55em; background:#fff; border:1px solid var(--line); border-radius:10px; padding:.34em .75em; box-shadow:0 2px 10px rgba(126,19,34,.05); transition:all .3s; }
+.gap-score .sl{ font-family:var(--mono); font-size:clamp(.56rem,.85vw,.7rem); color:var(--muted); white-space:nowrap; }
+.gap-score .bar{ width:clamp(48px,8vw,90px); height:7px; background:var(--paper-2); border-radius:4px; overflow:hidden; }
+.gap-score .bf{ display:block; height:100%; width:0; background:var(--crimson); border-radius:4px; transition:width .9s cubic-bezier(.3,.8,.3,1); }
+.gap-score .pct{ font-family:var(--mono); font-size:clamp(.56rem,.85vw,.7rem); font-weight:600; color:var(--crimson-deep); min-width:2.5em; text-align:right; }
+.gap-score .sc.best{ border-color:var(--g); box-shadow:0 4px 16px rgba(21,163,91,.18); }
+.gap-score .sc.best .bf{ background:var(--g); } .gap-score .sc.best .pct{ color:var(--g-deep); }
+.gap-score .sc.best .sl::after{ content:" \2713 best"; color:var(--g-deep); }
+@keyframes gblink{ 0%,100%{opacity:1} 50%{opacity:.45} }
+@keyframes gpop{ 0%{transform:scale(.4)} 60%{transform:scale(1.5)} 100%{transform:scale(1)} }
+@keyframes gshake{ 0%,100%{transform:translateX(0)} 20%{transform:translateX(-4px)} 40%{transform:translateX(4px)} 60%{transform:translateX(-3px)} 80%{transform:translateX(3px)} }
+@media (prefers-reduced-motion:reduce){ *{ animation-duration:.01ms!important; } }
+@media (max-width:680px){ .gap-graph .edge{ display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">GaP &middot; Graph-as-Policy</div>
+  <h1>The <span class="accent">policy is a graph</span> &mdash; agentic coding builds, tests &amp; refines it</h1>
+</header>
+<main>
+  <div class="gap-status" id="gStatus"><span class="chip"><span class="ico">&#9654;</span><span id="gStatusText">&hellip;</span></span></div>
+  <div class="morsl-strip">
+    <span class="ms-lbl">MORSL skill library</span>
+    <span class="ms-chip">perception</span><span class="ms-chip">planning</span><span class="ms-chip">control</span>
+  </div>
+  <div class="gap-graph" id="gGraph">
+    <div class="node"><span class="light"></span><span class="ico">&#128269;</span><span class="nm">Object Detection</span><span class="ty">perception</span></div>
+    <div class="edge"><span class="fill"></span></div>
+    <div class="node ins"><span class="light"></span><span class="ico">&#128208;</span><span class="nm">6-DoF Pose Est.</span><span class="ty">perception</span></div>
+    <div class="edge ins"><span class="fill"></span></div>
+    <div class="node"><span class="light"></span><span class="ico">&#9995;</span><span class="nm">Grasp Selection</span><span class="ty">planning</span></div>
+    <div class="edge"><span class="fill"></span></div>
+    <div class="node ins"><span class="light"></span><span class="ico">&#128737;&#65039;</span><span class="nm">Collision Checking</span><span class="ty">planning</span></div>
+    <div class="edge ins"><span class="fill"></span></div>
+    <div class="node"><span class="light"></span><span class="ico">&#9881;&#65039;</span><span class="nm">Grasp Execution</span><span class="ty">control</span></div>
+    <div class="edge"><span class="fill"></span></div>
+    <div class="node"><span class="light"></span><span class="ico">&#128203;</span><span class="nm">Task Success Verify</span><span class="ty">verify</span></div>
+  </div>
+  <div class="gap-score" id="gScore">
+    <div class="sc" data-g="A"><span class="sl">Graph A</span><div class="bar"><span class="bf"></span></div><span class="pct">0%</span></div>
+    <div class="sc" data-g="B"><span class="sl">Graph B</span><div class="bar"><span class="bf"></span></div><span class="pct">0%</span></div>
+    <div class="sc" data-g="C"><span class="sl">Graph C</span><div class="bar"><span class="bf"></span></div><span class="pct">0%</span></div>
+  </div>
+</main>
+<footer>
+  <div class="legend">
+    <span><i style="background:#D7CDC8"></i>idle</span>
+    <span><i style="background:var(--crimson)"></i>running</span>
+    <span><i style="background:var(--g)"></i>mastered &#10003;</span>
+    <span><i style="background:var(--red)"></i>failed &#10007;</span>
+  </div>
+</footer>
+<script>
+(function(){
+  const g=document.getElementById('gGraph'); if(!g) return;
+  const N=Array.from(g.querySelectorAll('.node')), E=Array.from(g.querySelectorAll('.edge'));
+  const st=document.getElementById('gStatus'), stT=document.getElementById('gStatusText');
+  const MS=Array.from(document.querySelectorAll('.ms-chip')), SC={};
+  document.querySelectorAll('#gScore .sc').forEach(s=>SC[s.dataset.g]={el:s,bf:s.querySelector('.bf'),pct:s.querySelector('.pct')});
+  const U=950; let cancel=false;
+  const wait=f=>new Promise(r=>setTimeout(r,f*U));
+  const setS=(k,ic,t)=>{ st.className='gap-status '+k; stT.textContent=t; st.querySelector('.ico').textContent=ic; };
+  const stt=(i,s)=>{ N[i].classList.remove('run','ok','fail','justin'); if(s)N[i].classList.add(s); };
+  const eon=(i,o)=>{ if(E[i])E[i].classList.toggle('on',o); };
+  const score=(gk,v,best)=>{ SC[gk].bf.style.width=v+'%'; SC[gk].pct.textContent=v+'%'; SC[gk].el.classList.toggle('best',!!best); };
+  function hardReset(){
+    N.forEach(n=>n.classList.remove('run','ok','fail','justin'));
+    [1,3].forEach(i=>{ N[i].classList.add('ins'); E[i].classList.add('ins'); });
+    E.forEach(e=>e.classList.remove('on'));
+    Object.keys(SC).forEach(k=>{ SC[k].bf.style.width='0%'; SC[k].pct.textContent='0%'; SC[k].el.classList.remove('best'); });
+    MS.forEach(c=>c.classList.remove('hot'));
+  }
+  async function master(i){ stt(i,'run'); await wait(.6); stt(i,'ok'); eon(i,true); await wait(.38); }
+  async function seq(){
+    hardReset();
+    setS('','①','Skills drawn from MORSL — perception · planning · control'); MS.forEach(c=>c.classList.add('hot')); await wait(1.5);
+    MS.forEach(c=>c.classList.remove('hot'));
+    setS('','②','Agentic coding composes a candidate Graph-as-Policy'); await wait(1.3);
+    setS('','③','Internal simulation — rehearse candidates in parallel'); score('A',55); score('B',72); score('C',38);
+    await master(0); stt(2,'run'); await wait(.7); stt(2,'fail');
+    setS('fail','✗','Best so far 72% — grasp brittle on varied poses; model-free isn’t reliable enough'); await wait(1.7);
+    setS('','④','Refine the graph — add nodes · swap nodes · tune parameters');
+    N[1].classList.remove('ins'); E[1].classList.remove('ins'); N[3].classList.remove('ins'); E[3].classList.remove('ins');
+    N[1].classList.add('justin'); N[3].classList.add('justin'); stt(2,''); E.forEach(e=>e.classList.remove('on')); stt(0,''); await wait(2.0);
+    N[1].classList.remove('justin'); N[3].classList.remove('justin');
+    setS('','⑤','Re-simulate the refined graph — a more reliable structure');
+    for(let i=0;i<N.length;i++){ await master(i); }
+    score('B',94,true);
+    setS('win','🤖','Reliable variational automation — success ↑, throughput ↑ → deploy to the real robot'); await wait(2.6);
+    seq();
+  }
+  seq();
+})();
+</script>
+</body>
+</html>

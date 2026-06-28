@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GaP — the policy is a big computation graph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crimson:#A51C30; --crimson-deep:#7E1322; --ink:#1C1614; --muted:#7A6A64;
+  --paper:#FBF8F6; --paper-2:#F3ECE8; --line:#E7DAD4;
+  --g:#15A35B; --g-deep:#0C7A41; --amber:#E0A116; --red:#D23B3B;
+  --perc:#3B6FB6; --plan:#C08A2A; --ctrl:#A51C30; --ver:#15A35B;
+  --sans:"IBM Plex Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", monospace;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ min-height:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased;
+  min-height:100vh; display:flex; flex-direction:column; overflow-x:hidden;
+  background-image:radial-gradient(120% 70% at 85% -10%, rgba(165,28,48,.06), transparent 60%); }
+
+header{ text-align:center; padding:clamp(.8rem,2.6vh,1.6rem) 1rem 0; }
+.eyebrow{ font-family:var(--mono); font-size:clamp(.62rem,1vw,.8rem); letter-spacing:.16em; text-transform:uppercase; color:var(--crimson); font-weight:600; }
+h1{ font-weight:600; font-size:clamp(1.2rem,3.2vw,2.1rem); letter-spacing:-.015em; margin-top:.2rem; }
+h1 .g{ color:var(--g-deep); }
+.sub{ color:var(--muted); font-size:clamp(.76rem,1.3vw,1rem); margin-top:.35rem; }
+
+.status{ display:flex; justify-content:center; margin:.7rem auto 0; min-height:2.3em; }
+.status .chip{ display:inline-flex; align-items:center; gap:.5em; padding:.42em 1.05em; border-radius:999px; border:1px solid var(--line);
+  background:#fff; color:var(--crimson-deep); font-size:clamp(.8rem,1.5vw,1.1rem); font-weight:500; transition:all .3s; max-width:94vw; }
+.status .chip .ico{ font-weight:700; }
+.status.fail .chip{ color:var(--red); border-color:#F1C9C9; background:#FDF2F2; }
+.status.rec .chip{ color:var(--amber); border-color:#F2DDA8; background:#FFFBF0; box-shadow:0 4px 16px rgba(224,161,22,.14); }
+.status.win .chip{ color:var(--g-deep); border-color:#BCE7CE; background:#E3F6EC; box-shadow:0 6px 20px rgba(21,163,91,.18); }
+
+main{ flex:1; display:flex; align-items:center; justify-content:center; padding:clamp(.6rem,2vh,1.4rem) clamp(.4rem,2vw,1.6rem); }
+.canvas{ position:relative; width:min(98vw,1560px); aspect-ratio:1640 / 905; }
+.canvas svg.edges{ position:absolute; inset:0; width:100%; height:100%; z-index:0; overflow:visible; }
+.ep{ fill:none; stroke:#D9CFCA; stroke-width:2.4; stroke-dasharray:100; stroke-dashoffset:100;
+  transition:stroke-dashoffset .6s ease, stroke .6s ease; }
+.ep.on{ stroke-dashoffset:0; stroke:var(--g); }
+.ep.rec{ stroke:#EBD8AC; stroke-width:2.2; stroke-dasharray:6 5; stroke-dashoffset:0; opacity:0; transition:opacity .4s, stroke .4s; }
+.ep.rec.on{ opacity:1; stroke:var(--amber); }
+
+.node{ position:absolute; transform:translate(-50%,-50%); width:clamp(86px,8.1vw,128px);
+  background:#fff; border:1.5px solid var(--line); border-left:4px solid var(--tc,var(--line)); border-radius:11px;
+  padding:.4rem .4rem .42rem; display:flex; flex-direction:column; align-items:center; gap:.16rem; z-index:1;
+  box-shadow:0 3px 11px rgba(126,19,34,.07); transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s,background .35s; }
+.node .ico{ font-size:clamp(.95rem,1.7vw,1.35rem); line-height:1; filter:grayscale(.55) opacity(.7); transition:filter .35s; }
+.node .nm{ font-size:clamp(.54rem,.82vw,.72rem); font-weight:600; text-align:center; line-height:1.08; }
+.node .ty{ font-family:var(--mono); font-size:clamp(.44rem,.62vw,.55rem); letter-spacing:.03em; text-transform:uppercase; color:var(--muted); }
+.node .light{ position:absolute; top:.34rem; right:.34rem; width:.66rem; height:.66rem; border-radius:50%;
+  background:#D7CDC8; box-shadow:inset 0 0 0 2px #fff,0 0 0 1px var(--line); transition:all .35s; }
+.node.run{ border-color:var(--crimson); transform:translate(-50%,-50%) scale(1.06); box-shadow:0 8px 22px rgba(165,28,48,.18); }
+.node.run .ico{ filter:none; } .node.run .light{ background:var(--crimson); box-shadow:inset 0 0 0 2px #fff,0 0 0 5px rgba(165,28,48,.18); animation:blink .65s ease-in-out infinite; }
+.node.ok{ border-color:var(--g); background:linear-gradient(180deg,#fff,#F4FBF7); }
+.node.ok .ico{ filter:none; } .node.ok .light{ background:var(--g); box-shadow:inset 0 0 0 2px #fff; animation:pop .5s cubic-bezier(.2,.9,.2,1); }
+.node.ok::after{ content:"\2713"; position:absolute; top:.28rem; right:.3rem; font-size:.5rem; font-weight:700; color:#fff; }
+.node.fail{ border-color:var(--red); background:linear-gradient(180deg,#fff,#FDF4F4); animation:shake .5s; }
+.node.fail .light{ background:var(--red); box-shadow:inset 0 0 0 2px #fff,0 0 0 5px rgba(210,59,59,.16); }
+.node.fail::after{ content:"\2717"; position:absolute; top:.28rem; right:.32rem; font-size:.54rem; font-weight:700; color:#fff; }
+.node.amb{ border-color:var(--amber); background:linear-gradient(180deg,#fff,#FFFBF0); }
+.node.amb .light{ background:var(--amber); box-shadow:inset 0 0 0 2px #fff,0 0 0 5px rgba(224,161,22,.18); animation:blink .55s ease-in-out infinite; }
+
+footer{ padding:.4rem 1rem clamp(.8rem,2.4vh,1.5rem); display:flex; flex-direction:column; align-items:center; gap:.7rem; }
+.legend{ display:flex; flex-wrap:wrap; gap:.4rem clamp(.7rem,1.8vw,1.3rem); justify-content:center; font-family:var(--mono); font-size:clamp(.58rem,.95vw,.74rem); color:var(--muted); }
+.legend span{ display:inline-flex; align-items:center; gap:.4em; } .legend i{ width:.68em; height:.68em; border-radius:3px; display:inline-block; }
+.controls{ display:flex; gap:.5rem; }
+.btn{ font-family:var(--mono); font-size:clamp(.62rem,1vw,.78rem); color:var(--crimson-deep); background:#fff; border:1px solid var(--line); border-radius:999px; padding:.46em 1em; cursor:pointer; transition:all .2s; }
+.btn:hover{ border-color:var(--crimson); transform:translateY(-1px); } .btn.active{ background:var(--crimson); color:#fff; border-color:var(--crimson); }
+
+.budget{ display:flex; align-items:center; justify-content:center; gap:.6em; margin:.55rem auto 0; font-family:var(--mono); font-size:clamp(.62rem,1vw,.8rem); color:var(--muted); }
+.budget .bl{ color:var(--crimson-deep); }
+.budget .bbar{ position:relative; width:clamp(150px,24vw,320px); height:9px; background:var(--paper-2); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.budget .bfill{ position:absolute; left:0; top:0; bottom:0; width:0; background:var(--g); border-radius:6px; transition:width .4s ease, background .3s; }
+.budget.over .bfill{ background:var(--red); } .budget.over .bnum{ color:var(--red); }
+.budget .bnum{ font-weight:600; color:var(--g-deep); min-width:7em; }
+.budget.done{ filter:drop-shadow(0 3px 10px rgba(21,163,91,.2)); }
+@keyframes blink{ 0%,100%{opacity:1} 50%{opacity:.45} }
+@keyframes pop{ 0%{transform:scale(.4)} 60%{transform:scale(1.5)} 100%{transform:scale(1)} }
+@keyframes shake{ 0%,100%{transform:translate(-50%,-50%)} 25%{transform:translate(calc(-50% - 4px),-50%)} 75%{transform:translate(calc(-50% + 4px),-50%)} }
+@media (prefers-reduced-motion:reduce){ *{ animation-duration:.01ms!important; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">GaP · Graph-as-Policy</div>
+  <h1>The policy <i>is</i> a computation graph — skills light <span class="g">green</span> as they're mastered</h1>
+  <p class="sub">Perception → planning → control skills (MORSL) · agentic coding builds the graph · internal simulation scores it on success rate AND latency budget · refine for reliable, real-time Variational Automation</p>
+</header>
+
+<div class="status" id="status"><span class="chip"><span class="ico">&#9654;</span><span id="statusText">Composing the graph policy&hellip;</span></span></div>
+
+<div class="budget" id="budget"><span class="bl">&#9201; latency vs budget</span><div class="bbar"><span class="bfill" id="bfill"></span></div><span class="bnum" id="bnum">0 / 1300 ms</span></div>
+
+<main>
+  <div class="canvas" id="canvas"><svg class="edges" id="edges" viewBox="0 0 1640 905" preserveAspectRatio="none"></svg></div>
+</main>
+
+<footer>
+  <div class="legend">
+    <span><i style="background:var(--perc)"></i>perception</span>
+    <span><i style="background:var(--plan)"></i>planning</span>
+    <span><i style="background:var(--ctrl)"></i>control</span>
+    <span><i style="background:var(--ver)"></i>verify</span>
+    <span><i style="background:#D7CDC8;border-radius:50%"></i>idle</span>
+    <span><i style="background:var(--g);border-radius:50%"></i>mastered &#10003;</span>
+    <span><i style="background:var(--red);border-radius:50%"></i>failed</span>
+    <span><i style="background:var(--amber);border-radius:50%"></i>recovery</span>
+  </div>
+  <div class="controls">
+    <button class="btn" id="replay">&#8635; Replay</button>
+    <button class="btn" data-spd="1.5">0.7&times;</button>
+    <button class="btn active" data-spd="1">1&times;</button>
+    <button class="btn" data-spd="0.6">1.7&times;</button>
+  </div>
+</footer>
+
+<script>
+const TYPE={perc:{c:'var(--perc)',i:'🔍',t:'perception'}, plan:{c:'var(--plan)',i:'🧭',t:'planning'},
+            ctrl:{c:'var(--ctrl)',i:'⚙️',t:'control'}, ver:{c:'var(--ver)',i:'✅',t:'verify'}};
+const NODES=[
+ {id:'cap', nm:'RGB-D Observation', ty:'perc', x:100,  y:452},
+ {id:'seg', nm:'Instance Segmentation', ty:'perc', x:300, y:282},
+ {id:'obs', nm:'Collision Map', ty:'perc', x:300, y:622},
+ {id:'det', nm:'Object Detection', ty:'perc', x:500, y:162},
+ {id:'pose',nm:'6-DoF Pose Est.', ty:'perc', x:500, y:362},
+ {id:'geo', nm:'Point Cloud / Shape', ty:'perc', x:500, y:560},
+ {id:'aff', nm:'Dex-Net Grasp Sampling', ty:'plan', x:712, y:252},
+ {id:'selg',nm:'Grasp Selection', ty:'plan', x:712, y:452},
+ {id:'coll',nm:'Collision Checking', ty:'plan', x:712, y:652},
+ {id:'regr',nm:'Re-grasp Planning', ty:'plan', x:918, y:150, rec:true},
+ {id:'rank',nm:'Grasp Quality (GQ-CNN)', ty:'plan', x:918, y:352},
+ {id:'ik',  nm:'Motion Planning (IK)', ty:'plan', x:918, y:548},
+ {id:'preg',nm:'Approach (pre-grasp)', ty:'ctrl', x:1124, y:302},
+ {id:'grasp',nm:'Grasp Execution', ty:'ctrl', x:1124, y:472},
+ {id:'lift',nm:'Lift', ty:'ctrl', x:1124, y:648},
+ {id:'vg',  nm:'Grasp Success Detect', ty:'ver', x:1330, y:302},
+ {id:'place',nm:'Transport', ty:'ctrl', x:1330, y:482},
+ {id:'ins', nm:'Insertion (force ctrl)', ty:'ctrl', x:1330, y:656},
+ {id:'rel', nm:'Release', ty:'ctrl', x:1538, y:392},
+ {id:'vp',  nm:'Task Success Verify', ty:'ver', x:1538, y:566},
+];
+const EDGES=[
+ ['cap','seg'],['cap','obs'],
+ ['seg','det'],['seg','pose'],['seg','geo'],['obs','coll'],
+ ['det','aff'],['pose','aff'],['pose','selg'],['geo','selg'],
+ ['aff','rank'],['selg','rank'],['selg','ik'],['coll','ik'],
+ ['rank','preg'],['ik','preg'],['ik','grasp'],['rank','grasp'],
+ ['preg','grasp'],['grasp','lift'],
+ ['grasp','vg'],['lift','place'],
+ ['vg','place'],['place','ins'],
+ ['ins','rel'],['rel','vp'],
+];
+const REC=[['vg','regr'],['regr','selg']];
+const byId={}; NODES.forEach(n=>byId[n.id]=n);
+
+// ---- build DOM ----
+const canvas=document.getElementById('canvas'), svg=document.getElementById('edges');
+function path(a,b){ const dx=(b.x-a.x)*0.42; return `M${a.x},${a.y} C${a.x+dx},${a.y} ${b.x-dx},${b.y} ${b.x},${b.y}`; }
+[...EDGES.map(e=>[...e,false]),...REC.map(e=>[...e,true])].forEach(([f,t,rec])=>{
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d',path(byId[f],byId[t])); p.setAttribute('pathLength','100');
+  p.setAttribute('class','ep'+(rec?' rec':'')); p.dataset.from=f; p.dataset.to=t;
+  svg.appendChild(p);
+});
+NODES.forEach(n=>{ const T=TYPE[n.ty]; const el=document.createElement('div'); el.className='node'; el.id='n-'+n.id;
+  el.style.left=(n.x/1640*100)+'%'; el.style.top=(n.y/905*100)+'%'; el.style.setProperty('--tc',T.c);
+  el.innerHTML=`<span class="light"></span><span class="ico">${n.ic||T.i}</span><span class="nm">${n.nm}</span><span class="ty">${T.t}</span>`;
+  canvas.appendChild(el);
+});
+
+// ---- animation ----
+const ND=id=>document.getElementById('n-'+id);
+const st=document.getElementById('status'), stT=document.getElementById('statusText');
+let U=1, cancel=false;
+const COST={perc:55,plan:70,ctrl:45,ver:30}, BUDGET=1300; let latMs=0;
+const $b=id=>document.getElementById(id);
+function latAdd(ms){ latMs+=ms; const p=Math.min(100,latMs/BUDGET*100); $b('bfill').style.width=p+'%'; $b('bnum').textContent=latMs+' / '+BUDGET+' ms'; $b('budget').classList.toggle('over',latMs>BUDGET); }
+function latReset(){ latMs=0; $b('bfill').style.width='0%'; $b('bnum').textContent='0 / '+BUDGET+' ms'; $b('budget').classList.remove('over','done'); }
+const wait=f=>new Promise(r=>setTimeout(r,f*U*1000));
+const setS=(k,ic,t)=>{ st.className='status '+k; stT.textContent=t; st.querySelector('.ico').textContent=ic; };
+const cls=(id,c)=>{ const n=ND(id); n.classList.remove('run','ok','fail','amb'); if(c)n.classList.add(c); };
+function drawOut(id){ document.querySelectorAll(`.ep[data-from="${id}"]:not(.rec)`).forEach(p=>p.classList.add('on')); }
+function reset(){ NODES.forEach(n=>cls(n.id,'')); document.querySelectorAll('.ep').forEach(p=>p.classList.remove('on')); latReset(); }
+
+const COLS=[...new Set(NODES.filter(n=>!n.rec).map(n=>n.x))].sort((a,b)=>a-b);
+async function lightNode(id){ cls(id,'run'); await wait(.34); cls(id,'ok'); drawOut(id); latAdd(COST[byId[id].ty]||40); }
+
+async function recovery(){
+  cls('vg','fail'); latAdd(90); setS('fail','✗','Verify Grasp failed — pose drift on an irregular object'); await wait(1.1); if(cancel)return;
+  setS('rec','🛠','Internal simulation refines the graph — route to Re-grasp Planner');
+  document.querySelector('.ep.rec[data-from="vg"][data-to="regr"]').classList.add('on'); await wait(.5);
+  cls('regr','amb'); await wait(.7);
+  document.querySelector('.ep.rec[data-from="regr"][data-to="selg"]').classList.add('on'); await wait(.7); if(cancel)return;
+  cls('regr','ok'); latAdd(70); setS('rec','🛠','Re-grasp parameters tuned — re-run the corrected branch'); await wait(.8); if(cancel)return;
+  cls('vg','run'); await wait(.4); cls('vg','ok'); drawOut('vg'); latAdd(30);
+  document.querySelectorAll('.ep.rec').forEach(p=>p.classList.remove('on'));
+}
+
+async function run(){
+  reset(); cls('regr','');
+  setS('','①','Skills drawn from MORSL · agentic coding composes the graph policy'); await wait(1.5); if(cancel)return;
+  setS('','▶','Internal simulation — executing the graph, skills light up as mastered');
+  for(const cx of COLS){
+    const col=NODES.filter(n=>n.x===cx && !n.rec).sort((a,b)=>a.y-b.y);
+    for(const n of col){
+      if(cancel)return;
+      if(n.id==='vg'){ await recovery(); }
+      else { await lightNode(n.id); await wait(.06); }
+    }
+    await wait(.12);
+  }
+  if(cancel)return;
+  $b('budget').classList.add('done');
+  setS('win','🤖','Task success ✓ AND within the latency budget ✓ → reliable, real-time Variational Automation → deploy');
+  await wait(2.9); if(cancel)return; run();
+}
+
+document.getElementById('replay').addEventListener('click',()=>{ cancel=true; setTimeout(()=>{ cancel=false; run(); },70); });
+document.querySelectorAll('[data-spd]').forEach(b=>b.addEventListener('click',()=>{ U=+b.dataset.spd;
+  document.querySelectorAll('[data-spd]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); }));
+run();
+</script>
+</body>
+</html>
