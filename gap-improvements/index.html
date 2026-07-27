@@ -224,11 +224,17 @@ instead of 7. Same pairwise reliability, a fraction of the calls, and the distra
 
 <!-- 05 — TWO MORE -->
 <h2 id="more"><span class="num">05</span> Two more improvements to the same node</h2>
-<h3>Repair instead of abort</h3>
-<p class="legend">Today a <code>not_found</code> throws the whole episode away. Instead, on failure we re-run
-perception with <b>escalating recall</b> — the specific target prompt, then relaxed thresholds — <i>before</i>
-signalling abort. Because the graph is explicit, the repair is <b>local</b> to the failed node.
-(<code>GAP_PERCEPTION_REPAIR=on</code>, opt-in.)</p>
+<h3>Repair instead of abort — and an honest negative</h3>
+<p class="legend">The idea: on a <code>not_found</code>, re-run perception with <b>escalating recall</b> (the specific
+target prompt, then relaxed thresholds) <i>before</i> signalling abort — a <b>local</b> repair of the failed node
+(<code>GAP_PERCEPTION_REPAIR=on</code>, opt-in). <b>On task&nbsp;1 it did nothing — and that turns out to be
+informative.</b> In our A/B the repair <b>fired 0 times</b>: task-1's perception never returns a clean
+<code>not_found</code> — it returns a <i>wrong-but-confident</i> pick (or the not-found is decided by a downstream
+node), which repair's trigger never sees. So repair is aimed at a <b>different failure mode</b> — a genuine
+<i>missed</i> detection — than the one task&nbsp;1 has. The clean negative is itself a result: it proves task&nbsp;1
+is a <b>“wrong-pick”</b> problem (which pre-ranking fixes at the source), not a <b>“missed-detection”</b> one. To
+make repair earn its keep, it needs a different trigger (fire on a low-confidence pick, or at the graph's downstream
+not-found edge) or a task where Grounding-DINO truly misses the object.</p>
 <h3 id="attribution">Failure attribution</h3>
 <p class="legend">A small tool reads a benchmark run and attributes each task’s failures to
 <b>graph-generation / perception / execution</b> — from control-step counts and workflow validity. On our A/B it
@@ -239,13 +245,20 @@ pre-ranking targets.</p>
 
 <!-- 06 — A/B + demos -->
 <h2 id="ab"><span class="num">06</span> The A/B, on the real benchmark</h2>
+<p class="legend">Three arms, plus pre-ranking on its own — all on task&nbsp;1, 8 trials each, perception cache off, on
+the real GaP LIBERO benchmark (2×4090). Firing counts are logged directly from the perception node.</p>
 <table>
-  <thead><tr><th>Task-1 · cream cheese box</th><th class="n">success</th><th class="n">avg steps</th><th class="n">pre-rank fired</th><th class="n">attribution</th></tr></thead>
+  <thead><tr><th>Task-1 · cream cheese box (8 trials)</th><th class="n">success</th><th class="n">avg steps</th><th class="n">firing</th></tr></thead>
   <tbody>
-    <tr><td>Baseline GaP (unchanged)</td><td class="n"><span class="bad">2/8 = 25.0%</span></td><td class="n">192</td><td class="n">0</td><td class="n">100% perception</td></tr>
-    <tr style="background:rgba(118,185,0,.06)"><td><b>+ pre-ranking (ours)</b></td><td class="n"><span class="good"><b>7/8 = 87.5%</b></span></td><td class="n">749</td><td class="n"><b>24</b></td><td class="n">ok</td></tr>
+    <tr><td>Baseline GaP (unchanged)</td><td class="n"><span class="bad">2/8 = 25.0%</span></td><td class="n">192</td><td class="n">—</td></tr>
+    <tr><td>Repair only <span class="legend">(Goal&nbsp;2)</span></td><td class="n"><span class="bad">2/8 = 25.0%</span></td><td class="n">192</td><td class="n">repair <b>0×</b></td></tr>
+    <tr style="background:rgba(118,185,0,.06)"><td><b>Pre-ranking</b> <span class="legend">(Goal&nbsp;1, ours)</span></td><td class="n"><span class="good"><b>7/8 = 87.5%</b></span></td><td class="n">749</td><td class="n">prerank <b>24×</b></td></tr>
+    <tr style="background:rgba(118,185,0,.06)"><td><b>Pre-ranking + Repair</b> <span class="legend">(combined)</span></td><td class="n"><span class="good"><b>7/8 = 87.5%</b></span></td><td class="n">750</td><td class="n">prerank 24×, repair 0×</td></tr>
   </tbody>
 </table>
+<p class="legend">The story is clean: <b>pre-ranking (Goal&nbsp;1) is the causal fix</b> (25% → 87.5%, fired 24×), and
+adding repair on top <b>doesn't hurt</b> (87.5%). Repair on its own does nothing — for the reason below, which is
+itself a useful finding.</p>
 
 <div class="vids">
   <figure>
