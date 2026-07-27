@@ -94,7 +94,7 @@
   <h1>Perception that <span class="hl">doesn't abort</span></h1>
   <p>A drop-in change to <a href="https://graph-robots.github.io/gap/">GaP (Graph-as-Policy)</a> that fixes its
   single biggest failure mode — the perception node that gives up. On the cream-cheese-box task it turns
-  <b>25% into 87.5%</b>, and every line of it is opt-in and reversible.</p>
+  <b>6.7% into 80.0%</b> (30-trial paper config), and every line of it is opt-in and reversible.</p>
 </header>
 
 <!-- 01 — HEADLINE RESULT (animated) -->
@@ -106,27 +106,28 @@
 <div class="score" id="scorePanel">
   <div class="row">
     <div class="tag"><b style="color:var(--bad)">Baseline GaP</b><span>perception aborts</span></div>
-    <div class="track"><div class="fill base" data-w="25"></div><div class="pct" id="pctBase">0.0%</div></div>
+    <div class="track"><div class="fill base" data-w="6.7"></div><div class="pct" id="pctBase">0.0%</div></div>
   </div>
   <div class="row">
     <div class="tag"><b style="color:var(--accent)">+ our pre-ranking</b><span>perception succeeds</span></div>
-    <div class="track"><div class="fill ours" data-w="87.5"></div><div class="pct" id="pctOurs">0.0%</div></div>
+    <div class="track"><div class="fill ours" data-w="80"></div><div class="pct" id="pctOurs">0.0%</div></div>
   </div>
-  <div class="delta" id="delta">▲ +62.5 points success on task&nbsp;1&nbsp;&nbsp;·&nbsp;&nbsp;2/8 → 7/8 trials</div>
+  <div class="delta" id="delta">▲ +73.3 points success on task&nbsp;1&nbsp;&nbsp;·&nbsp;&nbsp;2/30 → 24/30 trials&nbsp;&nbsp;·&nbsp;&nbsp;30-trial paper config</div>
 </div>
 
 <div class="cards">
-  <div class="card"><div class="lab">Task-1 success</div><div class="val"><span style="color:var(--bad)">25%</span> <span style="color:var(--muted);font-size:18px">→</span> <span style="color:var(--accent)">87.5%</span></div></div>
-  <div class="card"><div class="lab">Pre-ranking fired</div><div class="val" style="color:var(--accent)">24×</div></div>
+  <div class="card"><div class="lab">Task-1 success</div><div class="val"><span style="color:var(--bad)">6.7%</span> <span style="color:var(--muted);font-size:18px">→</span> <span style="color:var(--accent)">80.0%</span></div></div>
+  <div class="card"><div class="lab">Pre-ranking fired</div><div class="val" style="color:var(--accent)">90×</div></div>
   <div class="card"><div class="lab">Baseline failures = perception</div><div class="val" style="color:var(--bad)">100%</div></div>
-  <div class="card"><div class="lab">Avg control steps</div><div class="val">192 <span style="color:var(--muted);font-size:18px">→</span> 749</div></div>
+  <div class="card"><div class="lab">Avg control steps</div><div class="val">51 <span style="color:var(--muted);font-size:18px">→</span> 746</div></div>
 </div>
-<p class="legend"><b>Why the step count is the proof.</b> A baseline trial dies after ~<b>192</b> steps — the graph
+<p class="legend"><b>Why the step count is the proof.</b> A baseline trial dies after ~<b>51</b> steps — the graph
 reached <code>perceive</code>, couldn't pick the object, and aborted before the arm moved. With our change the same
-task runs ~<b>749</b> steps — perception succeeds, so the arm actually grasps and places. The
+task runs ~<b>746</b> steps — perception succeeds, so the arm actually grasps and places. The
 <a href="#attribution">failure-attribution tool</a> confirms it independently: <b>100% of baseline failures are
-perception</b>, the exact mode we target. <span class="legend">(Measured on the real GaP benchmark, 8 trials/arm,
-Gemini-3.1-pro codegen + Gemini-flash-lite perception. See <a href="#honest">the honest read</a>.)</span></p>
+perception</b> (28/28), the exact mode we target. <span class="legend">(<b>Faithful reproduction</b>: 30 trials/arm
+on the original config with object hints — the baseline 6.7% matches the paper-config reproduction. Gemini-3.1-pro
+codegen + Gemini-flash-lite perception, on 2×4090. See <a href="#honest">the honest read</a>.)</span></p>
 
 <!-- 02 — WHAT GaP IS -->
 <h2 id="gap"><span class="num">02</span> What GaP is — a policy you can read</h2>
@@ -182,7 +183,7 @@ reliable than asking a VLM to pick 1-of-N. But it has two costs.</p>
 </div>
 <p class="legend"><b>① On the cream-cheese-box the tournament loses.</b> The flat white-and-blue box is hard, and the
 arm/basket distractors are in the bracket — the VLM can’t pin it down, so the graph exits <code>not_found → abort</code>
-and the arm never moves (the ~51–192-step deaths above). <b>② It’s also the latency centre:</b> the tournament is
+and the arm never moves (the ~51-step deaths above). <b>② It’s also the latency centre:</b> the tournament is
 <b>O(N) sequential VLM API calls</b> — with two <code>perceive</code> nodes per episode, one episode makes
 <b>~14 VLM round-trips</b>, even though only <b>one</b> box ever reaches SAM3.</p>
 
@@ -241,24 +242,26 @@ not-found edge) or a task where Grounding-DINO truly misses the object.</p>
 reported baseline task-1 failures as <b>100% perception</b> (and 0% for our run), independently confirming what the
 pre-ranking targets.</p>
 <pre><code>task   succ%   steps  fails  stage          <span class="cm"># baseline run, real output</span>
-1      25.0%    192      6    <span class="bad">perception</span>     →  perception 6/6 (100%)</code></pre>
+1       6.7%     51     28    <span class="bad">perception</span>     →  perception 28/28 (100%)</code></pre>
 
 <!-- 06 — A/B + demos -->
 <h2 id="ab"><span class="num">06</span> The A/B, on the real benchmark</h2>
-<p class="legend">Three arms, plus pre-ranking on its own — all on task&nbsp;1, 8 trials each, perception cache off, on
-the real GaP LIBERO benchmark (2×4090). Firing counts are logged directly from the perception node.</p>
+<p class="legend">The headline is a <b>faithful 30-trial reproduction</b> — the original GaP config (30 trials =
+code_generations 3 × 10, with the object hints) vs. the same config plus our pre-ranking, on the real GaP LIBERO
+benchmark (2×4090). The baseline <b>6.7%</b> matches the paper-config reproduction, so this is a fair
+<b>“paper-level baseline vs. our improvement.”</b></p>
 <table>
-  <thead><tr><th>Task-1 · cream cheese box (8 trials)</th><th class="n">success</th><th class="n">avg steps</th><th class="n">firing</th></tr></thead>
+  <thead><tr><th>Task-1 · cream cheese box (30 trials)</th><th class="n">success</th><th class="n">avg steps</th><th class="n">firing</th></tr></thead>
   <tbody>
-    <tr><td>Baseline GaP (unchanged)</td><td class="n"><span class="bad">2/8 = 25.0%</span></td><td class="n">192</td><td class="n">—</td></tr>
-    <tr><td>Repair only <span class="legend">(Goal&nbsp;2)</span></td><td class="n"><span class="bad">2/8 = 25.0%</span></td><td class="n">192</td><td class="n">repair <b>0×</b></td></tr>
-    <tr style="background:rgba(118,185,0,.06)"><td><b>Pre-ranking</b> <span class="legend">(Goal&nbsp;1, ours)</span></td><td class="n"><span class="good"><b>7/8 = 87.5%</b></span></td><td class="n">749</td><td class="n">prerank <b>24×</b></td></tr>
-    <tr style="background:rgba(118,185,0,.06)"><td><b>Pre-ranking + Repair</b> <span class="legend">(combined)</span></td><td class="n"><span class="good"><b>7/8 = 87.5%</b></span></td><td class="n">750</td><td class="n">prerank 24×, repair 0×</td></tr>
+    <tr><td>Baseline GaP <span class="legend">(faithful reproduction)</span></td><td class="n"><span class="bad">2/30 = 6.7%</span></td><td class="n">51</td><td class="n">—</td></tr>
+    <tr style="background:rgba(118,185,0,.06)"><td><b>+ Pre-ranking</b> <span class="legend">(Goal&nbsp;1, ours)</span></td><td class="n"><span class="good"><b>24/30 = 80.0%</b></span></td><td class="n">746</td><td class="n">prerank <b>90×</b></td></tr>
   </tbody>
 </table>
-<p class="legend">The story is clean: <b>pre-ranking (Goal&nbsp;1) is the causal fix</b> (25% → 87.5%, fired 24×), and
-adding repair on top <b>doesn't hurt</b> (87.5%). Repair on its own does nothing — for the reason below, which is
-itself a useful finding.</p>
+<p class="legend"><b>+73.3 points over a faithful, reproduced baseline</b> (Fisher exact p ≪ 0.001 at n = 30).
+Pre-ranking is the causal fix — it fired 90× and turned the 28/28 perception aborts into completions.
+<span class="legend">In a smaller preliminary run (8 trials), <b>repair (Goal&nbsp;2) alone changed nothing and fired
+0×</b> — task-1's failure isn't a clean not-found, so repair targets a different mode (§05); adding it on top of
+pre-ranking neither helped nor hurt. A 30-trial repair/combined re-check is queued with the full-gate run.</span></p>
 
 <div class="vids">
   <figure>
@@ -277,12 +280,13 @@ itself a useful finding.</p>
 <h2 id="honest"><span class="num">07</span> The honest read</h2>
 <div class="callout warn">
   <span class="t">What this is, and what it isn’t</span>
-  This is a <b>real, causal</b> improvement on the perception-bottleneck task: 2/8 → 7/8, the mechanism confirmed
-  active (fired 24×), the step-count signature flipped (abort → execute), and the attribution tool independently
-  localizing baseline failures to perception. <b>What it isn’t yet:</b> the full 10-task gate average — this is one
-  task at <b>n = 8</b>, with baseline and ours on different generated graphs, so the exact magnitude will move with
-  more trials. The next step is the same A/B across the other tasks for a per-task before/after. Every change is
-  <b>opt-in and default-off</b> (baseline byte-identical), lives in the existing
+  This is a <b>real, causal</b> improvement over a <b>faithful reproduction</b>: 2/30 → 24/30 at <b>n = 30</b> on the
+  original paper config (with the object hints), the baseline matching the paper-config reproduction. The mechanism
+  is confirmed active (fired 90×), the step-count signature flipped (51 → 746, abort → execute), and the attribution
+  tool independently localizes the 28/28 baseline failures to perception. It is statistically solid (Fisher exact
+  p ≪ 0.001). <b>What it isn’t yet:</b> the full 10-task <b>gate aggregate</b> — this is the single perception-bottleneck
+  task. That run (10 tasks × 30 trials, baseline vs ours) is queued next, to report the paper-level aggregate
+  before/after. Every change is <b>opt-in and default-off</b> (baseline byte-identical), lives in the existing
   <code>perceiving-objects/perceive_dino_vlm.py</code> node, and is fully reversible.
 </div>
 
@@ -299,8 +303,8 @@ itself a useful finding.</p>
   var panel = document.getElementById('scorePanel');
   function animateScore(){
     document.querySelectorAll('.fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
-    countTo(document.getElementById('pctBase'), 25.0, 1400);
-    countTo(document.getElementById('pctOurs'), 87.5, 1400);
+    countTo(document.getElementById('pctBase'), 6.7, 1400);
+    countTo(document.getElementById('pctOurs'), 80.0, 1400);
     setTimeout(function(){ document.getElementById('delta').classList.add('show'); }, 900);
   }
   function countTo(el, target, dur){
