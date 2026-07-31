@@ -376,17 +376,8 @@ details[open] summary::before {
 }
 
 .series-omega {
-  background: #0b0d12;
-  padding: 0;
-  overflow: hidden;
-}
-.omega-frame {
-  display: block;
-  width: 100%;
-  height: 120px;
-  border: 0;
-  border-radius: 14px;
-  pointer-events: none;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  opacity: 0.85;
 }
 
 .series-greek {
@@ -433,8 +424,6 @@ details[open] summary::before {
   }
   .series-chi { padding: 0; }
   .chi-frame { height: 96px; }
-  .series-omega { padding: 0; }
-  .omega-frame { height: 96px; }
   .series-greek {
     font-size: 24px;
   }
