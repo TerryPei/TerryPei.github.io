@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Schedule the Budget before Inference</title>
+<title>FlashDriver: Schedule the Budget before Inference</title>
 <script>
 window.MathJax = {
   tex: {
@@ -108,7 +108,7 @@ window.MathJax = {
 <body>
 <div class="wrap">
 <header class="hero">
-  <h1>Schedule the Budget before Inference</h1>
+  <h1>FlashDriver: Schedule the Budget before Inference</h1>
   <p style="color:var(--muted);font-size:14.5px;line-height:1.6;margin:8px auto 12px;max-width:660px">
     Xiaohuan&nbsp;Pei, Yuanhao&nbsp;Ban, Justin&nbsp;Cui, Zhouheng&nbsp;Guang, Jiaqi&nbsp;Feng, Pichao&nbsp;Wang, Cho-Jui&nbsp;Hsieh
   </p>
@@ -175,7 +175,7 @@ budget.</p>
     <tr><td>Vision-Language-Action</td><td>acts from the current context</td><td class="n">\(o,\,l \rightarrow a\)</td><td class="n">\(p(a \mid o,\, l)\)</td></tr>
     <tr><td>World Model</td><td>predicts what happens next</td><td class="n">\(o,\,a,\,l \rightarrow o'\)</td><td class="n">\(p(o' \mid o,\, a,\, l)\)</td></tr>
     <tr><td>World-Action Model</td><td>keeps the future in the action path</td><td class="n">\(o,\,l \rightarrow o',\,a\) <span class="legend">coupled</span></td><td class="n">\(p(o',\, a \mid o,\, l)\)</td></tr>
-    <tr class="ours"><td><b>FlashDreamer</b> <span class="legend">ours</span></td><td><b>spends only the compute it can afford</b></td><td class="n">\(o,\,l,\,{\color{#fb923c}{c}} \rightarrow o',\,a,\,{\color{#fb923c}{c'}}\)</td><td class="n">\(p\bigl(o',\, a,\, {\color{#fb923c}{c'}} \mid o,\, l,\, {\color{#fb923c}{c}}\bigr)\)</td></tr>
+    <tr class="ours"><td><b>FlashDriver</b> <span class="legend">ours</span></td><td><b>spends only the compute it can afford</b></td><td class="n">\(o,\,l,\,{\color{#fb923c}{c}} \rightarrow o',\,a,\,{\color{#fb923c}{c'}}\)</td><td class="n">\(p\bigl(o',\, a,\, {\color{#fb923c}{c'}} \mid o,\, l,\, {\color{#fb923c}{c}}\bigr)\)</td></tr>
   </tbody>
 </table>
 <p class="legend">Everyone conditions on the <b>input</b> only. Ours <b>emits</b> its cost
@@ -189,13 +189,13 @@ exactly as \(o'\) becomes the next \(o\). The cost is a loop-carried state:
   \textbf{world / world-action model (previous):}\quad
     &amp;\bigl(o_i,\, a_i,\, l\bigr)\ \xrightarrow{\ f_\theta\ }\ o'_i
      \ \overset{\text{close}}{\longmapsto}\ o_{i+1}\\[5pt]
-  \textbf{FlashDreamer (ours):}\quad
+  \textbf{FlashDriver (ours):}\quad
     &amp;\bigl(o_i,\, l,\, {\color{#fb923c}{c_i}}\bigr)\ \xrightarrow{\ f_\theta\ }\ \bigl(o'_i,\, a_i,\, {\color{#fb923c}{c'_i}}\bigr)
      \ \overset{\text{close}}{\longmapsto}\ \bigl(o_{i+1},\, l,\, {\color{#fb923c}{c_{i+1}}}\bigr)
   \end{aligned}\]
 </div>
 <p class="legend">A world model <b>closes the loop through the observation</b> \(\bigl(o'_i \mapsto o_{i+1}\bigr)\) — that
-is the rollout. FlashDreamer closes a <b style="color:#fb923c">second loop through the cost</b>
+is the rollout. FlashDriver closes a <b style="color:#fb923c">second loop through the cost</b>
 \(\bigl({\color{#fb923c}{c'_i \mapsto c_{i+1}}}\bigr)\): what the last step cost becomes the next step's condition. The
 \(\overset{\text{close}}{\longmapsto}\) arrow is the loop-carried edge — <b>generation is the measurement.</b></p>
 
@@ -252,7 +252,7 @@ ground-truth table · \(\eta = 0.85\), \(\alpha = 0.5\) (swept in §09). <b>Gene
   <tbody>
     <tr><td>static / SparseVLM / FastV</td><td class="n"><span class="bad">✗</span></td><td class="n"><span class="bad">✗</span></td><td class="n"><span class="bad">✗</span></td></tr>
     <tr><td>AutoVLA / DeeAD / Metis</td><td class="n"><span class="bad">✗</span></td><td class="n"><span class="bad">✗</span></td><td class="n"><span class="good">✓</span></td></tr>
-    <tr class="ours"><td><b>FlashDreamer</b></td><td class="n"><span class="good">✓</span></td><td class="n"><span class="good">✓</span></td><td class="n">✓ <span class="legend">(with \(d_i\))</span></td></tr>
+    <tr class="ours"><td><b>FlashDriver</b></td><td class="n"><span class="good">✓</span></td><td class="n"><span class="good">✓</span></td><td class="n">✓ <span class="legend">(with \(d_i\))</span></td></tr>
   </tbody>
 </table>
 
@@ -269,7 +269,7 @@ steps. We swept it on the reproduced model. It is <b>not</b> the knob:</p>
 <p class="legend">Fitted: <b>16.2 ms per flow-matching step</b> vs a <b>1332 ms fixed backbone cost</b>. A deadline controller must
 halve the cost when load doubles — a knob worth 11% physically cannot. <b>The budget is visual tokens.</b></p>
 
-<h3>The architecture — and where FlashDreamer attaches</h3>
+<h3>The architecture — and where FlashDriver attaches</h3>
 <div class="arch">
   <div class="archrow">
     <div class="abox ain">3 cameras<small>+ ego history + goal</small></div>
@@ -282,7 +282,7 @@ halve the cost when load doubles — a knob worth 11% physically cannot. <b>The 
   </div>
   <div class="archconn">▲ sets the budget b &nbsp;│&nbsp; measures the cost c &nbsp;↺</div>
   <div class="archctrl">
-    <div class="ctrlbox">★ FlashDreamer controller <span style="color:var(--new);font-weight:500">— ours</span>
+    <div class="ctrlbox">★ FlashDriver controller <span style="color:var(--new);font-weight:500">— ours</span>
       <small>reads (past + current) ego + agent state → outputs this scene's token budget b<br>trained, tiny, sits <b>on top of the frozen VLM</b> — touches nothing else</small></div>
   </div>
 </div>
@@ -431,14 +431,14 @@ label, and we do <b>not</b> fabricate the missing v2 sub-metrics (also <code>—
 <tr><td colspan="15" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">— Tiny budget: c = (44 ms, 2.0 TF, 7.1 GB) —</td></tr>
 <tr><td>· static <span class="legend">b = 422 tok</span></td><td class="n">422</td><td class="n">44</td><td class="n">2.0</td><td class="n">7.1</td><td class="n">80.9</td><td class="n">79.3</td><td class="n">94.9</td><td class="n">98.4</td><td class="n">86.7</td><td class="n">79.5</td><td class="n">90.6</td><td class="n">98.3</td><td class="n">56.2</td><td class="n">54.6</td></tr>
 <tr><td>· static <span class="legend">b = 187 tok</span></td><td class="n">187</td><td class="n">41</td><td class="n">1.0</td><td class="n">7.1</td><td class="n">79.1</td><td class="n">77.7</td><td class="n">94.5</td><td class="n">98.2</td><td class="n">85.7</td><td class="n">78.1</td><td class="n">90.4</td><td class="n">98.3</td><td class="n">48.4</td><td class="n">51.4</td></tr>
-<tr><td colspan="15" style="background:rgba(118,185,0,.06);color:var(--accent);font-size:11.5px;font-family:var(--mono)">— FlashDreamer (ours): trained controller (frozen VLM) · past+current state → per-scene token budget —</td></tr>
-<tr class="ours"><td><b>FlashDreamer · quality</b> <span class="legend">coherent-curve controller · 10-budget grid · <b>≈ full quality, 1.1× faster</b> · +0.15 vs static@168</span></td><td class="n"><b>dyn</b></td><td class="n"><b>168</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>98.3</b></td><td class="n"><b>96.8</b></td><td class="n"><b>99.5</b></td><td class="n"><b>99.9</b></td><td class="n"><b>88.0</b></td><td class="n"><b>97.6</b></td><td class="n"><b>97.5</b></td><td class="n"><b>98.2</b></td><td class="n"><b>79.3</b></td><td class="n"><b>88.4</b></td></tr>
-<tr class="ours"><td><b>FlashDreamer · balanced</b> <span class="legend">per-scene budget from (past+current) state · <b>1.6× faster</b> · +0.81 vs static@119</span></td><td class="n"><b>dyn</b></td><td class="n"><b>119</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>97.1</b></td><td class="n"><b>96.3</b></td><td class="n"><b>99.5</b></td><td class="n"><b>99.8</b></td><td class="n"><b>88.6</b></td><td class="n"><b>96.3</b></td><td class="n"><b>96.9</b></td><td class="n"><b>98.3</b></td><td class="n"><b>78.4</b></td><td class="n"><b>86.7</b></td></tr>
-<tr class="ours"><td><b>FlashDreamer · safety-aware</b> <span class="legend">same controller, objective = EPDMS + 2·(NC+TTC) · <b>same 119 ms</b> · <b>+0.47 NC / +0.46 TTC</b> vs balanced, at equal EPDMS</span></td><td class="n"><b>dyn</b></td><td class="n"><b>119</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>97.6</b></td><td class="n"><b>96.0</b></td><td class="n"><b>99.4</b></td><td class="n"><b>99.8</b></td><td class="n"><b>88.4</b></td><td class="n"><b>96.8</b></td><td class="n"><b>96.8</b></td><td class="n"><b>98.3</b></td><td class="n"><b>78.7</b></td><td class="n"><b>86.9</b></td></tr>
-<tr class="ours"><td><b>FlashDreamer · aggressive</b> <span class="legend"><b>1.7× faster</b> · +0.87 vs static@108 · low-c reaches <b>+1.10 @ 88 ms</b></span></td><td class="n"><b>dyn</b></td><td class="n"><b>108</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>96.8</b></td><td class="n"><b>95.9</b></td><td class="n"><b>99.5</b></td><td class="n"><b>99.7</b></td><td class="n"><b>88.7</b></td><td class="n"><b>96.0</b></td><td class="n"><b>96.6</b></td><td class="n"><b>98.2</b></td><td class="n"><b>77.2</b></td><td class="n"><b>85.9</b></td></tr>
+<tr><td colspan="15" style="background:rgba(118,185,0,.06);color:var(--accent);font-size:11.5px;font-family:var(--mono)">— FlashDriver (ours): trained controller (frozen VLM) · past+current state → per-scene token budget —</td></tr>
+<tr class="ours"><td><b>FlashDriver · quality</b> <span class="legend">coherent-curve controller · 10-budget grid · <b>≈ full quality, 1.1× faster</b> · +0.15 vs static@168</span></td><td class="n"><b>dyn</b></td><td class="n"><b>168</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>98.3</b></td><td class="n"><b>96.8</b></td><td class="n"><b>99.5</b></td><td class="n"><b>99.9</b></td><td class="n"><b>88.0</b></td><td class="n"><b>97.6</b></td><td class="n"><b>97.5</b></td><td class="n"><b>98.2</b></td><td class="n"><b>79.3</b></td><td class="n"><b>88.4</b></td></tr>
+<tr class="ours"><td><b>FlashDriver · balanced</b> <span class="legend">per-scene budget from (past+current) state · <b>1.6× faster</b> · +0.81 vs static@119</span></td><td class="n"><b>dyn</b></td><td class="n"><b>119</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>97.1</b></td><td class="n"><b>96.3</b></td><td class="n"><b>99.5</b></td><td class="n"><b>99.8</b></td><td class="n"><b>88.6</b></td><td class="n"><b>96.3</b></td><td class="n"><b>96.9</b></td><td class="n"><b>98.3</b></td><td class="n"><b>78.4</b></td><td class="n"><b>86.7</b></td></tr>
+<tr class="ours"><td><b>FlashDriver · safety-aware</b> <span class="legend">same controller, objective = EPDMS + 2·(NC+TTC) · <b>same 119 ms</b> · <b>+0.47 NC / +0.46 TTC</b> vs balanced, at equal EPDMS</span></td><td class="n"><b>dyn</b></td><td class="n"><b>119</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>97.6</b></td><td class="n"><b>96.0</b></td><td class="n"><b>99.4</b></td><td class="n"><b>99.8</b></td><td class="n"><b>88.4</b></td><td class="n"><b>96.8</b></td><td class="n"><b>96.8</b></td><td class="n"><b>98.3</b></td><td class="n"><b>78.7</b></td><td class="n"><b>86.9</b></td></tr>
+<tr class="ours"><td><b>FlashDriver · aggressive</b> <span class="legend"><b>1.7× faster</b> · +0.87 vs static@108 · low-c reaches <b>+1.10 @ 88 ms</b></span></td><td class="n"><b>dyn</b></td><td class="n"><b>108</b><br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n"><b>96.8</b></td><td class="n"><b>95.9</b></td><td class="n"><b>99.5</b></td><td class="n"><b>99.7</b></td><td class="n"><b>88.7</b></td><td class="n"><b>96.0</b></td><td class="n"><b>96.6</b></td><td class="n"><b>98.2</b></td><td class="n"><b>77.2</b></td><td class="n"><b>85.9</b></td></tr>
 <tr style="color:var(--muted)"><td>upper bound <span class="legend">best budget per scene chosen with hindsight (ground-truth) — not runnable; shows the headroom a perfect signal would reach</span></td><td class="n">dynamic<br><span class="legend">per-scene c</span></td><td class="n">86<br><span class="legend">mean c</span></td><td class="n">—</td><td class="n">—</td><td class="n">98.6</td><td class="n">97.6</td><td class="n">99.2</td><td class="n">99.9</td><td class="n">90.6</td><td class="n">98.1</td><td class="n">98.1</td><td class="n">98.3</td><td class="n">84.7</td><td class="n">93.9</td></tr>
 </tbody></table>
-<div class="callout"><span class="t">★ How to read it</span>The top block is <b>every prior NAVSIM planner</b>; their <b>cost columns are all <code>—</code></b> because no one publishes a reproducible latency and we measured only our baseline — the same point §06 makes. The middle block is <b>DriveDreamer-Policy reproduced by us</b> (gray full-inference row = <b>187 ms, ~57 TFLOP, 88.7 EPDMS</b>), then the measured budget ladder: cutting the budget cuts all three cost numbers, but <b>safety drops first</b> (NC 98→79, TTC 98→78) while ego-progress barely moves (EP 88→86). <b>FlashDreamer is a trained controller</b> — a small model over a <b>frozen VLM</b> that reads the (past+current)
+<div class="callout"><span class="t">★ How to read it</span>The top block is <b>every prior NAVSIM planner</b>; their <b>cost columns are all <code>—</code></b> because no one publishes a reproducible latency and we measured only our baseline — the same point §06 makes. The middle block is <b>DriveDreamer-Policy reproduced by us</b> (gray full-inference row = <b>187 ms, ~57 TFLOP, 88.7 EPDMS</b>), then the measured budget ladder: cutting the budget cuts all three cost numbers, but <b>safety drops first</b> (NC 98→79, TTC 98→78) while ego-progress barely moves (EP 88→86). <b>FlashDriver is a trained controller</b> — a small model over a <b>frozen VLM</b> that reads the (past+current)
 ego+agent state and predicts a <b>coherent per-scene quality curve</b> (monotone + shrinkage) over a <b>10-budget
 grid</b>, allocating under a latency target. Across its frontier it <b>dominates the static budgets</b>: near-full
 quality at <b>88.4 @ 168 ms</b> (1.1× faster, −0.2 vs full), <b>86.7 @ 119 ms</b> (1.6× faster), and <b>85.9 @
@@ -470,11 +470,11 @@ content upper bound is a <b>content-dependent-cost</b> baseline (Cosmos 3 — se
     <tr><td>· b = 5,152</td><td class="n">97</td><td class="n"><span class="bad">0</span></td><td class="n"><span class="bad">0</span></td><td class="n"><span class="bad">0</span></td><td class="n">84.4</td><td class="n">84.4</td><td class="n">84.4</td><td class="n">84.4</td><td class="n">84.4</td><td class="n">84.4</td><td class="n">84.4</td></tr>
     <tr><td>· b = 3,372</td><td class="n">76</td><td class="n"><span class="bad">0</span></td><td class="n"><span class="bad">0</span></td><td class="n"><span class="bad">0</span></td><td class="n">81.5</td><td class="n">81.5</td><td class="n">81.5</td><td class="n">81.5</td><td class="n">81.5</td><td class="n">81.5</td><td class="n">81.5</td></tr>
     <tr><td>· b = 2,131</td><td class="n">63</td><td class="n"><span class="bad">0</span></td><td class="n"><span class="bad">0</span></td><td class="n">76.3</td><td class="n">76.3</td><td class="n">76.3</td><td class="n">76.3</td><td class="n">76.3</td><td class="n">76.3</td><td class="n">76.3</td><td class="n">76.3</td></tr>
-    <tr class="ours"><td><b>FlashDreamer</b> <span class="legend">8-budget ladder</span></td><td class="n"><b>adaptive</b></td><td class="n"><b>54.6</b></td><td class="n"><b>63.9</b></td><td class="n"><b>76.3</b></td><td class="n"><b>84.4</b></td><td class="n"><b>84.4</b></td><td class="n"><b>84.4</b></td><td class="n"><b>87.9</b></td><td class="n"><b>88.7</b></td><td class="n"><b>88.7</b></td><td class="n"><b>88.7</b></td></tr>
+    <tr class="ours"><td><b>FlashDriver</b> <span class="legend">8-budget ladder</span></td><td class="n"><b>adaptive</b></td><td class="n"><b>54.6</b></td><td class="n"><b>63.9</b></td><td class="n"><b>76.3</b></td><td class="n"><b>84.4</b></td><td class="n"><b>84.4</b></td><td class="n"><b>84.4</b></td><td class="n"><b>87.9</b></td><td class="n"><b>88.7</b></td><td class="n"><b>88.7</b></td><td class="n"><b>88.7</b></td></tr>
   </tbody>
 </table>
 <p class="legend">Every fixed budget <b>collapses to 0</b> once the deadline drops below its latency — it has no
-recourse. <b>FlashDreamer is the only row with a score in every column</b>, because it is the only method that can
+recourse. <b>FlashDriver is the only row with a score in every column</b>, because it is the only method that can
 <i>choose</i> a budget that fits. It is the <b>upper envelope by construction</b>. <span class="legend">(This
 table is idle-GPU: here the controller just automates picking the best feasible static budget per deadline — its
 <b>distinctive value appears under varying load</b> (§9), where it wins +12.7% (up to +29%). The per-scene content ceiling (§10)
@@ -483,7 +483,7 @@ is real but not cheaply reachable on this baseline.)</span></p>
 <h2><span class="num">09</span> T4 · Under time-varying load — where the controller wins</h2>
 <p class="legend">The real test of cost feedback. The GPU is <b>shared</b>, so the load multiplier <b>m(t)</b> drifts,
 trends, and bursts as other jobs arrive. A <b>static</b> budget is stuck: it <b>misses the deadline during bursts</b>
-(EPDMS@D → 0) <i>or</i> <b>wastes quality during lulls</b>. FlashDreamer measures its own recent latency and adapts —
+(EPDMS@D → 0) <i>or</i> <b>wastes quality during lulls</b>. FlashDriver measures its own recent latency and adapts —
 <b>reading only a clock, training-free</b>. Quality per budget is the <b>real full-navtest EPDMS (11 640 scenes)</b>;
 the load trace and deadline gate are simulated. <b>Rigorous sweep: 6 load regimes × 4 deadlines × 8 random seeds.</b>
 The controller is <b>distribution-aware</b> — it tracks the load's <b>mean and variance</b> and takes the largest
@@ -580,7 +580,7 @@ collision-safety</b>: save compute on the open road, spend it in dense traffic a
 
 <div class="callout">
   <span class="t">Two axes of adaptation — one works here, one doesn't</span>
-  FlashDreamer's rule \(b_i = \arg\max_b\{Q(b) : T(b)\,\hat m_i \le \eta\,\Delta t\}\) adapts to two things.
+  FlashDriver's rule \(b_i = \arg\max_b\{Q(b) : T(b)\,\hat m_i \le \eta\,\Delta t\}\) adapts to two things.
   <b>Load</b> \(\hat m_i\): §09 showed this <b>wins</b> — when the GPU load varies, tracking it beats any static budget.
   <b>Content</b>: the budget could also depend on <i>how hard this scene is</i>. Below we show the content ceiling is <b>large</b>, and that the cheap causal signals available on this baseline do not reach it — which is the argument for changing the baseline.
 </div>
@@ -697,7 +697,7 @@ collision-safety</b>: save compute on the open road, spend it in dense traffic a
 <table>
   <thead><tr><th>Cosmos 3 tower</th><th>Loops over</th><th>\(b\) = the knob</th><th>train-free · per-step</th></tr></thead>
   <tbody>
-    <tr><td><b>AR reasoner</b><br><small>text/vision → text</small></td><td>tokens<br><small>sequence × depth</small></td><td><b>Token pruning</b> — keep top-\(k\)% visual tokens (SparseVLM-style prune + merge). <b>The FlashDreamer knob transfers directly.</b></td><td class="n">✅ · ✅</td></tr>
+    <tr><td><b>AR reasoner</b><br><small>text/vision → text</small></td><td>tokens<br><small>sequence × depth</small></td><td><b>Token pruning</b> — keep top-\(k\)% visual tokens (SparseVLM-style prune + merge). <b>The FlashDriver knob transfers directly.</b></td><td class="n">✅ · ✅</td></tr>
     <tr class="ours"><td><b style="color:var(--new)">DiT generator</b><br><small>vision / action gen</small></td><td>denoising steps × frames</td><td><b style="color:var(--new)">Cache reuse — cache ratio \(R\)</b>: each step recompute only \((1{-}R)\) of the tokens and <b>reuse the cached features</b> from the previous step (ToCa / TeaCache-style). Continuous, dial-able per step. <small>(denoising steps 4→3→2→1 also cut cost but need a one-time distillation — not per-frame free.)</small></td><td class="n">✅ · ✅</td></tr>
   </tbody>
 </table>
@@ -791,7 +791,7 @@ generator cheaper too. <span style="color:var(--muted)">(Indices scale with reso
   <code>⟨BOG⟩</code> / action-token boundary exists <b>before any denoising step</b>. <b>Positions read (not
   generated):</b> the AR reasoner's next-token entropy and the clean action-token magnitude \(|a_t|\) (fast motion /
   contact ⇒ high). Feed those into \(\pi\) to set the DM chunk's budget \((\text{steps},R)\) up front — <b>a cheap AR
-  pass scheduling the expensive DM generation.</b> The <i>fancy</i> part: this is the FlashDreamer loop \(o\!\to\!b\)
+  pass scheduling the expensive DM generation.</b> The <i>fancy</i> part: this is the FlashDriver loop \(o\!\to\!b\)
   made <i>native</i> — the reasoner <b>is</b> the efficient method that schedules latency before inference, and it costs
   nothing extra because that state is computed anyway.
 </div>
