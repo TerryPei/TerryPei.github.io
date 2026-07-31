@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:100%;height:100%;overflow:hidden;background:#0b0d12}
+  .wrap{display:flex;gap:4px;width:100%;height:100%;padding:6px}
+  .cell{flex:1;position:relative;border-radius:8px;overflow:hidden;border:1px solid #2a2f3b;background:#000}
+  .cell.ours{border-color:#fb923c}
+  video{width:100%;height:100%;object-fit:cover;display:block}
+  .lab{position:absolute;left:6px;top:5px;font:700 8.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.09em;
+       text-transform:uppercase;color:#cbd2dd;background:rgba(0,0,0,.6);padding:3px 6px;border-radius:5px}
+  .cell.ours .lab{color:#fb923c}
+</style></head>
+<body>
+  <div class="wrap">
+    <div class="cell"><video src="smoothworldmodel/media/prev_slow.mp4" autoplay loop muted playsinline></video><span class="lab">previous · misses deadline</span></div>
+    <div class="cell ours"><video src="smoothworldmodel/media/ours_fast.mp4" autoplay loop muted playsinline></video><span class="lab">ours · holds deadline</span></div>
+  </div>
+</body></html>
