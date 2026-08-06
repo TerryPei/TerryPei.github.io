@@ -114,6 +114,7 @@
                   .pwbadge{position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;z-index:2;}
                   .pwbody{padding:12px 14px 14px;flex:1;display:flex;flex-direction:column;}
                   .pwauthors{font-size:14px;color:#333;margin:4px 0;}
+                  .pwquote{font-style:italic;color:#666;font-size:14.5px;text-align:center;}
                   .pwlinks{font-size:14px;}
                   .pwtag{display:inline-block;background:#fdeef5;color:#E31C79;border:1px solid #f6c6dc;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:bold;margin:2px 4px 2px 0;}
                   .pwvids{display:flex;gap:6px;padding:8px 8px 0 8px;}
@@ -153,10 +154,24 @@
                     <div class="pwbody">
                       <span class="papertitle">GroundFlow: Efficient Post-Training for Fine-Grained Multimodal Foundation Models</span>
                       <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Jiyuan Zhang, Yuanfan Guo, Weiguo Feng, Yuheng Shi, Tao Huang, Chang Xu, Cho-Jui Hsieh</div>
+                      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px 8px;"><div class="pwquote">&ldquo;efficient post-training directly on corrected hidden states&rdquo;</div></div>
                       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div>
                         <span class="pwtag">VLM</span><span class="pwtag">post-training</span>
                         <span class="pwtag">new training paradigm</span>
                       </div><div class="pwlinks">[<a href="https://huggingface.co/TerryPei/GroundFlow/tree/main">Code</a>]</div></div>
+                    </div>
+                  </div>
+
+                  <div class="pwcard">
+                    <div class="pwmedia" style="background:#fff;">
+                      <div class="pwbadge">Preprint 2026</div>
+                      <img src="images/projects/eos.png" alt="Efficient Operator Search: unified operator space with differentiable search" style="width:100%;height:100%;object-fit:contain;background:#fff;display:block;">
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">Differentiable Efficient Operator Search</span>
+                      <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Jiyuan Zhang, Yuanfan Guo, Weiguo Feng, Tao Huang, Chang Xu, Cho-Jui Hsieh</div>
+                      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px 8px;"><div class="pwquote">&ldquo;human-designed efficiency &rarr; a differentiable search space&rdquo;</div></div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">operator search</span><span class="pwtag">efficient inference</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2606.05232">Paper</a>] [<a href="https://www.terrypei.com/eos">Web</a>]</div></div>
                     </div>
                   </div>
 
@@ -168,6 +183,7 @@
                     <div class="pwbody">
                       <span class="papertitle">Self-Distilled RoI Predictors for Fine-Grained MLLM Perception</span>
                       <div class="pwauthors">Yuheng Shi, <u><b>Xiaohuan Pei</b></u>, Minjing Dong, Chang Xu</div>
+                      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px 8px;"><div class="pwquote">&ldquo;let the MLLM teach itself where to look&rdquo;</div></div>
                       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">fine-grained perception</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2509.16944">Paper</a>] [<a href="https://github.com/YuHengsss/SD-RPN">Code</a>]</div></div>
                     </div>
                   </div>
@@ -180,6 +196,7 @@
                     <div class="pwbody">
                       <span class="papertitle">Light Future-aware Masking for Vision-Language Inference</span>
                       <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Tao Huang, Yanxiang Ma, Chang Xu</div>
+                      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px 8px;"><div class="pwquote">&ldquo;do we really need left-to-right causal design on visual attention?&rdquo;</div></div>
                       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">efficient attention</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2505.18605">Paper</a>] [<a href="https://github.com/TerryPei/FutureMask">Code</a>]</div></div>
                     </div>
                   </div>
@@ -192,6 +209,7 @@
                     <div class="pwbody">
                       <span class="papertitle">Cross-Self KV Cache Pruning for Efficient Vision-Language Inference</span>
                       <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Tao Huang, Chang Xu</div>
+                      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px 8px;"><div class="pwquote">&ldquo;KV cache pruning should respect the modality difference: cross-modal keys &ne; self-modal keys&rdquo;</div></div>
                       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">KV cache</span><span class="pwtag">efficient inference</span></div><div class="pwlinks">[<a href="https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/CSP.pdf">Paper</a>] [<a href="https://github.com/TerryPei/CSP">Code</a>]
                         <a href="https://github.com/TerryPei/CSP" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/CSP?style=social" style="vertical-align:middle"></a>
                       </div></div>
@@ -206,6 +224,7 @@
                     <div class="pwbody">
                       <span class="papertitle">EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba</span>
                       <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Tao Huang, Chang Xu</div>
+                      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px 8px;"><div class="pwquote">&ldquo;atrous selective scan makes visual state-space models lightweight&rdquo;</div></div>
                       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">efficient architecture</span><span class="pwtag">backbone</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2403.09977.pdf">Paper</a>] [<a href="https://github.com/TerryPei/EfficientVMamba">Code</a>] [<a href="https://mp.weixin.qq.com/s/zCwQRcOiNOx06Hnkr3EYvw">Tutorial</a>]
                         <a href="https://github.com/TerryPei/EfficientVMamba" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social" style="vertical-align:middle"></a>
                       </div></div>
