@@ -105,12 +105,12 @@
             <tr>
               <td style="padding:12px 20px 20px 20px;" colspan="2">
                 <style>
-                  .pwgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-                  .pwcard{border:1px solid #e8e8e8;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;}
+                  .pwgrid{display:grid;grid-template-columns:1fr;gap:14px;}
+                  .pwcard{border:1px solid #e8e8e8;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:row;min-height:200px;}
                   .pwcard:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12);}
                   .pwfeature{grid-column:1 / -1;}
-                  .pwmedia{position:relative;background:#fafafa;}
-                  .pwmedia img{width:100%;display:block;}
+                  .pwmedia{position:relative;background:#fafafa;flex:0 0 300px;height:200px;overflow:hidden;}
+                  .pwmedia > img{width:100%;height:100%;object-fit:cover;display:block;}
                   .pwbadge{position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;z-index:2;}
                   .pwbody{padding:12px 14px 14px;flex:1;display:flex;flex-direction:column;}
                   .pwauthors{font-size:14px;color:#333;margin:4px 0;}
@@ -122,33 +122,33 @@
                   .pwcond img{width:100%;max-height:150px;object-fit:cover;object-position:center;border-radius:8px;display:block;}
                   .pwcondcap{font-size:12px;color:#777;padding:3px 10px 6px;text-align:center;}
                   .pwcondcap b{color:#E31C79;}
-                  @media (max-width:700px){.pwgrid{grid-template-columns:1fr;}.pwvids{flex-wrap:wrap;}.pwvids video{width:calc(50% - 4px);}}
+                  @media (max-width:700px){.pwcard{flex-direction:column;min-height:0;}.pwmedia{flex:none;width:100%;}}
                 </style>
                 <div class="pwgrid">
 
                   <div class="pwcard">
                     <div class="pwmedia">
                       <div class="pwbadge">ICLR 2026</div>
-                      <div style="display:flex;gap:3px;padding:6px 6px 0 6px;">
-                        <video src="videos/clip1.mp4" poster="videos/poster1.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
-                        <video src="videos/clip2.mp4" poster="videos/poster2.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
-                        <video src="videos/clip3.mp4" poster="videos/poster3.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
-                        <video src="videos/clip4.mp4" poster="videos/poster4.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
+                      <div style="display:flex;flex-wrap:wrap;gap:4px;padding:4px;height:100%;box-sizing:border-box;">
+                        <video src="videos/clip1.mp4" poster="videos/poster1.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(50% - 2px);height:94px;object-fit:cover;border-radius:6px;background:#000;"></video>
+                        <video src="videos/clip2.mp4" poster="videos/poster2.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(50% - 2px);height:94px;object-fit:cover;border-radius:6px;background:#000;"></video>
+                        <video src="videos/clip3.mp4" poster="videos/poster3.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(50% - 2px);height:94px;object-fit:cover;border-radius:6px;background:#000;"></video>
+                        <video src="videos/clip4.mp4" poster="videos/poster4.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(50% - 2px);height:94px;object-fit:cover;border-radius:6px;background:#000;"></video>
                       </div>
-                      <div class="pwcond"><img src="images/projects/adp_traj.png" alt="Action trajectory as condition" style="max-height:78px;object-fit:cover;object-position:center;"></div>
-                      <div class="pwcondcap">real-robot rollouts &middot; <b>action trajectory as condition</b></div>
-                    </div>
+                      </div>
                     <div class="pwbody">
                       <span class="papertitle">Action-aware Dynamic Pruning for Efficient Vision-Language-Action Manipulation</span>
                       <div class="pwauthors"><u><b>Xiaohuan Pei</b></u><sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu</div>
+                      <div style="margin:4px 0 2px;"><img src="images/projects/adp_traj.png" alt="Action trajectory as condition" style="width:100%;max-height:52px;object-fit:cover;object-position:center;border-radius:6px;display:block;"></div>
+                      <div style="font-size:12px;color:#777;">real-robot rollouts &middot; <b style="color:#E31C79;">action trajectory as condition</b></div>
                       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLA</span><span class="pwtag">efficient inference</span><span class="pwtag">real robot</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2509.22093">Paper</a>] [<a href="https://github.com/TerryPei/VLA-ADP">Code</a>] [<a href="https://chen7086.github.io/VLA-ADP/">Web</a>]</div></div>
                     </div>
                   </div>
 
                   <div class="pwcard">
-                    <div class="pwmedia" style="display:flex;justify-content:center;background:#fff;">
+                    <div class="pwmedia" style="background:#fff;">
                       <div class="pwbadge">Preprint 2026</div>
-                      <img src="images/projects/groundflow_radar.png" alt="GroundFlow radar: post-training on a frozen backbone surpasses Qwen3-VL-4B on all grounding axes" style="max-height:212px;width:auto;max-width:100%;">
+                      <img src="images/projects/groundflow_radar.png" alt="GroundFlow radar: post-training on a frozen backbone surpasses Qwen3-VL on all grounding axes" style="width:100%;height:100%;object-fit:contain;background:#fff;display:block;">
                     </div>
                     <div class="pwbody">
                       <span class="papertitle">GroundFlow: Efficient Post-Training for Fine-Grained Multimodal Foundation Models</span>
@@ -186,6 +186,7 @@
 
                   <div class="pwcard">
                     <div class="pwmedia">
+                      <div class="pwbadge">Preprint 2024</div>
                       <img src="images/projects/csp.png" alt="CSP">
                     </div>
                     <div class="pwbody">
@@ -243,6 +244,7 @@
                 <details>
                   <summary style="cursor:pointer;">
                     <h2 style="display:inline; margin:0;">Publications</h2>
+                    <span style="font-size:14px; color:#555; margin-left:8px; font-weight:normal;">(<b style="color:#E31C79;">10+</b> papers · <b style="color:#E31C79;">7</b> published as first / co-first author)</span>
                   </summary>
                   <div style="margin-top:6px;"><b>[C] Conference; [P] Preprint</b></div>
 
