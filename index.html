@@ -103,89 +103,115 @@
             </tr>
 
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div style="position:relative;">
-                  <div style="position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;">ICLR 2026</div>
-                  <img src='images/projects/vla-adp.png' width="100%" alt="VLA-ADP">
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-              <span class="papertitle">Action-aware Dynamic Pruning for Efficient Vision-Language-Action Manipulation</span>
-                <br>
-                <u><b>Xiaohuan Pei</b></u><sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu
-                <br>
-                [<a href="https://arxiv.org/pdf/2509.22093">Paper</a>] [<a href="https://github.com/TerryPei/VLA-ADP">Code</a>] [<a href="https://chen7086.github.io/VLA-ADP/">Web</a>]
-              </td>
-            </tr>
+              <td style="padding:12px 20px 20px 20px;" colspan="2">
+                <style>
+                  .pwgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+                  .pwcard{border:1px solid #e8e8e8;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;}
+                  .pwcard:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12);}
+                  .pwfeature{grid-column:1 / -1;}
+                  .pwmedia{position:relative;background:#fafafa;}
+                  .pwmedia img{width:100%;display:block;}
+                  .pwbadge{position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;z-index:2;}
+                  .pwbody{padding:12px 14px 14px;flex:1;display:flex;flex-direction:column;}
+                  .pwauthors{font-size:14px;color:#333;margin:4px 0;}
+                  .pwlinks{font-size:14px;}
+                  .pwtag{display:inline-block;background:#fdeef5;color:#E31C79;border:1px solid #f6c6dc;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:bold;margin:2px 4px 2px 0;}
+                  .pwvids{display:flex;gap:6px;padding:8px 8px 0 8px;}
+                  .pwvids video{width:calc(25% - 5px);max-height:110px;object-fit:cover;border-radius:8px;display:block;background:#000;}
+                  .pwcond{padding:6px 8px 2px 8px;}
+                  .pwcond img{width:100%;max-height:150px;object-fit:cover;object-position:center;border-radius:8px;display:block;}
+                  .pwcondcap{font-size:12px;color:#777;padding:3px 10px 6px;text-align:center;}
+                  .pwcondcap b{color:#E31C79;}
+                  @media (max-width:700px){.pwgrid{grid-template-columns:1fr;}.pwvids{flex-wrap:wrap;}.pwvids video{width:calc(50% - 4px);}}
+                </style>
+                <div class="pwgrid">
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div style="position:relative;">
-                  <div style="position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;">ICLR 2026</div>
-                  <img src='images/projects/sd-rpn.png' width="100%" alt="SD-RPN">
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-              <span class="papertitle">Self-Distilled RoI Predictors for Fine-Grained MLLM Perception</span>
-                <br>
-                Yuheng Shi, <u><b>Xiaohuan Pei</b></u>, Minjing Dong, Chang Xu
-                <br>
-                [<a href="https://arxiv.org/pdf/2509.16944">Paper</a>] [<a href="https://github.com/YuHengsss/SD-RPN">Code</a>]
-              </td>
-            </tr>
+                  <div class="pwcard">
+                    <div class="pwmedia">
+                      <div class="pwbadge">ICLR 2026</div>
+                      <div style="display:flex;gap:3px;padding:6px 6px 0 6px;">
+                        <video src="videos/clip1.mp4" poster="videos/poster1.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
+                        <video src="videos/clip2.mp4" poster="videos/poster2.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
+                        <video src="videos/clip3.mp4" poster="videos/poster3.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
+                        <video src="videos/clip4.mp4" poster="videos/poster4.jpg" autoplay muted loop playsinline preload="metadata" style="width:calc(25% - 3px);height:58px;object-fit:cover;border-radius:5px;background:#000;"></video>
+                      </div>
+                      <div class="pwcond"><img src="images/projects/adp_traj.png" alt="Action trajectory as condition" style="max-height:78px;object-fit:cover;object-position:center;"></div>
+                      <div class="pwcondcap">real-robot rollouts &middot; <b>action trajectory as condition</b></div>
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">Action-aware Dynamic Pruning for Efficient Vision-Language-Action Manipulation</span>
+                      <div class="pwauthors"><u><b>Xiaohuan Pei</b></u><sup>*</sup>, Yuxing Chen<sup>*</sup>, Siyu Xu, Yunke Wang, Yuheng Shi, Chang Xu</div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLA</span><span class="pwtag">efficient inference</span><span class="pwtag">real robot</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2509.22093">Paper</a>] [<a href="https://github.com/TerryPei/VLA-ADP">Code</a>] [<a href="https://chen7086.github.io/VLA-ADP/">Web</a>]</div></div>
+                    </div>
+                  </div>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div style="position:relative;">
-                  <div style="position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;">ICLR 2026</div>
-                  <img src='images/projects/lfm.png' width="100%" alt="LFM">
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-              <span class="papertitle">Light Future-aware Masking for Vision-Language Inference</span>
-                <br>
-                <u><b>Xiaohuan Pei</b></u>, Tao Huang, Yanxiang Ma, Chang Xu
-                <br>
-                [<a href="https://arxiv.org/pdf/2505.18605">Paper</a>] [<a href="https://github.com/TerryPei/FutureMask">Code</a>]
-              </td>
-            </tr>
+                  <div class="pwcard">
+                    <div class="pwmedia" style="display:flex;justify-content:center;background:#fff;">
+                      <div class="pwbadge">Preprint 2026</div>
+                      <img src="images/projects/groundflow_radar.png" alt="GroundFlow radar: post-training on a frozen backbone surpasses Qwen3-VL-4B on all grounding axes" style="max-height:212px;width:auto;max-width:100%;">
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">GroundFlow: Efficient Post-Training for Fine-Grained Multimodal Foundation Models</span>
+                      <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Jiyuan Zhang, Yuanfan Guo, Weiguo Feng, Yuheng Shi, Tao Huang, Chang Xu, Cho-Jui Hsieh</div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div>
+                        <span class="pwtag">VLM</span><span class="pwtag">post-training</span>
+                        <span class="pwtag">new training paradigm</span>
+                      </div><div class="pwlinks">[<a href="https://huggingface.co/TerryPei/GroundFlow/tree/main">Code</a>]</div></div>
+                    </div>
+                  </div>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div style="position:relative;">
-                  <img src='images/projects/csp.png' width="100%" alt="CSP">
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-              <span class="papertitle">Cross-Self KV Cache Pruning for Efficient Vision-Language Inference</span>
-                <br>
-                <u><b>Xiaohuan Pei</b></u>, Tao Huang, Chang Xu
-                <br>
-                [<a href="https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/CSP.pdf">Paper</a>] [<a href="https://github.com/TerryPei/CSP">Code</a>]
-                <a href="https://github.com/TerryPei/CSP" target="_blank">
-                  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/CSP?style=social">
-                </a>
-              </td>
-            </tr>
+                  <div class="pwcard">
+                    <div class="pwmedia">
+                      <div class="pwbadge">ICLR 2026</div>
+                      <img src="images/projects/sd-rpn.png" alt="SD-RPN">
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">Self-Distilled RoI Predictors for Fine-Grained MLLM Perception</span>
+                      <div class="pwauthors">Yuheng Shi, <u><b>Xiaohuan Pei</b></u>, Minjing Dong, Chang Xu</div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">fine-grained perception</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2509.16944">Paper</a>] [<a href="https://github.com/YuHengsss/SD-RPN">Code</a>]</div></div>
+                    </div>
+                  </div>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div style="position:relative;">
-                  <div style="position:absolute;top:0;left:0;background:#E31C79;color:#fff;padding:2px 8px;font-size:12px;font-weight:bold;">AAAI 2025</div>
-                  <img src='images/projects/efficientvmamba.png' width="100%" alt="EfficientVMamba">
+                  <div class="pwcard">
+                    <div class="pwmedia">
+                      <div class="pwbadge">ICLR 2026</div>
+                      <img src="images/projects/lfm.png" alt="LFM">
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">Light Future-aware Masking for Vision-Language Inference</span>
+                      <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Tao Huang, Yanxiang Ma, Chang Xu</div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">efficient attention</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2505.18605">Paper</a>] [<a href="https://github.com/TerryPei/FutureMask">Code</a>]</div></div>
+                    </div>
+                  </div>
+
+                  <div class="pwcard">
+                    <div class="pwmedia">
+                      <img src="images/projects/csp.png" alt="CSP">
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">Cross-Self KV Cache Pruning for Efficient Vision-Language Inference</span>
+                      <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Tao Huang, Chang Xu</div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">VLM</span><span class="pwtag">KV cache</span><span class="pwtag">efficient inference</span></div><div class="pwlinks">[<a href="https://github.com/TerryPei/TerryPei.github.io/blob/main/papers/CSP.pdf">Paper</a>] [<a href="https://github.com/TerryPei/CSP">Code</a>]
+                        <a href="https://github.com/TerryPei/CSP" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/CSP?style=social" style="vertical-align:middle"></a>
+                      </div></div>
+                    </div>
+                  </div>
+
+                  <div class="pwcard">
+                    <div class="pwmedia">
+                      <div class="pwbadge">AAAI 2025</div>
+                      <img src="images/projects/efficientvmamba.png" alt="EfficientVMamba">
+                    </div>
+                    <div class="pwbody">
+                      <span class="papertitle">EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba</span>
+                      <div class="pwauthors"><u><b>Xiaohuan Pei</b></u>, Tao Huang, Chang Xu</div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;"><div><span class="pwtag">efficient architecture</span><span class="pwtag">backbone</span></div><div class="pwlinks">[<a href="https://arxiv.org/pdf/2403.09977.pdf">Paper</a>] [<a href="https://github.com/TerryPei/EfficientVMamba">Code</a>] [<a href="https://mp.weixin.qq.com/s/zCwQRcOiNOx06Hnkr3EYvw">Tutorial</a>]
+                        <a href="https://github.com/TerryPei/EfficientVMamba" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social" style="vertical-align:middle"></a>
+                      </div></div>
+                    </div>
+                  </div>
+
                 </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-              <span class="papertitle">EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba</span>
-                <br>
-                <u><b>Xiaohuan Pei</b></u>, Tao Huang, Chang Xu
-                <br>
-                <i>Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2025</i>
-                <br>
-                [<a href="https://arxiv.org/pdf/2403.09977.pdf">Paper</a>] [<a href="https://github.com/TerryPei/EfficientVMamba">Code</a>] [<a href="https://mp.weixin.qq.com/s/zCwQRcOiNOx06Hnkr3EYvw">Tutorial</a>]
-                <a href="https://github.com/TerryPei/EfficientVMamba" target="_blank">
-                  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TerryPei/EfficientVMamba?style=social">
-                </a>
               </td>
             </tr>
 
