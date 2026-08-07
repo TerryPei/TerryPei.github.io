@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GroundFlow · post-training in hidden-state space</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --cream:#F8F6F0; --ink:#2f2d2a; --mut:rgba(47,45,42,.55);
+          --sh:#5ea25e; --mid:#d9536f; --dp:#5b7fc7; --shbg:#e7f2e4; --midbg:#fbe3e8; --dpbg:#e3ebf8; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--cream);color:var(--ink);font-family:'Lato',-apple-system,sans-serif;font-weight:300;line-height:1.55}
+  a{color:var(--ink)}
+  .home-back{position:fixed;top:20px;left:22px;z-index:10;font-size:22px;color:var(--ink);text-decoration:none;opacity:.3;transition:opacity .2s}
+  .home-back:hover{opacity:.68}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+
+  /* hero */
+  header{padding:clamp(56px,10vh,110px) 0 26px;text-align:center}
+  h1{font-weight:300;font-size:clamp(30px,5vw,52px);letter-spacing:.01em}
+  h1 b{font-weight:700}
+  .tag{margin-top:10px;font-size:clamp(15px,2vw,19px);color:var(--mut);font-style:italic}
+  .btns{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:9px 20px;border:1px solid rgba(47,45,42,.25);border-radius:999px;
+       text-decoration:none;font-size:14px;letter-spacing:.06em;transition:all .25s;background:rgba(255,255,255,.45)}
+  .btn:hover{background:#fff;box-shadow:0 6px 20px rgba(60,55,45,.12);transform:translateY(-1px)}
+  .btn b{font-weight:400}
+
+  section{padding:clamp(30px,5vh,54px) 0}
+  h2{font-weight:300;font-size:clamp(21px,3vw,30px);text-align:center;letter-spacing:.02em;margin-bottom:6px}
+  .sub{color:var(--mut);text-align:center;font-size:14.5px;margin-bottom:26px}
+
+  /* ---- animated pipeline ---- */
+  #pipe{background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.7);border-radius:22px;
+        box-shadow:0 12px 44px rgba(60,55,45,.10);padding:clamp(18px,3vw,34px);backdrop-filter:blur(8px)}
+  .stage{display:flex;gap:clamp(14px,3vw,40px);align-items:center;justify-content:center;flex-wrap:wrap;min-height:300px}
+  /* token grid */
+  .gridbox{text-align:center}
+  #tgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;width:clamp(190px,26vw,260px)}
+  #tgrid i{aspect-ratio:1;border-radius:4px;background:#e4e0d6;transition:all .7s cubic-bezier(.22,.61,.36,1);opacity:0;transform:scale(.6)}
+  #tgrid.on i{opacity:1;transform:scale(1)}
+  #tgrid i.hot{background:var(--mid);box-shadow:0 0 12px rgba(217,83,111,.55)}
+  #tgrid i.warm{background:#eda3b2}
+  #tgrid i.sink{background:#8f2fb3;box-shadow:0 0 14px rgba(143,47,179,.6)}
+  #tgrid i.fg{background:var(--sh);box-shadow:0 0 10px rgba(94,162,94,.5)}
+  #tgrid i.bg{background:#d9d4c8}
+  #tgrid i.ign{background:repeating-linear-gradient(45deg,#efece4,#efece4 3px,#dcd7ca 3px,#dcd7ca 6px)}
+  .glab{margin-top:10px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+  /* layer stack */
+  .stack{display:flex;gap:7px;align-items:flex-end}
+  .lyr{width:clamp(26px,3.4vw,40px);border-radius:8px;transition:all .7s cubic-bezier(.22,.61,.36,1);
+       display:flex;align-items:center;justify-content:center;font-size:15px;opacity:.35}
+  .lyr.s{height:120px;background:var(--shbg);border:1.5px solid var(--sh)}
+  .lyr.m{height:150px;background:var(--midbg);border:1.5px solid var(--mid)}
+  .lyr.d{height:120px;background:var(--dpbg);border:1.5px solid var(--dp)}
+  .stack.lit .lyr{opacity:1}
+  .stack.train .lyr.m{box-shadow:0 0 18px rgba(217,83,111,.55);transform:translateY(-8px)}
+  .stack.train .lyr.s,.stack.train .lyr.d{filter:saturate(.55);opacity:.75}
+  .stack.partial .lyr.d{opacity:.18}
+  /* caption + dots */
+  #cap{min-height:74px;text-align:center;margin-top:18px}
+  #cap .t{font-size:clamp(15.5px,2vw,18.5px)}
+  #cap .t b{font-weight:700;color:var(--mid)}
+  #cap .d{font-size:13.5px;color:var(--mut);margin-top:4px}
+  #dots{display:flex;gap:9px;justify-content:center;margin-top:14px}
+  #dots span{width:9px;height:9px;border-radius:50%;border:1.5px solid rgba(47,45,42,.4);cursor:pointer;transition:all .25s}
+  #dots span.on{background:var(--mid);border-color:var(--mid);transform:scale(1.3)}
+  .hint{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(47,45,42,.32);text-align:center;margin-top:10px}
+
+  /* figures & results */
+  .figcard{background:#fff;border:1px solid rgba(47,45,42,.08);border-radius:16px;padding:14px;
+           box-shadow:0 8px 30px rgba(60,55,45,.08)}
+  .figcard img{width:100%;display:block;border-radius:8px}
+  .figcap{font-size:13px;color:var(--mut);text-align:center;margin-top:8px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0}
+  .stat{background:#fff;border-radius:14px;padding:18px 10px;text-align:center;border-top:3px solid var(--mid);
+        box-shadow:0 6px 22px rgba(60,55,45,.07)}
+  .stat .n{font-size:clamp(24px,3.4vw,34px);font-weight:700;color:var(--mid)}
+  .stat .l{font-size:12.5px;color:var(--mut);margin-top:4px;line-height:1.35}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  @media(max-width:760px){.duo{grid-template-columns:1fr}}
+  .abl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  @media(max-width:760px){.abl{grid-template-columns:repeat(2,1fr)}}
+  .abl img{width:100%;border-radius:8px;background:#fff}
+  h3{font-weight:400;font-size:16px;letter-spacing:.04em;margin:26px 0 10px;color:var(--ink)}
+  footer{text-align:center;padding:40px 0 56px;color:var(--mut);font-size:13px}
+  .fade{opacity:0;transform:translateY(18px);transition:all .8s cubic-bezier(.22,.61,.36,1)}
+  .fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<a class="home-back" href="https://www.terrypei.com" title="terrypei.com">&larr;</a>
+
+<header class="wrap">
+  <h1>Ground<b>Flow</b></h1>
+  <div class="tag">post-training in hidden-state space &middot; the backbone stays frozen</div>
+  <div class="btns">
+    <a class="btn" href="https://arxiv.org/abs/2509.16944"><b>Paper</b> · SD-RPN</a>
+    <a class="btn" href="https://huggingface.co/TerryPei/GroundFlow/tree/main"><b>Code</b> · HuggingFace</a>
+    <a class="btn" href="#results"><b>Results</b></a>
+  </div>
+</header>
+
+<section class="wrap">
+  <h2>The pipeline, step by step</h2>
+  <div class="sub">two stages · annotation labels itself, training touches only the middle layers</div>
+  <div id="pipe">
+    <div class="figcard" style="box-shadow:none;border:none;background:transparent;padding:0 0 6px;">
+      <img src="figs/pipeline.png" alt="SD-RPN / GroundFlow pipeline: frozen layers 1..B, trainable middle layers B+1..B+R, RoI prediction trained with BCE against calibrated pseudo-labels" style="border-radius:12px;">
+    </div>
+    <div id="cap"><div class="t"></div><div class="d"></div></div>
+    <div id="dots"></div>
+    <div class="hint">auto-plays &middot; click a dot to jump</div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Previous vs. ours</h2>
+  <div class="sub">end-to-end supervision reaches only the final output — we supervise the middle, where the signal still exists</div>
+  <div class="figcard fade"><img src="figs/compare.png" alt="Previous end-to-end supervision vs GroundFlow end-to-middle supervision with shallow-deep interaction"></div>
+</section>
+
+<section class="wrap" id="results">
+  <h2>Results</h2>
+  <div class="sub">same frozen Qwen3-VL backbone · post-training only</div>
+  <div class="stats fade">
+    <div class="stat"><div class="n">+20.4</div><div class="l">V*Bench · 4B<br>62.8 &rarr; 83.2</div></div>
+    <div class="stat"><div class="n">+14.2</div><div class="l">V*Bench · 8B<br>67.0 &rarr; 81.2</div></div>
+    <div class="stat"><div class="n">+11.1</div><div class="l">HRBench-4K · 4B</div></div>
+    <div class="stat"><div class="n">+10.5</div><div class="l">HRBench-8K · 4B</div></div>
+    <div class="stat"><div class="n">866</div><div class="l">OCRBench · 8B<br>849 &rarr; 866</div></div>
+    <div class="stat"><div class="n">~10K</div><div class="l">QA pairs<br>3 trainable layers</div></div>
+  </div>
+  <div class="duo">
+    <div class="figcard fade"><img src="figs/radar.png" alt="GroundFlow surrounds Qwen3-VL on all grounding axes"><div class="figcap">surrounds the baseline on every grounding axis</div></div>
+    <div class="figcard fade"><img src="figs/arch.png" alt="GroundFlow architecture"><div class="figcap">hidden-state &rarr; hidden-state correction · shallow/deep frozen</div></div>
+  </div>
+
+  <h3>Robustness to the retrieval threshold &theta;</h3>
+  <div class="abl fade">
+    <img src="figs/fig2_thresh_ocr.png"><img src="figs/fig2_thresh_info.png"><img src="figs/fig2_thresh_vstar.png"><img src="figs/fig2_thresh_hr4k.png">
+  </div>
+  <h3>Grounding-alignment trade-off &alpha;</h3>
+  <div class="abl fade">
+    <img src="figs/fig3_alpha_ocr.png"><img src="figs/fig3_alpha_info.png"><img src="figs/fig3_alpha_vstar.png"><img src="figs/fig3_alpha_hr4k.png">
+  </div>
+  <h3>Alignment temperature &tau;</h3>
+  <div class="abl fade">
+    <img src="figs/fig4_tau_ocr.png"><img src="figs/fig4_tau_info.png"><img src="figs/fig4_tau_vstar.png"><img src="figs/fig4_tau_hr4k.png">
+  </div>
+  <h3>Component analysis</h3>
+  <div class="abl fade">
+    <img src="figs/fig5_addcomp_ocr.png"><img src="figs/fig5_addcomp_info.png"><img src="figs/fig5_addcomp_vstar.png"><img src="figs/fig5_addcomp_hr4k.png">
+  </div>
+</section>
+
+<footer>GroundFlow &middot; Xiaohuan (Terry) Pei et&nbsp;al. &middot; <a href="https://www.terrypei.com">terrypei.com</a></footer>
+
+<script>
+const capT=document.querySelector('#cap .t'), capD=document.querySelector('#cap .d');
+const steps=[
+ {t:'Input — image and questions enter the <b>frozen</b> MLLM',
+  d:'the vision encoder produces visual tokens H\u1D65; questions and the model\u2019s own answers enter as text states'},
+ {t:'Stage 1 \u00b7 pseudo-label generation (bottom path)',
+  d:'the full frozen model runs once; middle-layer attention is informative but noisy'},
+ {t:'Stage 1 \u00b7 step 1 — <b>sink-token removal</b>',
+  d:'spurious attention peaks are detected by abnormal feature norm and zeroed out'},
+ {t:'Stage 1 \u00b7 step 2 — <b>three-state labels</b> \u2192 calibrated M\u0304\u1D63\u2092\u1D62',
+  d:'foreground = 1 \u00b7 background = 0 \u00b7 ambiguous = ignored, never trained on'},
+ {t:'Stage 2 — train <b>only layers B+1..B+R</b> (top path)',
+  d:'layers 1..B share frozen weights; the middle block is initialized from the same layers and predicts M\u0302\u1D63\u2092\u1D62'},
+ {t:'<b>BCE</b> between prediction and calibrated labels',
+  d:'hidden state \u2192 corrected region signal; shallow and deep layers stay untouched'},
+ {t:'Inference — <b>partial forward, retrieve, reuse</b>',
+  d:'regions come from the middle layers; the answer reuses them via importance-weighted attention'},
+];
+const dots=document.getElementById('dots');
+steps.forEach((s,i)=>{const d=document.createElement('span');d.onclick=()=>{go(i);clearInterval(timer);setTimeout(play,9000);};dots.appendChild(d);});
+let cur=-1,timer=null;
+function go(i){cur=i;capT.innerHTML=steps[i].t;capD.innerHTML=steps[i].d;
+  [...dots.children].forEach((d,j)=>d.classList.toggle('on',j===i));}
+function tick(){go((cur+1)%steps.length);}
+function play(){timer=setInterval(tick,3200);}
+go(0);play();
+document.getElementById('pipe').addEventListener('mouseenter',()=>clearInterval(timer));
+document.getElementById('pipe').addEventListener('mouseleave',()=>{clearInterval(timer);play();});
+
+/* ---------- scroll fade ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
