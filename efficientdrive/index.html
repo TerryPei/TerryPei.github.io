@@ -624,38 +624,40 @@ collision-safety</b>: save compute on the open road, spend it in dense traffic a
   <b>88.2 @ 151 ms</b> (near-full quality, 1.24× faster).
   <table style="margin:10px 0">
     <thead><tr>
-      <th>Variant</th><th>conditions the budget on</th><th class="n">scored as</th><th class="n">operating point</th>
-      <th class="n">ours</th><th class="n">best static</th><th class="n">gain</th>
+      <th>Variant</th><th>conditions the budget on</th>
+      <th class="n">EPDMS<br><span class="legend">idle, mean c=84ms</span></th>
+      <th class="n">EPDMS@<i>D</i><br><span class="legend">&Delta;t=130ms</span></th>
+      <th class="n">EPDMS@<i>D</i><br><span class="legend">&Delta;t=180ms</span></th>
+      <th class="n">budget mix<br><span class="legend">at &Delta;t=130ms</span></th>
     </tr></thead>
     <tbody>
-      <tr><td colspan="7" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; protocol A &middot; per-step deadline &Delta;t=130&nbsp;ms under fluctuating load &middot; <b>a missed step scores 0</b> &middot; 3 budgets &middot; N=10,439 &mdash;</td></tr>
-      <tr class="ours"><td><b>CRUISE-F</b></td><td>measured cost only (a clock)</td><td class="n">EPDMS@<i>D</i></td><td class="n">&Delta;t = 130 ms</td>
-          <td class="n"><b>71.77</b></td><td class="n">62.88</td><td class="n"><span class="good">+8.89 &nbsp;(+14.1%)</span></td></tr>
-      <tr style="color:var(--muted)"><td>CRUISE-T</td><td>cost + learned quality</td><td class="n">EPDMS@<i>D</i></td><td class="n">&Delta;t = 130 ms</td>
-          <td class="n">&middot;</td><td class="n">62.88</td><td class="n">&middot;</td></tr>
-      <tr><td colspan="7" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; protocol B &middot; matched <b>mean</b> latency, no deadline, idle clock &middot; 8 budgets &middot; trained on 8,735 non-test scenes (5-fold CV) &mdash;</td></tr>
-      <tr style="color:var(--muted)"><td>CRUISE-F</td><td>measured cost only</td><td class="n">EPDMS</td><td class="n">mean c = 84 ms</td>
-          <td class="n">81.18</td><td class="n">81.18</td><td class="n">&plusmn;0.0 <span class="legend">(ties)</span></td></tr>
-      <tr class="ours"><td><b>CRUISE-T</b></td><td>cost <b>+</b> learned per-scene quality</td><td class="n">EPDMS</td><td class="n">mean c = 151 ms</td>
-          <td class="n"><b>88.2</b></td><td class="n">87.1</td><td class="n"><span class="good">+1.1</span></td></tr>
-      <tr class="ours"><td></td><td></td><td class="n">EPDMS</td><td class="n">mean c = 101 ms</td>
-          <td class="n">86.4</td><td class="n">84.5</td><td class="n"><span class="good">+1.9</span></td></tr>
-      <tr class="ours"><td></td><td></td><td class="n">EPDMS</td><td class="n">mean c = 70 ms</td>
-          <td class="n">81.4</td><td class="n">79.0</td><td class="n"><span class="good">+2.3</span></td></tr>
-      <tr class="ours"><td></td><td></td><td class="n">EPDMS</td><td class="n">mean c = 58 ms</td>
-          <td class="n">75.9</td><td class="n">71.5</td><td class="n"><span class="good">+4.5</span></td></tr>
+      <tr style="color:var(--muted)"><td>static @1728 (full-token)</td><td>nothing</td><td class="n">88.48</td><td class="n">0.00</td><td class="n">0.00</td><td class="n">1728:100%</td></tr>
+      <tr style="color:var(--muted)"><td>static @432</td><td>nothing</td><td class="n">81.18</td><td class="n">50.56</td><td class="n">81.18</td><td class="n">432:100%</td></tr>
+      <tr style="color:var(--muted)"><td>static @135 <span class="legend">best static under a 130ms deadline</span></td><td>nothing</td><td class="n">62.88</td><td class="n">62.88</td><td class="n">62.88</td><td class="n">135:100%</td></tr>
+      <tr class="ours"><td><b>CRUISE-F</b></td><td>measured cost only (a clock)</td>
+          <td class="n">81.18</td><td class="n"><b>71.77</b></td><td class="n"><b>81.18</b></td><td class="n">432:49% 135:51%</td></tr>
+      <tr class="ours"><td><b>CRUISE-T</b></td><td>cost <b>+</b> learned per-scene quality</td>
+          <td class="n">81.18</td><td class="n"><b>71.77</b></td><td class="n"><b>81.18</b></td><td class="n">432:49% 135:51%</td></tr>
+      <tr style="color:var(--muted)"><td>[oracle within the feasible set]</td><td>cost + <i>true</i> per-scene quality</td>
+          <td class="n">&middot;</td><td class="n">73.34</td><td class="n">&middot;</td><td class="n">432:39% 135:61%</td></tr>
     </tbody>
   </table>
-  <p class="legend" style="margin-top:6px">Two instantiations of one scheduling rule, differing only in what the budget
-  is conditioned on, and <b>each strongest under a different protocol</b>.
-  <b>Why the two "best static" columns differ:</b> under protocol A a missed step scores 0, so the best static budget is
-  not the highest-quality one but the fastest one that <i>never</i> misses &mdash; 135 tokens at <b>62.88</b>. The
-  432-token budget is better on an idle clock (81.18) yet misses 37.5% of steps at &Delta;t=130&nbsp;ms and collapses to
-  50.56. Protocol B removes the deadline entirely and scores on an idle clock, so its static baseline is the plain
-  quality frontier and sits far higher. <b>The two blocks answer different questions and must not be read row-to-row;</b>
-  only the gain column is comparable across them. Grey rows mark the axis on which each variant is not the intended one:
-  CRUISE-F ties the static frontier once the deadline is removed, which is exactly the caveat carried by the
-  &dagger; footnote in Table&nbsp;2.</p>
+  <p class="legend" style="margin-top:6px"><b>One protocol for every row</b> &mdash; same load trace, same deadline,
+  same scoring, misses count as 0, N=10,439 scenes, budgets {1728, 432, 135}. The only thing that changes between
+  CRUISE-F and CRUISE-T is the quality term inside the same rule
+  \(b_t=\arg\max_{b}\{Q(b):T(b)\hat m_t\le\eta\Delta t\}\): measured \(Q(b)\) versus a learned per-scene
+  \(\hat Q(b\mid x_t)\) (ridge, 5-fold CV, content + VLM features).
+  <br><br>
+  <b style="color:var(--warn)">The learned quality term changes nothing here, and we report that.</b> CRUISE-T picks
+  the identical budget on <b>0.00% of the 10,439 steps</b>, so every column matches CRUISE-F exactly. The reason is
+  visible in the last row: once the deadline has cut the feasible set down to one or two budgets, an oracle with
+  <i>perfect</i> per-scene quality gains only <b>+1.57</b> (73.34 vs 71.77). Under a deadline the binding constraint is
+  <b>feasibility, not quality ranking</b>, which is why the cost signal alone is sufficient.
+  <br><br>
+  <b>Scope.</b> This is ridge over three budgets, the three for which full-navtest per-scene scores exist. It is not
+  the 8-budget gradient-boosted controller of &sect;10, whose +1.1 to +4.5 EPDMS is measured at matched <i>mean</i>
+  latency with no deadline. Placing that controller on this protocol needs per-scene scores at all eight budgets on
+  full navtest, which we have not run; until then the two results are not comparable and we do not merge them.</p>
   <b>The ladder is clear:</b> CRUISE-F ties static on this axis → CRUISE-T beats it by +1–4 → adding probe forwards
   (trajectory-shape, cross-budget disagreement) pushes further at low \(c\) (+2 to +10) but pays the extra forward.
   <b>Yet none exceed 88.7 at low \(c\)</b> — the ceiling stays under the 91.3 hindsight bound, because much of that
