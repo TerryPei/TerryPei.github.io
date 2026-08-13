@@ -624,30 +624,38 @@ collision-safety</b>: save compute on the open road, spend it in dense traffic a
   <b>88.2 @ 151 ms</b> (near-full quality, 1.24× faster).
   <table style="margin:10px 0">
     <thead><tr>
-      <th>Variant</th><th>conditions the budget on</th><th class="n">operating point</th>
+      <th>Variant</th><th>conditions the budget on</th><th class="n">scored as</th><th class="n">operating point</th>
       <th class="n">ours</th><th class="n">best static</th><th class="n">gain</th>
     </tr></thead>
     <tbody>
-      <tr><td colspan="6" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; load axis &middot; fluctuating GPU load, per-step deadline &Delta;t=130&nbsp;ms, N=10,439 &mdash;</td></tr>
-      <tr class="ours"><td><b>CRUISE-F</b></td><td>measured cost only (a clock)</td><td class="n">&Delta;t = 130 ms</td>
+      <tr><td colspan="7" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; protocol A &middot; per-step deadline &Delta;t=130&nbsp;ms under fluctuating load &middot; <b>a missed step scores 0</b> &middot; 3 budgets &middot; N=10,439 &mdash;</td></tr>
+      <tr class="ours"><td><b>CRUISE-F</b></td><td>measured cost only (a clock)</td><td class="n">EPDMS@<i>D</i></td><td class="n">&Delta;t = 130 ms</td>
           <td class="n"><b>71.77</b></td><td class="n">62.88</td><td class="n"><span class="good">+8.89 &nbsp;(+14.1%)</span></td></tr>
-      <tr><td colspan="6" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; content axis &middot; matched mean latency, 8 budgets, trained on 8,735 non-test scenes (5-fold CV) &mdash;</td></tr>
-      <tr class="ours"><td><b>CRUISE-T</b></td><td>cost <b>+</b> learned per-scene quality</td><td class="n">mean c = 151 ms</td>
+      <tr style="color:var(--muted)"><td>CRUISE-T</td><td>cost + learned quality</td><td class="n">EPDMS@<i>D</i></td><td class="n">&Delta;t = 130 ms</td>
+          <td class="n">&middot;</td><td class="n">62.88</td><td class="n">&middot;</td></tr>
+      <tr><td colspan="7" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; protocol B &middot; matched <b>mean</b> latency, no deadline, idle clock &middot; 8 budgets &middot; trained on 8,735 non-test scenes (5-fold CV) &mdash;</td></tr>
+      <tr style="color:var(--muted)"><td>CRUISE-F</td><td>measured cost only</td><td class="n">EPDMS</td><td class="n">mean c = 84 ms</td>
+          <td class="n">81.18</td><td class="n">81.18</td><td class="n">&plusmn;0.0 <span class="legend">(ties)</span></td></tr>
+      <tr class="ours"><td><b>CRUISE-T</b></td><td>cost <b>+</b> learned per-scene quality</td><td class="n">EPDMS</td><td class="n">mean c = 151 ms</td>
           <td class="n"><b>88.2</b></td><td class="n">87.1</td><td class="n"><span class="good">+1.1</span></td></tr>
-      <tr class="ours"><td></td><td></td><td class="n">mean c = 101 ms</td>
+      <tr class="ours"><td></td><td></td><td class="n">EPDMS</td><td class="n">mean c = 101 ms</td>
           <td class="n">86.4</td><td class="n">84.5</td><td class="n"><span class="good">+1.9</span></td></tr>
-      <tr class="ours"><td></td><td></td><td class="n">mean c = 70 ms</td>
+      <tr class="ours"><td></td><td></td><td class="n">EPDMS</td><td class="n">mean c = 70 ms</td>
           <td class="n">81.4</td><td class="n">79.0</td><td class="n"><span class="good">+2.3</span></td></tr>
-      <tr class="ours"><td></td><td></td><td class="n">mean c = 58 ms</td>
+      <tr class="ours"><td></td><td></td><td class="n">EPDMS</td><td class="n">mean c = 58 ms</td>
           <td class="n">75.9</td><td class="n">71.5</td><td class="n"><span class="good">+4.5</span></td></tr>
     </tbody>
   </table>
-  <p class="legend" style="margin-top:6px">Two instantiations of the same scheduling rule, differing only in what the
-  budget is conditioned on. <b>CRUISE-F</b> reads the cost the previous step paid; <b>CRUISE-T</b> additionally reads a
-  learned per-scene quality estimate. They are strongest on different axes: the cost signal is what survives a
-  <i>deadline</i> under fluctuating load, while the learned estimate is what buys quality at a <i>matched mean
-  latency</i>. Neither modifies the frozen model. The two blocks are measured under different protocols and are not
-  directly comparable row-to-row; each is compared against the best static budget under its own protocol.</p>
+  <p class="legend" style="margin-top:6px">Two instantiations of one scheduling rule, differing only in what the budget
+  is conditioned on, and <b>each strongest under a different protocol</b>.
+  <b>Why the two "best static" columns differ:</b> under protocol A a missed step scores 0, so the best static budget is
+  not the highest-quality one but the fastest one that <i>never</i> misses &mdash; 135 tokens at <b>62.88</b>. The
+  432-token budget is better on an idle clock (81.18) yet misses 37.5% of steps at &Delta;t=130&nbsp;ms and collapses to
+  50.56. Protocol B removes the deadline entirely and scores on an idle clock, so its static baseline is the plain
+  quality frontier and sits far higher. <b>The two blocks answer different questions and must not be read row-to-row;</b>
+  only the gain column is comparable across them. Grey rows mark the axis on which each variant is not the intended one:
+  CRUISE-F ties the static frontier once the deadline is removed, which is exactly the caveat carried by the
+  &dagger; footnote in Table&nbsp;2.</p>
   <b>The ladder is clear:</b> CRUISE-F ties static on this axis → CRUISE-T beats it by +1–4 → adding probe forwards
   (trajectory-shape, cross-budget disagreement) pushes further at low \(c\) (+2 to +10) but pays the extra forward.
   <b>Yet none exceed 88.7 at low \(c\)</b> — the ceiling stays under the 91.3 hindsight bound, because much of that
