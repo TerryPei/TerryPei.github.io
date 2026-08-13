@@ -113,8 +113,8 @@ window.MathJax = {
   </p>
   <p>A controller that lets a driving world-action model <b>hold a per-frame deadline under
      changing GPU load</b> — by measuring what its own inference just cost and spending the next step's budget
-     accordingly. The load axis is <b>training-free</b> (it reads only a clock); a small <b>trained</b> variant
-     additionally beats every static budget at equal latency (§07).
+     accordingly. We report two instantiations: <b>CRUISE-F</b> conditions the budget on the measured cost alone,
+     <b>CRUISE-T</b> additionally on a learned per-scene quality estimate (§07). Neither touches the frozen model.
      Built on <b>DriveDreamer-Policy</b>, and transferable to <b>Cosmos 3</b>.</p>
 </header>
 
@@ -229,7 +229,7 @@ flow-matching steps \(N\).</p>
 \(w\), plus the measured cost \(c_{i-1}\) and load estimate \(\hat m_i\). <b>Output</b> \(b_i=|V_i|\) = how many
 visual tokens the frozen VLM prefill keeps this step. \(\pi_\theta\) is a <b>small trained controller</b>;
 \(\hat Q_\theta(b\mid x_i)\) predicts the quality at budget \(b\) from \(x_i\); \(\mathcal B\) = the budget set (§04
-ground-truth table). <b>Training-free variant:</b> replace \(\hat Q_\theta\) with the measured \(Q(b)\) and a hand-set
+ground-truth table). <b>CRUISE-F (cost-only) variant:</b> replace \(\hat Q_\theta\) with the measured \(Q(b)\) and a hand-set
 difficulty gate \(g(d_i)\).</p>
 
 <h3>The loop</h3>
@@ -470,7 +470,7 @@ is real but not cheaply reachable on this baseline.)</span></p>
 <p class="legend">The real test of cost feedback. The GPU is <b>shared</b>, so the load multiplier <b>m(t)</b> drifts,
 trends, and bursts as other jobs arrive. A <b>static</b> budget is stuck: it <b>misses the deadline during bursts</b>
 (EPDMS@D → 0) <i>or</i> <b>wastes quality during lulls</b>. EfficientDriver measures its own recent latency and adapts —
-<b>reading only a clock, training-free</b>. Quality per budget is the <b>real full-navtest EPDMS (11 640 scenes)</b>;
+<b>reading only a clock</b> (the CRUISE-F instantiation). Quality per budget is the <b>real full-navtest EPDMS (11 640 scenes)</b>;
 the load trace and deadline gate are simulated. <b>Rigorous sweep: 6 load regimes × 4 deadlines × 8 random seeds.</b>
 The controller is <b>distribution-aware</b> — it tracks the load's <b>mean and variance</b> and takes the largest
 budget that fits the deadline under \(\hat m + 1.2\,\hat\sigma\), so its safety margin grows exactly when load is
@@ -623,15 +623,32 @@ collision-safety</b>: save compute on the open road, spend it in dense traffic a
   gain is highest), <b>beats the static frontier by +1.1 to +4.5 EPDMS</b> — biggest at low \(c\) — reaching
   <b>88.2 @ 151 ms</b> (near-full quality, 1.24× faster).
   <table style="margin:10px 0">
-    <thead><tr><th class="n">mean c</th><th class="n">trained</th><th class="n">static</th><th class="n">gain</th><th class="n">vs full</th></tr></thead>
+    <thead><tr>
+      <th>Variant</th><th>conditions the budget on</th><th class="n">operating point</th>
+      <th class="n">ours</th><th class="n">best static</th><th class="n">gain</th>
+    </tr></thead>
     <tbody>
-      <tr><td class="n">151 ms</td><td class="n"><b>88.2</b></td><td class="n">87.1</td><td class="n"><span class="good">+1.1</span></td><td class="n">−0.3</td></tr>
-      <tr><td class="n">101 ms</td><td class="n">86.4</td><td class="n">84.5</td><td class="n"><span class="good">+1.9</span></td><td class="n">−2.1</td></tr>
-      <tr><td class="n">70 ms</td><td class="n">81.4</td><td class="n">79.0</td><td class="n"><span class="good">+2.3</span></td><td class="n">−7.2</td></tr>
-      <tr><td class="n">58 ms</td><td class="n">75.9</td><td class="n">71.5</td><td class="n"><span class="good">+4.5</span></td><td class="n">−12.6</td></tr>
+      <tr><td colspan="6" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; load axis &middot; fluctuating GPU load, per-step deadline &Delta;t=130&nbsp;ms, N=10,439 &mdash;</td></tr>
+      <tr class="ours"><td><b>CRUISE-F</b></td><td>measured cost only (a clock)</td><td class="n">&Delta;t = 130 ms</td>
+          <td class="n"><b>71.77</b></td><td class="n">62.88</td><td class="n"><span class="good">+8.89 &nbsp;(+14.1%)</span></td></tr>
+      <tr><td colspan="6" style="background:var(--panel2);color:var(--muted);font-size:11.5px;font-family:var(--mono)">&mdash; content axis &middot; matched mean latency, 8 budgets, trained on 8,735 non-test scenes (5-fold CV) &mdash;</td></tr>
+      <tr class="ours"><td><b>CRUISE-T</b></td><td>cost <b>+</b> learned per-scene quality</td><td class="n">mean c = 151 ms</td>
+          <td class="n"><b>88.2</b></td><td class="n">87.1</td><td class="n"><span class="good">+1.1</span></td></tr>
+      <tr class="ours"><td></td><td></td><td class="n">mean c = 101 ms</td>
+          <td class="n">86.4</td><td class="n">84.5</td><td class="n"><span class="good">+1.9</span></td></tr>
+      <tr class="ours"><td></td><td></td><td class="n">mean c = 70 ms</td>
+          <td class="n">81.4</td><td class="n">79.0</td><td class="n"><span class="good">+2.3</span></td></tr>
+      <tr class="ours"><td></td><td></td><td class="n">mean c = 58 ms</td>
+          <td class="n">75.9</td><td class="n">71.5</td><td class="n"><span class="good">+4.5</span></td></tr>
     </tbody>
   </table>
-  <b>The ladder is clear:</b> training-free ties static → trained beats it by +1–4 → adding probe forwards
+  <p class="legend" style="margin-top:6px">Two instantiations of the same scheduling rule, differing only in what the
+  budget is conditioned on. <b>CRUISE-F</b> reads the cost the previous step paid; <b>CRUISE-T</b> additionally reads a
+  learned per-scene quality estimate. They are strongest on different axes: the cost signal is what survives a
+  <i>deadline</i> under fluctuating load, while the learned estimate is what buys quality at a <i>matched mean
+  latency</i>. Neither modifies the frozen model. The two blocks are measured under different protocols and are not
+  directly comparable row-to-row; each is compared against the best static budget under its own protocol.</p>
+  <b>The ladder is clear:</b> CRUISE-F ties static on this axis → CRUISE-T beats it by +1–4 → adding probe forwards
   (trajectory-shape, cross-budget disagreement) pushes further at low \(c\) (+2 to +10) but pays the extra forward.
   <b>Yet none exceed 88.7 at low \(c\)</b> — the ceiling stays under the 91.3 hindsight bound, because much of that
   headroom is irreducible EPDMS noise and the rest needs a <b>content feature this baseline does not emit</b>.
@@ -706,7 +723,7 @@ collision-safety</b>: save compute on the open road, spend it in dense traffic a
 </div>
 
 <table>
-  <thead><tr><th>Cosmos 3 tower</th><th>Loops over</th><th>\(b\) = the knob</th><th>train-free · per-step</th></tr></thead>
+  <thead><tr><th>Cosmos 3 tower</th><th>Loops over</th><th>\(b\) = the knob</th><th>knob type · per-step</th></tr></thead>
   <tbody>
     <tr><td><b>AR reasoner</b><br><small>text/vision → text</small></td><td>tokens<br><small>sequence × depth</small></td><td><b>Token pruning</b> — keep top-\(k\)% visual tokens (SparseVLM-style prune + merge). <b>The EfficientDriver knob transfers directly.</b></td><td class="n">✅ · ✅</td></tr>
     <tr class="ours"><td><b style="color:var(--new)">DiT generator</b><br><small>vision / action gen</small></td><td>denoising steps × frames</td><td><b style="color:var(--new)">Cache reuse — cache ratio \(R\)</b>: each step recompute only \((1{-}R)\) of the tokens and <b>reuse the cached features</b> from the previous step (ToCa / TeaCache-style). Continuous, dial-able per step. <small>(denoising steps 4→3→2→1 also cut cost but need a one-time distillation — not per-frame free.)</small></td><td class="n">✅ · ✅</td></tr>
@@ -870,7 +887,7 @@ conclusion are solid, the exact magnitude is not.</p>
 <td class="n">0.72<sup>p</sup></td><td class="n">0.660<sup>p</sup></td><td class="n">&middot;</td></tr>
 
 <tr><td colspan="15" style="background:rgba(118,185,0,.06);color:var(--accent);font-size:11.5px;font-family:var(--mono)">&mdash; Dynamic (ours) &middot; schedule the denoising-step budget per chunk under the deadline &mdash;</td></tr>
-<tr class="ours"><td><b>EfficientDriver (ours)</b> <span class="legend">same closed-form train-free controller &middot; denoising-step budget</span></td>
+<tr class="ours"><td><b>EfficientDriver (ours)</b> <span class="legend">same closed-form controller &middot; denoising-step budget</span></td>
 <td class="n">dyn</td><td class="n">dyn</td><td class="n">&le;5</td><td class="n">adaptive</td><td class="n">&middot;</td>
 <td class="n">&middot;</td><td class="n">&middot;</td><td class="n">&middot;</td><td class="n">&middot;</td><td class="n">&middot;</td><td class="n">&middot;</td>
 <td class="n">adaptive</td><td class="n"><b>0.70&nbsp;&middot;&nbsp;+10.7%<sup>p</sup></b></td><td class="n">&middot;</td></tr>
