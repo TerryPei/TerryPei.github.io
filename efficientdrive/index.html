@@ -546,7 +546,7 @@ trends, and bursts as other jobs arrive. A <b>static</b> budget is stuck: it <b>
 <b>reading only a clock</b> (the CRUISE-F instantiation). Quality per budget is the <b>real full-navtest EPDMS (11 640 scenes)</b>;
 the load trace and deadline gate are simulated. <b>Rigorous sweep: 6 load regimes × 4 deadlines × 8 random seeds.</b>
 The controller is <b>distribution-aware</b> — it tracks the load's <b>mean and variance</b> and takes the largest
-budget that fits the deadline under \(\hat m + 1.2\,\hat\sigma\), so its safety margin grows exactly when load is
+budget that fits the deadline under \(\hat m+\kappa\hat\sigma\) with \(\kappa=1.2\), so its margin grows exactly when the load is
 volatile. <b>load upper bound</b> = an oracle that knows the load exactly.</p>
 
 <h3 style="margin:22px 0 6px">Is the premise real? A dedicated GPU, measured.</h3>
@@ -604,7 +604,7 @@ temperature and SM clock. The baseline <b>T</b> is the median of the first 200 s
   A plain EWMA-of-the-<i>mean</i> controller <b>loses on calm load</b> (−5%): it sits a budget right at the deadline
   and the ±12% per-frame noise pushes it over. The fix is <b>not</b> "more caution everywhere" (that forfeits quality
   on frames it would have made) but <b>sizing the safety margin to the load's variance</b> — track <b>both</b> mean
-  and σ, gate on \(\hat m + 1.2\,\hat\sigma\). This lifts calm from −5% to −0.1% and the overall mean from +5.0% to
+  and σ, gate on \(\hat m+\kappa\hat\sigma\). This lifts calm from −5% to −0.1% and the overall mean from +5.0% to
   <b>+7.1%</b> (13 → 15 of 24 cells won). The right amount of caution is <b>data-dependent</b>, not a fixed constant.
 </div>
 
