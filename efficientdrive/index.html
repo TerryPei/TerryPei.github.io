@@ -372,10 +372,10 @@ load profiles — the controller <b>beats the best static budget by +12.7% EPDMS
 </figure>
 
 <h2><span class="num">06</span> T1 · The gap — nobody reports latency</h2>
-<p class="legend">We checked all 15 methods on the NAVSIM leaderboard against their primary sources.</p>
+<p class="legend">We checked all 16 methods on the NAVSIM leaderboard against their primary sources &mdash; including the newest state of the art, published this month.</p>
 <div class="cards">
-  <div class="card"><div class="lab">Report latency in the MAIN table</div><div class="val" style="color:var(--bad)">0 / 15</div></div>
-  <div class="card"><div class="lab">Report nothing, anywhere</div><div class="val" style="color:var(--warn)">6 / 15</div></div>
+  <div class="card"><div class="lab">Report latency in the MAIN table</div><div class="val" style="color:var(--bad)">0 / 16</div></div>
+  <div class="card"><div class="lab">Report nothing, anywhere</div><div class="val" style="color:var(--warn)">7 / 16</div></div>
   <div class="card"><div class="lab">Measured spread</div><div class="val">~600×</div></div>
   <div class="card"><div class="lab">Distinct GPUs used</div><div class="val">7</div></div>
 </div>
@@ -391,7 +391,8 @@ load profiles — the controller <b>beats the best static budget by +12.7% EPDMS
     <tr><td>PWM <span class="legend">NeurIPS'25</span></td><td class="n">—</td><td class="n">850 ms</td><td>A800</td><td class="legend">ablation Table 4</td></tr>
     <tr><td>AutoVLA <span class="legend">NeurIPS'25</span></td><td class="n">—</td><td class="n">1 072–10 518 ms</td><td><span class="warnc">not stated</span></td><td class="legend">runtime Table 2</td></tr>
     <tr><td>UniAD · ARTEMIS · LAW · DrivingGPT · FSDrive</td><td class="n">—</td><td class="n"><span class="bad">NOT REPORTED</span></td><td>—</td><td class="legend">no ms / FPS / Hz anywhere in the paper</td></tr>
-    <tr class="paper"><td><b>DriveDreamer-Policy</b> <span class="legend">the SOTA we build on</span></td><td class="n"><b>88.7</b></td><td class="n"><span class="bad">NOT REPORTED</span></td><td>—</td><td class="legend"><b>abstract claims "controllable latency" — never measures it</b></td></tr>
+    <tr><td>DA-WAM <span class="legend">arXiv&rsquo;26 &middot; best published on BOTH NAVSIM benchmarks</span></td><td class="n">87.7</td><td class="n"><span class="bad">NOT REPORTED</span></td><td><span class="warnc">not stated</span></td><td class="legend">no ms / FPS / Hz anywhere; even the training GPU model is unnamed ("8 GPUs")</td></tr>
+<tr class="paper"><td><b>DriveDreamer-Policy</b> <span class="legend">the SOTA we build on</span></td><td class="n"><b>88.7</b></td><td class="n"><span class="bad">NOT REPORTED</span></td><td>—</td><td class="legend"><b>abstract claims "controllable latency" — never measures it</b></td></tr>
     <tr class="ours"><td><b>· measured by us</b></td><td class="n">88.80</td><td class="n"><b>187 ms</b></td><td>RTX 4090</td><td class="legend"><b>clock-locked, idle GPU, 3 repeats</b></td></tr>
   </tbody>
 </table>
