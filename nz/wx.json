@@ -1,0 +1,257 @@
+{
+ "generated_at": "2026-09-26T20:33:12.374159+12:00",
+ "generated_nz": "09/26 20:33",
+ "n_alerts_total": 16,
+ "alerts": [],
+ "days": [
+  {
+   "date": "2026-09-28",
+   "d": "9/28",
+   "wd": "周一",
+   "place": "基督城",
+   "level": 0,
+   "status": "照常",
+   "notes": [
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 1.6,
+    "hi": 15.2,
+    "pop": 8,
+    "mm": 0.0,
+    "wind": 18.8,
+    "code": 3
+   },
+   "sum": "阴 2～15°C · 降水 8%"
+  },
+  {
+   "date": "2026-09-29",
+   "d": "9/29",
+   "wd": "周二",
+   "place": "库克山",
+   "level": 1,
+   "status": "留意",
+   "notes": [
+    "最低 -5°C，早上山口路面可能结冰。10:00 取车正好，别更早"
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": -4.6,
+    "hi": 7.9,
+    "pop": 0,
+    "mm": 0.0,
+    "wind": 6.1,
+    "code": 3
+   },
+   "sum": "阴 -5～8°C · 降水 0%"
+  },
+  {
+   "date": "2026-09-30",
+   "d": "9/30",
+   "wd": "周三",
+   "place": "达尼丁",
+   "level": 0,
+   "status": "照常",
+   "notes": [
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 4.5,
+    "hi": 13.7,
+    "pop": 6,
+    "mm": 0.0,
+    "wind": 19.1,
+    "code": 3
+   },
+   "sum": "阴 4～14°C · 降水 6%"
+  },
+  {
+   "date": "2026-10-01",
+   "d": "10/1",
+   "wd": "周四",
+   "place": "蒂阿瑙",
+   "level": 1,
+   "status": "留意",
+   "notes": [
+    "Te Anau 湖滨 日落大概率没有：不用专门等，18:30 电话结束后看天色再说"
+   ],
+   "fc": {
+    "kind": "雨",
+    "icon": "rain",
+    "lo": 7.2,
+    "hi": 14.0,
+    "pop": 94,
+    "mm": 28.0,
+    "wind": 12.8,
+    "code": 63
+   },
+   "sum": "雨 7～14°C · 降水 94%"
+  },
+  {
+   "date": "2026-10-02",
+   "d": "10/2",
+   "wd": "周五",
+   "place": "米尔福德峡湾",
+   "level": 2,
+   "status": "有备选",
+   "notes": [
+    "预报 122 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
+    "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 13.0,
+    "hi": 13.2,
+    "pop": 100,
+    "mm": 122.4,
+    "wind": 14.9,
+    "code": 82
+   },
+   "sum": "阵雨 13～13°C · 降水 100%"
+  },
+  {
+   "date": "2026-10-03",
+   "d": "10/3",
+   "wd": "周六",
+   "place": "瓦纳卡",
+   "level": 1,
+   "status": "留意",
+   "notes": [
+    "That Wanaka Tree 日落大概率没有：树就在湖边，小雨也能去，大雨就算了"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 9.9,
+    "hi": 12.5,
+    "pop": 57,
+    "mm": 19.3,
+    "wind": 9.4,
+    "code": 80
+   },
+   "sum": "阵雨 10～12°C · 降水 57%"
+  },
+  {
+   "date": "2026-10-04",
+   "d": "10/4",
+   "wd": "周日",
+   "place": "霍基蒂卡",
+   "level": 1,
+   "status": "留意",
+   "notes": [
+    "Hokitika 海滩 日落大概率没有：海滩就在门口，下雨就在房间看"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 11.9,
+    "hi": 13.9,
+    "pop": 57,
+    "mm": 31.7,
+    "wind": 10.2,
+    "code": 80
+   },
+   "sum": "阵雨 12～14°C · 降水 57%"
+  },
+  {
+   "date": "2026-10-05",
+   "d": "10/5",
+   "wd": "周一",
+   "place": "亚瑟山口",
+   "level": 0,
+   "status": "照常",
+   "notes": [
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 7.3,
+    "hi": 9.3,
+    "pop": 35,
+    "mm": 21.4,
+    "wind": 10.4,
+    "code": 80
+   },
+   "sum": "阵雨 7～9°C · 降水 35%"
+  },
+  {
+   "date": "2026-10-06",
+   "d": "10/6",
+   "wd": "周二",
+   "place": "罗托鲁瓦",
+   "level": 0,
+   "status": "照常",
+   "notes": [
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 10.0,
+    "hi": 13.5,
+    "pop": 32,
+    "mm": 0.0,
+    "wind": 11.7,
+    "code": 3
+   },
+   "sum": "阴 10～14°C · 降水 32%"
+  },
+  {
+   "date": "2026-10-07",
+   "d": "10/7",
+   "wd": "周三",
+   "place": "霍比特人村",
+   "level": 0,
+   "status": "照常",
+   "notes": [
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 7.5,
+    "hi": 17.7,
+    "pop": 35,
+    "mm": 11.4,
+    "wind": 11.5,
+    "code": 80
+   },
+   "sum": "阵雨 8～18°C · 降水 35%"
+  },
+  {
+   "date": "2026-10-08",
+   "d": "10/8",
+   "wd": "周四",
+   "place": "奥克兰",
+   "level": 0,
+   "status": "照常",
+   "notes": [
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 14.3,
+    "hi": 17.6,
+    "pop": 22,
+    "mm": 10.0,
+    "wind": 17.7,
+    "code": 81
+   },
+   "sum": "阵雨 14～18°C · 降水 22%"
+  }
+ ],
+ "src": {
+  "metservice": "https://www.metservice.com/warnings/home",
+  "nzta": "https://www.journeys.nzta.govt.nz/",
+  "milford": "https://www.nzta.govt.nz/projects/sh94-milford-road/sh94-milford-road-status",
+  "cap": "https://alerts.metservice.com/cap/rss"
+ }
+}
