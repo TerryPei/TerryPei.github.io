@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-29T03:30:54.164030+13:00",
- "generated_nz": "09/29 03:30",
+ "generated_at": "2026-09-29T10:11:43.640470+13:00",
+ "generated_nz": "09/29 10:11",
  "n_alerts_total": 0,
- "n_roads_total": 205,
+ "n_roads_total": 190,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -116,11 +116,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 28 Sept 2026 5:30pm",
+   "span": "9/18 17:30–10/31 17:30 · 更新 29 Sept 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traffic at the closure points of Makarora an",
    "days": [
     "2026-10-04"
@@ -193,7 +193,7 @@
     "kind": "阴",
     "icon": "cloud",
     "lo": -4.3,
-    "hi": 8.3,
+    "hi": 8.4,
     "pop": 0,
     "mm": 0.0,
     "wind": 7.6,
@@ -217,14 +217,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 6.3,
-    "hi": 15.4,
-    "pop": 3,
+    "lo": 6.0,
+    "hi": 15.8,
+    "pop": 0,
     "mm": 0.0,
-    "wind": 17.6,
+    "wind": 17.2,
     "code": 3
    },
-   "sum": "阴 6～15°C · 降水 3%"
+   "sum": "阴 6～16°C · 降水 0%"
   },
   {
    "date": "2026-10-01",
@@ -243,16 +243,16 @@
     "Te Anau 湖滨 日落大概率没有：不用专门等，18:30 电话结束后看天色再说"
    ],
    "fc": {
-    "kind": "雨",
+    "kind": "小雨",
     "icon": "rain",
-    "lo": 8.1,
-    "hi": 11.4,
-    "pop": 85,
-    "mm": 11.2,
-    "wind": 19.2,
-    "code": 61
+    "lo": 8.3,
+    "hi": 11.7,
+    "pop": 84,
+    "mm": 4.8,
+    "wind": 21.5,
+    "code": 53
    },
-   "sum": "雨 8～11°C · 降水 85%"
+   "sum": "小雨 8～12°C · 降水 84%"
   },
   {
    "date": "2026-10-02",
@@ -262,20 +262,20 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "预报 64 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
+    "预报 88 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
     "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
    ],
    "fc": {
     "kind": "阵雨",
     "icon": "rain",
-    "lo": 11.1,
-    "hi": 14.0,
+    "lo": 9.5,
+    "hi": 13.6,
     "pop": 100,
-    "mm": 64.4,
-    "wind": 19.9,
+    "mm": 87.7,
+    "wind": 21.5,
     "code": 82
    },
-   "sum": "阵雨 11～14°C · 降水 100%"
+   "sum": "阵雨 10～14°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
@@ -291,13 +291,13 @@
     "kind": "小雨",
     "icon": "rain",
     "lo": 8.6,
-    "hi": 13.1,
-    "pop": 53,
-    "mm": 0.3,
-    "wind": 7.8,
+    "hi": 13.2,
+    "pop": 52,
+    "mm": 0.4,
+    "wind": 10.6,
     "code": 51
    },
-   "sum": "小雨 9～13°C · 降水 53%"
+   "sum": "小雨 9～13°C · 降水 52%"
   },
   {
    "date": "2026-10-04",
@@ -307,20 +307,20 @@
    "level": 1,
    "status": "留意",
    "notes": [
-    "NZTA 路况（Caution）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
+    "NZTA 路况（Vehicle Restrictions）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
     "NZTA 路况（Caution）SH 6 Harihari to Fox Glacier：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 9.0,
-    "hi": 15.0,
-    "pop": 33,
-    "mm": 3.1,
-    "wind": 16.0,
+    "lo": 10.6,
+    "hi": 14.1,
+    "pop": 31,
+    "mm": 3.8,
+    "wind": 10.8,
     "code": 53
    },
-   "sum": "小雨 9～15°C · 降水 33%"
+   "sum": "小雨 11～14°C · 降水 31%"
   },
   {
    "date": "2026-10-05",
@@ -335,14 +335,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 0.1,
-    "hi": 11.7,
+    "lo": 6.8,
+    "hi": 14.3,
     "pop": 8,
     "mm": 0.0,
-    "wind": 11.1,
+    "wind": 10.3,
     "code": 3
    },
-   "sum": "阴 0～12°C · 降水 8%"
+   "sum": "阴 7～14°C · 降水 8%"
   },
   {
    "date": "2026-10-06",
@@ -357,14 +357,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 5.0,
-    "hi": 13.4,
+    "lo": 9.2,
+    "hi": 13.2,
     "pop": 14,
     "mm": 0.0,
-    "wind": 12.3,
+    "wind": 11.3,
     "code": 3
    },
-   "sum": "阴 5～13°C · 降水 14%"
+   "sum": "阴 9～13°C · 降水 14%"
   },
   {
    "date": "2026-10-07",
@@ -377,16 +377,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 5.5,
-    "hi": 15.5,
+    "kind": "晴间多云",
+    "icon": "part",
+    "lo": 5.7,
+    "hi": 15.2,
     "pop": 16,
     "mm": 0.0,
-    "wind": 7.7,
-    "code": 3
+    "wind": 12.6,
+    "code": 2
    },
-   "sum": "阴 6～16°C · 降水 16%"
+   "sum": "晴间多云 6～15°C · 降水 16%"
   },
   {
    "date": "2026-10-08",
@@ -399,16 +399,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
-    "lo": 12.7,
-    "hi": 17.0,
+    "kind": "晴间多云",
+    "icon": "part",
+    "lo": 12.0,
+    "hi": 17.8,
     "pop": 24,
-    "mm": 0.6,
-    "wind": 12.1,
-    "code": 51
+    "mm": 0.0,
+    "wind": 11.9,
+    "code": 1
    },
-   "sum": "小雨 13～17°C · 降水 24%"
+   "sum": "晴间多云 12～18°C · 降水 24%"
   }
  ],
  "src": {
