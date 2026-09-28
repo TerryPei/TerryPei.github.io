@@ -179,7 +179,8 @@ def decide(day, f, alerts, now):
         if day.get("outdoor") and (pop >= 60): notes.append((1, day["outdoor"]))
         if day.get("arrive") and wind >= 60: notes.append((1, "落地那晚风大，可能晚点，Sudima 24 小时前台，不急。"))
     lvl = max([n[0] for n in notes], default=0)
-    if not notes and f: notes.append((0, "照常。" + (day.get("note", ""))))
+    if dd < now.date(): notes = [(0, "已经过去了。")]; lvl = 0
+    elif not notes and f: notes.append((0, "照常。" + (day.get("note", ""))))
     elif not notes: notes.append((0, "还没进 16 天预报范围。"))
     return lvl, notes, hit_alerts
 
