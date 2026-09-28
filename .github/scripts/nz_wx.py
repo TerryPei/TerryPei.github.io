@@ -48,6 +48,183 @@ DAYS = [
   "areas": ["bay of plenty", "rotorua", "taupo", "waikato"], "outdoor": "Hobbiton 中文团照常，带雨衣"},
  {"date": "2026-10-08", "place": "奥克兰", "lat": -36.850, "lon": 174.763, "areas": ["waikato", "auckland"], "depart_home": True},
 ]
+ROADS = {
+ "2026-09-29": [
+  "SH 79",
+  "SH 8(?!\\d)",
+  "SH 80",
+  "Geraldine",
+  "Fairlie",
+  "Tekapo",
+  "Burkes",
+  "Pukaki",
+  "Mt Cook",
+  "Mount Cook",
+  "Twizel",
+  "Rakaia",
+  "Ashburton",
+  "Rolleston",
+  "Christchurch"
+ ],
+ "2026-09-30": [
+  "SH 8(?!\\d)",
+  "SH 83",
+  "SH 80",
+  "Twizel",
+  "Omarama",
+  "Kurow",
+  "Duntroon",
+  "Oamaru",
+  "Moeraki",
+  "Hampden",
+  "Palmerston",
+  "Waitati",
+  "Dunedin",
+  "Mt Cook",
+  "Mount Cook"
+ ],
+ "2026-10-01": [
+  "Dunedin",
+  "Otokia",
+  "Henley",
+  "Balclutha",
+  "Kaka Point",
+  "Nugget",
+  "Clinton",
+  "Gore",
+  "McNab",
+  "SH 94",
+  "Lumsden",
+  "Mossburn",
+  "Te Anau",
+  "SH 90",
+  "SH 93",
+  "Mataura"
+ ],
+ "2026-10-02": [
+  "SH 94",
+  "Milford",
+  "Homer",
+  "Te Anau",
+  "Eglinton",
+  "Hollyford",
+  "Manapouri",
+  "SH 95",
+  "Knobs Flat"
+ ],
+ "2026-10-03": [
+  "SH 94",
+  "Te Anau",
+  "Mossburn",
+  "Lumsden",
+  "Kingston",
+  "Frankton",
+  "Queenstown",
+  "Crown Range",
+  "Arrowtown",
+  "Cardrona",
+  "Wanaka",
+  "Cromwell",
+  "Kawarau",
+  "Glenorchy",
+  "Lake Hayes",
+  "Shotover",
+  "Athol",
+  "Garston"
+ ],
+ "2026-10-04": [
+  "Wanaka",
+  "Hawea",
+  "Makarora",
+  "Haast",
+  "Paringa",
+  "Fox Glacier",
+  "Franz Josef",
+  "Whataroa",
+  "Harihari",
+  "Hokitika",
+  "Ross",
+  "Fergusons",
+  "Knights Point",
+  "Bruce Bay"
+ ],
+ "2026-10-05": [
+  "Hokitika",
+  "Greymouth",
+  "Barrytown",
+  "Punakaiki",
+  "Kumara",
+  "Otira",
+  "Arthur",
+  "Porters",
+  "Castle Hill",
+  "Springfield",
+  "Sheffield",
+  "Darfield",
+  "SH 73",
+  "Lewis Pass",
+  "SH 7(?!\\d)",
+  "Christchurch"
+ ],
+ "2026-10-06": [
+  "Auckland Airport",
+  "SH 20",
+  "Bombay",
+  "Pokeno",
+  "Huntly",
+  "Hamilton",
+  "Otorohanga",
+  "Waitomo",
+  "SH 3(?!\\d)",
+  "SH 39",
+  "Te Awamutu",
+  "Cambridge",
+  "Tirau",
+  "Putaruru",
+  "SH 5(?!\\d)",
+  "Rotorua",
+  "Tokoroa",
+  "Karapiro",
+  "Rukuhia",
+  "Ohaupo"
+ ],
+ "2026-10-07": [
+  "Rotorua",
+  "Waiotapu",
+  "Wai-O-Tapu",
+  "SH 5(?!\\d)",
+  "Taupo",
+  "Huka",
+  "Wairakei",
+  "Tokoroa",
+  "Putaruru",
+  "Tirau",
+  "Matamata",
+  "Hinuera",
+  "SH 27",
+  "SH 24",
+  "SH 29",
+  "Cambridge",
+  "Karapiro",
+  "Hamilton"
+ ],
+ "2026-10-08": [
+  "Hamilton",
+  "Huntly",
+  "Bombay",
+  "Pokeno",
+  "Auckland",
+  "SH 20",
+  "Mount Eden",
+  "Manukau",
+  "Cambridge",
+  "Rangiriri"
+ ]
+}
+DAY_LINES = {"2026-09-29": [[-43.48949, 172.54608], [-43.47407, 172.55703], [-43.75, 172.05], [-44.10246, 171.24426], [-44.1, 170.83], [-44.00335, 170.48247], [-44.08899, 170.13586], [-43.719, 170.094], [-44.08899, 170.13586], [-44.24974, 170.08993]], "2026-09-30": [[-44.24974, 170.08993], [-44.466, 169.921], [-44.49, 169.97], [-44.72, 170.3], [-44.89325, 170.65813], [-45.10354, 170.97038], [-45.3455, 170.8262], [-45.6, 170.66], [-45.73, 170.6], [-45.91235, 170.48867], [-45.9185, 170.454]], "2026-10-01": [[-45.91235, 170.48867], [-45.87526, 170.50899], [-45.84981, 170.53506], [-45.97, 170.16], [-46.234, 169.746], [-46.4455, 169.8125], [-46.234, 169.746], [-46.204, 169.373], [-46.098, 168.943], [-45.735, 168.443], [-45.667, 168.25], [-45.42287, 167.71851]], "2026-10-02": [[-45.42287, 167.71851], [-45.0, 168.02], [-45.0284, 168.011], [-44.80086, 168.02135], [-44.7738, 167.9947], [-44.76419, 167.98103], [-44.6682, 167.92698], [-44.72154, 167.94781], [-45.539, 167.606]], "2026-10-03": [[-45.42287, 167.71851], [-45.667, 168.25], [-45.735, 168.443], [-45.51, 168.58], [-45.331, 168.716], [-45.021, 168.738], [-45.03633, 168.66171], [-45.02884, 168.43857], [-44.98987, 168.80965], [-44.93928, 168.83547], [-44.88154, 169.00353], [-44.69306, 169.13627]], "2026-10-04": [[-44.69306, 169.13627], [-44.50899, 169.24712], [-44.6, 169.3], [-44.229, 169.228], [-44.161, 169.278], [-44.07823, 169.38613], [-44.0384, 169.36527], [-43.88066, 169.04203], [-43.75811, 169.14948], [-43.71461, 169.22572], [-43.72, 169.41], [-43.465, 170.017], [-43.4462, 169.967], [-43.4302, 170.1858], [-43.26, 170.36], [-43.15, 170.56], [-42.9, 170.81], [-42.70717, 170.97403]], "2026-10-05": [[-42.70717, 170.97403], [-42.62, 171.18], [-42.45, 171.21], [-42.11465, 171.33087], [-42.45, 171.21], [-42.62, 171.18], [-42.883, 171.5605], [-42.94095, 171.56284], [-43.23368, 171.72237], [-43.34, 171.93], [-43.52328, 172.58234], [-43.47407, 172.55703], [-43.48949, 172.54608]], "2026-10-06": [[-37.00103, 174.78725], [-37.18, 174.97], [-37.56, 175.16], [-37.79, 175.28], [-38.01, 175.32], [-38.19, 175.21], [-38.26087, 175.10354], [-38.19, 175.21], [-38.01, 175.32], [-37.89, 175.47], [-37.98, 175.75], [-38.05, 175.78], [-38.0455, 175.8555], [-38.14284, 176.25352]], "2026-10-07": [[-38.14284, 176.25352], [-38.35585, 176.36755], [-38.649, 176.0895], [-38.688, 176.069], [-38.23, 175.87], [-38.05, 175.78], [-37.98, 175.75], [-37.8722, 175.6832], [-37.81, 175.77], [-37.89, 175.47], [-37.78524, 175.28271]], "2026-10-08": [[-37.78524, 175.28271], [-37.56, 175.16], [-37.18, 174.97], [-36.99, 174.88], [-36.877, 174.764], [-36.8432, 174.76068], [-37.00103, 174.78725]]}
+ROAD_KM = 5.0   # 事件点离当天路线多近算「在路上」
+NZTA_DELAYS = "https://www.journeys.nzta.govt.nz/assets/map-data-cache/delays.json"
+NZTA_PAGE = "https://www.journeys.nzta.govt.nz/highway-conditions"
 LEVEL = ["照常", "留意", "有备选", "改计划"]
 ZH_WD = "一二三四五六日"
 
@@ -123,10 +300,68 @@ def fetch_forecast():
                                "wind": dd["wind_speed_10m_max"][j], "gust": dd.get("wind_gusts_10m_max", [None] * 99)[j]}
     return fc
 
+# ---------- 2b. NZTA 路况（Journey Planner 的公开缓存文件） ----------
+def fetch_nzta():
+    d = json.loads(get(NZTA_DELAYS)); out = []
+    for x in d.get("features", []):
+        p = x.get("properties") or {}
+        if p.get("EventType") == "News" or p.get("Status") not in ("Active", "Scheduled"): continue
+        def dt(v):
+            try: return datetime.datetime.strptime(v, "%Y-%m-%d %H:%M:%S").replace(tzinfo=NZ)
+            except Exception: return None
+        pts = []
+        def walk(g):
+            if isinstance(g, (int, float)): return
+            if isinstance(g, list) and len(g) == 2 and all(isinstance(v, (int, float)) for v in g): pts.append((g[1], g[0])); return
+            if isinstance(g, list):
+                for v in g: walk(v)
+        geom = x.get("geometry") or {}
+        walk(geom.get("coordinates") if isinstance(geom, dict) else None)
+        out.append({"pts": pts, "area": p.get("LocationArea") or "", "type": p.get("EventType") or "", "impact": p.get("Impact") or "", "status": p.get("Status"),
+                    "on": dt(p.get("StartDate") or ""), "off": dt(p.get("EndDate") or ""), "text": re.sub(r"\s+", " ", p.get("EventComments") or ""),
+                    "alt": p.get("AlternativeRoute") or "", "upd": p.get("LastUpdatedNice") or ""})
+    return out
+
+def _seg_km(pt, a, b):
+    import math
+    kx = 111.0 * math.cos(math.radians(pt[0])); ky = 111.0
+    px, py = (pt[1] - a[1]) * kx, (pt[0] - a[0]) * ky; bx, by = (b[1] - a[1]) * kx, (b[0] - a[0]) * ky
+    L2 = bx * bx + by * by; t = 0 if L2 == 0 else max(0, min(1, (px * bx + py * by) / L2))
+    return math.hypot(px - t * bx, py - t * by)
+
+def near_route(pts, line):
+    """事件的点里有多大比例落在当天路线 ROAD_KM 公里内"""
+    if not pts or len(line) < 2: return 0.0
+    n = 0
+    for pt in pts:
+        if min(_seg_km(pt, line[k], line[k + 1]) for k in range(len(line) - 1)) <= ROAD_KM: n += 1
+    return n / len(pts)
+
+def road_hits(day, roads):
+    w0, w1 = day_window(day); line = DAY_LINES.get(day["date"], []); hits = []
+    for r in roads:
+        if r["on"] and r["on"] > w1: continue
+        if r["off"] and r["off"] < w0: continue
+        if r["pts"]:
+            frac = near_route(r["pts"], line)
+            ok = frac >= 0.3 if len(r["pts"]) > 1 else frac > 0
+        else:
+            ok = any(re.search(k, r["area"]) for k in ROADS.get(day["date"], []))
+        if ok: hits.append(r)
+    return hits
+
 # ---------- 3. 决策 ----------
-def decide(day, f, alerts, now):
+def decide(day, f, alerts, now, roads=()):
     notes = []          # (level, text)
-    hit_alerts = []
+    hit_alerts = []; hit_roads = road_hits(day, roads)
+    wd = datetime.date.fromisoformat(day["date"]).weekday()
+    for r in hit_roads:
+        imp = r["impact"]; txt = r["text"][:260]
+        lv = 3 if imp == "Road Closed" else 2 if imp in ("Delays", "Vehicle Restrictions") else 1
+        low = txt.lower()
+        if "closed" in low and "weekday" in low and wd >= 5: lv = 1; txt = "周末不封，只有 Stop/Go。" + txt
+        elif "closed" in low and lv < 3: lv = 2
+        notes.append((lv, "NZTA 路况（%s）%s：%s%s" % (imp or r["type"], r["area"], txt, (" 绕行：" + r["alt"]) if r["alt"] and r["alt"] not in ("Not Applicable", "N/A", "NA") else "")))
     w0, w1 = day_window(day)
     dd = datetime.date.fromisoformat(day["date"])
     for a in alerts:
@@ -182,7 +417,7 @@ def decide(day, f, alerts, now):
     if dd < now.date(): notes = [(0, "已经过去了。")]; lvl = 0
     elif not notes and f: notes.append((0, "照常。" + (day.get("note", ""))))
     elif not notes: notes.append((0, "还没进 16 天预报范围。"))
-    return lvl, notes, hit_alerts
+    return lvl, notes, hit_alerts, hit_roads
 
 def main():
     out_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist", "nz", "wx.json")
@@ -191,11 +426,15 @@ def main():
     except Exception as e: alerts = []; print("alerts failed:", e, file=sys.stderr)
     try: fc = fetch_forecast()
     except Exception as e: fc = {}; print("forecast failed:", e, file=sys.stderr)
+    try: roads = fetch_nzta()
+    except Exception as e: roads = []; print("nzta failed:", e, file=sys.stderr)
+    used_roads = {}
     days_out, used = [], {}
     for day in DAYS:
         f = fc.get(day["date"])
-        lvl, notes, hits = decide(day, f, alerts, now)
+        lvl, notes, hits, rhits = decide(day, f, alerts, now, roads)
         for a in hits: used.setdefault(a["link"], (a, []))[1].append(day["date"])
+        for r in rhits: used_roads.setdefault(r["area"], (r, []))[1].append(day["date"])
         dd = datetime.date.fromisoformat(day["date"])
         row = {"date": day["date"], "d": "%d/%d" % (dd.month, dd.day), "wd": "周" + ZH_WD[dd.weekday()], "place": day["place"],
                "level": lvl, "status": LEVEL[lvl], "notes": [n[1] for n in notes if n[1]]}
@@ -206,10 +445,13 @@ def main():
         days_out.append(row)
     alerts_out = [{"head": a["head"], "level": a["level"], "type": a["type"], "area": a["area"], "span": fmt_span(a["on"], a["off"]),
                    "desc": a["desc"][:300], "days": ds, "link": a["link"]} for a, ds in used.values()]
+    for r, ds in used_roads.values():
+        alerts_out.append({"head": "NZTA 路况 · " + (r["impact"] or r["type"]), "level": "red" if r["impact"] == "Road Closed" else "orange" if r["impact"] in ("Delays", "Vehicle Restrictions") else "road",
+                           "type": "nzta", "area": r["area"], "span": fmt_span(r["on"], r["off"]) + ((" · 更新 " + r["upd"]) if r["upd"] else ""), "desc": r["text"][:300], "days": ds, "link": NZTA_PAGE})
     alerts_out.sort(key=lambda x: x["days"][0])
-    res = {"generated_at": now.isoformat(), "generated_nz": now.strftime("%m/%d %H:%M"), "n_alerts_total": len(alerts),
+    res = {"generated_at": now.isoformat(), "generated_nz": now.strftime("%m/%d %H:%M"), "n_alerts_total": len(alerts), "n_roads_total": len(roads),
            "alerts": alerts_out, "days": days_out,
-           "src": {"metservice": "https://www.metservice.com/warnings/home", "nzta": "https://www.journeys.nzta.govt.nz/",
+           "src": {"metservice": "https://www.metservice.com/warnings/home", "nzta": NZTA_PAGE, "nzta_data": NZTA_DELAYS,
                    "milford": "https://www.nzta.govt.nz/projects/sh94-milford-road/sh94-milford-road-status", "cap": CAP_RSS}}
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     json.dump(res, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

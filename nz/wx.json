@@ -1,8 +1,170 @@
 {
- "generated_at": "2026-09-29T03:09:39.195377+13:00",
- "generated_nz": "09/29 03:09",
+ "generated_at": "2026-09-29T03:30:54.164030+13:00",
+ "generated_nz": "09/29 03:30",
  "n_alerts_total": 0,
- "alerts": [],
+ "n_roads_total": 205,
+ "alerts": [
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 Hinds to Earling",
+   "span": "9/28 06:00–10/2 17:00 · 更新 28 Sept 2026 6:00am",
+   "desc": "Due to pavement repair works, there are Stop/Go traffic management in place from Monday 28th September to Friday 2nd October between 6am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-09-29"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
+   "span": "10/8 06:00–10/8 06:00 · 更新 1 Sept 2026 9:18pm",
+   "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
+   "days": [
+    "2026-09-29"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 88 Dunedin to Port Chalmers",
+   "span": "9/28 07:00–10/4 18:00 · 更新 28 Sept 2026 7:00am",
+   "desc": "Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
+   "days": [
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 McNab to Hampden",
+   "span": "9/28 07:00–10/2 17:00 · 更新 28 Sept 2026 7:00am",
+   "desc": "Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Delays",
+   "level": "orange",
+   "type": "nzta",
+   "area": "SH 88 Port Chalmers, between the intersections of Wickliffe Terrace and Station Road",
+   "span": "9/14 18:00–10/1 00:00 · 更新 25 Sept 2026 8:48am",
+   "desc": "Due to asphalt resurfacing, there will be temporary traffic signals in place at all times from 6pm on Monday 14th September to 12am on Thursday 1st October. Plan your journey accordingly and expect up to 10 minute delays.",
+   "days": [
+    "2026-09-30"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 Dunedin, near the intersection with Saint Andrew Street",
+   "span": "8/19 19:00–10/16 06:00 · 更新 4 Sept 2026 2:34pm",
+   "desc": "Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly allowing extra time for travel.",
+   "days": [
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 Otokia to Henley",
+   "span": "9/21 07:00–12/8 18:00 · 更新 28 Sept 2026 12:51pm",
+   "desc": "Due to road works, a northbound closure with detour will be in place from 21 Sept to 11 Oct, 6am to 6pm. Southbound traffic will remain on SH1 under a 30km/h temporary speed restriction. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. From 12 O",
+   "days": [
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 McNab to Gore",
+   "span": "9/28 07:00–10/1 18:00 · 更新 28 Sept 2026 7:00am",
+   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place from Monday 28th September to Thursday 1st October between 7am and 6pm. Take extra care.",
+   "days": [
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 6 Lumsden",
+   "span": "10/1 07:00–18:00 · 更新 24 Sept 2026 9:52am",
+   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on Thursday 2nd October between 7am to 6pm. Take extra care.",
+   "days": [
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 6 The Wanaka Lookout to Makarora",
+   "span": "9/18 17:30–10/31 17:30 · 更新 28 Sept 2026 5:30pm",
+   "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traffic at the closure points of Makarora an",
+   "days": [
+    "2026-10-04"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 6 Harihari to Fox Glacier",
+   "span": "9/14 06:00–10/4 17:00 · 更新 24 Sept 2026 8:19am",
+   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-10-04"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Delays",
+   "level": "orange",
+   "type": "nzta",
+   "area": "SH 6 Coal Creek (Coal Creek Bridge)",
+   "span": "7/27 08:00–11/27 18:00 · 更新 28 Aug 2026 10:42am",
+   "desc": "Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-10-05"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 Cambridge",
+   "span": "9/15 15:36–11/13 17:00 · 更新 15 Sept 2026 3:46pm",
+   "desc": "Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow extra travel time and travel with care th",
+   "days": [
+    "2026-10-06",
+    "2026-10-07"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  }
+ ],
  "days": [
   {
    "date": "2026-09-28",
@@ -23,6 +185,8 @@
    "level": 1,
    "status": "留意",
    "notes": [
+    "NZTA 路况（Caution）SH 1 Hinds to Earling：Due to pavement repair works, there are Stop/Go traffic management in place from Monday 28th September to Friday 2nd October between 6am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
+    "NZTA 路况（Caution）SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)：Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
     "最低 -4°C，早上山口路面可能结冰。10:00 取车正好，别更早"
    ],
    "fc": {
@@ -42,10 +206,13 @@
    "d": "9/30",
    "wd": "周三",
    "place": "达尼丁",
-   "level": 0,
-   "status": "照常",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "照常。"
+    "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
+    "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
+    "NZTA 路况（Delays）SH 88 Port Chalmers, between the intersections of Wickliffe Terrace and Station Road：Due to asphalt resurfacing, there will be temporary traffic signals in place at all times from 6pm on Monday 14th September to 12am on Thursday 1st October. Plan your journey accordingly and expect up to 10 minute delays.",
+    "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly"
    ],
    "fc": {
     "kind": "阴",
@@ -67,6 +234,12 @@
    "level": 1,
    "status": "留意",
    "notes": [
+    "NZTA 路况（Caution）SH 1 Otokia to Henley：Due to road works, a northbound closure with detour will be in place from 21 Sept to 11 Oct, 6am to 6pm. Southbound traffic will remain on SH1 under a 30km/h temporary speed restriction. Outside these hours and on weekends, all traffic will remain on SH1 under 绕行：Northbound detour will be via Henley-Berwick Rd to Centre Rd to SH86 and back onto SH1.",
+    "NZTA 路况（Caution）SH 1 McNab to Gore：Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place from Monday 28th September to Thursday 1st October between 7am and 6pm. Take extra care.",
+    "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
+    "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
+    "NZTA 路况（Caution）SH 6 Lumsden：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on Thursday 2nd October between 7am to 6pm. Take extra care.",
+    "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly",
     "Te Anau 湖滨 日落大概率没有：不用专门等，18:30 电话结束后看天色再说"
    ],
    "fc": {
@@ -131,10 +304,11 @@
    "d": "10/4",
    "wd": "周日",
    "place": "霍基蒂卡",
-   "level": 0,
-   "status": "照常",
+   "level": 1,
+   "status": "留意",
    "notes": [
-    "照常。"
+    "NZTA 路况（Caution）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
+    "NZTA 路况（Caution）SH 6 Harihari to Fox Glacier：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "小雨",
@@ -153,10 +327,10 @@
    "d": "10/5",
    "wd": "周一",
    "place": "亚瑟山口",
-   "level": 0,
-   "status": "照常",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "照常。"
+    "NZTA 路况（Delays）SH 6 Coal Creek (Coal Creek Bridge)：Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "阴",
@@ -175,10 +349,10 @@
    "d": "10/6",
    "wd": "周二",
    "place": "罗托鲁瓦",
-   "level": 0,
-   "status": "照常",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "照常。"
+    "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
     "kind": "阴",
@@ -197,10 +371,10 @@
    "d": "10/7",
    "wd": "周三",
    "place": "霍比特人村",
-   "level": 0,
-   "status": "照常",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "照常。"
+    "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
     "kind": "阴",
@@ -239,7 +413,8 @@
  ],
  "src": {
   "metservice": "https://www.metservice.com/warnings/home",
-  "nzta": "https://www.journeys.nzta.govt.nz/",
+  "nzta": "https://www.journeys.nzta.govt.nz/highway-conditions",
+  "nzta_data": "https://www.journeys.nzta.govt.nz/assets/map-data-cache/delays.json",
   "milford": "https://www.nzta.govt.nz/projects/sh94-milford-road/sh94-milford-road-status",
   "cap": "https://alerts.metservice.com/cap/rss"
  }
