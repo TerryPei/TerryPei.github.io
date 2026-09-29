@@ -1,9 +1,22 @@
 {
- "generated_at": "2026-09-30T08:55:49.704413+13:00",
- "generated_nz": "09/30 08:55",
+ "generated_at": "2026-09-30T11:11:43.663530+13:00",
+ "generated_nz": "09/30 11:11",
  "n_alerts_total": 0,
- "n_roads_total": 184,
+ "n_roads_total": 186,
  "alerts": [
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
+   "span": "10/8 06:00–10/8 06:00 · 更新 30 Sept 2026 9:30am",
+   "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
+   "days": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
@@ -13,19 +26,6 @@
    "desc": "Due to pavement repair works, there are Stop/Go traffic management in place from Monday 28th September to Friday 2nd October between 6am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-09-29"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
-   "span": "10/8 06:00–10/8 06:00 · 更新 1 Sept 2026 9:18pm",
-   "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
-   "days": [
-    "2026-09-29",
-    "2026-09-30"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -164,18 +164,6 @@
     "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 1 Mountain Rd to Symonds St, Northbound",
-   "span": "9/30 08:26 · 更新 30 Sept 2026 8:51am",
-   "desc": "Due to a crash, the left northbound lane is blocked after Khyber Pass Rd. Expect delays and pass with care.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   }
  ],
  "days": [
@@ -209,11 +197,11 @@
    "level": 2,
    "status": "有备选",
    "notes": [
+    "NZTA 路况（Caution）SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)：Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
     "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Delays）SH 88 Port Chalmers, between the intersections of Wickliffe Terrace and Station Road：Due to asphalt resurfacing, there will be temporary traffic signals in place at all times from 6pm on Monday 14th September to 12am on Thursday 1st October. Plan your journey accordingly and expect up to 10 minute delays.",
-    "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly",
-    "NZTA 路况（Caution）SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)：Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area."
+    "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly"
    ],
    "fc": {
     "kind": "阴",
@@ -394,10 +382,10 @@
    "d": "10/8",
    "wd": "周四",
    "place": "奥克兰",
-   "level": 1,
-   "status": "留意",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Caution）SH 1 Mountain Rd to Symonds St, Northbound：Due to a crash, the left northbound lane is blocked after Khyber Pass Rd. Expect delays and pass with care."
+    "照常。"
    ],
    "fc": {
     "kind": "小雨",
