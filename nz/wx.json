@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-29T10:11:43.640470+13:00",
- "generated_nz": "09/29 10:11",
+ "generated_at": "2026-09-29T18:34:10.136010+13:00",
+ "generated_nz": "09/29 18:34",
  "n_alerts_total": 0,
- "n_roads_total": 190,
+ "n_roads_total": 202,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -84,8 +84,8 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 1 Otokia to Henley",
-   "span": "9/21 07:00–12/8 18:00 · 更新 28 Sept 2026 12:51pm",
-   "desc": "Due to road works, a northbound closure with detour will be in place from 21 Sept to 11 Oct, 6am to 6pm. Southbound traffic will remain on SH1 under a 30km/h temporary speed restriction. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. From 12 O",
+   "span": "9/21 07:00–12/8 18:00 · 更新 29 Sept 2026 12:27pm",
+   "desc": "Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please take extra care.",
    "days": [
     "2026-10-01"
    ],
@@ -116,11 +116,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Vehicle Restrictions",
-   "level": "orange",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 29 Sept 2026 8:00am",
+   "span": "9/18 17:30–10/31 17:30 · 更新 29 Sept 2026 5:30pm",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traffic at the closure points of Makarora an",
    "days": [
     "2026-10-04"
@@ -187,19 +187,19 @@
    "notes": [
     "NZTA 路况（Caution）SH 1 Hinds to Earling：Due to pavement repair works, there are Stop/Go traffic management in place from Monday 28th September to Friday 2nd October between 6am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Caution）SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)：Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
-    "最低 -4°C，早上山口路面可能结冰。10:00 取车正好，别更早"
+    "最低 -2°C，早上山口路面可能结冰。10:00 取车正好，别更早"
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": -4.3,
-    "hi": 8.4,
+    "lo": -2.5,
+    "hi": 8.0,
     "pop": 0,
     "mm": 0.0,
     "wind": 7.6,
     "code": 3
    },
-   "sum": "阴 -4～8°C · 降水 0%"
+   "sum": "阴 -2～8°C · 降水 0%"
   },
   {
    "date": "2026-09-30",
@@ -218,10 +218,10 @@
     "kind": "阴",
     "icon": "cloud",
     "lo": 6.0,
-    "hi": 15.8,
+    "hi": 15.6,
     "pop": 0,
     "mm": 0.0,
-    "wind": 17.2,
+    "wind": 17.7,
     "code": 3
    },
    "sum": "阴 6～16°C · 降水 0%"
@@ -234,7 +234,7 @@
    "level": 1,
    "status": "留意",
    "notes": [
-    "NZTA 路况（Caution）SH 1 Otokia to Henley：Due to road works, a northbound closure with detour will be in place from 21 Sept to 11 Oct, 6am to 6pm. Southbound traffic will remain on SH1 under a 30km/h temporary speed restriction. Outside these hours and on weekends, all traffic will remain on SH1 under 绕行：Northbound detour will be via Henley-Berwick Rd to Centre Rd to SH86 and back onto SH1.",
+    "NZTA 路况（Caution）SH 1 Otokia to Henley：Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please tak 绕行：Northbound detour will be via Henley-Berwick Rd to Centre Rd to SH86 and back onto SH1.",
     "NZTA 路况（Caution）SH 1 McNab to Gore：Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place from Monday 28th September to Thursday 1st October between 7am and 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
@@ -245,14 +245,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 8.3,
-    "hi": 11.7,
-    "pop": 84,
-    "mm": 4.8,
-    "wind": 21.5,
+    "lo": 8.4,
+    "hi": 11.4,
+    "pop": 83,
+    "mm": 8.0,
+    "wind": 19.9,
     "code": 53
    },
-   "sum": "小雨 8～12°C · 降水 84%"
+   "sum": "小雨 8～11°C · 降水 83%"
   },
   {
    "date": "2026-10-02",
@@ -262,20 +262,20 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "预报 88 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
+    "预报 74 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
     "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
    ],
    "fc": {
     "kind": "阵雨",
     "icon": "rain",
-    "lo": 9.5,
-    "hi": 13.6,
+    "lo": 8.2,
+    "hi": 14.3,
     "pop": 100,
-    "mm": 87.7,
-    "wind": 21.5,
+    "mm": 74.0,
+    "wind": 20.4,
     "code": 82
    },
-   "sum": "阵雨 10～14°C · 降水 100%"
+   "sum": "阵雨 8～14°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
@@ -290,14 +290,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 8.6,
-    "hi": 13.2,
-    "pop": 52,
-    "mm": 0.4,
-    "wind": 10.6,
+    "lo": 8.2,
+    "hi": 11.9,
+    "pop": 40,
+    "mm": 0.6,
+    "wind": 7.1,
     "code": 51
    },
-   "sum": "小雨 9～13°C · 降水 52%"
+   "sum": "小雨 8～12°C · 降水 40%"
   },
   {
    "date": "2026-10-04",
@@ -307,20 +307,20 @@
    "level": 1,
    "status": "留意",
    "notes": [
-    "NZTA 路况（Vehicle Restrictions）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
+    "NZTA 路况（Caution）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
     "NZTA 路况（Caution）SH 6 Harihari to Fox Glacier：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 10.6,
-    "hi": 14.1,
-    "pop": 31,
-    "mm": 3.8,
-    "wind": 10.8,
-    "code": 53
+    "lo": 9.2,
+    "hi": 14.9,
+    "pop": 54,
+    "mm": 0.3,
+    "wind": 9.0,
+    "code": 51
    },
-   "sum": "小雨 11～14°C · 降水 31%"
+   "sum": "小雨 9～15°C · 降水 54%"
   },
   {
    "date": "2026-10-05",
@@ -335,14 +335,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 6.8,
+    "lo": 2.7,
     "hi": 14.3,
-    "pop": 8,
+    "pop": 14,
     "mm": 0.0,
     "wind": 10.3,
     "code": 3
    },
-   "sum": "阴 7～14°C · 降水 8%"
+   "sum": "阴 3～14°C · 降水 14%"
   },
   {
    "date": "2026-10-06",
@@ -359,12 +359,12 @@
     "icon": "cloud",
     "lo": 9.2,
     "hi": 13.2,
-    "pop": 14,
+    "pop": 27,
     "mm": 0.0,
     "wind": 11.3,
     "code": 3
    },
-   "sum": "阴 9～13°C · 降水 14%"
+   "sum": "阴 9～13°C · 降水 27%"
   },
   {
    "date": "2026-10-07",
@@ -381,12 +381,12 @@
     "icon": "part",
     "lo": 5.7,
     "hi": 15.2,
-    "pop": 16,
+    "pop": 25,
     "mm": 0.0,
     "wind": 12.6,
     "code": 2
    },
-   "sum": "晴间多云 6～15°C · 降水 16%"
+   "sum": "晴间多云 6～15°C · 降水 25%"
   },
   {
    "date": "2026-10-08",
@@ -403,12 +403,12 @@
     "icon": "part",
     "lo": 12.0,
     "hi": 17.8,
-    "pop": 24,
+    "pop": 14,
     "mm": 0.0,
     "wind": 11.9,
     "code": 1
    },
-   "sum": "晴间多云 12～18°C · 降水 24%"
+   "sum": "晴间多云 12～18°C · 降水 14%"
   }
  ],
  "src": {
