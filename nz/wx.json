@@ -1,9 +1,21 @@
 {
- "generated_at": "2026-10-01T06:57:24.416903+13:00",
- "generated_nz": "10/01 06:57",
- "n_alerts_total": 0,
- "n_roads_total": 180,
+ "generated_at": "2026-10-01T09:55:47.459362+13:00",
+ "generated_nz": "10/01 09:55",
+ "n_alerts_total": 2,
+ "n_roads_total": 198,
  "alerts": [
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 Hinds to Earling",
+   "span": "9/28 06:00–10/9 17:00 · 更新 1 Oct 2026 7:37am",
+   "desc": "Due to pavement repair works, there are Stop/Go traffic management in place on weekdays between 6am and 5pm from Monday 28th September to Friday 9nd October. Plan your journey accordingly and expect up to 10 minute delays.",
+   "days": [
+    "2026-09-29"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
@@ -14,18 +26,6 @@
    "days": [
     "2026-09-29",
     "2026-09-30"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 1 Hinds to Earling",
-   "span": "9/28 06:00–10/2 17:00 · 更新 28 Sept 2026 6:00am",
-   "desc": "Due to pavement repair works, there are Stop/Go traffic management in place from Monday 28th September to Friday 2nd October between 6am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
-   "days": [
-    "2026-09-29"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -72,21 +72,9 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 1 Otokia to Henley",
-   "span": "9/21 07:00–12/8 18:00 · 更新 29 Sept 2026 12:27pm",
-   "desc": "Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please take extra care.",
-   "days": [
-    "2026-10-01"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
    "area": "SH 1 McNab to Gore",
-   "span": "9/28 07:00–10/1 18:00 · 更新 28 Sept 2026 7:00am",
-   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place from Monday 28th September to Thursday 1st October between 7am and 6pm. Take extra care.",
+   "span": "9/28 07:00–10/9 18:00 · 更新 1 Oct 2026 9:38am",
+   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
    ],
@@ -97,10 +85,11 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 6 Lumsden",
-   "span": "10/1 07:00–18:00 · 更新 24 Sept 2026 9:52am",
-   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on Thursday 2nd October between 7am to 6pm. Take extra care.",
+   "span": "10/1 07:00–10/7 18:00 · 更新 1 Oct 2026 9:36am",
+   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Thursday 2nd October to Wednesday 7th October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-03"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -108,8 +97,44 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
+   "area": "SH 1 Otokia to Henley",
+   "span": "9/21 07:00–12/8 18:00 · 更新 29 Sept 2026 12:27pm",
+   "desc": "Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please take extra care.",
+   "days": [
+    "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "Heavy Rain Watch",
+   "level": "watch",
+   "type": "rain",
+   "area": "Fiordland north of Doubtful Sound",
+   "span": "10/2 07:00–15:00",
+   "desc": "Periods of heavy rain, and amounts may approach warning criteria. Note, heavy rain should gradually ease from the south during the afternoon. Chance of upgrading to a Warning: Moderate.",
+   "days": [
+    "2026-10-02"
+   ],
+   "link": "https://alerts.metservice.com/cap/alert?id=2.49.0.0.554.0.severeweather.nz.20260930202918365.1"
+  },
+  {
+   "head": "Strong Wind Watch",
+   "level": "watch",
+   "type": "wind",
+   "area": "Southland, Clutha, Dunedin, Central Otago, and the Southern lakes",
+   "span": "10/2 03:00–12:00",
+   "desc": "Northwest winds may approach severe gale in exposed places. Chance of upgrading to a Warning: Moderate.",
+   "days": [
+    "2026-10-02"
+   ],
+   "link": "https://alerts.metservice.com/cap/alert?id=2.49.0.0.554.0.severeweather.nz.20260930202918365.0"
+  },
+  {
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
+   "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 30 Sept 2026 5:30pm",
+   "span": "9/18 17:30–10/31 17:30 · 更新 1 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traffic at the closure points of Makarora an",
    "days": [
     "2026-10-04"
@@ -181,9 +206,9 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 1 Mt Wellington to Princess St, Southbound",
-   "span": "10/1 06:35 · 更新 1 Oct 2026 6:37am",
-   "desc": "Due to a crash southbound between Mt Wellington to Princes Street, the right lane is blocked. Use caution when passing and expect delays.",
+   "area": "SH 20 Queenstown Rd to Onehunga, Southbound",
+   "span": "10/1 09:26 · 更新 1 Oct 2026 9:30am",
+   "desc": "Due to a crash southbound near Neilson St off-ramp, the right lane is currently blocked. Pass with care and expect delays.",
    "days": [
     "2026-10-08"
    ],
@@ -232,25 +257,25 @@
    "level": 1,
    "status": "留意",
    "notes": [
+    "NZTA 路况（Caution）SH 1 McNab to Gore：Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
+    "NZTA 路况（Caution）SH 6 Lumsden：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Thursday 2nd October to Wednesday 7th October. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Caution）SH 1 Otokia to Henley：Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please tak 绕行：Northbound detour will be via Henley-Berwick Rd to Centre Rd to SH86 and back onto SH1.",
-    "NZTA 路况（Caution）SH 1 McNab to Gore：Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place from Monday 28th September to Thursday 1st October between 7am and 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Caution）SH 6 Lumsden：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on Thursday 2nd October between 7am to 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly",
     "Te Anau 湖滨 日落大概率没有：不用专门等，18:30 电话结束后看天色再说"
    ],
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 8.2,
-    "hi": 11.7,
-    "pop": 98,
-    "mm": 6.7,
-    "wind": 18.0,
+    "lo": 7.9,
+    "hi": 11.1,
+    "pop": 100,
+    "mm": 11.3,
+    "wind": 20.1,
     "code": 53
    },
-   "sum": "小雨 8～12°C · 降水 98%"
+   "sum": "小雨 8～11°C · 降水 100%"
   },
   {
    "date": "2026-10-02",
@@ -260,42 +285,43 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "预报 82 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
+    "Fiordland 大雨关注（10/2 07:00–15:00）：SH94 有关闭风险。早上先看 Milford Road 状态页；封了打 Cruise Milford 03 398 1250；开着就照去，雨中瀑布最壮观。",
+    "Fiordland 强风关注（10/2 03:00–12:00）：游船可能取消，出发前看邮件或打 03 398 1250。",
     "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
    ],
    "fc": {
     "kind": "阵雨",
     "icon": "rain",
-    "lo": 10.9,
-    "hi": 13.7,
+    "lo": 10.3,
+    "hi": 13.9,
     "pop": 100,
-    "mm": 82.2,
-    "wind": 20.2,
+    "mm": 57.8,
+    "wind": 19.4,
     "code": 82
    },
-   "sum": "阵雨 11～14°C · 降水 100%"
+   "sum": "阵雨 10～14°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
    "d": "10/3",
    "wd": "周六",
    "place": "瓦纳卡",
-   "level": 0,
-   "status": "照常",
+   "level": 1,
+   "status": "留意",
    "notes": [
-    "照常。"
+    "NZTA 路况（Caution）SH 6 Lumsden：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Thursday 2nd October to Wednesday 7th October. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 7.4,
-    "hi": 13.4,
-    "pop": 24,
-    "mm": 0.0,
-    "wind": 5.9,
-    "code": 3
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 8.0,
+    "hi": 13.2,
+    "pop": 40,
+    "mm": 0.2,
+    "wind": 7.7,
+    "code": 51
    },
-   "sum": "阴 7～13°C · 降水 24%"
+   "sum": "小雨 8～13°C · 降水 40%"
   },
   {
    "date": "2026-10-04",
@@ -305,20 +331,20 @@
    "level": 1,
    "status": "留意",
    "notes": [
-    "NZTA 路况（Caution）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
+    "NZTA 路况（Vehicle Restrictions）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Queued traf 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
     "NZTA 路况（Caution）SH 6 Harihari to Fox Glacier：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 5.6,
-    "hi": 14.2,
-    "pop": 4,
+    "lo": 6.3,
+    "hi": 14.3,
+    "pop": 10,
     "mm": 0.0,
-    "wind": 12.9,
+    "wind": 14.9,
     "code": 3
    },
-   "sum": "阴 6～14°C · 降水 4%"
+   "sum": "阴 6～14°C · 降水 10%"
   },
   {
    "date": "2026-10-05",
@@ -335,14 +361,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 3.7,
-    "hi": 13.7,
-    "pop": 6,
+    "lo": 4.2,
+    "hi": 13.2,
+    "pop": 7,
     "mm": 0.0,
-    "wind": 14.0,
+    "wind": 11.6,
     "code": 3
    },
-   "sum": "阴 4～14°C · 降水 6%"
+   "sum": "阴 4～13°C · 降水 7%"
   },
   {
    "date": "2026-10-06",
@@ -357,14 +383,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 9.2,
-    "hi": 14.3,
-    "pop": 18,
-    "mm": 1.2,
-    "wind": 12.3,
+    "lo": 9.6,
+    "hi": 13.9,
+    "pop": 22,
+    "mm": 0.3,
+    "wind": 13.9,
     "code": 51
    },
-   "sum": "小雨 9～14°C · 降水 18%"
+   "sum": "小雨 10～14°C · 降水 22%"
   },
   {
    "date": "2026-10-07",
@@ -377,16 +403,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
-    "lo": 7.8,
-    "hi": 15.2,
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 8.5,
+    "hi": 15.0,
     "pop": 25,
-    "mm": 0.6,
-    "wind": 5.4,
-    "code": 51
+    "mm": 0.0,
+    "wind": 11.2,
+    "code": 3
    },
-   "sum": "小雨 8～15°C · 降水 25%"
+   "sum": "阴 8～15°C · 降水 25%"
   },
   {
    "date": "2026-10-08",
@@ -396,19 +422,19 @@
    "level": 1,
    "status": "留意",
    "notes": [
-    "NZTA 路况（Caution）SH 1 Mt Wellington to Princess St, Southbound：Due to a crash southbound between Mt Wellington to Princes Street, the right lane is blocked. Use caution when passing and expect delays."
+    "NZTA 路况（Caution）SH 20 Queenstown Rd to Onehunga, Southbound：Due to a crash southbound near Neilson St off-ramp, the right lane is currently blocked. Pass with care and expect delays."
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 9.3,
-    "hi": 18.0,
+    "lo": 13.9,
+    "hi": 18.5,
     "pop": 38,
     "mm": 0.0,
-    "wind": 9.8,
+    "wind": 13.9,
     "code": 3
    },
-   "sum": "阴 9～18°C · 降水 38%"
+   "sum": "阴 14～18°C · 降水 38%"
   }
  ],
  "src": {
