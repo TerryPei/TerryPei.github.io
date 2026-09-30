@@ -1,15 +1,15 @@
 {
- "generated_at": "2026-09-30T11:17:49.109897+13:00",
- "generated_nz": "09/30 11:17",
+ "generated_at": "2026-09-30T13:18:36.945351+13:00",
+ "generated_nz": "09/30 13:18",
  "n_alerts_total": 0,
- "n_roads_total": 186,
+ "n_roads_total": 197,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
    "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
-   "span": "10/8 06:00–10/8 06:00 · 更新 30 Sept 2026 9:30am",
+   "span": "10/8 06:00–10/8 06:00 · 更新 30 Sept 2026 12:44pm",
    "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
    "days": [
     "2026-09-29",
