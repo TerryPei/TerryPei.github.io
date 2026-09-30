@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-30T22:34:51.821239+13:00",
- "generated_nz": "09/30 22:34",
+ "generated_at": "2026-10-01T06:57:24.416903+13:00",
+ "generated_nz": "10/01 06:57",
  "n_alerts_total": 0,
- "n_roads_total": 176,
+ "n_roads_total": 180,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -52,18 +52,6 @@
    "days": [
     "2026-09-30",
     "2026-10-01"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Delays",
-   "level": "orange",
-   "type": "nzta",
-   "area": "SH 88 Port Chalmers, between the intersections of Wickliffe Terrace and Station Road",
-   "span": "9/14 18:00–10/1 00:00 · 更新 25 Sept 2026 8:48am",
-   "desc": "Due to asphalt resurfacing, there will be temporary traffic signals in place at all times from 6pm on Monday 14th September to 12am on Thursday 1st October. Plan your journey accordingly and expect up to 10 minute delays.",
-   "days": [
-    "2026-09-30"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -141,6 +129,30 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 73 1km south of Otira",
+   "span": "10/5 07:30–10/6 16:30 · 更新 1 Oct 2026 6:54am",
+   "desc": "Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-10-05"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 73 Otira to Arthurs Pass",
+   "span": "10/5 07:30–10/7 16:30 · 更新 1 Oct 2026 6:50am",
+   "desc": "Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-10-05"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
    "head": "NZTA 路况 · Delays",
    "level": "orange",
    "type": "nzta",
@@ -149,19 +161,6 @@
    "desc": "Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-05"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 29 Karapiro",
-   "span": "9/30 17:10 · 更新 30 Sept 2026 7:20pm",
-   "desc": "Due to a crash, SH29 remains closed in both directions between the intersection of SH1/SH29 and Totman Road. The road is expected to remain closed for some time while crews work to remove the vehicle. Follow the direction of traffic management crews.",
-   "days": [
-    "2026-10-06",
-    "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -175,6 +174,18 @@
    "days": [
     "2026-10-06",
     "2026-10-07"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 1 Mt Wellington to Princess St, Southbound",
+   "span": "10/1 06:35 · 更新 1 Oct 2026 6:37am",
+   "desc": "Due to a crash southbound between Mt Wellington to Princes Street, the right lane is blocked. Use caution when passing and expect delays.",
+   "days": [
+    "2026-10-08"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   }
@@ -207,26 +218,11 @@
    "d": "9/30",
    "wd": "周三",
    "place": "达尼丁",
-   "level": 2,
-   "status": "有备选",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Caution）SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)：Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
-    "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
-    "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Delays）SH 88 Port Chalmers, between the intersections of Wickliffe Terrace and Station Road：Due to asphalt resurfacing, there will be temporary traffic signals in place at all times from 6pm on Monday 14th September to 12am on Thursday 1st October. Plan your journey accordingly and expect up to 10 minute delays.",
-    "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly"
-   ],
-   "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 7.4,
-    "hi": 16.0,
-    "pop": 0,
-    "mm": 0.0,
-    "wind": 18.1,
-    "code": 3
-   },
-   "sum": "阴 7～16°C · 降水 0%"
+    "已经过去了。"
+   ]
   },
   {
    "date": "2026-10-01",
@@ -247,14 +243,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 8.0,
-    "hi": 11.4,
+    "lo": 8.2,
+    "hi": 11.7,
     "pop": 98,
-    "mm": 6.9,
-    "wind": 21.1,
+    "mm": 6.7,
+    "wind": 18.0,
     "code": 53
    },
-   "sum": "小雨 8～11°C · 降水 98%"
+   "sum": "小雨 8～12°C · 降水 98%"
   },
   {
    "date": "2026-10-02",
@@ -264,20 +260,20 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "预报 79 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
+    "预报 82 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
     "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
    ],
    "fc": {
     "kind": "阵雨",
     "icon": "rain",
-    "lo": 9.9,
-    "hi": 13.8,
+    "lo": 10.9,
+    "hi": 13.7,
     "pop": 100,
-    "mm": 79.2,
-    "wind": 20.3,
+    "mm": 82.2,
+    "wind": 20.2,
     "code": 82
    },
-   "sum": "阵雨 10～14°C · 降水 100%"
+   "sum": "阵雨 11～14°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
@@ -292,11 +288,11 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 6.9,
-    "hi": 12.9,
+    "lo": 7.4,
+    "hi": 13.4,
     "pop": 24,
     "mm": 0.0,
-    "wind": 6.6,
+    "wind": 5.9,
     "code": 3
    },
    "sum": "阴 7～13°C · 降水 24%"
@@ -315,14 +311,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 3.5,
-    "hi": 14.3,
+    "lo": 5.6,
+    "hi": 14.2,
     "pop": 4,
     "mm": 0.0,
-    "wind": 13.7,
+    "wind": 12.9,
     "code": 3
    },
-   "sum": "阴 4～14°C · 降水 4%"
+   "sum": "阴 6～14°C · 降水 4%"
   },
   {
    "date": "2026-10-05",
@@ -332,16 +328,18 @@
    "level": 2,
    "status": "有备选",
    "notes": [
+    "NZTA 路况（Caution）SH 73 1km south of Otira：Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
+    "NZTA 路况（Caution）SH 73 Otira to Arthurs Pass：Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Delays）SH 6 Coal Creek (Coal Creek Bridge)：Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 4.5,
-    "hi": 14.1,
+    "lo": 3.7,
+    "hi": 13.7,
     "pop": 6,
     "mm": 0.0,
-    "wind": 12.9,
+    "wind": 14.0,
     "code": 3
    },
    "sum": "阴 4～14°C · 降水 6%"
@@ -351,33 +349,31 @@
    "d": "10/6",
    "wd": "周二",
    "place": "罗托鲁瓦",
-   "level": 3,
-   "status": "改计划",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "NZTA 路况（Road Closed）SH 29 Karapiro：Due to a crash, SH29 remains closed in both directions between the intersection of SH1/SH29 and Totman Road. The road is expected to remain closed for some time while crews work to remove the vehicle. Follow the direction of traffic management crews. 绕行：Allow extra time to detour via SH27 to Tirau, then onto SH1.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 8.7,
-    "hi": 13.3,
+    "lo": 9.2,
+    "hi": 14.3,
     "pop": 18,
-    "mm": 0.3,
-    "wind": 11.2,
+    "mm": 1.2,
+    "wind": 12.3,
     "code": 51
    },
-   "sum": "小雨 9～13°C · 降水 18%"
+   "sum": "小雨 9～14°C · 降水 18%"
   },
   {
    "date": "2026-10-07",
    "d": "10/7",
    "wd": "周三",
    "place": "霍比特人村",
-   "level": 3,
-   "status": "改计划",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "NZTA 路况（Road Closed）SH 29 Karapiro：Due to a crash, SH29 remains closed in both directions between the intersection of SH1/SH29 and Totman Road. The road is expected to remain closed for some time while crews work to remove the vehicle. Follow the direction of traffic management crews. 绕行：Allow extra time to detour via SH27 to Tirau, then onto SH1.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
@@ -397,10 +393,10 @@
    "d": "10/8",
    "wd": "周四",
    "place": "奥克兰",
-   "level": 0,
-   "status": "照常",
+   "level": 1,
+   "status": "留意",
    "notes": [
-    "照常。"
+    "NZTA 路况（Caution）SH 1 Mt Wellington to Princess St, Southbound：Due to a crash southbound between Mt Wellington to Princes Street, the right lane is blocked. Use caution when passing and expect delays."
    ],
    "fc": {
     "kind": "阴",
