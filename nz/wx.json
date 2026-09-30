@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-01T09:56:26.254386+13:00",
- "generated_nz": "10/01 09:56",
+ "generated_at": "2026-10-01T09:59:58.268494+13:00",
+ "generated_nz": "10/01 09:59",
  "n_alerts_total": 2,
- "n_roads_total": 198,
+ "n_roads_total": 197,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -199,18 +199,6 @@
    "days": [
     "2026-10-06",
     "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 20 Queenstown Rd to Onehunga, Southbound",
-   "span": "10/1 09:26 · 更新 1 Oct 2026 9:30am",
-   "desc": "Due to a crash southbound near Neilson St off-ramp, the right lane is currently blocked. Pass with care and expect delays.",
-   "days": [
-    "2026-10-08"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   }
@@ -419,10 +407,10 @@
    "d": "10/8",
    "wd": "周四",
    "place": "奥克兰",
-   "level": 1,
-   "status": "留意",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Caution）SH 20 Queenstown Rd to Onehunga, Southbound：Due to a crash southbound near Neilson St off-ramp, the right lane is currently blocked. Pass with care and expect delays."
+    "照常。"
    ],
    "fc": {
     "kind": "阴",
