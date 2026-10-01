@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-01T18:37:42.900710+13:00",
- "generated_nz": "10/01 18:37",
+ "generated_at": "2026-10-01T22:49:58.570293+13:00",
+ "generated_nz": "10/01 22:49",
  "n_alerts_total": 2,
- "n_roads_total": 199,
+ "n_roads_total": 197,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -98,23 +98,23 @@
    "type": "rain",
    "area": "Fiordland north of Doubtful Sound",
    "span": "10/2 07:00–15:00",
-   "desc": "Periods of heavy rain, and amounts may approach warning criteria. Note, heavy rain should gradually ease from the south during the afternoon. Chance of upgrading to a Warning: Moderate.",
+   "desc": "A period of heavy rain, and amounts may approach warning criteria. Note, heavy rain should ease from the south during the afternoon. Chance of upgrading to a Warning: Low. Changes: The chance of upgrade for this Watch has been decreased to Low.",
    "days": [
     "2026-10-02"
    ],
-   "link": "https://alerts.metservice.com/cap/alert?id=2.49.0.0.554.0.severeweather.nz.20260930202918365.1"
+   "link": "https://alerts.metservice.com/cap/alert?id=2.49.0.0.554.0.severeweather.nz.20261001070753608.2"
   },
   {
    "head": "Strong Wind Watch",
    "level": "watch",
    "type": "wind",
-   "area": "Southland, Clutha, Dunedin, Central Otago, and the Southern lakes",
-   "span": "10/2 03:00–12:00",
-   "desc": "Northwest winds may approach severe gale in exposed places. Chance of upgrading to a Warning: Moderate.",
+   "area": "Southland, Clutha and Stewart Island",
+   "span": "10/2 01:00–10:00",
+   "desc": "Northwest winds may approach severe gale in exposed places. Chance of upgrading to a Warning: Moderate. Changes: Stewart Island added to the Watch area.",
    "days": [
     "2026-10-02"
    ],
-   "link": "https://alerts.metservice.com/cap/alert?id=2.49.0.0.554.0.severeweather.nz.20260930202918365.0"
+   "link": "https://alerts.metservice.com/cap/alert?id=2.49.0.0.554.0.severeweather.nz.20261001070753608.1"
   },
   {
    "head": "NZTA 路况 · Caution",
@@ -243,13 +243,13 @@
     "kind": "雨",
     "icon": "rain",
     "lo": 7.9,
-    "hi": 11.3,
+    "hi": 11.5,
     "pop": 100,
-    "mm": 12.5,
-    "wind": 19.8,
+    "mm": 16.6,
+    "wind": 20.8,
     "code": 61
    },
-   "sum": "雨 8～11°C · 降水 100%"
+   "sum": "雨 8～12°C · 降水 100%"
   },
   {
    "date": "2026-10-02",
@@ -260,20 +260,20 @@
    "status": "有备选",
    "notes": [
     "Fiordland 大雨关注（10/2 07:00–15:00）：SH94 有关闭风险。早上先看 Milford Road 状态页；封了打 Cruise Milford 03 398 1250；开着就照去，雨中瀑布最壮观。",
-    "Fiordland 强风关注（10/2 03:00–12:00）：游船可能取消，出发前看邮件或打 03 398 1250。",
+    "Fiordland 强风关注（10/2 01:00–10:00）：游船可能取消，出发前看邮件或打 03 398 1250。",
     "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
    ],
    "fc": {
     "kind": "阵雨",
     "icon": "rain",
-    "lo": 11.3,
-    "hi": 13.7,
+    "lo": 10.1,
+    "hi": 13.6,
     "pop": 100,
-    "mm": 44.1,
-    "wind": 18.5,
-    "code": 81
+    "mm": 58.0,
+    "wind": 18.8,
+    "code": 82
    },
-   "sum": "阵雨 11～14°C · 降水 100%"
+   "sum": "阵雨 10～14°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
@@ -288,14 +288,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 7.8,
-    "hi": 13.5,
-    "pop": 40,
+    "lo": 7.5,
+    "hi": 13.3,
+    "pop": 33,
     "mm": 0.0,
-    "wind": 8.5,
+    "wind": 8.6,
     "code": 3
    },
-   "sum": "阴 8～14°C · 降水 40%"
+   "sum": "阴 8～13°C · 降水 33%"
   },
   {
    "date": "2026-10-04",
@@ -311,14 +311,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 7.1,
-    "hi": 14.4,
-    "pop": 10,
+    "lo": 4.5,
+    "hi": 14.0,
+    "pop": 4,
     "mm": 0.0,
-    "wind": 13.9,
+    "wind": 17.0,
     "code": 3
    },
-   "sum": "阴 7～14°C · 降水 10%"
+   "sum": "阴 4～14°C · 降水 4%"
   },
   {
    "date": "2026-10-05",
@@ -335,14 +335,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 3.8,
-    "hi": 14.6,
-    "pop": 7,
+    "lo": 3.3,
+    "hi": 13.4,
+    "pop": 3,
     "mm": 0.0,
-    "wind": 11.1,
+    "wind": 14.3,
     "code": 3
    },
-   "sum": "阴 4～15°C · 降水 7%"
+   "sum": "阴 3～13°C · 降水 3%"
   },
   {
    "date": "2026-10-06",
@@ -355,16 +355,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 9.7,
-    "hi": 13.4,
-    "pop": 22,
-    "mm": 0.0,
-    "wind": 13.4,
-    "code": 3
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 9.4,
+    "hi": 12.9,
+    "pop": 16,
+    "mm": 0.1,
+    "wind": 14.0,
+    "code": 51
    },
-   "sum": "阴 10～13°C · 降水 22%"
+   "sum": "小雨 9～13°C · 降水 16%"
   },
   {
    "date": "2026-10-07",
@@ -377,16 +377,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 6.9,
-    "hi": 15.0,
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 6.6,
+    "hi": 16.5,
     "pop": 25,
-    "mm": 0.0,
-    "wind": 11.2,
-    "code": 3
+    "mm": 0.9,
+    "wind": 12.4,
+    "code": 51
    },
-   "sum": "阴 7～15°C · 降水 25%"
+   "sum": "小雨 7～16°C · 降水 25%"
   },
   {
    "date": "2026-10-08",
@@ -399,16 +399,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 13.9,
-    "hi": 18.5,
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 13.8,
+    "hi": 18.1,
     "pop": 38,
-    "mm": 0.0,
-    "wind": 13.9,
-    "code": 3
+    "mm": 1.2,
+    "wind": 17.6,
+    "code": 51
    },
-   "sum": "阴 14～18°C · 降水 38%"
+   "sum": "小雨 14～18°C · 降水 38%"
   }
  ],
  "src": {
