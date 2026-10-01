@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-01T23:48:39.999437+13:00",
- "generated_nz": "10/01 23:48",
+ "generated_at": "2026-10-02T02:00:50.542414+13:00",
+ "generated_nz": "10/02 02:00",
  "n_alerts_total": 2,
  "n_roads_total": 196,
  "alerts": [
@@ -229,27 +229,11 @@
    "d": "10/1",
    "wd": "周四",
    "place": "蒂阿瑙",
-   "level": 1,
-   "status": "留意",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Caution）SH 1 McNab to Gore：Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Caution）SH 1 Otokia to Henley：Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please tak 绕行：Northbound detour will be via Henley-Berwick Rd to Centre Rd to SH86 and back onto SH1.",
-    "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
-    "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Caution）SH 1 Dunedin, near the intersection with Saint Andrew Street：Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly",
-    "Te Anau 湖滨 日落大概率没有：不用专门等，18:30 电话结束后看天色再说"
-   ],
-   "fc": {
-    "kind": "雨",
-    "icon": "rain",
-    "lo": 7.9,
-    "hi": 11.5,
-    "pop": 100,
-    "mm": 16.6,
-    "wind": 20.8,
-    "code": 61
-   },
-   "sum": "雨 8～12°C · 降水 100%"
+    "已经过去了。"
+   ]
   },
   {
    "date": "2026-10-02",
@@ -266,14 +250,14 @@
    "fc": {
     "kind": "阵雨",
     "icon": "rain",
-    "lo": 10.1,
-    "hi": 13.6,
+    "lo": 9.4,
+    "hi": 13.4,
     "pop": 100,
-    "mm": 58.0,
-    "wind": 18.8,
+    "mm": 63.3,
+    "wind": 20.4,
     "code": 82
    },
-   "sum": "阵雨 10～14°C · 降水 100%"
+   "sum": "阵雨 9～13°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
@@ -288,14 +272,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 7.5,
-    "hi": 13.3,
+    "lo": 7.0,
+    "hi": 13.6,
     "pop": 33,
     "mm": 0.0,
-    "wind": 8.6,
+    "wind": 10.5,
     "code": 3
    },
-   "sum": "阴 8～13°C · 降水 33%"
+   "sum": "阴 7～14°C · 降水 33%"
   },
   {
    "date": "2026-10-04",
@@ -309,16 +293,16 @@
     "NZTA 路况（Caution）SH 6 Harihari to Fox Glacier：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 4.5,
+    "kind": "晴间多云",
+    "icon": "part",
+    "lo": 2.8,
     "hi": 14.0,
     "pop": 4,
     "mm": 0.0,
-    "wind": 17.0,
-    "code": 3
+    "wind": 17.6,
+    "code": 2
    },
-   "sum": "阴 4～14°C · 降水 4%"
+   "sum": "晴间多云 3～14°C · 降水 4%"
   },
   {
    "date": "2026-10-05",
@@ -336,13 +320,13 @@
     "kind": "阴",
     "icon": "cloud",
     "lo": 3.3,
-    "hi": 13.4,
+    "hi": 14.0,
     "pop": 3,
     "mm": 0.0,
-    "wind": 14.3,
+    "wind": 12.2,
     "code": 3
    },
-   "sum": "阴 3～13°C · 降水 3%"
+   "sum": "阴 3～14°C · 降水 3%"
   },
   {
    "date": "2026-10-06",
@@ -357,11 +341,11 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 9.4,
-    "hi": 12.9,
+    "lo": 9.3,
+    "hi": 12.8,
     "pop": 16,
-    "mm": 0.1,
-    "wind": 14.0,
+    "mm": 0.6,
+    "wind": 12.5,
     "code": 51
    },
    "sum": "小雨 9～13°C · 降水 16%"
@@ -377,16 +361,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
-    "lo": 6.6,
-    "hi": 16.5,
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 5.7,
+    "hi": 15.7,
     "pop": 25,
-    "mm": 0.9,
-    "wind": 12.4,
-    "code": 51
+    "mm": 0.0,
+    "wind": 13.1,
+    "code": 3
    },
-   "sum": "小雨 7～16°C · 降水 25%"
+   "sum": "阴 6～16°C · 降水 25%"
   },
   {
    "date": "2026-10-08",
