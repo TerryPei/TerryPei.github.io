@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-01T17:53:45.879979+13:00",
- "generated_nz": "10/01 17:53",
+ "generated_at": "2026-10-01T18:37:42.900710+13:00",
+ "generated_nz": "10/01 18:37",
  "n_alerts_total": 2,
- "n_roads_total": 201,
+ "n_roads_total": 199,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -77,19 +77,6 @@
    "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 6 Lumsden",
-   "span": "10/1 07:00–10/7 18:00 · 更新 1 Oct 2026 9:36am",
-   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Thursday 2nd October to Wednesday 7th October. Plan your journey accordingly and expect up to 5 minute delays.",
-   "days": [
-    "2026-10-01",
-    "2026-10-03"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -246,7 +233,6 @@
    "status": "留意",
    "notes": [
     "NZTA 路况（Caution）SH 1 McNab to Gore：Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Caution）SH 6 Lumsden：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Thursday 2nd October to Wednesday 7th October. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Caution）SH 1 Otokia to Henley：Due to road works, the road will be under Stop/Go temporary traffic management including a 30km/h temporary speed restriction between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please tak 绕行：Northbound detour will be via Henley-Berwick Rd to Centre Rd to SH86 and back onto SH1.",
     "NZTA 路况（Caution）SH 88 Dunedin to Port Chalmers：Due to paving work, traffic will be held in place in place for up to 10 minutes at a time from Monday 28th September to Sunday 4th October between 7am an 6pm. Take extra care.",
     "NZTA 路况（Caution）SH 1 McNab to Hampden：Due to pavement repair works, there will be Stop/Go traffic management in place in various locations through this area from Monday 28th September to Friday 2nd October between 7am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
@@ -294,10 +280,10 @@
    "d": "10/3",
    "wd": "周六",
    "place": "瓦纳卡",
-   "level": 1,
-   "status": "留意",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Caution）SH 6 Lumsden：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Thursday 2nd October to Wednesday 7th October. Plan your journey accordingly and expect up to 5 minute delays."
+    "照常。"
    ],
    "fc": {
     "kind": "阴",
