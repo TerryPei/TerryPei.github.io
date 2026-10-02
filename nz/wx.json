@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-02T22:38:40.518779+13:00",
- "generated_nz": "10/02 22:38",
+ "generated_at": "2026-10-03T06:48:32.389409+13:00",
+ "generated_nz": "10/03 06:48",
  "n_alerts_total": 0,
- "n_roads_total": 190,
+ "n_roads_total": 188,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -277,23 +277,11 @@
    "d": "10/2",
    "wd": "周五",
    "place": "米尔福德峡湾",
-   "level": 2,
-   "status": "有备选",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "预报 76 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
-    "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
-   ],
-   "fc": {
-    "kind": "阵雨",
-    "icon": "rain",
-    "lo": 10.0,
-    "hi": 13.4,
-    "pop": 100,
-    "mm": 76.4,
-    "wind": 22.0,
-    "code": 82
-   },
-   "sum": "阵雨 10～13°C · 降水 100%"
+    "已经过去了。"
+   ]
   },
   {
    "date": "2026-10-03",
@@ -308,14 +296,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 6.9,
+    "lo": 6.4,
     "hi": 13.5,
-    "pop": 6,
+    "pop": 42,
     "mm": 0.0,
-    "wind": 9.7,
+    "wind": 9.1,
     "code": 3
    },
-   "sum": "阴 7～14°C · 降水 6%"
+   "sum": "阴 6～14°C · 降水 42%"
   },
   {
    "date": "2026-10-04",
@@ -332,14 +320,14 @@
    "fc": {
     "kind": "晴间多云",
     "icon": "part",
-    "lo": 3.3,
-    "hi": 14.1,
+    "lo": 3.7,
+    "hi": 13.9,
     "pop": 0,
     "mm": 0.0,
-    "wind": 15.9,
+    "wind": 16.2,
     "code": 1
    },
-   "sum": "晴间多云 3～14°C · 降水 0%"
+   "sum": "晴间多云 4～14°C · 降水 0%"
   },
   {
    "date": "2026-10-05",
@@ -356,14 +344,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 4.9,
+    "lo": 3.0,
     "hi": 12.6,
     "pop": 0,
     "mm": 0.0,
-    "wind": 12.9,
+    "wind": 13.5,
     "code": 3
    },
-   "sum": "阴 5～13°C · 降水 0%"
+   "sum": "阴 3～13°C · 降水 0%"
   },
   {
    "date": "2026-10-06",
@@ -380,16 +368,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 4.0,
-    "hi": 14.9,
-    "pop": 7,
-    "mm": 0.0,
-    "wind": 12.5,
-    "code": 3
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 4.3,
+    "hi": 12.6,
+    "pop": 8,
+    "mm": 0.7,
+    "wind": 13.0,
+    "code": 51
    },
-   "sum": "阴 4～15°C · 降水 7%"
+   "sum": "小雨 4～13°C · 降水 8%"
   },
   {
    "date": "2026-10-07",
@@ -405,16 +393,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 4.7,
-    "hi": 17.6,
-    "pop": 20,
-    "mm": 0.0,
-    "wind": 7.4,
-    "code": 3
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 7.8,
+    "hi": 17.3,
+    "pop": 14,
+    "mm": 3.5,
+    "wind": 4.3,
+    "code": 51
    },
-   "sum": "阴 5～18°C · 降水 20%"
+   "sum": "小雨 8～17°C · 降水 14%"
   },
   {
    "date": "2026-10-08",
@@ -429,14 +417,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 12.3,
-    "hi": 19.7,
-    "pop": 38,
+    "lo": 10.5,
+    "hi": 18.6,
+    "pop": 8,
     "mm": 0.0,
     "wind": 18.3,
     "code": 3
    },
-   "sum": "阴 12～20°C · 降水 38%"
+   "sum": "阴 10～19°C · 降水 8%"
   }
  ],
  "src": {
