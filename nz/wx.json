@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-03T06:48:32.389409+13:00",
- "generated_nz": "10/03 06:48",
+ "generated_at": "2026-10-03T11:05:58.790365+13:00",
+ "generated_nz": "10/03 11:05",
  "n_alerts_total": 0,
- "n_roads_total": 188,
+ "n_roads_total": 187,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -155,18 +155,6 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 3 Otorohanga to Te Mapara",
-   "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:44am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
    "area": "SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road",
    "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:34am",
    "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -294,16 +282,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 6.4,
-    "hi": 13.5,
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 7.4,
+    "hi": 13.9,
     "pop": 42,
-    "mm": 0.0,
-    "wind": 9.1,
-    "code": 3
+    "mm": 0.2,
+    "wind": 8.5,
+    "code": 51
    },
-   "sum": "阴 6～14°C · 降水 42%"
+   "sum": "小雨 7～14°C · 降水 42%"
   },
   {
    "date": "2026-10-04",
@@ -320,11 +308,11 @@
    "fc": {
     "kind": "晴间多云",
     "icon": "part",
-    "lo": 3.7,
-    "hi": 13.9,
+    "lo": 4.0,
+    "hi": 14.0,
     "pop": 0,
     "mm": 0.0,
-    "wind": 16.2,
+    "wind": 16.4,
     "code": 1
    },
    "sum": "晴间多云 4～14°C · 降水 0%"
@@ -344,14 +332,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 3.0,
-    "hi": 12.6,
+    "lo": 1.2,
+    "hi": 13.1,
     "pop": 0,
     "mm": 0.0,
-    "wind": 13.5,
+    "wind": 13.4,
     "code": 3
    },
-   "sum": "阴 3～13°C · 降水 0%"
+   "sum": "阴 1～13°C · 降水 0%"
   },
   {
    "date": "2026-10-06",
@@ -361,7 +349,6 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -370,14 +357,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 4.3,
-    "hi": 12.6,
+    "lo": 3.0,
+    "hi": 12.8,
     "pop": 8,
-    "mm": 0.7,
-    "wind": 13.0,
+    "mm": 0.1,
+    "wind": 14.3,
     "code": 51
    },
-   "sum": "小雨 4～13°C · 降水 8%"
+   "sum": "小雨 3～13°C · 降水 8%"
   },
   {
    "date": "2026-10-07",
@@ -395,14 +382,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 7.8,
-    "hi": 17.3,
+    "lo": 6.4,
+    "hi": 18.0,
     "pop": 14,
-    "mm": 3.5,
-    "wind": 4.3,
+    "mm": 1.2,
+    "wind": 7.3,
     "code": 51
    },
-   "sum": "小雨 8～17°C · 降水 14%"
+   "sum": "小雨 6～18°C · 降水 14%"
   },
   {
    "date": "2026-10-08",
@@ -417,14 +404,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 10.5,
-    "hi": 18.6,
+    "lo": 10.4,
+    "hi": 20.0,
     "pop": 8,
     "mm": 0.0,
-    "wind": 18.3,
+    "wind": 5.7,
     "code": 3
    },
-   "sum": "阴 10～19°C · 降水 8%"
+   "sum": "阴 10～20°C · 降水 8%"
   }
  ],
  "src": {
