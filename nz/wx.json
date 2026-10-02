@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-02T22:37:49.795724+13:00",
- "generated_nz": "10/02 22:37",
+ "generated_at": "2026-10-02T22:38:40.518779+13:00",
+ "generated_nz": "10/02 22:38",
  "n_alerts_total": 0,
  "n_roads_total": 190,
  "alerts": [
@@ -277,11 +277,23 @@
    "d": "10/2",
    "wd": "周五",
    "place": "米尔福德峡湾",
-   "level": 0,
-   "status": "照常",
+   "level": 2,
+   "status": "有备选",
    "notes": [
-    "还没进 16 天预报范围。"
-   ]
+    "预报 76 mm 大雨：峡湾下雨是常态，瀑布最壮观，但雨大 SH94 会关。头天晚上和当天早上各看一次状态页。",
+    "Manapouri Frasers Beach 日落大概率没有：不去 Manapouri，回 Te Anau 休息"
+   ],
+   "fc": {
+    "kind": "阵雨",
+    "icon": "rain",
+    "lo": 10.0,
+    "hi": 13.4,
+    "pop": 100,
+    "mm": 76.4,
+    "wind": 22.0,
+    "code": 82
+   },
+   "sum": "阵雨 10～13°C · 降水 100%"
   },
   {
    "date": "2026-10-03",
@@ -291,8 +303,19 @@
    "level": 0,
    "status": "照常",
    "notes": [
-    "还没进 16 天预报范围。"
-   ]
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 6.9,
+    "hi": 13.5,
+    "pop": 6,
+    "mm": 0.0,
+    "wind": 9.7,
+    "code": 3
+   },
+   "sum": "阴 7～14°C · 降水 6%"
   },
   {
    "date": "2026-10-04",
@@ -305,7 +328,18 @@
     "NZTA 路况（Caution）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Qu 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases",
     "NZTA 路况（Caution）SH 6 Lake Paringa：Due to slip clearing and other maintenance work, there will be Stop/Go traffic management in place from Monday 21st September to Sunday 4th October between 6am and 5pm. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Caution）SH 6 Harihari to Fox Glacier：Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 6am and 5pm from Monday 14th September to Friday 25th September. Plan your journey accordingly and expect up to 5 minute delays."
-   ]
+   ],
+   "fc": {
+    "kind": "晴间多云",
+    "icon": "part",
+    "lo": 3.3,
+    "hi": 14.1,
+    "pop": 0,
+    "mm": 0.0,
+    "wind": 15.9,
+    "code": 1
+   },
+   "sum": "晴间多云 3～14°C · 降水 0%"
   },
   {
    "date": "2026-10-05",
@@ -318,7 +352,18 @@
     "NZTA 路况（Caution）SH 73 1km south of Otira：Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Caution）SH 73 Otira to Arthurs Pass：Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
     "NZTA 路况（Delays）SH 6 Coal Creek (Coal Creek Bridge)：Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays."
-   ]
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 4.9,
+    "hi": 12.6,
+    "pop": 0,
+    "mm": 0.0,
+    "wind": 12.9,
+    "code": 3
+   },
+   "sum": "阴 5～13°C · 降水 0%"
   },
   {
    "date": "2026-10-06",
@@ -333,7 +378,18 @@
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
-   ]
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 4.0,
+    "hi": 14.9,
+    "pop": 7,
+    "mm": 0.0,
+    "wind": 12.5,
+    "code": 3
+   },
+   "sum": "阴 4～15°C · 降水 7%"
   },
   {
    "date": "2026-10-07",
@@ -347,7 +403,18 @@
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 5 Waimangu, near the SH38 intersection：Due to uneven dig-out works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
-   ]
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 4.7,
+    "hi": 17.6,
+    "pop": 20,
+    "mm": 0.0,
+    "wind": 7.4,
+    "code": 3
+   },
+   "sum": "阴 5～18°C · 降水 20%"
   },
   {
    "date": "2026-10-08",
@@ -357,8 +424,19 @@
    "level": 0,
    "status": "照常",
    "notes": [
-    "还没进 16 天预报范围。"
-   ]
+    "照常。"
+   ],
+   "fc": {
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 12.3,
+    "hi": 19.7,
+    "pop": 38,
+    "mm": 0.0,
+    "wind": 18.3,
+    "code": 3
+   },
+   "sum": "阴 12～20°C · 降水 38%"
   }
  ],
  "src": {
