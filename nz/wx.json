@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-03T18:07:00.585570+13:00",
- "generated_nz": "10/03 18:07",
+ "generated_at": "2026-10-03T23:44:47.505194+13:00",
+ "generated_nz": "10/03 23:44",
  "n_alerts_total": 0,
- "n_roads_total": 178,
+ "n_roads_total": 176,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -140,18 +140,6 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Delays",
-   "level": "orange",
-   "type": "nzta",
-   "area": "SH 6 Coal Creek (Coal Creek Bridge)",
-   "span": "7/27 08:00–11/27 18:00 · 更新 28 Aug 2026 10:42am",
-   "desc": "Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays.",
-   "days": [
-    "2026-10-05"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
@@ -210,18 +198,6 @@
    "desc": "Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow extra travel time and travel with care th",
    "days": [
     "2026-10-06",
-    "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 5 Tumunui to Waiotapu",
-   "span": "10/3 16:14 · 更新 3 Oct 2026 5:23pm",
-   "desc": "Due to a crash, the SH5/SH38 intersection in Waimangu is blocked. Pass with scene with care.",
-   "days": [
     "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
@@ -309,10 +285,10 @@
     "kind": "小雨",
     "icon": "rain",
     "lo": 7.4,
-    "hi": 14.2,
+    "hi": 14.0,
     "pop": 41,
     "mm": 0.2,
-    "wind": 9.0,
+    "wind": 9.3,
     "code": 51
    },
    "sum": "小雨 7～14°C · 降水 41%"
@@ -332,11 +308,11 @@
    "fc": {
     "kind": "晴间多云",
     "icon": "part",
-    "lo": 4.0,
-    "hi": 14.2,
+    "lo": 4.4,
+    "hi": 14.5,
     "pop": 0,
     "mm": 0.0,
-    "wind": 17.0,
+    "wind": 15.7,
     "code": 1
    },
    "sum": "晴间多云 4～14°C · 降水 0%"
@@ -346,24 +322,23 @@
    "d": "10/5",
    "wd": "周一",
    "place": "亚瑟山口",
-   "level": 2,
-   "status": "有备选",
+   "level": 1,
+   "status": "留意",
    "notes": [
     "NZTA 路况（Caution）SH 73 1km south of Otira：Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Caution）SH 73 Otira to Arthurs Pass：Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Delays）SH 6 Coal Creek (Coal Creek Bridge)：Due to bypass construction works, there will be Stop/Go traffic management in place 24/7 from Monday 27th July until further notice. Plan your journey accordingly and expect up to 5 minute delays."
+    "NZTA 路况（Caution）SH 73 Otira to Arthurs Pass：Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 1.1,
+    "lo": 1.5,
     "hi": 13.1,
     "pop": 0,
     "mm": 0.0,
     "wind": 13.3,
     "code": 3
    },
-   "sum": "阴 1～13°C · 降水 0%"
+   "sum": "阴 2～13°C · 降水 0%"
   },
   {
    "date": "2026-10-06",
@@ -380,16 +355,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
-    "lo": 6.2,
-    "hi": 13.8,
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 4.3,
+    "hi": 13.9,
     "pop": 7,
-    "mm": 0.2,
-    "wind": 13.9,
-    "code": 51
+    "mm": 0.0,
+    "wind": 14.4,
+    "code": 3
    },
-   "sum": "小雨 6～14°C · 降水 7%"
+   "sum": "阴 4～14°C · 降水 7%"
   },
   {
    "date": "2026-10-07",
@@ -399,23 +374,22 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "NZTA 路况（Caution）SH 5 Tumunui to Waiotapu：Due to a crash, the SH5/SH38 intersection in Waimangu is blocked. Pass with scene with care. 绕行：Follow directions of emergency services.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 5 Waimangu, near the SH38 intersection：Due to uneven dig-out works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
+    "kind": "阴",
+    "icon": "cloud",
     "lo": 5.8,
-    "hi": 16.6,
+    "hi": 18.7,
     "pop": 25,
-    "mm": 1.5,
-    "wind": 14.3,
-    "code": 51
+    "mm": 0.0,
+    "wind": 9.4,
+    "code": 3
    },
-   "sum": "小雨 6～17°C · 降水 25%"
+   "sum": "阴 6～19°C · 降水 25%"
   },
   {
    "date": "2026-10-08",
@@ -430,14 +404,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 10.4,
-    "hi": 19.9,
+    "lo": 11.1,
+    "hi": 19.4,
     "pop": 6,
     "mm": 0.0,
-    "wind": 18.7,
+    "wind": 10.2,
     "code": 3
    },
-   "sum": "阴 10～20°C · 降水 6%"
+   "sum": "阴 11～19°C · 降水 6%"
   }
  ],
  "src": {
