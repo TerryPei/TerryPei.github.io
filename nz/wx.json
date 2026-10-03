@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-03T23:44:47.505194+13:00",
- "generated_nz": "10/03 23:44",
+ "generated_at": "2026-10-04T00:32:33.692838+13:00",
+ "generated_nz": "10/04 00:32",
  "n_alerts_total": 0,
  "n_roads_total": 176,
  "alerts": [
@@ -143,18 +143,6 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 3 Otorohanga to Te Mapara",
-   "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:44am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
    "area": "SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road",
    "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:34am",
    "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -279,19 +267,8 @@
    "level": 0,
    "status": "照常",
    "notes": [
-    "照常。"
-   ],
-   "fc": {
-    "kind": "小雨",
-    "icon": "rain",
-    "lo": 7.4,
-    "hi": 14.0,
-    "pop": 41,
-    "mm": 0.2,
-    "wind": 9.3,
-    "code": 51
-   },
-   "sum": "小雨 7～14°C · 降水 41%"
+    "已经过去了。"
+   ]
   },
   {
    "date": "2026-10-04",
@@ -348,7 +325,6 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
