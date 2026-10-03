@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-04T05:08:29.422748+13:00",
- "generated_nz": "10/04 05:08",
+ "generated_at": "2026-10-04T10:06:32.709652+13:00",
+ "generated_nz": "10/04 10:06",
  "n_alerts_total": 0,
  "n_roads_total": 177,
  "alerts": [
@@ -136,18 +136,6 @@
    "desc": "Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-05"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 3 Otorohanga to Te Mapara",
-   "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:44am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -297,11 +285,11 @@
    "fc": {
     "kind": "晴间多云",
     "icon": "part",
-    "lo": 4.0,
-    "hi": 14.8,
+    "lo": 4.2,
+    "hi": 14.6,
     "pop": 0,
     "mm": 0.0,
-    "wind": 16.4,
+    "wind": 16.6,
     "code": 1
    },
    "sum": "晴间多云 4～15°C · 降水 0%"
@@ -320,14 +308,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 3.0,
+    "lo": 1.8,
     "hi": 13.6,
     "pop": 0,
     "mm": 0.0,
-    "wind": 13.3,
+    "wind": 13.8,
     "code": 3
    },
-   "sum": "阴 3～14°C · 降水 0%"
+   "sum": "阴 2～14°C · 降水 0%"
   },
   {
    "date": "2026-10-06",
@@ -337,23 +325,22 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 4.7,
-    "hi": 13.8,
-    "pop": 3,
-    "mm": 0.0,
-    "wind": 14.1,
-    "code": 3
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 5.2,
+    "hi": 13.6,
+    "pop": 2,
+    "mm": 0.2,
+    "wind": 11.5,
+    "code": 51
    },
-   "sum": "阴 5～14°C · 降水 3%"
+   "sum": "小雨 5～14°C · 降水 2%"
   },
   {
    "date": "2026-10-07",
@@ -371,14 +358,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 7.0,
-    "hi": 17.7,
-    "pop": 16,
-    "mm": 0.2,
-    "wind": 10.2,
-    "code": 51
+    "lo": 6.5,
+    "hi": 17.8,
+    "pop": 22,
+    "mm": 1.0,
+    "wind": 11.3,
+    "code": 53
    },
-   "sum": "小雨 7～18°C · 降水 16%"
+   "sum": "小雨 6～18°C · 降水 22%"
   },
   {
    "date": "2026-10-08",
@@ -391,16 +378,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "晴间多云",
-    "icon": "part",
-    "lo": 11.8,
-    "hi": 19.1,
-    "pop": 8,
-    "mm": 0.0,
-    "wind": 11.3,
-    "code": 2
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 11.5,
+    "hi": 19.5,
+    "pop": 17,
+    "mm": 0.3,
+    "wind": 10.9,
+    "code": 51
    },
-   "sum": "晴间多云 12～19°C · 降水 8%"
+   "sum": "小雨 12～20°C · 降水 17%"
   }
  ],
  "src": {
