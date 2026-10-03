@@ -1,9 +1,22 @@
 {
- "generated_at": "2026-10-03T11:05:58.790365+13:00",
- "generated_nz": "10/03 11:05",
+ "generated_at": "2026-10-03T18:07:00.585570+13:00",
+ "generated_nz": "10/03 18:07",
  "n_alerts_total": 0,
- "n_roads_total": 187,
+ "n_roads_total": 178,
  "alerts": [
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
+   "span": "10/8 06:00–10/8 06:00 · 更新 3 Oct 2026 3:59pm",
+   "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
+   "days": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
@@ -13,19 +26,6 @@
    "desc": "Due to pavement repair works, there are Stop/Go traffic management in place on weekdays between 6am and 5pm from Monday 28th September to Friday 9nd October. Plan your journey accordingly and expect up to 10 minute delays.",
    "days": [
     "2026-09-29"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
-   "span": "10/8 06:00–10/8 06:00 · 更新 30 Sept 2026 12:44pm",
-   "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
-   "days": [
-    "2026-09-29",
-    "2026-09-30"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -155,6 +155,18 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
+   "area": "SH 3 Otorohanga to Te Mapara",
+   "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:44am",
+   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
    "area": "SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road",
    "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:34am",
    "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -198,6 +210,18 @@
    "desc": "Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow extra travel time and travel with care th",
    "days": [
     "2026-10-06",
+    "2026-10-07"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 5 Tumunui to Waiotapu",
+   "span": "10/3 16:14 · 更新 3 Oct 2026 5:23pm",
+   "desc": "Due to a crash, the SH5/SH38 intersection in Waimangu is blocked. Pass with scene with care.",
+   "days": [
     "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
@@ -285,13 +309,13 @@
     "kind": "小雨",
     "icon": "rain",
     "lo": 7.4,
-    "hi": 13.9,
-    "pop": 42,
+    "hi": 14.2,
+    "pop": 41,
     "mm": 0.2,
-    "wind": 8.5,
+    "wind": 9.0,
     "code": 51
    },
-   "sum": "小雨 7～14°C · 降水 42%"
+   "sum": "小雨 7～14°C · 降水 41%"
   },
   {
    "date": "2026-10-04",
@@ -309,10 +333,10 @@
     "kind": "晴间多云",
     "icon": "part",
     "lo": 4.0,
-    "hi": 14.0,
+    "hi": 14.2,
     "pop": 0,
     "mm": 0.0,
-    "wind": 16.4,
+    "wind": 17.0,
     "code": 1
    },
    "sum": "晴间多云 4～14°C · 降水 0%"
@@ -332,11 +356,11 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 1.2,
+    "lo": 1.1,
     "hi": 13.1,
     "pop": 0,
     "mm": 0.0,
-    "wind": 13.4,
+    "wind": 13.3,
     "code": 3
    },
    "sum": "阴 1～13°C · 降水 0%"
@@ -349,6 +373,7 @@
    "level": 2,
    "status": "有备选",
    "notes": [
+    "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -357,14 +382,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 3.0,
-    "hi": 12.8,
-    "pop": 8,
-    "mm": 0.1,
-    "wind": 14.3,
+    "lo": 6.2,
+    "hi": 13.8,
+    "pop": 7,
+    "mm": 0.2,
+    "wind": 13.9,
     "code": 51
    },
-   "sum": "小雨 3～13°C · 降水 8%"
+   "sum": "小雨 6～14°C · 降水 7%"
   },
   {
    "date": "2026-10-07",
@@ -374,6 +399,7 @@
    "level": 2,
    "status": "有备选",
    "notes": [
+    "NZTA 路况（Caution）SH 5 Tumunui to Waiotapu：Due to a crash, the SH5/SH38 intersection in Waimangu is blocked. Pass with scene with care. 绕行：Follow directions of emergency services.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 5 Waimangu, near the SH38 intersection：Due to uneven dig-out works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -382,14 +408,14 @@
    "fc": {
     "kind": "小雨",
     "icon": "rain",
-    "lo": 6.4,
-    "hi": 18.0,
-    "pop": 14,
-    "mm": 1.2,
-    "wind": 7.3,
+    "lo": 5.8,
+    "hi": 16.6,
+    "pop": 25,
+    "mm": 1.5,
+    "wind": 14.3,
     "code": 51
    },
-   "sum": "小雨 6～18°C · 降水 14%"
+   "sum": "小雨 6～17°C · 降水 25%"
   },
   {
    "date": "2026-10-08",
@@ -405,13 +431,13 @@
     "kind": "阴",
     "icon": "cloud",
     "lo": 10.4,
-    "hi": 20.0,
-    "pop": 8,
+    "hi": 19.9,
+    "pop": 6,
     "mm": 0.0,
-    "wind": 5.7,
+    "wind": 18.7,
     "code": 3
    },
-   "sum": "阴 10～20°C · 降水 8%"
+   "sum": "阴 10～20°C · 降水 6%"
   }
  ],
  "src": {
