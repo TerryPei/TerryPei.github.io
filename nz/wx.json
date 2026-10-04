@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-05T01:13:49.412756+13:00",
- "generated_nz": "10/05 01:13",
+ "generated_at": "2026-10-05T07:36:04.847009+13:00",
+ "generated_nz": "10/05 07:36",
  "n_alerts_total": 0,
- "n_roads_total": 189,
+ "n_roads_total": 171,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -82,8 +82,20 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
+   "area": "SH 73 Otira to Arthurs Pass",
+   "span": "10/5 07:30–10/7 16:30 · 更新 5 Oct 2026 7:30am",
+   "desc": "Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-10-05"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
    "area": "SH 73 1km south of Otira",
-   "span": "10/5 07:30–10/6 16:30 · 更新 1 Oct 2026 6:54am",
+   "span": "10/5 07:30–10/6 16:30 · 更新 5 Oct 2026 7:30am",
    "desc": "Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-05"
@@ -94,11 +106,23 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 73 Otira to Arthurs Pass",
-   "span": "10/5 07:30–10/7 16:30 · 更新 1 Oct 2026 6:50am",
-   "desc": "Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
+   "area": "SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road",
+   "span": "10/5 07:00–10/9 18:00 · 更新 5 Oct 2026 7:00am",
+   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
    "days": [
-    "2026-10-05"
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 3 Otorohanga to Te Mapara",
+   "span": "10/5 07:00–10/9 18:00 · 更新 5 Oct 2026 7:00am",
+   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
+   "days": [
+    "2026-10-06"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -112,30 +136,6 @@
    "days": [
     "2026-10-06",
     "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 3 Otorohanga to Te Mapara",
-   "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:44am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road",
-   "span": "10/5 07:00–10/9 18:00 · 更新 2 Oct 2026 11:34am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -264,17 +264,17 @@
    "level": 1,
    "status": "留意",
    "notes": [
-    "NZTA 路况（Caution）SH 73 1km south of Otira：Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
-    "NZTA 路况（Caution）SH 73 Otira to Arthurs Pass：Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays."
+    "NZTA 路况（Caution）SH 73 Otira to Arthurs Pass：Due to drainage maintenance and low shoulder works, there will be Stop/Go traffic management in place from Monday 5th October to Wednesday 7th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
+    "NZTA 路况（Caution）SH 73 1km south of Otira：Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays."
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 2.4,
-    "hi": 13.8,
+    "lo": 1.7,
+    "hi": 13.5,
     "pop": 0,
     "mm": 0.0,
-    "wind": 14.0,
+    "wind": 13.5,
     "code": 3
    },
    "sum": "阴 2～14°C · 降水 0%"
@@ -287,23 +287,23 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
-    "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
+    "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
+    "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 6.2,
-    "hi": 13.6,
-    "pop": 1,
+    "lo": 6.5,
+    "hi": 14.8,
+    "pop": 2,
     "mm": 0.0,
-    "wind": 13.5,
+    "wind": 14.3,
     "code": 3
    },
-   "sum": "阴 6～14°C · 降水 1%"
+   "sum": "阴 6～15°C · 降水 2%"
   },
   {
    "date": "2026-10-07",
@@ -319,16 +319,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
-    "lo": 6.8,
-    "hi": 17.8,
-    "pop": 51,
-    "mm": 0.4,
-    "wind": 12.4,
-    "code": 51
+    "kind": "阴",
+    "icon": "cloud",
+    "lo": 5.6,
+    "hi": 17.9,
+    "pop": 29,
+    "mm": 0.0,
+    "wind": 12.1,
+    "code": 3
    },
-   "sum": "小雨 7～18°C · 降水 51%"
+   "sum": "阴 6～18°C · 降水 29%"
   },
   {
    "date": "2026-10-08",
@@ -343,11 +343,11 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 11.9,
+    "lo": 12.4,
     "hi": 19.4,
     "pop": 2,
     "mm": 0.0,
-    "wind": 13.1,
+    "wind": 14.0,
     "code": 3
    },
    "sum": "阴 12～19°C · 降水 2%"
