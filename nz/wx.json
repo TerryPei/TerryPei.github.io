@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-04T20:45:18.959392+13:00",
- "generated_nz": "10/04 20:45",
+ "generated_at": "2026-10-05T01:13:49.412756+13:00",
+ "generated_nz": "10/05 01:13",
  "n_alerts_total": 0,
  "n_roads_total": 189,
  "alerts": [
@@ -250,22 +250,11 @@
    "d": "10/4",
    "wd": "周日",
    "place": "霍基蒂卡",
-   "level": 1,
-   "status": "留意",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Caution）SH 6 The Wanaka Lookout to Makarora：周末不封，只有 Stop/Go。Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Qu 绕行：No detour available. For more details go to: nzta.govt.nz/media-releases"
-   ],
-   "fc": {
-    "kind": "晴间多云",
-    "icon": "part",
-    "lo": 4.1,
-    "hi": 15.5,
-    "pop": 0,
-    "mm": 0.0,
-    "wind": 16.3,
-    "code": 1
-   },
-   "sum": "晴间多云 4～16°C · 降水 0%"
+    "已经过去了。"
+   ]
   },
   {
    "date": "2026-10-05",
@@ -285,7 +274,7 @@
     "hi": 13.8,
     "pop": 0,
     "mm": 0.0,
-    "wind": 13.9,
+    "wind": 14.0,
     "code": 3
    },
    "sum": "阴 2～14°C · 降水 0%"
@@ -305,16 +294,16 @@
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
+    "kind": "阴",
+    "icon": "cloud",
     "lo": 6.2,
     "hi": 13.6,
-    "pop": 6,
-    "mm": 0.2,
-    "wind": 13.0,
-    "code": 51
+    "pop": 1,
+    "mm": 0.0,
+    "wind": 13.5,
+    "code": 3
    },
-   "sum": "小雨 6～14°C · 降水 6%"
+   "sum": "阴 6～14°C · 降水 1%"
   },
   {
    "date": "2026-10-07",
@@ -334,12 +323,12 @@
     "icon": "rain",
     "lo": 6.8,
     "hi": 17.8,
-    "pop": 29,
-    "mm": 0.2,
-    "wind": 12.3,
+    "pop": 51,
+    "mm": 0.4,
+    "wind": 12.4,
     "code": 51
    },
-   "sum": "小雨 7～18°C · 降水 29%"
+   "sum": "小雨 7～18°C · 降水 51%"
   },
   {
    "date": "2026-10-08",
@@ -356,12 +345,12 @@
     "icon": "cloud",
     "lo": 11.9,
     "hi": 19.4,
-    "pop": 4,
+    "pop": 2,
     "mm": 0.0,
-    "wind": 11.5,
+    "wind": 13.1,
     "code": 3
    },
-   "sum": "阴 12～19°C · 降水 4%"
+   "sum": "阴 12～19°C · 降水 2%"
   }
  ],
  "src": {
