@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-05T07:36:04.847009+13:00",
- "generated_nz": "10/05 07:36",
+ "generated_at": "2026-10-05T12:55:18.535616+13:00",
+ "generated_nz": "10/05 12:55",
  "n_alerts_total": 0,
- "n_roads_total": 171,
+ "n_roads_total": 191,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -67,11 +67,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 2 Oct 2026 5:30pm",
+   "span": "9/18 17:30–10/31 17:30 · 更新 5 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -99,6 +99,115 @@
    "desc": "Due to channel clearing works, there will be Stop/Go traffic management in place on Monday 5th October and Tuesday 6th October between 7:30am and 4:30pm. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-05"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Razorback Road On-ramp Northbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 12:45pm",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Drury/SH22 On-ramp Northbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 12:42pm",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Papakura On-ramp (Diamond) Southbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 12:27pm",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Papakura On-ramp (Loop) Southbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 12:26pm",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 2 Westbound Link to SH1 Northbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 12:09pm",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Northbound Link to SH2 Eastbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 11:44am",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Full Closure Drury to Papakura, Northbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 11:41am",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Full Closure Papakura to Drury, Southbound",
+   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 11:39am",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "days": [
+    "2026-10-06"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 21 Rukuhia, near the Raynes Road intersection",
+   "span": "10/5 09:00–10/9 15:00 · 更新 5 Oct 2026 9:01am",
+   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
+   "days": [
+    "2026-10-06",
+    "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -133,19 +242,6 @@
    "area": "SH 3 Rukuhia, near the Raynes Road intersection",
    "span": "10/4 19:00–10/8 05:00 · 更新 4 Oct 2026 7:02pm",
    "desc": "Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06",
-    "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 21 Rukuhia, near the Raynes Road intersection",
-   "span": "10/5 09:00–10/9 15:00 · 更新 2 Oct 2026 9:14am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
    "days": [
     "2026-10-06",
     "2026-10-07"
@@ -284,13 +380,21 @@
    "d": "10/6",
    "wd": "周二",
    "place": "罗托鲁瓦",
-   "level": 2,
-   "status": "有备选",
+   "level": 3,
+   "status": "改计划",
    "notes": [
+    "NZTA 路况（Road Closed）SH 1 Razorback Road On-ramp Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Drury/SH22 On-ramp Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Diamond) Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Loop) Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 2 Westbound Link to SH1 Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Northbound Link to SH2 Eastbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Full Closure Drury to Papakura, Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Full Closure Papakura to Drury, Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
+    "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
-    "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
    "fc": {
@@ -313,8 +417,8 @@
    "level": 2,
    "status": "有备选",
    "notes": [
-    "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
+    "NZTA 路况（Caution）SH 3 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 5 Waimangu, near the SH38 intersection：Due to uneven dig-out works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 1 Cambridge：Due to road resurfacing and shoulder widening, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to Hickey Road from Tuesday 15 September. Lanes are closed 24/7; expect delays at peak times. Allow e"
    ],
