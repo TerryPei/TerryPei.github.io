@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Embodied Brain — A Unified Research Agenda</title>
+<style>
+:root{--bg:#0f1117;--panel:#171a23;--panel2:#1d212c;--ink:#e8eaf0;--muted:#9aa3b2;
+--line:#2a2f3b;--accent:#76b900;--blue:#3b82f6;--purple:#a78bfa;--mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",Roboto,sans-serif;line-height:1.7;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding:52px 24px 90px}
+.hero{text-align:center;border-bottom:1px solid var(--line);padding-bottom:30px;margin-bottom:38px}
+.hero h1{font-size:40px;margin:0 0 8px;letter-spacing:-.5px}
+.hero .sub{color:var(--muted);font-size:16.5px}
+h2{font-size:21px;margin:52px 0 16px;display:flex;align-items:center;gap:12px}
+h2 .num{font:700 13px/1 var(--mono);color:var(--accent);border:1px solid var(--line);background:var(--panel);padding:6px 10px;border-radius:6px}
+h3{font-size:15.5px;margin:26px 0 8px;color:var(--accent)}
+p{margin:10px 0}
+blockquote{margin:16px 0;padding:14px 18px;background:var(--panel);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:15px}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow-x:auto;margin:14px 0;font-family:var(--mono);font-size:12.5px;line-height:1.62;color:#c9d2e0}
+ol.projects{margin:12px 0;padding-left:24px}
+ol.projects li{margin:6px 0}
+ol.projects b{color:var(--ink)}
+.tbox{border:1px solid var(--line);border-radius:10px;overflow-x:auto;margin:16px 0;background:var(--panel)}
+table.matrix{border-collapse:collapse;font-size:12px;min-width:2600px}
+table.matrix th{position:sticky;top:0;background:var(--panel2);color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+table.matrix td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top;min-width:150px;line-height:1.55}
+table.matrix td:first-child{position:sticky;left:0;background:var(--panel);min-width:150px;font-weight:700;border-right:1px solid var(--line)}
+table.matrix tr.flag td:first-child{color:var(--accent)}
+table.matrix tr.flag{background:rgba(118,185,0,.07)}
+.lit{color:#dbe3f0}
+.lit b{color:var(--blue)}
+.gap{color:var(--ink);font-style:italic}
+.stars{color:var(--accent);white-space:nowrap}
+.k{color:var(--muted)}
+.note{color:var(--muted);font-size:12.5px}
+hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+.closing{margin-top:34px;text-align:center;color:var(--ink);font-size:15.5px;font-style:italic;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.c1 pre{width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}
+.c1 blockquote{width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto;text-align:center;max-width:820px}
+.c1 p.comp{text-align:center;max-width:820px;margin:12px auto}
+@media(max-width:640px){.hero h1{font-size:28px}}
+/* v4: core thesis + landscape */
+.thesis{max-width:880px;margin:36px auto 6px;text-align:center}
+.tlabel{font:700 11px/1 var(--mono);letter-spacing:.22em;color:var(--accent);margin-bottom:14px}
+.tq{font-size:21px;line-height:1.55;font-weight:700;margin:0 auto 14px;max-width:780px}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 6px;text-align:left}
+.br{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--line);border-radius:10px;padding:15px 16px 11px}
+.br p{font-size:13.5px;margin:8px 0;line-height:1.6}
+.bh{font:700 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.br-brain{border-top-color:var(--blue)} .br-brain .bh{color:var(--blue)}
+.br-comp{border-top-color:var(--accent)} .br-comp .bh{color:var(--accent)}
+.br-body{border-top-color:var(--purple)} .br-body .bh{color:var(--purple)}
+.bf{color:#dbe3f0}
+.uq{max-width:860px;margin:26px auto 0;text-align:center}
+.uq h3{text-align:center;margin:0 0 4px}
+.boxeq{width:-moz-fit-content;width:fit-content;margin:12px auto;border:1.5px solid var(--ink);border-radius:4px;padding:11px 26px;font-weight:700;font-size:16px}
+.goal{font-size:15px}
+.inst{font-weight:700;margin:14px 0 4px}
+.inst .w1{color:var(--blue)}.inst .w2{color:var(--accent)}.inst .w3{color:var(--purple)}
+table.matrix{min-width:3400px}
+table.matrix td{min-width:200px}
+table.matrix td:first-child{min-width:170px}
+td.lit{min-width:330px}
+td.cq{min-width:250px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.tier{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.tier h4{margin:0;font-size:13px}
+.tier .tname{font:700 11px/1 var(--mono);letter-spacing:.12em}
+.tA .tname{color:var(--accent)}.tB .tname{color:var(--blue)}.tC .tname{color:var(--purple)}
+.tier ol{margin:10px 0 0;padding-left:20px}
+.tier li{margin:7px 0;font-size:13.5px}
+ul.pos{margin:12px 0;padding-left:22px}
+ul.pos li{margin:7px 0}
+.together{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0}
+@media(max-width:760px){.branches,.tiers{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+
+<div class="hero">
+<h1>Embodied Brain</h1>
+<div class="sub">A Unified Research Agenda for Efficient and Dexterous Robot Intelligence</div>
+</div>
+
+<h2><span class="num">01</span>The Embodied Brain Research Map</h2>
+<div class="c1">
+
+<pre>
+                         EMBODIED BRAIN
+          Efficient &amp; Dexterous Robot Intelligence
+                               │
+              ┌────────────────┴────────────────┐
+              │                                 │
+       EFFICIENT BRAIN                    DEXTEROUS BRAIN
+              │                                 │
+    ┌─────────┼──────────┐            ┌─────────┼──────────┐
+    │         │          │            │         │          │
+Embodied-   WAM-     Compute-as-   Morphology  Coarse-   Dexterity
+ DEOS       DEOS       Action       Search     to-Fine   Bottleneck
+    │         │          │                        Tactile
+    │         │          │
+    └─────────┴─────┬────┴───────────────────────┘
+                    │
+           Shared Embodied Infrastructure
+                    │
+     VLA / WAM / Simulation / Tactile / Edge Hardware
+</pre>
+
+<div class="thesis">
+<div class="tlabel">CORE THESIS</div>
+<p class="tq">There is no universally efficient embodied model.<br>The right brain depends on its body, task, and hardware.</p>
+<p>This observation motivates <b>Embodied-DEOS</b>, where embodied intelligence is treated as a joint design problem rather than a fixed model followed by post-hoc compression.</p>
+</div>
+
+<pre>
+                         Embodied-DEOS
+                              │
+               ┌──────────────┼──────────────┐
+               │              │              │
+             Brain          Compute          Body
+               │              │              │
+          WAM Search      Bit / Runtime     Hand Search
+               │              │              │
+     What should the     How much compute   What embodiment
+      robot predict?     should be spent?   should we build?
+               │              │              │
+        WAM-DEOS        Compute-as-Action   Hand Co-Search
+                               │
+                        Embodied Efficiency
+                               │
+                    Coarse-to-Fine Touch
+</pre>
+
+<div class="branches">
+<div class="br br-brain">
+<div class="bh">Brain</div>
+<p><b>WAM Search — What should the robot predict?</b></p>
+<p>Rather than assuming that future RGB/video prediction is always necessary, search for the most task-relevant world representation under a fixed computational budget:</p>
+<p class="bf"><b>RGB / latent / depth / flow / object state / contact / tactile × horizon × resolution × precision.</b></p>
+</div>
+<div class="br br-comp">
+<div class="bh">Compute</div>
+<p><b>Bit / Runtime — How much computation should the robot spend?</b></p>
+<p>Treat computation itself as an embodied resource:</p>
+<p class="bf"><b>precision × tokens × layers × action steps × runtime policy × hardware mapping.</b></p>
+<p>This branch contains the central <b>Embodied-DEOS</b> search framework and the <b>Compute-as-Action</b> direction.</p>
+</div>
+<div class="br br-body">
+<div class="bh">Body</div>
+<p><b>Hand Search — What body and sensory interface should intelligence inhabit?</b></p>
+<p>Move beyond designing policies for a fixed hand and study:</p>
+<p class="bf"><b>morphology × action representation × tactile sensing × control bandwidth × compute.</b></p>
+<p>This branch includes embodiment-policy-compute co-search, dexterity bottleneck analysis, and coarse-to-fine multimodal tactile intelligence.</p>
+</div>
+</div>
+
+<div class="uq">
+<h3>Unifying Research Question</h3>
+<p>Embodied intelligence therefore becomes a three-way co-design problem:</p>
+<div class="boxeq">Brain &nbsp;×&nbsp; Compute &nbsp;×&nbsp; Body</div>
+<p>or more concretely:</p>
+<div class="boxeq">What to predict &nbsp;×&nbsp; How much to compute &nbsp;×&nbsp; What embodiment to control</div>
+<p class="goal">The long-term goal is not simply to make an existing robot model smaller. It is to discover the <b>smallest computational and physical structure sufficient for intelligent interaction</b>.</p>
+</div>
+<p class="comp">These directions are designed to complement Prof. Yang's embodied intelligence agenda by building a reusable research stack spanning efficient foundation models, world models, tactile intelligence, and dexterous embodiment.</p>
+
+</div>
+<h2><span class="num">02</span>Project Landscape, Literature Gaps &amp; Execution Matrix</h2>
+<p>These projects are designed as complementary components of Prof. Yang's broader agenda in embodied efficiency and dexterous intelligence. Each direction is scoped to produce a decisive technical signal within 2–4 weeks and a complete research iteration within 4–8 weeks. Importantly, every project is paired with an explicit fallback route, so failed hypotheses still contribute reusable infrastructure, empirical insights, or a smaller publishable problem.</p>
+<p class="inst">The following projects instantiate the three branches of Embodied-DEOS: <span class="w1">Brain</span>, <span class="w2">Compute</span>, and <span class="w3">Body</span>.</p>
+<p class="note">每个 project 一行 · 表格可横向滚动</p>
+
+<div class="tbox"><table class="matrix">
+<tr><th>Project</th><th>Core Question &amp; Idea</th><th>Recent Literature / Closest Competitors</th><th>Exact Gap We Target</th><th>Concrete Implementation</th><th>Required Baselines</th><th>Benchmark / Data</th><th>Compute &amp; Hardware</th><th>4–8 Week Validation</th><th>Failure Criterion &amp; Backup</th><th>Difficulty / Ceiling</th><th>Follow Potential</th><th>Suggested Personnel</th><th>Contribution to Prof. Yang's Group</th></tr>
+
+<tr class="flag">
+<td>P0 — Embodied-DEOS<br><span class="k" style="font-weight:400">Flagship</span></td>
+<td class="cq"><b>Given a robot, task distribution, and edge-compute budget, what should its embodied model + precision + runtime + hardware stack look like?</b> Jointly search <b>architecture × bit-width × embodied structure × runtime × chip/mapping</b> instead of compressing a fixed VLA after training.</td>
+<td class="lit"><b>DaDu-Corki, ISCA'25</b> already establishes embodied algorithm–architecture co-design; <b>QVLA, ICLR'26</b> performs action-centric channel-wise {0,2,4,8,16}-bit allocation; <b>QuantVLA, CVPR'26</b> performs training-free VLA PTQ; <b>ActQuant'26</b> reaches sub-4-bit action-guided mixed precision and real UR3 deployment; <b>VQVLA'26</b> couples motion-aware dynamic precision with a custom accelerator; <b>SpecVLA'26</b> performs state-aware speculative inference with heterogeneous hardware; <b>KERV, DAC'26</b> uses robot kinematics for speculative decoding and reports 27–37% acceleration.</td>
+<td class="gap">All current strong works <b>manually choose one efficiency axis</b>: quantization, speculative inference, vector quantization, or hardware acceleration, usually after the model architecture is fixed. Missing: <b>task-aware joint search over the complete embodied stack under closed-loop success constraints.</b></td>
+<td>Start from pretrained OpenVLA-OFT / π0.5-like VLA. Searchable variables: <b>bit {2,3,4,8,16}; visual tokens; active layers; action horizon; action chunk; action-head depth; WM horizon if present; speculative/early-exit/cache strategy; accelerator PE/SRAM/bandwidth/dataflow.</b> Stage 1 sample design space; Stage 2 train latency/energy surrogate; Stage 3 evolutionary/differentiable search; Stage 4 validate Pareto candidates on Jetson/GPU.</td>
+<td>FP16; AWQ/GPTQ; QVLA; QuantVLA; ActQuant; fixed hand-designed config; random search; evolutionary search; precision-only search; architecture-only search; runtime-only search; hardware-only search; ideally VQVLA/SpecVLA numbers where comparable.</td>
+<td><b>Primary:</b> LIBERO. <b>Generality:</b> ManiSkill + RoboTwin 2.0. <b>Models:</b> OpenVLA-OFT first, second VLA only after Week 4. <b>Hardware:</b> RTX GPU + Jetson AGX Orin.</td>
+<td><b>Minimum:</b> 2×4090/5090 + 1 Jetson. <b>Comfortable:</b> 4 GPUs + 1–2 Jetsons. No foundation-model training from scratch. Search relies on pretrained weights, PTQ, proxy evaluation and profiling.</td>
+<td><b>W1:</b> VLA + LIBERO + quantization + profiler. <b>W2:</b> sample 100–500 configurations; obtain task/hardware-specific Pareto differences. <b>W3:</b> evolutionary/surrogate search MVP. <b>W4:</b> joint vs single-axis main table → GO/PIVOT. <b>W5:</b> second task/model. <b>W6:</b> Jetson calibration. <b>W7:</b> transfer/ablation. <b>W8:</b> freeze.</td>
+<td><b>If differentiable search fails:</b> evolutionary + surrogate. <b>If chip simulator correlation is poor:</b> replace chip simulator with real-device cost model. <b>If architecture search adds little:</b> retain bit × token × runtime × hardware. <b>If joint search gain is weak but landscape is strongly task-dependent:</b> pivot to <b>Embodied Design-Space Scaling Laws / Pareto Benchmark</b>. Maximum wasted time: ~1 week per branch.</td>
+<td><b>Difficulty 5/5. Ceiling 5/5.</b> ICLR/NeurIPS/CVPR if ML-heavy; ISCA/MICRO/ASPLOS if hardware-heavy; RSS/CoRL if robotics-heavy.</td>
+<td><b>5/5.</b> Natural follow-ups: Humanoid-DEOS, WAM-DEOS, Dexterous-DEOS, Driving-DEOS, Tactile-DEOS. This has the best chance of becoming a reusable setting rather than a one-off method.</td>
+<td><b>Terry personally owns formulation + core search + Figure 1.</b> 1 Master can own hardware profiling; 1 PhD can help runtime infrastructure.</td>
+<td>Adds a <b>general efficiency/search methodology</b> to Prof. Yang's embodied work and creates reusable search/profiling infrastructure for future students rather than a single isolated paper.</td></tr>
+
+<tr>
+<td>P1 — WAM-DEOS<br><span class="k" style="font-weight:400">What Should the Robot Predict?</span></td>
+<td class="cq">Current WAMs usually assume that predicting future RGB/video/latent video is desirable. Ask instead: <b>under a fixed compute budget, what future representation is actually useful for control?</b> Search <b>prediction target × horizon × resolution × frequency × precision</b>.</td>
+<td class="lit"><b>Light-WAM'26</b> reduces WAM cost with a compact video backbone, downsampled latent supervision and lightweight StateFusionActionExpert; <b>Q-WAM'26</b> pushes WAMs to W4A4 while protecting action-sensitive subspaces and evaluates on RoboTwin 2.0 and real robots. These works optimize <b>how</b> a predefined WAM is computed. <b>Dexterous Tactile World Model'26</b> further shows that adding tactile force magnitude/location changes future prediction quality, reinforcing that representation choice matters.</td>
+<td class="gap">Missing question: <b>why predict pixels at all?</b> Prediction fidelity and downstream policy utility need not align. No systematic search currently decides whether a control task should predict <b>RGB, latent features, depth, flow, object state, contact, tactile state or task features</b>.</td>
+<td>Shared observation encoder + multiple lightweight prediction heads. Candidate targets: RGB / latent / depth / optical flow / object pose / contact map / tactile latent / policy feature. Search target + future horizon {1,2,4,8} + spatial resolution + bit. Evaluate downstream policy success, not just reconstruction.</td>
+<td>Full RGB future prediction; latent future prediction; Light-WAM; Q-WAM; no-WM VLA; same compute with different manually selected targets; random target search.</td>
+<td><b>LIBERO first</b>, <b>RoboTwin 2.0 second</b>. Use state/contact ground truth from simulation where possible to cheaply construct candidate future targets.</td>
+<td>2×4090 minimum; 2–4 A100/H100 comfortable. Avoid training a large video foundation model from scratch; freeze/pretrain backbone and train lightweight heads.</td>
+<td><b>W1:</b> WAM/control baseline. <b>W2:</b> compare RGB vs latent vs state/contact targets. Killer plot = reconstruction quality vs control success. <b>W3:</b> add horizon/resolution search. <b>W4:</b> Pareto table. <b>W5:</b> RoboTwin. <b>W6:</b> second WAM/backbone. <b>W7–8:</b> ablation + writing.</td>
+<td>If target type differences are weak → search <b>horizon × resolution × temporal frequency</b> only. If generative WAM training is too expensive → freeze WM and search representation heads. If RGB/state labels are inconsistent → use intermediate pretrained feature prediction.</td>
+<td><b>4/5 difficulty; 5/5 ceiling.</b> Particularly attractive if a clear “pixels are not the best future representation” result appears.</td>
+<td><b>5/5.</b> Easy follow-ups for humanoids, driving, dexterous manipulation and navigation.</td>
+<td><b>Strong PhD</b> + Master maintaining WAM benchmark/data pipeline.</td>
+<td>Builds a reusable <b>world-model branch</b> under Prof. Yang's agenda and makes the efficiency line relevant to one of the fastest-growing embodied-model paradigms.</td></tr>
+
+<tr>
+<td>P2 — Compute-as-Action</td>
+<td class="cq">A robot normally predicts physical action <i>a<sub>t</sub></i>. We additionally let it predict a <b>computational action</b> <i>c<sub>t</sub></i>: how much computation should be spent now? <i>π(o<sub>t</sub>) → (a<sub>t</sub>, c<sub>t</sub>)</i>. <i>c<sub>t</sub></i> can control bit-width, inference depth, action-generation steps, VLM invocation or speculative-verification budget.</td>
+<td class="lit"><b>VQVLA'26</b> already adjusts vector-quantization precision based on robot motion state; <b>SpecVLA'26</b> distinguishes active/inactive states and changes action/speculation strategy; <b>KERV'26</b> dynamically adjusts speculative thresholds using kinematic variability; <b>QVLA/ActQuant</b> optimize precision based on action sensitivity but primarily offline.</td>
+<td class="gap">Dynamic compute itself is therefore <b>not enough</b>. The gap is to treat computation as a <b>learned control variable jointly optimized with physical action</b>, rather than a handcrafted state rule or offline allocation.</td>
+<td>Begin with a very small action space: <i>c<sub>t</sub></i> ∈ {4,8,16} bit or {short, medium, full compute}. Train a scheduler from state/uncertainty/contact signal using task reward minus compute penalty. Later expand to token count / flow steps / VLM call frequency.</td>
+<td>Fixed FP16; fixed INT8/INT4; QVLA/ActQuant; VQVLA-style state heuristic; entropy/uncertainty heuristic; random scheduler; oracle budget from hindsight.</td>
+<td>LIBERO + ManiSkill. Choose tasks containing easy free-space phases and hard contact/precision phases so compute allocation has a clear temporal structure.</td>
+<td>1–2×4090. No new robot required in first iteration.</td>
+<td><b>W1:</b> fixed compute sweep. <b>W2:</b> locate state-dependent sensitivity. <b>W3:</b> train bit/computation scheduler. <b>W4:</b> learned vs heuristic. <b>W5:</b> second compute knob or benchmark. <b>W6:</b> ablation/write.</td>
+<td>If RL scheduler is unstable → supervised oracle/imitation scheduler. If learned scheduler does not beat heuristic → pivot to <b>uncertainty-calibrated compute scheduling</b>. If bits provide weak dynamic effect → use diffusion/flow steps or VLM invocation frequency.</td>
+<td><b>3.5/5 difficulty; 4/5 ceiling.</b> Conceptually clean and fast to test.</td>
+<td><b>4.5/5.</b> Can immediately branch into token-as-action, camera-rate-as-action, memory-as-action and world-model-steps-as-action.</td>
+<td>PhD or strong Master.</td>
+<td>Provides a <b>fast, lower-risk companion paper</b> to Embodied-DEOS and can directly supply the runtime policy used inside the flagship search space.</td></tr>
+
+<tr>
+<td>P3 — Embodied Information Budget</td>
+<td class="cq"><b>Which sensory information deserves bandwidth at each stage of interaction?</b> Instead of always processing RGB/depth/tactile/proprioception/history at maximum fidelity, dynamically allocate <b>modality × sampling rate × tokens × precision</b>.</td>
+<td class="lit"><b>ET-Hand, ICRA'25</b> already learns task-specific multimodal tactile sensor placement and can adjust tactile positions/types/numbers, so “sensor placement search” alone is already occupied. <b>TouchWorld'26</b> separates slow semantic planning from tactile prediction and fast tactile residual correction. <b>TouchWGNN'26</b> fuses distributed tactile, vision and proprioception using spatiotemporal tactile graphs. <b>EmArm'26</b> demonstrates the value of whole-arm tactile sensorimotor feedback.</td>
+<td class="gap">Existing works choose a sensing system or fusion architecture first. Missing: <b>task-conditioned allocation of a unified sensory budget</b> where sensing itself is treated as an efficiency resource: camera frames, tactile channels, history length, modality frequency and numerical precision.</td>
+<td>Build modality gates over RGB/depth/contact/tactile/proprio/history. Start with discrete choices: modality ON/OFF + sampling rate {low/high}. Then add token/bit budgets. Optimize task success minus sensor/compute bandwidth.</td>
+<td>Full multimodal policy; vision-only; tactile-only; fixed modality subsets; random modality dropout; fixed sampling rate; ET-Hand-style tactile placement where comparable; oracle modality mask.</td>
+<td>Start in <b>ManiSkill / Isaac Lab contact-rich simulation</b>, where contact/tactile proxies can be cheaply generated. Add real tactile stream only after a clear simulation signal.</td>
+<td>1–2×4090. Real tactile hardware optional for first 4–6 weeks.</td>
+<td><b>W1:</b> modality-mask sweep. <b>W2:</b> task-phase sensitivity map. <b>W3:</b> dynamic gate. <b>W4:</b> success vs sensory bandwidth. <b>W5:</b> rate/precision. <b>W6:</b> second task suite.</td>
+<td>If joint modality/rate/bit search is unstable → modality ON/OFF only. If simulated tactile is too artificial → frame project as <b>visual/history bandwidth allocation</b> first, then add touch later.</td>
+<td><b>4/5 difficulty; 4/5 ceiling.</b></td>
+<td><b>4.5/5.</b> Especially relevant to sensor-rich humanoids where raw sensory bandwidth will become expensive.</td>
+<td>PhD; Master can own simulator/sensor instrumentation.</td>
+<td>Extends “efficiency” beyond model FLOPs into <b>physical sensing cost</b>, providing a bridge between Yang's embodied-efficiency and dexterous/tactile directions.</td></tr>
+
+<tr>
+<td>P4 — Embodiment–Policy–Compute Co-Search</td>
+<td class="cq"><b>Do not do plain morphology–policy co-design. That problem is now directly occupied.</b> Instead ask: <i>what body, control representation and compute/sensing budget should be designed together for a task family?</i> Search <b>hand morphology × action representation × tactile layout × controller/compute budget</b>.</td>
+<td class="lit"><b>House of Dextra, ICLR'26</b> is a direct and very strong competitor: it already jointly searches task-specific hand morphology and control policy across finger/joint/palm structures and can fabricate/deploy discovered hands rapidly. <b>Function-based Parametric Co-Design'26</b> further expands parametric hand geometry; <b>CageCoOpt, IROS'25</b> jointly optimizes morphology and policy for caging robustness. On the representation side, <b>XL-VLA, CVPR'26</b> and <b>UniDex, CVPR'26</b> already tackle cross-hand action representations.</td>
+<td class="gap"><b>Plain morphology-policy search is no longer novel enough.</b> The open angle is co-designing the embodiment together with <b>foundation-model action interface, tactile layout and computational/control bandwidth</b>, ideally for a <i>family of tasks</i> rather than one task-specific hand.</td>
+<td>Restrict morphology initially to an existing parameterized hand: finger count / actuated DoFs / coupling / fingertip geometry. Jointly search latent action dimension, active tactile regions and policy compute. Objective: task-suite performance − hardware cost − compute cost. No physical fabrication in first paper iteration.</td>
+<td>House of Dextra; fixed LEAP/Allegro morphology; morphology-only search; policy-only search; fixed latent action representation; XL-VLA/UniDex-style latent/raw action where feasible.</td>
+<td>House-of-Dextra/open dexterous simulation tasks; ManiSkill/Isaac Gym dexterous tasks. Optional final physical validation on one modular/LEAP-style hand.</td>
+<td>2–4×4090. Main cost is simulation engineering, not GPU.</td>
+<td><b>W1:</b> fixed-hand baseline. <b>W2:</b> sweep DoF/coupling/latent-dim and identify interaction. <b>W3:</b> parameterized search. <b>W4:</b> joint vs separated optimization. <b>W5:</b> multi-task setting. <b>W6:</b> tactile/compute dimension. <b>W7–8:</b> generalization/write.</td>
+<td>If morphology simulation becomes a bottleneck → freeze morphology family and search <b>DoF activation × coupling × action representation</b>. If gains over House of Dextra are unclear → pivot to <b>resource-constrained generalist hand design</b>: one morphology under a budget across many tasks.</td>
+<td><b>5/5 difficulty; 5/5 ceiling</b>, but much higher implementation risk than P0.</td>
+<td><b>5/5</b> if successful because follow-up naturally extends to humanoid limbs, grippers and whole-body design.</td>
+<td>Strong dexterous PhD; not the best first project for a Master.</td>
+<td>Gives the group a <b>body-design counterpart</b> to Embodied-DEOS, while avoiding direct duplication of House of Dextra by injecting efficiency, representation and sensing co-design.</td></tr>
+
+<tr>
+<td>P5 — Coarse2FineTouch<br><span class="k" style="font-weight:400">Adaptive Multimodal Tactile Intelligence</span></td>
+<td class="cq"><b>Touch should not always be processed at maximum fidelity.</b> Use cheap coarse contact perception by default and selectively activate fine-grained spatial/temporal tactile processing when contact uncertainty, slip or precision manipulation requires it. Search/learn <b>coarse vs fine tactile representation × modality × rate × resolution</b>.</td>
+<td class="lit"><b>TouchWorld'26</b> already builds a predictive–reactive tactile hierarchy with vision-language planning, tactile world prediction and high-frequency residual correction. <b>Dexterous Tactile World Model'26</b> shows that both force magnitude and spatial location improve future manipulation prediction. <b>DexTouch-WM'26</b> learns action-conditioned visual+tactile dynamics from scalable human touch. <b>ViTacFormer'25</b> learns cross-modal vision–tactile representations for long-horizon dexterous manipulation. <b>TouchWGNN'26</b> explicitly models distributed tactile signals as spatiotemporal graphs. On sensing resolution, <b>ICRA'25 Non-Planar Tactile Super-Resolution</b> reconstructs high-resolution GelSight-like tactile patterns from low-resolution Xela readings; <b>SuperTac'25</b> also tackles tactile super-resolution. <b>ET-Hand'25</b> already optimizes sensor placement, so placement alone is not the novelty.</td>
+<td class="gap">There is already hierarchy, fusion and super-resolution separately. Missing: <b>a control policy that treats tactile fidelity itself as an adaptive resource.</b> Decide <i>when</i> binary contact/coarse force is enough and <i>when</i> to invoke high-resolution spatial tactile, higher temporal frequency or expensive visuo-tactile fusion.</td>
+<td>Three-level tactile stack: <b>L0 contact/slip flags → L1 sparse/low-res taxels → L2 high-res tactile image/full graph</b>. Router conditioned on visual uncertainty, contact transition, tactile entropy and task phase. Train jointly or distill from a full-fidelity teacher. Optional second axis: visual+tactile cross-modal gating.</td>
+<td>Full high-resolution tactile policy; low-res tactile only; binary contact only; vision-only; fixed visuo-tactile fusion; ViTacFormer; TouchWGNN-style fusion; tactile SR then policy; random coarse/fine routing; oracle router from error/failure.</td>
+<td><b>Fast representation experiment:</b> ICRA'25 Xela↔GelSight tactile-SR dataset. <b>Multimodal:</b> ViTaDex vision–tactile dataset. <b>Manipulation:</b> simulated LEAP/Isaac contact stream initially; real Xela/GelSight/LEAP if available.</td>
+<td><b>1–2×4090</b> for first stage. Hardware version: LEAP/other hand + Xela/GelSight-type sensors. Avoid making custom tactile hardware before ML signal is established.</td>
+<td><b>W1:</b> reproduce coarse/full tactile baselines. <b>W2:</b> quantify which manipulation states actually need fine tactile. <b>W3:</b> router MVP. <b>W4:</b> success vs tactile bandwidth/resolution. <b>W5:</b> multimodal vision+tactile router. <b>W6:</b> second task. <b>W7–8:</b> optional real-hand demo + writing.</td>
+<td>If dynamic router does not improve success/compute tradeoff → frame as <b>coarse-to-fine tactile distillation</b>. If real high-res tactile is unavailable → use low-res→high-res paired tactile data and prove representation efficiency first. If routing is trivial → switch to <b>uncertainty-triggered tactile super-resolution</b> where high-res is reconstructed only on difficult contacts.</td>
+<td><b>4/5 difficulty; 5/5 ceiling</b> if a real-hand demo is strong. Visually compelling and easy to explain.</td>
+<td><b>5/5.</b> Natural follow-ups: tactile event cameras, multimodal sensor scheduling, tactile chips, humanoid skin, world-model touch budgets.</td>
+<td>Strong tactile/dexterous PhD + Master on tactile data/representation.</td>
+<td>This is a very direct way to <b>strengthen Prof. Yang's dexterous-hand topic with a modern multimodal/tactile angle</b>, while simultaneously connecting it back to the group's efficiency theme.</td></tr>
+
+<tr>
+<td>P6 — Dexterity Bottleneck<br><span class="k" style="font-weight:400">Control-Bandwidth Scaling</span></td>
+<td class="cq">Rather than inventing another universal latent action space, ask a more scientific question: <b>what is the minimum control bandwidth required for a given level of dexterity?</b> Estimate task-dependent intrinsic action dimensionality <i>D</i>*(task) and how it scales with contact/task complexity.</td>
+<td class="lit"><b>UniDex, CVPR'26</b> provides 50K trajectories across 8 hands with 6–24 DoFs and proposes FAAS; <b>XL-VLA, CVPR'26</b> learns a shared cross-hand latent action space and scales pooled cross-hand demonstrations; <b>High-DoF VLA Post-Training'26</b> learns a temporal hand-action codec and uses it throughout SFT, DAgger and residual RL. Cross-embodiment world-model work is also beginning to search embodiment-invariant representations.</td>
+<td class="gap">“Learn a compact latent action representation” alone is crowded. Missing is a <b>systematic measurement/scaling law</b> relating task/contact complexity to the minimum action information rate needed for success. This can produce a reusable scientific result rather than another codec.</td>
+<td>Train/compress action representations at latent dims <i>D</i> ∈ {2,4,8,16,32} or varying temporal bitrate. Evaluate raw joint / PCA / AE / VQ / learned temporal codec. Estimate minimum <i>D</i> achieving ≥95% of full-control success. Correlate <i>D</i>* with contact transitions, number of active fingers, object DoF and task horizon. Extend to dynamic task-conditioned latent dimension if static scaling exists.</td>
+<td>Raw joints; PCA; autoencoder; VQ/VQ-VAE; fixed latent dimension; XL-VLA-style shared latent; UniDex FAAS; temporal hand-action codec; random joint subset.</td>
+<td><b>UniDex dataset</b> is particularly attractive because it already spans 8 hand embodiments and 6–24 DoFs. Supplement with simulated dexterous tasks to obtain clean contact/task-complexity annotations.</td>
+<td>1–2×4090. This is one of the cheapest dexterous directions because it can start entirely offline.</td>
+<td><b>W1:</b> representation baselines. <b>W2:</b> task × latent-dimension curves. <b>W3:</b> correlate with contact/task complexity. <b>W4:</b> first scaling law / kill decision. <b>W5:</b> second embodiment/data source. <b>W6:</b> dynamic latent extension or writing.</td>
+<td>If no clean universal scaling law appears → pivot to <b>task-conditioned adaptive latent dimension</b>. If latent dimension alone is too crude → measure <b>action bitrate = dimension × temporal rate × precision</b> instead. If representation dominates results → turn into a principled action-compression paper.</td>
+<td><b>3.5/5 difficulty; 4.5/5 ceiling.</b> Very low cost relative to potential scientific impact.</td>
+<td><b>4.5/5.</b> A good scaling law is likely to be cited by later hand/VLA papers even if they do not adopt the exact method.</td>
+<td>PhD or strong Master.</td>
+<td>Gives Prof. Yang's dexterous direction a <b>fundamental/scientific thread</b>, complementing the larger engineering-heavy tactile and morphology projects.</td></tr>
+</table></div>
+
+<h3>Recommended Priority</h3>
+<p>The projects should not be launched with equal priority.</p>
+<div class="tiers">
+<div class="tier tA">
+<h4><span class="tname">Tier A</span> — Immediate group-building priorities</h4>
+<ol>
+<li><b>Embodied-DEOS</b> — central flagship and shared efficiency methodology.</li>
+<li><b>Coarse2FineTouch</b> — strongest bridge between Prof. Yang's dexterous-hand topic and the efficiency agenda.</li>
+<li><b>WAM-DEOS</b> — high-upside foundation-model direction that can reuse the same search methodology.</li>
+</ol>
+</div>
+<div class="tier tB">
+<h4><span class="tname">Tier B</span> — Fast parallel projects</h4>
+<ol start="4">
+<li><b>Compute-as-Action</b> — low-cost and likely to produce a result quickly.</li>
+<li><b>Dexterity Bottleneck</b> — cheap, scientific and suitable for a student to validate within weeks.</li>
+</ol>
+</div>
+<div class="tier tC">
+<h4><span class="tname">Tier C</span> — Longer-term expansion</h4>
+<ol start="6">
+<li><b>Embodied Information Budget</b> — becomes more valuable once tactile/sensor infrastructure is available.</li>
+<li><b>Embodiment–Policy–Compute Co-Search</b> — high ceiling, but should only start after carefully differentiating from House of Dextra and building stable dexterous simulation infrastructure.</li>
+</ol>
+</div>
+</div>
+
+<h3>Key Positioning</h3>
+<p>The projects are deliberately connected rather than independent:</p>
+<ul class="pos">
+<li><b>Embodied-DEOS</b> asks <i>what computation should an embodied model use?</i></li>
+<li><b>WAM-DEOS</b> asks <i>what future should the robot model?</i></li>
+<li><b>Compute-as-Action</b> asks <i>when should the robot spend computation?</i></li>
+<li><b>Information Budget</b> asks <i>what sensory information is worth acquiring?</i></li>
+<li><b>Coarse2FineTouch</b> asks <i>when does manipulation require fine physical perception?</i></li>
+<li><b>Dexterity Bottleneck</b> asks <i>how much control bandwidth is fundamentally necessary?</i></li>
+<li><b>Embodiment–Policy–Compute Co-Search</b> asks <i>what body and brain should be built together?</i></li>
+</ul>
+<p class="together">Together, they provide a systematic path from <b>efficient computation → efficient sensing → dexterous interaction → embodied co-design</b>, while sharing benchmarks, models, hardware profiling tools and student infrastructure.</p>
+
+<h2><span class="num">03</span>From Research Ideas to a Lab Research Engine</h2>
+<p class="note">Execution, Team Structure, Shared Infrastructure and Expected Contribution</p>
+
+<h3>3.1 Shared Infrastructure</h3>
+<pre>
+Embodied Model Zoo
+├── VLA
+│   ├── OpenVLA/OFT
+│   ├── π-family
+│   └── lightweight VLA
+│
+├── WAM
+│   ├── Light-WAM style
+│   └── WAM baselines
+│
+Benchmark
+├── LIBERO
+├── ManiSkill
+├── RoboTwin
+└── Dexterous tasks
+│
+Efficiency Stack
+├── quantization
+├── latency profiler
+├── memory profiler
+├── energy profiler
+├── Timeloop / Accelergy / SCALE-Sim
+└── Jetson deployment
+│
+Dexterous Stack
+├── LEAP / simulated hand
+├── tactile datasets
+├── visual-tactile encoder
+└── contact evaluation
+</pre>
+<blockquote>My first contribution would be to help establish this shared infrastructure, so that subsequent students can validate a new idea within days rather than spending weeks rebuilding environments.</blockquote>
+
+<h3>3.2 Personnel Map</h3>
+<pre>
+                         Prof. Yang
+                            │
+                   Research Direction
+                            │
+                         Terry
+                  shared methodology
+                  search / efficiency
+                  project integration
+                            │
+       ┌────────────────────┼─────────────────────┐
+       │                    │                     │
+     PhD 1                PhD 2                 PhD 3
+   WAM-DEOS          Embodied Systems      Dexterous/Tactile
+       │                    │                     │
+    Master               Master              Master × 2
+</pre>
+<blockquote>I can help coordinate the shared efficiency/search methodology and work closely with students on implementation, experiments and paper development, while keeping the individual projects aligned with Prof. Yang's broader research direction.</blockquote>
+
+<h3>3.3 4–8 Week Validation Engine</h3>
+<pre>
+Week 1     Baseline + infrastructure
+Week 2     Killer observation
+Week 3     Minimal viable method
+Week 4     GO / PIVOT / KILL
+Week 5–6   Main experiments + baselines
+Week 7     Generality / hardware / real robot
+Week 8     Freeze
+</pre>
+<p>项目不允许因为一个 idea failed 浪费两三个月。每个 project 从 Day 1 带：</p>
+<pre>
+Primary hypothesis
+Backup A
+Backup B
+Reusable infrastructure
+</pre>
+
+<h3>3.4 Expected Contribution to the Group</h3>
+<p><b>Research contribution</b> — 把 embodied efficiency 和 dexterous manipulation 两个方向进一步系统化，形成几个可以持续发展的 research threads。</p>
+<p><b>Infrastructure contribution</b> — 建一套 reusable VLA/WAM/edge/tactile evaluation stack，减少后续学生重复搭环境的成本。</p>
+<p><b>Mentoring / execution contribution</b> — 帮 PhD/Master 快速完成 idea validation、baseline、实验和论文迭代，让强 idea 可以继续放大，弱 idea 在 2–4 周内及时 pivot。</p>
+
+
+</div></body></html>
