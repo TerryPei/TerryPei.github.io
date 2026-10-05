@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Embodied Brain — A Unified Research Agenda</title>
+<title>Embodied Brain — The Right Brain for the Right Body</title>
 <style>
 :root{--bg:#0f1117;--panel:#171a23;--panel2:#1d212c;--ink:#e8eaf0;--muted:#9aa3b2;
 --line:#2a2f3b;--accent:#76b900;--blue:#3b82f6;--purple:#a78bfa;--mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace}
@@ -40,6 +40,9 @@ hr{border:0;border-top:1px solid var(--line);margin:36px 0}
 .c1 p.comp{text-align:center;max-width:820px;margin:12px auto}
 @media(max-width:640px){.hero h1{font-size:28px}}
 /* v4: core thesis + landscape */
+.eyebrow{font:700 12px/1 var(--mono);letter-spacing:.3em;color:var(--accent);margin-bottom:16px}
+.heroline{margin:18px auto 0;max-width:740px;font-size:17px;font-weight:600;line-height:1.6}
+.lead{text-align:center;max-width:860px;margin:16px auto 6px;font-size:16px}
 .thesis{max-width:880px;margin:36px auto 6px;text-align:center}
 .tlabel{font:700 11px/1 var(--mono);letter-spacing:.22em;color:var(--accent);margin-bottom:14px}
 .tq{font-size:21px;line-height:1.55;font-weight:700;margin:0 auto 14px;max-width:780px}
@@ -77,40 +80,13 @@ ul.pos li{margin:7px 0}
 </style></head><body><div class="wrap">
 
 <div class="hero">
+<div class="eyebrow">THE RIGHT BRAIN FOR THE RIGHT BODY</div>
 <h1>Embodied Brain</h1>
-<div class="sub">A Unified Research Agenda for Efficient and Dexterous Robot Intelligence</div>
+<div class="sub">Brain × Compute × Body Co-Design for Efficient Embodied Intelligence</div>
+<p class="heroline">There is no universally efficient embodied model.<br>The right brain depends on its body, task, and hardware.</p>
 </div>
 
-<h2><span class="num">01</span>The Embodied Brain Research Map</h2>
 <div class="c1">
-
-<pre>
-                         EMBODIED BRAIN
-          Efficient &amp; Dexterous Robot Intelligence
-                               │
-              ┌────────────────┴────────────────┐
-              │                                 │
-       EFFICIENT BRAIN                    DEXTEROUS BRAIN
-              │                                 │
-    ┌─────────┼──────────┐            ┌─────────┼──────────┐
-    │         │          │            │         │          │
-Embodied-   WAM-     Compute-as-   Morphology  Coarse-   Dexterity
- DEOS       DEOS       Action       Search     to-Fine   Bottleneck
-    │         │          │                        Tactile
-    │         │          │
-    └─────────┴─────┬────┴───────────────────────┘
-                    │
-           Shared Embodied Infrastructure
-                    │
-     VLA / WAM / Simulation / Tactile / Edge Hardware
-</pre>
-
-<div class="thesis">
-<div class="tlabel">CORE THESIS</div>
-<p class="tq">There is no universally efficient embodied model.<br>The right brain depends on its body, task, and hardware.</p>
-<p>This observation motivates <b>Embodied-DEOS</b>, where embodied intelligence is treated as a joint design problem rather than a fixed model followed by post-hoc compression.</p>
-</div>
-
 <pre>
                          Embodied-DEOS
                               │
@@ -129,6 +105,14 @@ Embodied-   WAM-     Compute-as-   Morphology  Coarse-   Dexterity
                                │
                     Coarse-to-Fine Touch
 </pre>
+</div>
+
+<h2><span class="num">01</span>The Embodied Brain Research Map</h2>
+<div class="c1">
+
+<p class="lead">Today's embodied foundation models largely follow a one-brain-fits-all paradigm. We ask a different question: what is the right brain for a particular body, task, and hardware budget?</p>
+
+<p class="comp">This observation motivates <b>Embodied-DEOS</b>, where embodied intelligence is treated as a joint design problem rather than a fixed model followed by post-hoc compression.</p>
 
 <div class="branches">
 <div class="br br-brain">
