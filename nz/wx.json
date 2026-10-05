@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-05T12:55:18.535616+13:00",
- "generated_nz": "10/05 12:55",
+ "generated_at": "2026-10-05T18:23:48.499798+13:00",
+ "generated_nz": "10/05 18:23",
  "n_alerts_total": 0,
  "n_roads_total": 191,
  "alerts": [
@@ -67,11 +67,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Vehicle Restrictions",
-   "level": "orange",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 5 Oct 2026 8:00am",
+   "span": "9/18 17:30–10/31 17:30 · 更新 5 Oct 2026 5:30pm",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -366,11 +366,11 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 1.7,
-    "hi": 13.5,
+    "lo": 1.9,
+    "hi": 13.7,
     "pop": 0,
     "mm": 0.0,
-    "wind": 13.5,
+    "wind": 13.0,
     "code": 3
    },
    "sum": "阴 2～14°C · 降水 0%"
@@ -400,14 +400,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 6.5,
-    "hi": 14.8,
-    "pop": 2,
+    "lo": 5.4,
+    "hi": 14.5,
+    "pop": 0,
     "mm": 0.0,
-    "wind": 14.3,
+    "wind": 15.8,
     "code": 3
    },
-   "sum": "阴 6～15°C · 降水 2%"
+   "sum": "阴 5～14°C · 降水 0%"
   },
   {
    "date": "2026-10-07",
@@ -425,14 +425,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 5.6,
-    "hi": 17.9,
+    "lo": 5.0,
+    "hi": 18.4,
     "pop": 29,
     "mm": 0.0,
-    "wind": 12.1,
+    "wind": 20.0,
     "code": 3
    },
-   "sum": "阴 6～18°C · 降水 29%"
+   "sum": "阴 5～18°C · 降水 29%"
   },
   {
    "date": "2026-10-08",
@@ -445,16 +445,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "阴",
-    "icon": "cloud",
-    "lo": 12.4,
-    "hi": 19.4,
-    "pop": 2,
-    "mm": 0.0,
-    "wind": 14.0,
-    "code": 3
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 12.7,
+    "hi": 20.8,
+    "pop": 4,
+    "mm": 0.1,
+    "wind": 14.6,
+    "code": 51
    },
-   "sum": "阴 12～19°C · 降水 2%"
+   "sum": "小雨 13～21°C · 降水 4%"
   }
  ],
  "src": {
