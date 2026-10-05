@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-06T03:24:43.814294+13:00",
- "generated_nz": "10/06 03:24",
+ "generated_at": "2026-10-06T10:57:15.502225+13:00",
+ "generated_nz": "10/06 10:57",
  "n_alerts_total": 0,
- "n_roads_total": 190,
+ "n_roads_total": 177,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -67,11 +67,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 5 Oct 2026 5:30pm",
+   "span": "9/18 17:30–10/31 17:30 · 更新 6 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -106,93 +106,9 @@
    "head": "NZTA 路况 · Road Closed",
    "level": "red",
    "type": "nzta",
-   "area": "SH 2 Westbound Link to SH1 Northbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:15pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
    "area": "SH 1 Full Closure Papakura to Drury, Southbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:14pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Northbound Link to SH2 Eastbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:10pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Razorback Road On-ramp Northbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:07pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Papakura On-ramp (Diamond) Southbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:06pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Papakura On-ramp (Loop) Southbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:06pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Full Closure Drury to Papakura, Northbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:05pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Drury/SH22 On-ramp Northbound",
-   "span": "10/5 21:00–10/6 05:00 · 更新 5 Oct 2026 9:05pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "span": "10/6 21:00–10/7 05:00 · 更新 6 Oct 2026 10:53am",
+   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
    "days": [
     "2026-10-06"
    ],
@@ -371,14 +287,7 @@
    "level": 3,
    "status": "改计划",
    "notes": [
-    "NZTA 路况（Road Closed）SH 2 Westbound Link to SH1 Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Full Closure Papakura to Drury, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Northbound Link to SH2 Eastbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Razorback Road On-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Diamond) Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Loop) Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Full Closure Drury to Papakura, Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Drury/SH22 On-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Full Closure Papakura to Drury, Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
     "NZTA 路况（Caution）SH 21 Rukuhia, near the Raynes Road intersection：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
     "NZTA 路况（Caution）SH 3 Otorohanga to Te Mapara：Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
@@ -388,14 +297,14 @@
    "fc": {
     "kind": "阴",
     "icon": "cloud",
-    "lo": 5.0,
-    "hi": 14.8,
+    "lo": 4.8,
+    "hi": 14.5,
     "pop": 0,
     "mm": 0.0,
-    "wind": 16.7,
+    "wind": 16.2,
     "code": 3
    },
-   "sum": "阴 5～15°C · 降水 0%"
+   "sum": "阴 5～14°C · 降水 0%"
   },
   {
    "date": "2026-10-07",
@@ -413,14 +322,14 @@
    "fc": {
     "kind": "晴间多云",
     "icon": "part",
-    "lo": 4.4,
-    "hi": 17.7,
+    "lo": 4.8,
+    "hi": 18.0,
     "pop": 4,
     "mm": 0.0,
-    "wind": 21.7,
+    "wind": 18.1,
     "code": 1
    },
-   "sum": "晴间多云 4～18°C · 降水 4%"
+   "sum": "晴间多云 5～18°C · 降水 4%"
   },
   {
    "date": "2026-10-08",
@@ -433,16 +342,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "晴间多云",
-    "icon": "part",
-    "lo": 12.6,
-    "hi": 21.1,
-    "pop": 2,
-    "mm": 0.0,
-    "wind": 14.4,
-    "code": 1
+    "kind": "小雨",
+    "icon": "rain",
+    "lo": 12.8,
+    "hi": 21.2,
+    "pop": 4,
+    "mm": 0.7,
+    "wind": 14.9,
+    "code": 51
    },
-   "sum": "晴间多云 13～21°C · 降水 2%"
+   "sum": "小雨 13～21°C · 降水 4%"
   }
  ],
  "src": {
