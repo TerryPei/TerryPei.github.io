@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-07T04:51:18.278946+13:00",
- "generated_nz": "10/07 04:51",
+ "generated_at": "2026-10-07T11:35:59.853973+13:00",
+ "generated_nz": "10/07 11:35",
  "n_alerts_total": 0,
- "n_roads_total": 171,
+ "n_roads_total": 174,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -67,11 +67,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 6 Oct 2026 5:30pm",
+   "span": "9/18 17:30–10/31 17:30 · 更新 7 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -288,14 +288,14 @@
    "fc": {
     "kind": "晴间多云",
     "icon": "part",
-    "lo": 5.7,
-    "hi": 17.7,
+    "lo": 4.9,
+    "hi": 17.2,
     "pop": 0,
     "mm": 0.0,
-    "wind": 23.8,
+    "wind": 22.9,
     "code": 2
    },
-   "sum": "晴间多云 6～18°C · 降水 0%"
+   "sum": "晴间多云 5～17°C · 降水 0%"
   },
   {
    "date": "2026-10-08",
@@ -308,16 +308,16 @@
     "照常。"
    ],
    "fc": {
-    "kind": "小雨",
-    "icon": "rain",
+    "kind": "阴",
+    "icon": "cloud",
     "lo": 12.5,
-    "hi": 19.6,
+    "hi": 19.7,
     "pop": 2,
-    "mm": 0.6,
-    "wind": 12.9,
-    "code": 53
+    "mm": 0.0,
+    "wind": 14.4,
+    "code": 3
    },
-   "sum": "小雨 12～20°C · 降水 2%"
+   "sum": "阴 12～20°C · 降水 2%"
   }
  ],
  "src": {
