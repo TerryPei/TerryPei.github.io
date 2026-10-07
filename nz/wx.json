@@ -1,22 +1,9 @@
 {
- "generated_at": "2026-10-08T02:10:45.219384+13:00",
- "generated_nz": "10/08 02:10",
+ "generated_at": "2026-10-08T09:32:53.885385+13:00",
+ "generated_nz": "10/08 09:32",
  "n_alerts_total": 0,
- "n_roads_total": 194,
+ "n_roads_total": 190,
  "alerts": [
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 80 Pukaki to Mt Cook (Aoraki Mt Cook Highway)",
-   "span": "10/8 06:00–10/8 06:00 · 更新 3 Oct 2026 3:59pm",
-   "desc": "Due to an uneven road surface, there is stop/go traffic management under traffic signals with a temporary speed restriction of 30 km/hr currently in place. Please take extra care when driving through this area.",
-   "days": [
-    "2026-09-29",
-    "2026-09-30"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
@@ -46,18 +33,6 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 1 Otokia to Henley",
-   "span": "9/21 07:00–12/8 18:00 · 更新 2 Oct 2026 9:38am",
-   "desc": "Due to road works, the road will be under Stop/Go temporary traffic management, including a 30km/h temporary speed restriction, lane shifts and contraflows, between 7am to 6pm. Outside these hours and on weekends, all traffic will remain on SH1 under temporary speed restrictions. Please take extra c",
-   "days": [
-    "2026-10-01"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
    "area": "SH 1 McNab to Gore",
    "span": "9/28 07:00–10/9 18:00 · 更新 1 Oct 2026 9:38am",
    "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
@@ -67,11 +42,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–10/31 17:30 · 更新 7 Oct 2026 5:30pm",
+   "span": "9/18 17:30–10/31 17:30 · 更新 8 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -79,17 +54,15 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 1 Cambridge",
-   "span": "10/6 15:08–10/8 05:00 · 更新 7 Oct 2026 8:01pm",
-   "desc": "Due to the continuation of the road resurfacing on SH1, Waikato Expressway, (Cambridge), the southbound on-ramp at the Victoria Road Interchange (Hautapu) will be closed overnight Wednesday 7 October between 8pm and 5am",
+   "span": "10/6 15:13–10/9 05:00 · 更新 6 Oct 2026 3:16pm",
+   "desc": "Due to the continuation of the road resurfacing on SH1, Waikato Expressway, (Cambridge), the northbound off-ramp at the Victoria Road Interchange (Hautapu) will be closed overnight Thursday 8 October between 8pm and 5am",
    "days": [
     "2026-10-06",
     "2026-10-06",
-    "2026-10-06",
-    "2026-10-07",
     "2026-10-07",
     "2026-10-07"
    ],
@@ -136,204 +109,11 @@
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
-   "area": "SH 3 Rukuhia, near the Raynes Road intersection",
-   "span": "10/4 19:00–10/8 05:00 · 更新 4 Oct 2026 7:02pm",
-   "desc": "Due to maintenance works, there is stop/go traffic management with a 30km/h temporary speed restriction in place. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06",
-    "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
    "area": "SH 5 Waimangu, near the SH38 intersection",
    "span": "9/21 09:30–10/9 15:30 · 更新 2 Oct 2026 8:51am",
    "desc": "Due to uneven dig-out works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
    "days": [
     "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 2 Westbound Link to SH1 Northbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 10:33pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 16 Eastbound Link to SH1 Southbound",
-   "span": "10/7 22:00–10/8 05:00 · 更新 7 Oct 2026 10:30pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 St Marks Rd On-ramp, Southbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 10:28pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Full Closure Fanshawe St to Greenlane (incl links to SH16), Southbound",
-   "span": "10/7 22:00–10/8 05:00 · 更新 7 Oct 2026 10:19pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 16 Full Closure Stanley St to Wellesley St (incl links to SH1), Westbound",
-   "span": "10/7 22:00–10/8 05:00 · 更新 7 Oct 2026 10:08pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Symonds Street On-ramp, Southbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:20pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Hobson Street On-ramp, Southbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:15pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 16 Grafton Rd On-ramp, Southbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:11pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Highbrook Dr Off-ramp, Southbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:08pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Northbound Link to SH2 Eastbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:08pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Khyber Pass Rd On-ramp, Southbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:07pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 22 Full Closure Drury/SH22 northbound on-ramp to Drury/SH22 southbound off-ramp",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:07pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 22 Full Closure Drury/SH22 southbound on-ramp to Drury/SH22 northbound off-ramp",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:06pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Razorback Rd On-ramp Northbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:05pm",
-   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 16 Hobson Street On-ramp, Westbound",
-   "span": "10/7 21:00–10/8 05:00 · 更新 7 Oct 2026 9:01pm",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   }
@@ -454,36 +234,22 @@
    "d": "10/8",
    "wd": "周四",
    "place": "奥克兰",
-   "level": 3,
-   "status": "改计划",
+   "level": 0,
+   "status": "照常",
    "notes": [
-    "NZTA 路况（Road Closed）SH 2 Westbound Link to SH1 Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 16 Eastbound Link to SH1 Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 St Marks Rd On-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Full Closure Fanshawe St to Greenlane (incl links to SH16), Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 16 Full Closure Stanley St to Wellesley St (incl links to SH1), Westbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Symonds Street On-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Hobson Street On-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 16 Grafton Rd On-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Highbrook Dr Off-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Northbound Link to SH2 Eastbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Khyber Pass Rd On-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 22 Full Closure Drury/SH22 northbound on-ramp to Drury/SH22 southbound off-ramp：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 22 Full Closure Drury/SH22 southbound on-ramp to Drury/SH22 northbound off-ramp：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Razorback Rd On-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 16 Hobson Street On-ramp, Westbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour."
+    "照常。"
    ],
    "fc": {
-    "kind": "晴间多云",
-    "icon": "part",
+    "kind": "阴",
+    "icon": "cloud",
     "lo": 12.3,
-    "hi": 20.5,
+    "hi": 20.1,
     "pop": 0,
     "mm": 0.0,
-    "wind": 14.4,
-    "code": 2
+    "wind": 14.3,
+    "code": 3
    },
-   "sum": "晴间多云 12～20°C · 降水 0%"
+   "sum": "阴 12～20°C · 降水 0%"
   }
  ],
  "src": {
