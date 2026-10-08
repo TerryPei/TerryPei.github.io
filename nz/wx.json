@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-08T13:55:12.680785+13:00",
- "generated_nz": "10/08 13:55",
+ "generated_at": "2026-10-08T23:23:48.400790+13:00",
+ "generated_nz": "10/08 23:23",
  "n_alerts_total": 0,
- "n_roads_total": 203,
+ "n_roads_total": 204,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -42,11 +42,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Vehicle Restrictions",
-   "level": "orange",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 8 Oct 2026 9:45am",
+   "span": "9/18 17:30–11/30 17:30 · 更新 8 Oct 2026 5:30pm",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -58,8 +58,8 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 1 Cambridge",
-   "span": "10/6 15:13–10/9 05:00 · 更新 6 Oct 2026 3:16pm",
-   "desc": "Due to the continuation of the road resurfacing on SH1, Waikato Expressway, (Cambridge), the northbound off-ramp at the Victoria Road Interchange (Hautapu) will be closed overnight Thursday 8 October between 8pm and 5am",
+   "span": "10/6 15:13–10/12 05:00 · 更新 8 Oct 2026 2:19pm",
+   "desc": "Due to the continuation of the road resurfacing on SH1, Waikato Expressway, (Cambridge), the northbound off-ramp at the Victoria Road Interchange (Hautapu) will be closed overnight Sunday 11 October between 8pm and 5am",
    "days": [
     "2026-10-06",
     "2026-10-06",
@@ -122,80 +122,8 @@
    "level": "red",
    "type": "nzta",
    "area": "SH 20 Neilson St Off-ramp Northbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:40am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 20 Rimu Rd On-ramp Northbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:40am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Razorback Rd On-ramp Northbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:40am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Papakura On-ramp (Diamond) Southbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:39am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Onewa Rd On-ramp, Southbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:39am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Papakura On-ramp (Loop) Southbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:39am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
-   "days": [
-    "2026-10-08"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
-   "type": "nzta",
-   "area": "SH 1 Princes St Off-ramp Northbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:38am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:13pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
    "days": [
     "2026-10-08"
    ],
@@ -206,8 +134,8 @@
    "level": "red",
    "type": "nzta",
    "area": "SH 1 Fanshawe St Off-ramp Southbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:38am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:32pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
    "days": [
     "2026-10-08"
    ],
@@ -218,8 +146,8 @@
    "level": "red",
    "type": "nzta",
    "area": "SH 1 Shelly Beach Rd Off-ramp Southbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:37am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:22pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
    "days": [
     "2026-10-08"
    ],
@@ -230,8 +158,8 @@
    "level": "red",
    "type": "nzta",
    "area": "SH 2 Westbound Link to SH1 Northbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:36am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:15pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
    "days": [
     "2026-10-08"
    ],
@@ -242,8 +170,8 @@
    "level": "red",
    "type": "nzta",
    "area": "SH 1 Northbound Link to SH2 Eastbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:31am",
-   "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:14pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
    "days": [
     "2026-10-08"
    ],
@@ -254,7 +182,79 @@
    "level": "red",
    "type": "nzta",
    "area": "SH 1 Full Closure Papakura to Drury, Southbound",
-   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 11:30am",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:08pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "days": [
+    "2026-10-08"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Onewa Rd On-ramp, Southbound",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:07pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "days": [
+    "2026-10-08"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Papakura On-ramp (Diamond) Southbound",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:07pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "days": [
+    "2026-10-08"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Princes St Off-ramp Northbound",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:06pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "days": [
+    "2026-10-08"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 20 Rimu Rd On-ramp Northbound",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:05pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "days": [
+    "2026-10-08"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Razorback Rd On-ramp Northbound",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:01pm",
+   "desc": "This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey.",
+   "days": [
+    "2026-10-08"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Road Closed",
+   "level": "red",
+   "type": "nzta",
+   "area": "SH 1 Papakura On-ramp (Loop) Southbound",
+   "span": "10/8 21:00–10/9 05:00 · 更新 8 Oct 2026 9:01pm",
    "desc": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
    "days": [
     "2026-10-08"
@@ -381,30 +381,30 @@
    "level": 3,
    "status": "改计划",
    "notes": [
-    "NZTA 路况（Road Closed）SH 20 Neilson St Off-ramp Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 20 Rimu Rd On-ramp Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Razorback Rd On-ramp Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Diamond) Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Onewa Rd On-ramp, Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Loop) Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Princes St Off-ramp Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Fanshawe St Off-ramp Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Shelly Beach Rd Off-ramp Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 2 Westbound Link to SH1 Northbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Northbound Link to SH2 Eastbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour.",
-    "NZTA 路况（Road Closed）SH 1 Full Closure Papakura to Drury, Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour."
+    "NZTA 路况（Road Closed）SH 20 Neilson St Off-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Fanshawe St Off-ramp Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Shelly Beach Rd Off-ramp Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 2 Westbound Link to SH1 Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Northbound Link to SH2 Eastbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Full Closure Papakura to Drury, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Onewa Rd On-ramp, Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Diamond) Southbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Princes St Off-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 20 Rimu Rd On-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Razorback Rd On-ramp Northbound：This closure is now in place. Delays may be experienced. Follow detour and allow extra time for your journey. 绕行：Follow posted detour.",
+    "NZTA 路况（Road Closed）SH 1 Papakura On-ramp (Loop) Southbound：This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour. 绕行：Follow posted detour."
    ],
    "fc": {
     "kind": "阴",
     "icon": "cloud",
     "lo": 11.9,
-    "hi": 19.9,
-    "pop": 0,
+    "hi": 21.2,
+    "pop": 2,
     "mm": 0.0,
-    "wind": 14.1,
+    "wind": 14.3,
     "code": 3
    },
-   "sum": "阴 12～20°C · 降水 0%"
+   "sum": "阴 12～21°C · 降水 2%"
   }
  ],
  "src": {
