@@ -1,21 +1,9 @@
 {
- "generated_at": "2026-10-09T14:09:27.511332+13:00",
- "generated_nz": "10/09 14:09",
+ "generated_at": "2026-10-09T23:22:41.330202+13:00",
+ "generated_nz": "10/09 23:22",
  "n_alerts_total": 0,
- "n_roads_total": 215,
+ "n_roads_total": 226,
  "alerts": [
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 1 Hinds to Earling",
-   "span": "9/28 06:00–10/9 17:00 · 更新 1 Oct 2026 7:37am",
-   "desc": "Due to pavement repair works, there are Stop/Go traffic management in place on weekdays between 6am and 5pm from Monday 28th September to Friday 9nd October. Plan your journey accordingly and expect up to 10 minute delays.",
-   "days": [
-    "2026-09-29"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
@@ -42,11 +30,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Vehicle Restrictions",
-   "level": "orange",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 9 Oct 2026 8:00am",
+   "span": "9/18 17:30–11/30 17:30 · 更新 9 Oct 2026 5:30pm",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -64,55 +52,6 @@
     "2026-10-06",
     "2026-10-06",
     "2026-10-07",
-    "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 21 Rukuhia, near the Raynes Road intersection",
-   "span": "10/5 09:00–10/9 15:00 · 更新 5 Oct 2026 9:01am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06",
-    "2026-10-07"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 3 Otorohanga, between the intersections of Cherry Road and Blucks Road",
-   "span": "10/5 07:00–10/9 18:00 · 更新 5 Oct 2026 7:00am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 3 Otorohanga to Te Mapara",
-   "span": "10/5 07:00–10/9 18:00 · 更新 5 Oct 2026 7:00am",
-   "desc": "Due to maintenance works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
-    "2026-10-06"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 5 Waimangu, near the SH38 intersection",
-   "span": "9/21 09:30–10/9 15:30 · 更新 2 Oct 2026 8:51am",
-   "desc": "Due to uneven dig-out works, there are multiple stop/go traffic management sites with 30km/h temporary speed restriction in place in the area. Stop on request and drive with caution.",
-   "days": [
     "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
