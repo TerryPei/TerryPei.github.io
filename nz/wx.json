@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-09T07:47:32.557716+13:00",
- "generated_nz": "10/09 07:47",
+ "generated_at": "2026-10-09T14:09:27.511332+13:00",
+ "generated_nz": "10/09 14:09",
  "n_alerts_total": 0,
- "n_roads_total": 191,
+ "n_roads_total": 215,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -34,19 +34,19 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 1 McNab to Gore",
-   "span": "9/28 07:00–10/9 18:00 · 更新 1 Oct 2026 9:38am",
-   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 28th September to Friday 9th October. Plan your journey accordingly and expect up to 5 minute delays.",
+   "span": "9/28 07:00–10/16 18:00 · 更新 9 Oct 2026 9:34am",
+   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Friday 16th October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 8 Oct 2026 5:30pm",
+   "span": "9/18 17:30–11/30 17:30 · 更新 9 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
