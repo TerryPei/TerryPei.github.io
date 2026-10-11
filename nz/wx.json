@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-12T01:37:50.201363+13:00",
- "generated_nz": "10/12 01:37",
+ "generated_at": "2026-10-12T08:27:47.849733+13:00",
+ "generated_nz": "10/12 08:27",
  "n_alerts_total": 0,
- "n_roads_total": 214,
+ "n_roads_total": 200,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -30,11 +30,11 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
+   "head": "NZTA 路况 · Vehicle Restrictions",
+   "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 9 Oct 2026 5:30pm",
+   "span": "9/18 17:30–11/30 17:30 · 更新 12 Oct 2026 8:00am",
    "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
    "days": [
     "2026-10-04"
@@ -42,16 +42,14 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Road Closed",
-   "level": "red",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 1 Cambridge",
-   "span": "10/6 15:13–10/12 05:00 · 更新 11 Oct 2026 8:00pm",
-   "desc": "Due to the continuation of the road resurfacing on SH1, Waikato Expressway, (Cambridge), the northbound off-ramp at the Victoria Road Interchange (Hautapu) will be closed overnight Sunday 11 October between 8pm and 5am",
+   "span": "9/15 15:36–11/13 17:00 · 更新 9 Oct 2026 7:39am",
+   "desc": "Due to road resurfacing, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to the Southern Interchange (Tirau Road). Stop/go will be in place between the Southern Interchange and Hickey Road from Tuesday 13 October. Allow extra travel tim",
    "days": [
     "2026-10-06",
-    "2026-10-06",
-    "2026-10-07",
     "2026-10-07"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
