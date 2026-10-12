@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-12T23:37:11.741763+13:00",
- "generated_nz": "10/12 23:37",
- "n_alerts_total": 1,
- "n_roads_total": 212,
+ "generated_at": "2026-10-13T10:12:57.180082+13:00",
+ "generated_nz": "10/13 10:12",
+ "n_alerts_total": 5,
+ "n_roads_total": 200,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
