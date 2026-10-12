@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-12T08:27:47.849733+13:00",
- "generated_nz": "10/12 08:27",
- "n_alerts_total": 0,
- "n_roads_total": 200,
+ "generated_at": "2026-10-12T13:26:11.079282+13:00",
+ "generated_nz": "10/12 13:26",
+ "n_alerts_total": 1,
+ "n_roads_total": 221,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -30,12 +30,12 @@
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
   {
-   "head": "NZTA 路况 · Vehicle Restrictions",
-   "level": "orange",
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 12 Oct 2026 8:00am",
-   "desc": "Due to slip clearing works, this section of road will be closed in both direction on weekdays between 8am and 5:30pm until further notice. Outside of these hours there will be various traffic control including Stop/Go at multiple locations along this route. Queued traffic at the closure points of Ma",
+   "span": "9/18 17:30–11/30 17:30 · 更新 12 Oct 2026 9:19am",
+   "desc": "Due to slip clearing works, vehicles will be continuously convoyed through the worksite on weekdays between 8am and 5:30pm from Tuesday 13th October until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Plan your journey a",
    "days": [
     "2026-10-04"
    ],
