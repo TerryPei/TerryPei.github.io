@@ -1,22 +1,9 @@
 {
- "generated_at": "2026-10-16T05:49:58.043576+13:00",
- "generated_nz": "10/16 05:49",
- "n_alerts_total": 2,
- "n_roads_total": 202,
+ "generated_at": "2026-10-16T10:16:05.842504+13:00",
+ "generated_nz": "10/16 10:16",
+ "n_alerts_total": 1,
+ "n_roads_total": 203,
  "alerts": [
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 1 Dunedin, near the intersection with Saint Andrew Street",
-   "span": "8/19 19:00–10/16 06:00 · 更新 4 Sept 2026 2:34pm",
-   "desc": "Due to excavation work and the construction of a signalised pedestrian crossing, the road will be down to one lane with a 30km/h speed restriction in place on weekdays between 7pm and 6am from Tuesday 8th August until mid October. Plan your journey accordingly allowing extra time for travel.",
-   "days": [
-    "2026-09-30",
-    "2026-10-01"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
