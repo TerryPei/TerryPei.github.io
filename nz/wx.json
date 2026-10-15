@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-15T10:33:44.811803+13:00",
- "generated_nz": "10/15 10:33",
- "n_alerts_total": 5,
- "n_roads_total": 204,
+ "generated_at": "2026-10-15T17:24:11.891905+13:00",
+ "generated_nz": "10/15 17:24",
+ "n_alerts_total": 3,
+ "n_roads_total": 212,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -46,8 +46,8 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 1 Cambridge",
-   "span": "9/15 15:36–11/13 17:00 · 更新 9 Oct 2026 7:39am",
-   "desc": "Due to road resurfacing, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to the Southern Interchange (Tirau Road). Stop/go will be in place between the Southern Interchange and Hickey Road from Tuesday 13 October. Allow extra travel tim",
+   "span": "9/15 15:36–11/13 17:00 · 更新 15 Oct 2026 4:15pm",
+   "desc": "Due to road resurfacing, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to the Southern Interchange (Tirau Road). Stop/go will be in place between the Southern Interchange and Hickey Road from Sunday 18 October. Allow extra travel time",
    "days": [
     "2026-10-06",
     "2026-10-07"
