@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-10-16T10:16:05.842504+13:00",
- "generated_nz": "10/16 10:16",
- "n_alerts_total": 1,
- "n_roads_total": 203,
+ "generated_at": "2026-10-16T17:19:20.893281+13:00",
+ "generated_nz": "10/16 17:19",
+ "n_alerts_total": 0,
+ "n_roads_total": 242,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
    "area": "SH 1 McNab to Gore",
-   "span": "9/28 07:00–10/23 18:00 · 更新 15 Oct 2026 7:22am",
-   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Friday 23rd October. Plan your journey accordingly and expect up to 5 minute delays.",
+   "span": "9/28 07:00–10/24 18:00 · 更新 16 Oct 2026 4:10pm",
+   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Saturday 24th October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
    ],
