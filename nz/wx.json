@@ -1,18 +1,30 @@
 {
- "generated_at": "2026-10-22T06:04:23.852741+13:00",
- "generated_nz": "10/22 06:04",
+ "generated_at": "2026-10-22T10:33:09.527534+13:00",
+ "generated_nz": "10/22 10:33",
  "n_alerts_total": 0,
- "n_roads_total": 169,
+ "n_roads_total": 196,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
    "area": "SH 1 McNab to Gore",
-   "span": "9/28 07:00–10/24 18:00 · 更新 16 Oct 2026 4:10pm",
-   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Saturday 24th October. Plan your journey accordingly and expect up to 5 minute delays.",
+   "span": "9/28 07:00–10/31 18:00 · 更新 22 Oct 2026 9:40am",
+   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Saturday 31st October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
+   ],
+   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
+  },
+  {
+   "head": "NZTA 路况 · Caution",
+   "level": "road",
+   "type": "nzta",
+   "area": "SH 6 Lumsden",
+   "span": "10/2 07:00–10/30 18:00 · 更新 22 Oct 2026 9:43am",
+   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place between 7am and 6pm from Thursday 2nd October to Friday 30th October. Plan your journey accordingly and expect up to 5 minute delays.",
+   "days": [
+    "2026-10-03"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
@@ -21,7 +33,7 @@
    "level": "orange",
    "type": "nzta",
    "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 20 Oct 2026 8:06am",
+   "span": "9/18 17:30–11/30 17:30 · 更新 22 Oct 2026 8:49am",
    "desc": "Due to slip clearing works, vehicles will be continuously convoyed through the worksite on weekdays between 8am and 5:30pm from Tuesday 13th October until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Plan your journey a",
    "days": [
     "2026-10-04"
@@ -33,8 +45,8 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 1 Cambridge",
-   "span": "9/15 15:36–11/13 17:00 · 更新 15 Oct 2026 4:15pm",
-   "desc": "Due to road resurfacing, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to the Southern Interchange (Tirau Road). Stop/go will be in place between the Southern Interchange and Hickey Road from Sunday 18 October. Allow extra travel time",
+   "span": "9/15 15:36–11/13 17:00 · 更新 22 Oct 2026 8:01am",
+   "desc": "Due to road resurfacing, SH1 Waikato Expressway, (Cambridge) will be one lane in each direction from south of the Swayne Road overbridge to the Southern Interchange (Tirau Road). Stop/go will be in place overnight between the Southern Interchange and Hickey Road from Sunday 18 October. Allow extra t",
    "days": [
     "2026-10-06",
     "2026-10-07"
