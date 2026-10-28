@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-10-29T01:39:54.504491+13:00",
- "generated_nz": "10/29 01:39",
- "n_alerts_total": 5,
- "n_roads_total": 218,
+ "generated_at": "2026-10-29T09:11:52.239255+13:00",
+ "generated_nz": "10/29 09:11",
+ "n_alerts_total": 3,
+ "n_roads_total": 213,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
    "level": "road",
    "type": "nzta",
    "area": "SH 1 McNab to Gore",
-   "span": "9/28 07:00–10/31 18:00 · 更新 22 Oct 2026 9:40am",
-   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Saturday 31st October. Plan your journey accordingly and expect up to 5 minute delays.",
+   "span": "9/28 07:00–11/7 18:00 · 更新 29 Oct 2026 9:05am",
+   "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Saturday 7th November. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
    ],
@@ -25,18 +25,6 @@
    "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place between 7am and 6pm from Thursday 2nd October to Friday 30th October. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-03"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Delays",
-   "level": "orange",
-   "type": "nzta",
-   "area": "SH 6 The Wanaka Lookout to Makarora",
-   "span": "9/18 17:30–11/30 17:30 · 更新 22 Oct 2026 8:49am",
-   "desc": "Due to slip clearing works, vehicles will be continuously convoyed through the worksite on weekdays between 8am and 5:30pm from Tuesday 13th October until further notice. Outside of these hours there will be Stop/Go traffic control in place at multiple locations along this route. Plan your journey a",
-   "days": [
-    "2026-10-04"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
