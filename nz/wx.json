@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-29T09:11:52.239255+13:00",
- "generated_nz": "10/29 09:11",
- "n_alerts_total": 3,
- "n_roads_total": 213,
+ "generated_at": "2026-10-29T13:46:30.858848+13:00",
+ "generated_nz": "10/29 13:46",
+ "n_alerts_total": 6,
+ "n_roads_total": 230,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -21,8 +21,8 @@
    "level": "road",
    "type": "nzta",
    "area": "SH 6 Lumsden",
-   "span": "10/2 07:00–10/30 18:00 · 更新 22 Oct 2026 9:43am",
-   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place between 7am and 6pm from Thursday 2nd October to Friday 30th October. Plan your journey accordingly and expect up to 5 minute delays.",
+   "span": "10/2 07:00–11/3 18:00 · 更新 29 Oct 2026 9:15am",
+   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place between 7am and 6pm from Thursday 2nd October to Tuesday 3rd November. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-03"
    ],
