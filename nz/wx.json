@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-03T10:39:46.095449+13:00",
- "generated_nz": "11/03 10:39",
+ "generated_at": "2026-11-03T19:29:53.084962+13:00",
+ "generated_nz": "11/03 19:29",
  "n_alerts_total": 1,
- "n_roads_total": 167,
+ "n_roads_total": 164,
  "alerts": [
   {
    "head": "NZTA 路况 · Caution",
@@ -13,18 +13,6 @@
    "desc": "Due to maintenance work , there will be Stop/Go traffic management with a 30km/h speed restriction in place on weekdays between 7am and 6pm from Monday 12th October to Saturday 7th November. Plan your journey accordingly and expect up to 5 minute delays.",
    "days": [
     "2026-10-01"
-   ],
-   "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
-  },
-  {
-   "head": "NZTA 路况 · Caution",
-   "level": "road",
-   "type": "nzta",
-   "area": "SH 6 Lumsden",
-   "span": "10/2 07:00–11/3 18:00 · 更新 29 Oct 2026 9:15am",
-   "desc": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place between 7am and 6pm from Thursday 2nd October to Tuesday 3rd November. Plan your journey accordingly and expect up to 5 minute delays.",
-   "days": [
-    "2026-10-03"
    ],
    "link": "https://www.journeys.nzta.govt.nz/highway-conditions"
   },
