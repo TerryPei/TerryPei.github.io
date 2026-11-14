@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-14T08:32:14.754896+13:00",
- "generated_nz": "11/14 08:32",
- "n_alerts_total": 0,
- "n_roads_total": 221,
+ "generated_at": "2026-11-14T14:23:30.898075+13:00",
+ "generated_nz": "11/14 14:23",
+ "n_alerts_total": 4,
+ "n_roads_total": 259,
  "alerts": [],
  "days": [
   {
